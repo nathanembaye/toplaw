@@ -13,7 +13,7 @@ function Team() {
             <img src={Bush} alt="Headshot" />
           </div>
             <div className="teamNameContainer">
-              <a href="toplaw/bio">George W. Bush</a>
+              <a href="/bio">George W. Bush</a>
             </div>
             <div className="teamTitleContainer">
               <p>Criminal Defense Attorney</p>
@@ -25,7 +25,7 @@ function Team() {
             <img src={Cheney} alt="Headshot" />
           </div>
             <div className="teamNameContainer">
-              <a href="toplaw/bio">Vince Cheney</a>
+              <a href="/bio">Vince Cheney</a>
             </div>
             <div className="teamTitleContainer">
               <p>Law Clerk</p>
