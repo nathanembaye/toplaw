@@ -10,9 +10,8 @@ function Menu(props: any) {
     const myNav = document.getElementById('navigationMenu');
 
     const path = window.location.pathname;
-    
     // if (path !== '/'){
-    if (path !== process.env.PUBLIC_URL){
+    if (path !== process.env.PUBLIC_URL + "/"){
       return
     }
 
@@ -31,7 +30,7 @@ function Menu(props: any) {
   useEffect(() => {
     const path = window.location.pathname;
     // if (path !== '/'){
-    if (path !== process.env.PUBLIC_URL){
+    if (path !== process.env.PUBLIC_URL + "/"){
       const myNav = document.getElementById('navigationMenu');
       if (myNav) {
         myNav.classList.add("menuContainerTwo");

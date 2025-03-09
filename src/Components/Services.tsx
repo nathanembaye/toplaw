@@ -59,11 +59,9 @@ function Services() {
        
   window.addEventListener('resize', function(){
     if (window.innerWidth <= 767 && iconSize !== '3vw'){
-      console.log('Size switched to 3vw');
       setIconSize('4vw');
     }
     else if (window.innerWidth > 767 && iconSize !== '2vw'){
-      console.log('Size switched to 2vw');
       setIconSize('2vw');
     }
   });

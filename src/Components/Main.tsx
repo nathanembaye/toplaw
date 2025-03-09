@@ -10,7 +10,7 @@ function Main() {
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Routes>
                     <Route path="/" element={<App />}/>
-                    <Route path="/about" element={<About />}/>
+                    <Route path="/bio" element={<About />}/>
                 </Routes>
             </BrowserRouter>
     </div>
