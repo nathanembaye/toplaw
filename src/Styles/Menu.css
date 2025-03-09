@@ -1,0 +1,101 @@
+.menuContainer {
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+.menuContainerTwo {
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    /*background-color: rgb(27, 70, 111);*/
+    background-color: gray;
+}
+
+.menuOptions {
+    width: auto;
+    height: 100%;
+    /* background-color: rgb(27, 70, 111); */
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menuLinks {
+    align-self: center;
+    margin-right: 5%;
+    color: rgb(230, 230, 230);
+    font-size: 1.2em;
+    text-decoration: none;
+    background: linear-gradient(currentColor 0 0) 
+    bottom center/
+    var(--underline-width, 0%) 0.1em
+    no-repeat;
+    display: inline-block;
+    padding: 0 .5em 0.2em;
+    transition: background-size 0.5s;
+    cursor: pointer;
+}
+
+.menuLinks:hover {
+    --underline-width: 100%;
+}
+ 
+.menuLogo {
+    width: 180px;
+    height: 100%;
+    /* background-color: rgb(27, 70, 111); */
+    display: flex;
+    justify-content: center;
+}
+
+.menuTitle {
+    align-self: center;
+    color: rgb(230, 230, 230);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.burgerIcon {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+
+    .burgerMenu {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .menuOptions {
+      display: none;
+    }
+
+    .burgerMenu {
+        display: flex;
+        justify-content: flex-end;
+        width: calc(100vw - 180px);
+        margin-right: 20px;
+        height: 64px;
+    }
+    
+    .burgerIcon {
+        align-self: center;
+    }
+}

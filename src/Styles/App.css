@@ -1,0 +1,91 @@
+.AppContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(27, 70, 111);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.AppContainerForMenu {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+.NavigationTop {
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    position: fixed;
+}
+
+.CancelButtonContainer {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+}
+
+.NavigationBottom {
+  position: relative;
+  height: calc(100vh - 64px);
+  width: 100%;
+  top: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.NavigationMenu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  margin-right: 20px;
+  height: 64px;
+}
+
+.NavigationIcon {
+  align-self: right;
+  cursor: pointer;
+}
+
+.NavigationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+}
+
+.NavigationItemText {
+  color: rgb(27, 70, 111);
+}
+
+.NavigationItemTextClicked {
+  color: rgb(237, 0, 0);
+}
+
+.NavigationItem {
+  position: relative;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 64px;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.landingPageContainer {
+    height:100vh;
+    width: 100vw;
+    background: url('../test.jpg') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}

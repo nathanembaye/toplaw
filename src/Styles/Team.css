@@ -1,0 +1,219 @@
+.teamContainer {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: hsla(74.11764706,21.51898734%,84.50980392%,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.teamTeam {
+    width: 50%;
+    height: 100%;
+    border-color: rgb(109, 29, 29);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
+}
+
+.teamImageContainer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+        display: block;
+    }
+}
+
+.teamNameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    display: inline-block;
+    text-align: center;
+    border-style: solid;
+    border-width: 0px;
+    border-color: rgb(34, 0, 255);
+}
+
+.teamNameContainer a {
+    color: hsla(220,23.07692308%,15.29411765%,1);
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.teamNameContainer a:hover {
+    color: #0072B5;
+    text-align: center;
+    font-size: 15px;
+}
+
+.teamTitleContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: 0px;
+    border-color: rgb(26, 255, 0);
+}
+
+.teamTitleContainer p {
+    color: hsla(220,23.07692308%,15.29411765%,1);
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .teamContainer {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: hsla(74.11764706,21.51898734%,84.50980392%,1);
+        display: flex;
+        flex-direction: row;
+        border-width: 0px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+
+    .teamTeam {
+        width: 40%;
+        height: auto;
+        border-width: 0px;
+        border-color: rgb(255, 0, 0);
+        border-style: solid;
+    }
+
+    .teamImageContainer {
+        width: 100%;
+        height: auto;
+        border-width: 0px;
+        border-color: rgb(255, 0, 0);
+        border-style: solid;
+        img {
+            width: 27vw;
+            height: 27vw;
+            border-radius: 50%;
+        }
+    }
+
+    .teamNameContainer {
+        width: auto;
+        height: auto;
+        margin-top: 2.5vh;
+        border-width: 0px;
+        border-color: rgb(44, 133, 0);
+        border-style: solid;
+        a {
+            font-size: 3vw;
+        }
+        a:hover {
+            font-size: 3vw;
+        }
+    }
+
+    .teamTitleContainer {
+        width: 100%;
+        height: auto;
+        border-width: 0px;
+        border-color: rgb(0, 42, 255);
+        border-style: solid;
+        margin-top: 1vh;
+        p {
+            font-size: 2vw;
+            margin: 0;
+        }
+    }
+}
+
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 767px) {
+
+    .teamContainer {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: hsla(74.11764706,21.51898734%,84.50980392%,1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 7vh;
+        padding-bottom: 7vh;
+        row-gap: 8vh;
+    }
+
+    .teamTeam {
+        width: 100%;
+        height: auto;
+        border-width: 0px;
+        border-color: rgb(255, 0, 0);
+        border-style: solid;
+    }
+
+    .teamImageContainer {
+        width: 100%;
+        height: auto;
+        border-width: 0px;
+        border-color: rgb(255, 0, 0);
+        border-style: solid;
+        img {
+            width: 75vw;
+            height: 75vw;
+            border-radius: 50%;
+        }
+    }
+
+    .teamNameContainer {
+        width: auto;
+        height: auto;
+        margin-top: 2.5vh;
+        border-width: 0px;
+        border-color: rgb(44, 133, 0);
+        border-style: solid;
+        a {
+            font-size: 7vw;
+        }
+        a:hover {
+            font-size: 7vw;
+        }
+    }
+
+    .teamTitleContainer {
+        width: 100%;
+        height: auto;
+        border-width: 0px;
+        border-color: rgb(0, 42, 255);
+        border-style: solid;
+        margin-top: 1vh;
+        p {
+            font-size: 5vw;
+            margin: 0;
+        }
+    }
+}
