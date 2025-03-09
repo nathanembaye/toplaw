@@ -19,11 +19,11 @@ function About() {
                   </div>
 
                   <div className="personContact">
-                    <p><b>OFFICE</b>: (416) 629-4800, ext 101</p>
+                    <p><b>OFFICE</b>: (333) 321-643, ext 444</p>
                   </div>
 
                   <div className="personContact">
-                    <p><b>COLLECT</b>: 1 (833) 628-4801</p>
+                    <p><b>COLLECT</b>: 1 (321) 431-6543</p>
                   </div>
 
                   <div className="personContact">
