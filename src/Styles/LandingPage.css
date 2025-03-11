@@ -12,32 +12,33 @@
     align-items: center;
 }
 
-.test {
+.carouselContainer {
     width: 25vw;
     margin-right: 50%;
     height: auto;
-    ul {
-        list-style-type: none;
-    }
-
-    li {
-        opacity: 0;
-        color: white;
-        font-size: 4vw;
-    }
 }
 
-.test li:nth-child(1) { 
+.carousel {
+    list-style-type: none;
+}
+
+.carouselItem {
+    opacity: 0;
+    color: white;
+    font-size: 4vw;
+}
+
+.carouselContainer li:nth-child(1) { 
     animation: 
     fadeIn 0.25s forwards,           /* Appears first and immediately, no s*/
     fadeOut 0.25s 3.5s forwards;      /* Disappears last (after 3.5s) */
 }
-.test li:nth-child(2) { 
+.carouselContainer li:nth-child(2) { 
     animation: 
     fadeIn 0.25s 0.25s forwards,       /* Appears second (after 0.25s) */
     fadeOut 0.25s 3.25s forwards;      /* Disappears second (after 3.25s) */
 }
-.test li:nth-child(3) { 
+.carouselContainer li:nth-child(3) { 
     animation: 
         fadeIn 0.25s 0.5s forwards,       /* Appears last (after 0.5s) */
         fadeOut 0.25s 3s forwards;      /* Disappears first (after 3s) */
