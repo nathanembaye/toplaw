@@ -8,14 +8,20 @@
     background-size: cover;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    border-width: 0px;
+    border-color: yellow;
+    border-style: solid;
 }
 
 .carouselContainer {
-    width: 25vw;
-    margin-right: 50%;
+    width: 30vw;
     height: auto;
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
 }
 
 .carousel {
@@ -40,8 +46,8 @@
 }
 .carouselContainer li:nth-child(3) { 
     animation: 
-        fadeIn 0.25s 0.5s forwards,       /* Appears last (after 0.5s) */
-        fadeOut 0.25s 3s forwards;      /* Disappears first (after 3s) */
+    fadeIn 0.25s 0.5s forwards,       /* Appears last (after 0.5s) */
+    fadeOut 0.25s 3s forwards;      /* Disappears first (after 3s) */
 }
 
 
@@ -64,3 +70,10 @@
 }
  
 
+/* Extra small devices (phones, 767px and down) */
+@media only screen and (max-width: 767px) {
+
+    .landingPageContainer {
+        background: url('../test.jpg') no-repeat 40% center; 
+    }
+}

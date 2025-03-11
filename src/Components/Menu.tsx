@@ -8,7 +8,6 @@ function Menu(props: any) {
   const [active, setActive] = useState<boolean>(window.location.href.includes('about') ? true : false);
 
   document.body.addEventListener('scroll', function () { 
-    console.log('here', document.body.scrollTop)
         // toggle activity on homepage only
         if (!window.location.href.includes('about')){
             if (document.body.scrollTop >= 300) {
