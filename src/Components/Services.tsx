@@ -11,7 +11,7 @@ import { CiViewTimeline } from "react-icons/ci";
 
 function Services() {
 
-  const [iconSize, setIconSize] = useState<boolean>('2vw');
+  const [iconSize, setIconSize] = useState(window.innerWidth <= 767 ? '4vw' : '2vw');
 
   function getIcon(type: number){
     if (type === 1){
@@ -36,29 +36,29 @@ function Services() {
 
   function getText(type: number){
     if (type === 1){
-      return <p>Frauds or Mislead</p>
+      return <p className="serviceItemTextDetails">Frauds or Mislead</p>
     } 
     else if (type === 2){
-      return <p>Bailes & Warrants</p>
+      return <p className="serviceItemTextDetails">Bailes & Warrants</p>
     }
     else if (type === 3) {
-      return <p>Federal Drug Crimes</p>
+      return <p className="serviceItemTextDetails">Federal Drug Crimes</p>
     }
     else if (type === 4) {
-      return <p>Traffic Related Crimes</p>
+      return <p className="serviceItemTextDetails">Traffic Related Crimes</p>
     }
     else if (type === 5) {
-      return <p>Family Law</p>
+      return <p className="serviceItemTextDetails">Family Law</p>
     }
     else if (type === 6) {
-      return <p>Business Law</p>
+      return <p className="serviceItemTextDetails">Business Law</p>
     }
     
   }
 
        
   window.addEventListener('resize', function(){
-    if (window.innerWidth <= 767 && iconSize !== '3vw'){
+    if (window.innerWidth <= 767 && iconSize !== '4vw'){
       setIconSize('4vw');
     }
     else if (window.innerWidth > 767 && iconSize !== '2vw'){
@@ -84,9 +84,9 @@ function Services() {
   return (
     <div id="services" className="servicesContainer">
       <div className="servicesTextContainer">
-        <p>TOPLAW IS A LEADING CANADIAN CRIMINAL DEFENCE FIRM.</p>
-        <p>WE ARE BASED IN TORONTO AND TAKE CASES ACROSS THE COUNTRY.</p>
-        <p>WE SPECIALIZE IN ALL ASPECTS OF CRIMINAL LAW.</p>
+        <p className="servicesTextIntro">TOPLAW IS A LEADING CANADIAN CRIMINAL DEFENCE FIRM.</p>
+        <p className="servicesTextIntro">WE ARE BASED IN TORONTO AND TAKE CASES ACROSS THE COUNTRY.</p>
+        <p className="servicesTextIntro">WE SPECIALIZE IN ALL ASPECTS OF CRIMINAL LAW.</p>
       </div>
 
       <div className="servicesItemsContainer">

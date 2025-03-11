@@ -1,11 +1,14 @@
 .teamContainer {
     width: 100vw;
     min-height: 100vh;
-    background-color: hsla(74.11764706,21.51898734%,84.50980392%,1);
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
 }
 
 
@@ -30,15 +33,15 @@
     border-width: 0px;
     border-color: rgb(0, 0, 0);
     border-style: solid;
+}
 
-    img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        aspect-ratio: 1/1;
-        display: block;
-    }
+.teamImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
 }
 
 .teamNameContainer {
@@ -54,14 +57,14 @@
     border-color: rgb(34, 0, 255);
 }
 
-.teamNameContainer a {
-    color: hsla(220,23.07692308%,15.29411765%,1);
+.teamNameLink {
+    color: gray;
     text-align: center;
     font-size: 15px;
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-.teamNameContainer a:hover {
+.teamNameLink:hover {
     color: #0072B5;
     text-align: center;
     font-size: 15px;
@@ -78,15 +81,12 @@
     border-color: rgb(26, 255, 0);
 }
 
-.teamTitleContainer p {
-    color: hsla(220,23.07692308%,15.29411765%,1);
+.teamNameJob {
+    color: gray;
     text-align: center;
     font-size: 12px;
 }
 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -94,12 +94,12 @@
     .teamContainer {
         width: 100vw;
         min-height: 100vh;
-        background-color: hsla(74.11764706,21.51898734%,84.50980392%,1);
+        background-color: white;
         display: flex;
         flex-direction: row;
-        border-width: 0px;
+        border-width: 1px;
         border-style: solid;
-        border-color: rgb(0, 0, 0);
+        border-color: grey;
     }
 
 
@@ -117,11 +117,12 @@
         border-width: 0px;
         border-color: rgb(255, 0, 0);
         border-style: solid;
-        img {
-            width: 27vw;
-            height: 27vw;
-            border-radius: 50%;
-        }
+    }
+
+    .teamImage {
+        width: 27vw;
+        height: 27vw;
+        border-radius: 50%;
     }
 
     .teamNameContainer {
@@ -131,12 +132,14 @@
         border-width: 0px;
         border-color: rgb(44, 133, 0);
         border-style: solid;
-        a {
-            font-size: 3vw;
-        }
-        a:hover {
-            font-size: 3vw;
-        }
+    }
+
+    .teamNameLink {
+        font-size: 3vw;
+    }
+
+    .teamNameLink:hover {
+        font-size: 3vw;
     }
 
     .teamTitleContainer {
@@ -146,10 +149,11 @@
         border-color: rgb(0, 42, 255);
         border-style: solid;
         margin-top: 1vh;
-        p {
-            font-size: 2vw;
-            margin: 0;
-        }
+    }
+
+    .teamNameJob {
+        font-size: 2vw;
+        margin: 0;
     }
 }
 
@@ -159,13 +163,16 @@
     .teamContainer {
         width: 100vw;
         min-height: 100vh;
-        background-color: hsla(74.11764706,21.51898734%,84.50980392%,1);
+        background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 7vh;
         padding-bottom: 7vh;
         row-gap: 8vh;
+        border-width: 1px;
+        border-style: solid;
+        border-color: grey;
     }
 
     .teamTeam {
@@ -182,11 +189,12 @@
         border-width: 0px;
         border-color: rgb(255, 0, 0);
         border-style: solid;
-        img {
-            width: 75vw;
-            height: 75vw;
-            border-radius: 50%;
-        }
+    }
+
+    .teamImage {
+        width: 70vw;
+        height: 70vw;
+        border-radius: 50%;
     }
 
     .teamNameContainer {
@@ -196,12 +204,14 @@
         border-width: 0px;
         border-color: rgb(44, 133, 0);
         border-style: solid;
-        a {
-            font-size: 7vw;
-        }
-        a:hover {
-            font-size: 7vw;
-        }
+    }
+
+    .teamNameLink {
+        font-size: 7vw;
+    }
+
+    .teamNameLink:hover {
+        font-size: 7vw;
     }
 
     .teamTitleContainer {
@@ -211,9 +221,10 @@
         border-color: rgb(0, 42, 255);
         border-style: solid;
         margin-top: 1vh;
-        p {
-            font-size: 5vw;
-            margin: 0;
-        }
+    }
+
+    .teamNameJob {
+        font-size: 5vw;
+        margin: 0;
     }
 }

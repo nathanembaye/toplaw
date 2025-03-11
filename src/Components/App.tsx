@@ -17,8 +17,8 @@ function App() {
     return <>
               <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
               <LandingPage />
-              <Team />
               <Services />
+              <Team />
               <Contact />
             </>
   }
@@ -62,10 +62,10 @@ function App() {
                     <h1 className={clickedNavItem !== "landing" ? "NavigationItemText" : "NavigationItemTextClicked"} onClick={() => navClicked("home")}>HOME</h1>
                   </div>
                   <div className="NavigationItem">
-                    <h1 className={clickedNavItem !== "team" ? "NavigationItemText" : "NavigationItemTextClicked"} onClick={() => navClicked("team")}>TEAM</h1>
+                    <h1 className={clickedNavItem !== "services" ? "NavigationItemText" : "NavigationItemTextClicked"} onClick={() => navClicked("services")}>SERVICES</h1>
                   </div>
                   <div className="NavigationItem">
-                    <h1 className={clickedNavItem !== "services" ? "NavigationItemText" : "NavigationItemTextClicked"} onClick={() => navClicked("services")}>SERVICES</h1>
+                    <h1 className={clickedNavItem !== "team" ? "NavigationItemText" : "NavigationItemTextClicked"} onClick={() => navClicked("team")}>TEAM</h1>
                   </div>
                   <div className="NavigationItem">
                     <h1 className={clickedNavItem !== "contact" ? "NavigationItemText" : "NavigationItemTextClicked"} onClick={() => navClicked("contact")}>CONTACT</h1>

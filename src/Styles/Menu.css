@@ -1,4 +1,18 @@
-.menuContainer {
+.menuContainerActive {
+    width: 100vw;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    background-color: #F2F3F2;
+}
+
+.menuContainerUnactive {
     width: 100vw;
     height: 64px;
     display: flex;
@@ -11,25 +25,9 @@
     transition: background-color 500ms linear;
 }
 
-.menuContainerTwo {
-    width: 100vw;
-    height: 64px;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    position: fixed;
-    z-index: 10;
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
-    /*background-color: rgb(27, 70, 111);*/
-    background-color: gray;
-}
-
 .menuOptions {
     width: auto;
     height: 100%;
-    /* background-color: rgb(27, 70, 111); */
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -38,7 +36,7 @@
 .menuLinks {
     align-self: center;
     margin-right: 5%;
-    color: rgb(230, 230, 230);
+    color: white;
     font-size: 1.2em;
     text-decoration: none;
     background: linear-gradient(currentColor 0 0) 
@@ -50,6 +48,23 @@
     transition: background-size 0.5s;
     cursor: pointer;
 }
+
+.menuLinksActive {
+    align-self: center;
+    margin-right: 5%;
+    color: gray;
+    font-size: 1.2em;
+    text-decoration: none;
+    background: linear-gradient(currentColor 0 0) 
+    bottom center/
+    var(--underline-width, 0%) 0.1em
+    no-repeat;
+    display: inline-block;
+    padding: 0 .5em 0.2em;
+    transition: background-size 0.5s;
+    cursor: pointer;
+}
+
 
 .menuLinks:hover {
     --underline-width: 100%;
@@ -65,7 +80,14 @@
 
 .menuTitle {
     align-self: center;
-    color: rgb(230, 230, 230);
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.menuTitleActive {
+    align-self: center;
+    color: gray;
     font-size: 30px;
     text-decoration: none;
 }

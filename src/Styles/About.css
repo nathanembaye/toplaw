@@ -1,5 +1,5 @@
 .personContainer {
-    background-color: hsla(74.11764706,21.51898734%,84.50980392%,1);
+    background-color: white;
     padding-top: 10%;
     padding-bottom: 10%;
     display: flex;
@@ -18,11 +18,12 @@
     border-width: 0px;
     border-style: solid;
     border-color: red;
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-    }
+}
+
+.personImage {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
 .personInfo {
@@ -34,13 +35,10 @@
 }
 
 
-.personBio {
-    p {
-        font-size: 2.5vh;
-    }
+.personBioText {
+    font-size: 2.5vh;
 }
 
- 
 
 
 /* Extra small devices (phones, 767px and down) */
@@ -67,11 +65,12 @@
         border-width: 0px;
         border-style: solid;
         border-color: red;
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
+    }
+
+    .personImage {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .personName {
@@ -83,19 +82,20 @@
     .personContact {
         width: 90vw;
         height: auto;
-        p {
-            margin: 0.5%;
-        }
+    }
+
+    .personContactText{
+        margin: 0.5%;
     }
 
     .personBio {
         width: 90vw;
         height: auto;
         margin-top: 5%;
+    }
 
-        p {
-            font-size: 16px;
-        }
+    .personBioText {
+        font-size: 16px;
     }
 
 }

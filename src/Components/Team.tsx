@@ -10,25 +10,25 @@ function Team() {
 
         <div className="teamTeam">
           <div className="teamImageContainer">
-            <img src={Bush} alt="Headshot" />
+            <img className="teamImage" src={Bush} alt="Headshot" />
           </div>
             <div className="teamNameContainer">
-              <a href="/bio">George W. Bush</a>
+              <a className="teamNameLink" href={"#" + process.env.PUBLIC_URL + "/about"}>George W. Bush</a>
             </div>
             <div className="teamTitleContainer">
-              <p>Criminal Defense Attorney</p>
+              <p className="teamNameJob">Criminal Defense Attorney</p>
             </div>
         </div>
 
         <div className="teamTeam">
           <div className="teamImageContainer">
-            <img src={Cheney} alt="Headshot" />
+            <img className="teamImage" src={Cheney} alt="Headshot" />
           </div>
             <div className="teamNameContainer">
-              <a href="/bio">Vince Cheney</a>
+              <a className="teamNameLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Vince Cheney</a>
             </div>
             <div className="teamTitleContainer">
-              <p>Law Clerk</p>
+              <p className="teamNameJob">Law Clerk</p>
             </div>
         </div>
 

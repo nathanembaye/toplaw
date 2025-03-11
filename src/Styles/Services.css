@@ -20,7 +20,7 @@
     border-style: solid;
 }
 
-.serviceItemsGridContainer{
+.serviceItemsGridContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -41,22 +41,18 @@
     border-color: rgb(255, 0, 0);
     width: 100%;
     height: auto;
+}
 
-    p {
-        color: gray;
-        border-width: 0px;
-        border-style: solid;
-        border-color: rgb(251, 0, 0);
-        text-align: center;
-        height: auto;
-        max-width: 52%;
-        font-size: 3.8vmin;
-        margin: 1vh;
-    }
-
-    b {
-        color: #0072B5;
-    }
+.servicesTextIntro {
+    color: gray;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(251, 0, 0);
+    text-align: center;
+    height: auto;
+    max-width: 52%;
+    font-size: 3.8vmin;
+    margin: 1vh;
 }
 
 .serviceItemContainer {
@@ -70,8 +66,9 @@
     border-radius: 1vmin;
     width: 22vw;
     height: calc(22vw * 0.3);
-    
-    /* box-shadow: 0px 0px 4px 0px grey; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0
+    .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+   /*  box-shadow: 5px 5px 5px 5px #e5e5e5; */
 }
 
 .serviceItemLeftContainer{
@@ -97,19 +94,17 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
 
-    p {
-        font-size: 1.5vw;
-        color: gray;
-        border-width: 0px;
-        border-style: solid;
-        border-color: red;
-        margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
-    }
-
- 
+.serviceItemTextDetails {
+    font-size: 1.5vw;
+    color: gray;
+    border-width: 0px;
+    border-style: solid;
+    border-color: red;
+    margin: 0px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .serviceItemLogoContainer {
@@ -125,11 +120,9 @@
 
 /* Extra small devices (phones, 1000px and down) */
 @media only screen and (max-width: 1000px) {
-    .servicesTextContainer {
-        p {
-            max-width: 80%;
-            font-size: 3.5vmin;
-        }
+    .servicesTextIntro {
+        max-width: 80%;
+        font-size: 3.5vmin;
     }
 }
 
@@ -158,11 +151,8 @@
         height: calc(calc(50vw * 0.3) * 0.6);
     }
 
-    .serviceItemTextContainer {
-    
-        p {
-            font-size: 3vw;
-        }
+    .serviceItemTextDetails{
+        font-size: 3vw;
     }
 
     .servicesItemsContainer {
@@ -172,17 +162,14 @@
 
     .servicesTextContainer{
         padding-top: 10%;
-
     }
 
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .servicesTextContainer {
-        p {
-            max-width: 90%;
-            font-size: 5vmin;
-        }
+    .servicesTextIntro {
+        max-width: 90%;
+        font-size: 5vmin;
     }
 }
