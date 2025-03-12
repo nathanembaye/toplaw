@@ -17,14 +17,14 @@
     position: relative;
     width: auto;
     height: auto;
-    padding-right: 4.5%;
+    padding-right: 2%;
     font-size: 4vw;
     color: white;
     transform: translate3d(0, 8%, 0);
 }
 
 .carouselContainer {
-    width: 25vw;
+    width: auto;
     height: auto;
 }
 
@@ -91,7 +91,6 @@
 
     .carouselContainer {
         position: relative;
-        width: 50vw;
         right: 5%;
     }
 
