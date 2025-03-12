@@ -89,6 +89,7 @@
     }
 
     .carouselContainer {
+        position: relative;
         width: 50vw;
         right: 5%;
     }
