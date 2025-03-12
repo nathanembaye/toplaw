@@ -21,31 +21,36 @@ function LandingPage() {
 
   const messages = [['is a', 'quantitative trading firm', 'based in New York city'], 
                     ['is a', 'criminal defense firm', 'based in Toronto'],
-                    ['is a', 'tech company', 'based in Shanghai']]
+                    ['is a', 'computing company', 'based in Shanghai']]
 
 
 
   return (
     <div id="landing" className="landingPageContainer">
-         <div className="carouselContainer">
-                <ul className="carousel">
-                  {messageIndex == 0 && <>
-                                          <li className="carouselItem">{messages[0][0]}</li>
-                                          <li className="carouselItem">{messages[0][1]}</li>
-                                          <li className="carouselItem">{messages[0][2]}</li>
-                                          </>}
-                  {messageIndex == 1 && <>
-                                          <li className="carouselItem">{messages[1][0]}</li>
-                                          <li className="carouselItem">{messages[1][1]}</li>
-                                          <li className="carouselItem">{messages[1][2]}</li>
-                                        </>}
-                  {messageIndex == 2 && <>
-                                        <li className="carouselItem">{messages[2][0]}</li>
-                                        <li className="carouselItem">{messages[2][1]}</li>
-                                        <li className="carouselItem">{messages[2][2]}</li>
-                                        </>}
-                </ul>
-          </div>
+            <div className="carouselContainer">
+          
+                    <ul className="carousel">
+                    <div className="carouselTitle">
+                        TopLaw
+                    </div>
+                      {messageIndex == 0 && <>
+                                              <li className="carouselItem">{messages[0][0]}</li>
+                                              <li className="carouselItem">{messages[0][1]}</li>
+                                              <li className="carouselItem">{messages[0][2]}</li>
+                                              </>}
+                      {messageIndex == 1 && <>
+                                              <li className="carouselItem">{messages[1][0]}</li>
+                                              <li className="carouselItem">{messages[1][1]}</li>
+                                              <li className="carouselItem">{messages[1][2]}</li>
+                                            </>}
+                      {messageIndex == 2 && <>
+                                        
+                                            <li className="carouselItem">{messages[2][0]}</li>
+                                            <li className="carouselItem">{messages[2][1]}</li>
+                                            <li className="carouselItem">{messages[2][2]}</li>
+                                            </>}
+                    </ul>
+              </div>
     </div>
   );
 }

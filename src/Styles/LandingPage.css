@@ -10,14 +10,21 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
 
-    border-width: 0px;
-    border-color: yellow;
-    border-style: solid;
+.carouselTitle {
+    float: left;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-right: 4.5%;
+    font-size: 4vw;
+    color: white;
+    transform: translate3d(0, 8%, 0);
 }
 
 .carouselContainer {
-    width: 30vw;
+    width: 25vw;
     height: auto;
     border-width: 0px;
     border-color: red;
@@ -74,6 +81,28 @@
 @media only screen and (max-width: 767px) {
 
     .landingPageContainer {
-        background: url('../test.jpg') no-repeat 40% center; 
+        height:100vh;
+        width: 100vw;
+        background: url('../test.jpg') no-repeat 23% center; 
+       /* background: url('../test.jpg') no-repeat center center; */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
+
+    .carouselContainer {
+        width: 50vw;
+    }
+
+    .carouselItem {
+        opacity: 0;
+        color: white;
+        font-size: 7vw;
+    }
+
+    .carouselTitle {
+        font-size: 7vw;
+    }
+    
 }

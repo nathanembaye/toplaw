@@ -33,7 +33,7 @@ function Menu(props: any) {
   return (
     <div className={active ? "menuContainerActive" : "menuContainerUnactive"} id="mainMenu">
         <div className="menuLogo">
-          <a className={active ? "menuTitleActive" : "menuTitle"} href="/">TopLaw</a>
+          <a className={active ? "menuTitleActive" : "menuTitle"} href="/"></a>
         </div>
         <div className="menuOptions">
           <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("landing")}>HOME</a>
