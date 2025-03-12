@@ -90,6 +90,7 @@
 
     .carouselContainer {
         width: 50vw;
+        right: 5%;
     }
 
     .carouselItem {
