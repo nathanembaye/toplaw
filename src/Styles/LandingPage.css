@@ -96,10 +96,15 @@
 /* Extra small devices (phones, 767px and down) */
 @media only screen and (max-width: 767px) {
 
-    .carouselContainer li:nth-child(1) {   
-        margin-bottom: 12%;
+    .carouselTitleText {
+        margin: 0px;
+        transform: translate3d(0, 8%, 0);
     }
-
+    
+    .underline {
+        transform: translate3d(0, 8%, 0);
+    }
+    
     .landingPageContainer {
         height:100vh;
         width: 100vw;
