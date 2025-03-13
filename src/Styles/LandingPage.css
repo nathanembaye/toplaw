@@ -102,7 +102,7 @@
         fadeIn 0.25s 0.25s forwards,       /* Appears second (after 0.25s) */
         fadeOut 0.25s 3.25s forwards;      /* Disappears second (after 3.25s) */
         display: inline-block; /* needed so underline doesnt break into two lines*/
-        margin-bottom: 2%;
+        margin-bottom: 12%;
     }
 
     .landingPageContainer {
