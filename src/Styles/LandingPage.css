@@ -21,7 +21,7 @@
     font-size: 4vw;
     color: white;
     display: inline-grid;
-
+    position: absolute;
     border-width: 1px;
     border-color: red;
     border-style: solid;
@@ -55,7 +55,6 @@
     color: white;
     font-size: 4vw;
     width: auto;
-    margin-bottom: 1%;
 }
 
 .carouselContainer li:nth-child(1) {}
