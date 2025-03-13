@@ -32,7 +32,7 @@ function LandingPage() {
           
                     <ul className="carousel">
                       <div className="carouselTitle">
-                          <p>TopLaw</p>
+                          <p className="carouselTitleText">TopLaw</p>
                           <img src={Underline} className="underline"/>
                       </div>
                       {messageIndex == 0 && <>

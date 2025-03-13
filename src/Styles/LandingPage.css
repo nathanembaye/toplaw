@@ -21,11 +21,11 @@
     font-size: 4vw;
     color: white;
     display: inline-grid;
+}
 
-    p {
-        margin: 0px;
-        transform: translate3d(0, 8%, 0);
-    }
+.carouselTitleText {
+    margin: 0px;
+    transform: translate3d(0, 8%, 0);
 }
 
 .underline {
