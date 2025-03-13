@@ -70,7 +70,6 @@
     display: inline-block; /* needed so underline doesnt break into two lines*/
 }
 .carouselContainer li:nth-child(4) { 
-    margin-top: 2vh;
     animation: 
     fadeIn 0.25s 0.5s forwards,       /* Appears last (after 0.5s) */
     fadeOut 0.25s 3s forwards;      /* Disappears first (after 3s) */
