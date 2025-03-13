@@ -97,6 +97,14 @@
 /* Extra small devices (phones, 767px and down) */
 @media only screen and (max-width: 767px) {
 
+    .carouselContainer li:nth-child(3) { 
+        animation: 
+        fadeIn 0.25s 0.25s forwards,       /* Appears second (after 0.25s) */
+        fadeOut 0.25s 3.25s forwards;      /* Disappears second (after 3.25s) */
+        display: inline-block; /* needed so underline doesnt break into two lines*/
+        margin-bottom: 4%;
+    }
+
     .landingPageContainer {
         height:100vh;
         width: 100vw;
