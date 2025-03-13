@@ -28,14 +28,12 @@
     border-width: 0px;
     border-color: transparent;
     border-style: solid;
-    transform: translate3d(0, 8%, 0);
 }
 
 .underline {
     border-width: 0px;
     border-color: rgb(0, 120, 6);
     border-style: solid;
-    transform: translate3d(0, 8%, 0);
 }
 
 .carouselContainer {
