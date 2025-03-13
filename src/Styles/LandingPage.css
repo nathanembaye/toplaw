@@ -18,15 +18,19 @@
     width: auto;
     height: auto;
     padding-right: 2%;
-    font-size: 4vw;
     color: white;
     display: inline-grid;
+
+    border-width: 0px;
+    border-color: yellow;
+    border-style: solid;
 }
 
 .carouselTitleText {
+    font-size: 4vw;
     margin: 0px;
     border-width: 0px;
-    border-color: transparent;
+    border-color: black;
     border-style: solid;
 }
 
@@ -51,6 +55,10 @@
     font-size: 4vw;
     width: auto;
     height: auto;
+
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
 }
 
 .carouselContainer li:nth-child(1) {}
