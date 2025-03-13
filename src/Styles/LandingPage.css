@@ -21,22 +21,21 @@
     font-size: 4vw;
     color: white;
     display: inline-grid;
-    
-    border-width: 1px;
+    border-width: 0px;
     border-color: red;
     border-style: solid;
 }
 
 .carouselTitleText {
     margin: 0px;
-    border-width: 1px;
+    border-width: 0px;
     border-color: rgb(0, 0, 0);
     border-style: solid;
     transform: translate3d(0, 8%, 0);
 }
 
 .underline {
-    border-width: 1px;
+    border-width: 0px;
     border-color: rgb(0, 120, 6);
     border-style: solid;
 }
@@ -69,7 +68,7 @@
     fadeIn 0.25s forwards,           /* Appears first and immediately, no s*/
     fadeOut 0.25s 3.5s forwards;      /* Disappears last (after 3.5s) */
 
-    border-width: 1px;
+    border-width: 0px;
     border-color: yellow;
     border-style: solid;
 }
@@ -79,7 +78,7 @@
     fadeOut 0.25s 3.25s forwards;      /* Disappears second (after 3.25s) */
     display: inline-block; /* needed so underline doesnt break into two lines*/
 
-    border-width: 1px;
+    border-width: 0px;
     border-color: yellow;
     border-style: solid;
 }
@@ -88,7 +87,7 @@
     fadeIn 0.25s 0.5s forwards,       /* Appears last (after 0.5s) */
     fadeOut 0.25s 3s forwards;      /* Disappears first (after 3s) */
 
-    border-width: 1px;
+    border-width: 0px;
     border-color: yellow;
     border-style: solid;
 }
