@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/toplaw/static/css/main.0d93b195.css",
+    "main.css": "/toplaw/static/css/main.807afe51.css",
     "main.js": "/toplaw/static/js/main.65e0a048.js",
     "static/media/cheney.jpg": "/toplaw/static/media/cheney.084c25865619a0be32d5.jpg",
     "static/media/test.jpg": "/toplaw/static/media/test.bba6923266d782996e9b.jpg",
     "static/media/bush.jpg": "/toplaw/static/media/bush.4196c7887fe2d9e77946.jpg",
     "static/media/test.svg": "/toplaw/static/media/test.dfcc0bc283181921290150e5d1fc7c4e.svg",
     "index.html": "/toplaw/index.html",
-    "main.0d93b195.css.map": "/toplaw/static/css/main.0d93b195.css.map",
+    "main.807afe51.css.map": "/toplaw/static/css/main.807afe51.css.map",
     "main.65e0a048.js.map": "/toplaw/static/js/main.65e0a048.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d93b195.css",
+    "static/css/main.807afe51.css",
     "static/js/main.65e0a048.js"
   ]
 }
