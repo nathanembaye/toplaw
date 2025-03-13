@@ -1,5 +1,5 @@
 .landingPageContainer {
-    height:100vh;
+    height: 100vh;
     width: 100vw;
     background: url('../test.jpg') no-repeat center center; 
     -webkit-background-size: cover;
@@ -20,6 +20,17 @@
     padding-right: 2%;
     font-size: 4vw;
     color: white;
+    display: inline-grid;
+
+    p {
+        margin: 0px;
+        transform: translate3d(0, 8%, 0);
+    }
+}
+
+.underline {
+    height: auto;
+    width: auto;
     transform: translate3d(0, 8%, 0);
 }
 
@@ -38,16 +49,26 @@
     font-size: 4vw;
 }
 
-.carouselContainer li:nth-child(1) {}
+.carouselContainer li:nth-child(1) {   
+}
+
+
+
+ 
+
+
 .carouselContainer li:nth-child(2) { 
     animation: 
     fadeIn 0.25s forwards,           /* Appears first and immediately, no s*/
     fadeOut 0.25s 3.5s forwards;      /* Disappears last (after 3.5s) */
+    
 }
 .carouselContainer li:nth-child(3) { 
     animation: 
     fadeIn 0.25s 0.25s forwards,       /* Appears second (after 0.25s) */
     fadeOut 0.25s 3.25s forwards;      /* Disappears second (after 3.25s) */
+    display: inline-block; /* needed so underline doesnt break into two lines*/
+    margin-bottom: 4%;
 }
 .carouselContainer li:nth-child(4) { 
     animation: 

@@ -3,6 +3,7 @@ import '../Styles/LandingPage.css';
 //  'TopLaw is a criminal defense firm based in Toronto.',
 // 'TopLaw represents clients across all of Canada',
 // 'Toplaw specializes in all aspects of criminal law.',
+import Underline from '../test.svg';
 
 function LandingPage() {
 
@@ -30,9 +31,10 @@ function LandingPage() {
             <div className="carouselContainer">
           
                     <ul className="carousel">
-                    <div className="carouselTitle">
-                        TopLaw
-                    </div>
+                      <div className="carouselTitle">
+                          <p>TopLaw</p>
+                          <img src={Underline} className="underline"/>
+                      </div>
                       {messageIndex == 0 && <>
                                               <li className="carouselItem">{messages[0][0]}</li>
                                               <li className="carouselItem">{messages[0][1]}</li>
