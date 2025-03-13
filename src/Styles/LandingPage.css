@@ -29,8 +29,6 @@
 }
 
 .underline {
-    height: auto;
-    width: auto;
     transform: translate3d(0, 8%, 0);
 }
 
@@ -103,7 +101,6 @@
         height:100vh;
         width: 100vw;
         background: url('../test.jpg') no-repeat 23% center; 
-       /* background: url('../test.jpg') no-repeat center center; */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -121,7 +118,7 @@
         font-size: 7vw;
     }
 
-    .carouselTitle {
+    .carouselTitleText {
         font-size: 7vw;
     }
     
