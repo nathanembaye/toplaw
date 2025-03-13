@@ -31,10 +31,13 @@ function LandingPage() {
             <div className="carouselContainer">
           
                     <ul className="carousel">
+
                       <div className="carouselTitle">
                           <p className="carouselTitleText">TopLaw</p>
                           <img src={Underline} className="underline"/>
                       </div>
+
+                      
                       {messageIndex == 0 && <>
                                               <li className="carouselItem">{messages[0][0]}</li>
                                               <li className="carouselItem">{messages[0][1]}</li>

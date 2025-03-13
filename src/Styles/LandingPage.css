@@ -16,20 +16,30 @@
     float: left;
     position: relative;
     width: auto;
-    height: auto;
+    height: 1px;
     padding-right: 2%;
     font-size: 4vw;
     color: white;
     display: inline-grid;
+
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
 }
 
 .carouselTitleText {
     margin: 0px;
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
     transform: translate3d(0, 8%, 0);
 }
 
 .underline {
-    transform: translate3d(0, 8%, 0);
+
+    border-width: 0px;
+    border-color: rgb(0, 120, 6);
+    border-style: solid;
 }
 
 .carouselContainer {
@@ -45,10 +55,10 @@
     opacity: 0;
     color: white;
     font-size: 4vw;
+    width: auto;
 }
 
-.carouselContainer li:nth-child(1) {   
-}
+.carouselContainer li:nth-child(1) {}
 
 
 
@@ -59,18 +69,29 @@
     animation: 
     fadeIn 0.25s forwards,           /* Appears first and immediately, no s*/
     fadeOut 0.25s 3.5s forwards;      /* Disappears last (after 3.5s) */
+
+    border-width: 0px;
+    border-color: yellow;
+    border-style: solid;
 }
 .carouselContainer li:nth-child(3) { 
     animation: 
     fadeIn 0.25s 0.25s forwards,       /* Appears second (after 0.25s) */
     fadeOut 0.25s 3.25s forwards;      /* Disappears second (after 3.25s) */
     display: inline-block; /* needed so underline doesnt break into two lines*/
-    margin-bottom: 4%;
+
+    border-width: 0px;
+    border-color: yellow;
+    border-style: solid;
 }
 .carouselContainer li:nth-child(4) { 
     animation: 
     fadeIn 0.25s 0.5s forwards,       /* Appears last (after 0.5s) */
     fadeOut 0.25s 3s forwards;      /* Disappears first (after 3s) */
+
+    border-width: 0px;
+    border-color: yellow;
+    border-style: solid;
 }
 
 
