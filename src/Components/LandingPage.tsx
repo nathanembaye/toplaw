@@ -7,18 +7,37 @@ import Underline from '../test.svg';
 
 function LandingPage() {
 
-  //setting this -1 to start gives us 5 second before rendering real text
+  //setting -1 to hide at first
   const [messageIndex, setMessageIndex] = useState(-1);
+  const [enabledAnimation, setEnabledAnimation] = useState(false);
 
-  useEffect(() => {
+  function timeout(delay: number) {
+    console.log('Calling timer...')
+    return new Promise( res => setTimeout(res, delay) );
+}
 
-    const interval = setInterval(() => {
-      setMessageIndex(messageIndex => messageIndex + 1 === 3 ? 0 : messageIndex + 1)
-    }, 5000);
-    
-    return () => clearInterval(interval);
+  async function callDelay(){
+    await timeout(2000);
+    setEnabledAnimation(true);
+    setMessageIndex(0)
+  }
 
-  }, []);
+
+  useEffect(() => { 
+
+    // after 5 seconds animation is enabled (svg is set to 5s too)
+    callDelay();
+
+    if (enabledAnimation){
+      const interval = setInterval(() => {
+        setMessageIndex(messageIndex => messageIndex + 1 === 3 ? 0 : messageIndex + 1);
+      }, 5000);
+  
+      return () => clearInterval(interval);
+    }
+
+
+  }, [enabledAnimation]);
 
 
   const messages = [['is a', 'quantitative trading', 'firm based in New York city'], 
