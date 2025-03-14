@@ -140,6 +140,13 @@
         height: 5vh;
     }
 
+    .carouselItemHide {
+        opacity: 0;
+        color: transparent;
+        font-size: 7vw;
+        height: 5vh;
+    }
+
     .carouselTitle {
         height: 5vh;
     }
