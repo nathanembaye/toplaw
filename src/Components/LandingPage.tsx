@@ -10,6 +10,14 @@ function LandingPage() {
   const [messageIndex, setMessageIndex] = useState(-1);
   const [enabledAnimation, setEnabledAnimation] = useState(false);
 
+    // State to track if the component should be reloaded
+    const [imageUrl, setImageUrl] = useState(Underline);
+
+    useEffect(() => {
+      const timestamp = new Date().getTime();
+      setImageUrl(`${Underline}?${timestamp}`);
+    }, []);
+
   function timeout(delay: number) {
     return new Promise( res => setTimeout(res, delay) );
 }
@@ -20,6 +28,10 @@ function LandingPage() {
     setMessageIndex(0);
   }
 
+  useEffect(() => { 
+
+  
+  }, []);
 
   useEffect(() => { 
 
@@ -43,18 +55,6 @@ function LandingPage() {
                     ['is a', 'computing company', 'based in Shanghai']]
 
 
-  const UnderlineAnimation = () => {
-    // cache busting technique to always re-animate on refresh
-    const timestamp = new Date().getTime();
-    return (
-      <img
-        src={`${Underline}?${timestamp}`}
-        className="underline"
-        alt="underline"
-      />
-    );
-  };
-
   return (
     <div id="landing" className="landingPageContainer">
             <div className="carouselContainer">
@@ -63,7 +63,7 @@ function LandingPage() {
 
                       <div className="carouselTitle">
                           <p className="carouselTitleText">TopLaw</p>
-                          <UnderlineAnimation/>
+                          <img src={imageUrl} className="underline" alt="underline" />
                       </div>
 
                       {messageIndex == -1 && <>
