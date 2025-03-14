@@ -29,21 +29,21 @@ function Menu(props: any) {
     }
 
   }
-          
+    // <IoIosMenu size={50} color={active ? 'gray' : 'white'}/> 
   return (
     <div className={active ? "menuContainerActive" : "menuContainerUnactive"} id="mainMenu">
         <div className="menuLogo">
           <a className={active ? "menuTitleActive" : "menuTitle"} href="/"></a>
         </div>
         <div className="menuOptions">
-          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("landing")}>HOME</a>
-          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("services")}>SERVICES</a>
-          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("team")}>TEAM</a>
-          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("contact")}>CONTACT</a>
+          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("landing")}></a>
+          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("services")}></a>
+          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("team")}></a>
+          <a className={active ? "menuLinksActive" : "menuLinks"} onClick={() => menuClick("contact")}></a>
         </div>
         <div className="burgerMenu">
           <div className="burgerIcon" onClick={() => props.setIsMenuOpen(true)}>
-            <IoIosMenu size={50} color={active ? 'gray' : 'white'}/>       
+            <IoIosMenu size={50} color="transparent"/>       
           </div>
         </div>
       </div>
