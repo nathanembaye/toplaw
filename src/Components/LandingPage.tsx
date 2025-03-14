@@ -45,7 +45,7 @@ function LandingPage() {
   }, [enabledAnimation]);
 
 
-  const messages = [['is a', 'quantitative trading', 'firm based in New York city'], 
+  const messages = [['is a', 'quantitative trading', 'firm based in New York'], 
                     ['is a', 'criminal defense', 'firm based in Toronto'],
                     ['is a', 'computing company', 'based in Shanghai']]
 
