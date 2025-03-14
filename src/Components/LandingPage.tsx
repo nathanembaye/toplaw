@@ -7,7 +7,8 @@ import Underline from '../test.svg';
 
 function LandingPage() {
 
-  const [messageIndex, setMessageIndex] = useState(0);
+  //setting this -1 to start gives us 5 second before rendering real text
+  const [messageIndex, setMessageIndex] = useState(-1);
 
   useEffect(() => {
 
@@ -37,12 +38,19 @@ function LandingPage() {
                           <img src={Underline} className="underline"/>
                       </div>
 
-                      
+                      {messageIndex == -1 && <>
+                                              <li className="carouselItemHide">{messages[0][0]}</li>
+                                              <li className="carouselItemHide">{messages[0][1]}</li>
+                                              <li className="carouselItemHide">{messages[0][2]}</li>
+                                              </>}
+
+
                       {messageIndex == 0 && <>
                                               <li className="carouselItem">{messages[0][0]}</li>
                                               <li className="carouselItem">{messages[0][1]}</li>
                                               <li className="carouselItem">{messages[0][2]}</li>
                                               </>}
+
                       {messageIndex == 1 && <>
                                               <li className="carouselItem">{messages[1][0]}</li>
                                               <li className="carouselItem">{messages[1][1]}</li>

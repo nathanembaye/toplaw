@@ -12,18 +12,28 @@
     align-items: center;
 }
 
+.carouselItemHide {
+    opacity: 0;
+    color: transparent;
+    font-size: 4vw;
+    width: auto;
+    height: 10vh;
+}
+
 .carouselTitle {
     float: left;
     position: relative;
     width: auto;
     height: auto;
-    padding-right: 2%;
+    padding-right: 1vw;
     color: white;
     display: inline-grid;
 
     border-width: 0px;
     border-color: yellow;
     border-style: solid;
+    transform: translate3d(0, 8%, 0);
+    height: 10vh;
 }
 
 .carouselTitleText {
@@ -49,12 +59,16 @@
     list-style-type: none;
 }
 
+.carousel li {
+    list-style-type: none;
+}
+
 .carouselItem {
     opacity: 0;
     color: white;
     font-size: 4vw;
     width: auto;
-    height: auto;
+    height: 10vh;
 
     border-width: 0px;
     border-color: red;
@@ -123,6 +137,11 @@
         opacity: 0;
         color: white;
         font-size: 7vw;
+        height: 5vh;
+    }
+
+    .carouselTitle {
+        height: 5vh;
     }
 
     .carouselTitleText {
