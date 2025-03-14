@@ -28,16 +28,20 @@
     padding-right: 1vw;
     color: white;
     display: inline-grid;
-    transform: translate3d(0, 8%, 0);
     height: 10vh;
+    /* transform: translate3d(0, 8%, 0); */
 }
 
 .carouselTitleText {
     font-size: 4vw;
     margin: 0px;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    animation: fadeIn 0.25s forwards;
 }
 
 .underline {
+    transform: translate3d(0, 8%, 0);
 }
 
 .carouselContainer {
@@ -80,7 +84,6 @@
     fadeIn 0.25s 0.5s forwards,       /* Appears last (after 0.5s) */
     fadeOut 0.25s 3s forwards;      /* Disappears first (after 3s) */
 }
-
 
 @keyframes fadeIn {
     to { 

@@ -22,7 +22,7 @@
     .logo_path {
       stroke-dasharray: 750; /* Total length of the path */
       stroke-dashoffset: 750; /* Hide the stroke initially */
-      animation: drawPath 5s ease forwards; /* Animation duration (adjust for speed) */
+      animation: drawPath 5s ease 1s forwards; /* Animation duration (adjust for speed) */
     }
 
     /* Keyframes to animate the stroke */

@@ -22,7 +22,7 @@ function LandingPage() {
 }
 
   async function callDelay(){
-    await timeout(2000);
+    await timeout(3000);
     setEnabledAnimation(true);
     setMessageIndex(0);
   }
@@ -67,7 +67,6 @@ function LandingPage() {
                                               <li className="carouselItemHide">{messages[0][2]}</li>
                                               </>}
 
-
                       {messageIndex == 0 && <>
                                               <li className="carouselItem">{messages[0][0]}</li>
                                               <li className="carouselItem">{messages[0][1]}</li>
@@ -79,12 +78,13 @@ function LandingPage() {
                                               <li className="carouselItem">{messages[1][1]}</li>
                                               <li className="carouselItem">{messages[1][2]}</li>
                                             </>}
+
                       {messageIndex == 2 && <>
-                                        
                                             <li className="carouselItem">{messages[2][0]}</li>
                                             <li className="carouselItem">{messages[2][1]}</li>
                                             <li className="carouselItem">{messages[2][2]}</li>
                                             </>}
+                                            
                     </ul>
               </div>
     </div>
