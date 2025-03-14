@@ -3,8 +3,7 @@ import '../Styles/LandingPage.css';
 //  'TopLaw is a criminal defense firm based in Toronto.',
 // 'TopLaw represents clients across all of Canada',
 // 'Toplaw specializes in all aspects of criminal law.',
-import Underline from '../test.svg';
-
+import Underline from '../Assets/test.svg';
 function LandingPage() {
 
   //setting -1 to hide at first
@@ -12,14 +11,13 @@ function LandingPage() {
   const [enabledAnimation, setEnabledAnimation] = useState(false);
 
   function timeout(delay: number) {
-    console.log('Calling timer...')
     return new Promise( res => setTimeout(res, delay) );
 }
 
   async function callDelay(){
     await timeout(2000);
     setEnabledAnimation(true);
-    setMessageIndex(0)
+    setMessageIndex(0);
   }
 
 
@@ -45,6 +43,17 @@ function LandingPage() {
                     ['is a', 'computing company', 'based in Shanghai']]
 
 
+  const UnderlineAnimation = () => {
+    // cache busting technique to always re-animate on refresh
+    const timestamp = new Date().getTime();
+    return (
+      <img
+        src={`${Underline}?${timestamp}`}
+        className="underline"
+        alt="underline"
+      />
+    );
+  };
 
   return (
     <div id="landing" className="landingPageContainer">
@@ -54,7 +63,7 @@ function LandingPage() {
 
                       <div className="carouselTitle">
                           <p className="carouselTitleText">TopLaw</p>
-                          <img src={Underline} className="underline"/>
+                          <UnderlineAnimation/>
                       </div>
 
                       {messageIndex == -1 && <>
