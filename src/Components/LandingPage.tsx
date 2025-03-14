@@ -9,11 +9,10 @@ function LandingPage() {
   //setting -1 to hide at first
   const [messageIndex, setMessageIndex] = useState(-1);
   const [enabledAnimation, setEnabledAnimation] = useState(false);
-
-    // State to track if the component should be reloaded
-    const [imageUrl, setImageUrl] = useState(Underline);
+  const [imageUrl, setImageUrl] = useState(Underline);
 
     useEffect(() => {
+      //time based url makes svg re-animate every refresh
       const timestamp = new Date().getTime();
       setImageUrl(`${Underline}?${timestamp}`);
     }, []);
@@ -28,10 +27,6 @@ function LandingPage() {
     setMessageIndex(0);
   }
 
-  useEffect(() => { 
-
-  
-  }, []);
 
   useEffect(() => { 
 
