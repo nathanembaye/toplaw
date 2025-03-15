@@ -84,12 +84,6 @@ function Services() {
           </div>
   }
 
-  function buttonClick(){
-    if (window.location.pathname === "/"){
-      document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})
-    }
-  }
-
   return (
     <div id="services" className="servicesContainer">
 
@@ -101,10 +95,10 @@ function Services() {
         </div>
 
         <div className={buttonDesign}>
-          <button className="servicesButton" onClick={() => buttonClick()}>
+          <button className="servicesButton" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
             <p className="servicesButtonText">Get Quote</p>
           </button>
-          <button className="servicesButtonTwo" onClick={() => buttonClick()}>
+          <button className="servicesButtonTwo" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
             <p className="servicesButtonTextTwo">Learn More</p>
           </button>
         </div>
