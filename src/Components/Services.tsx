@@ -11,9 +11,6 @@ import { CiViewTimeline } from "react-icons/ci";
 
 function Services() {
 
-
-  const COLORS = {'0': 'serviceItemLogoContainer', '1': 'serviceItemLogoContainerOne', '2': 'serviceItemLogoContainerTwo', '3': 'serviceItemLogoContainerThree'}
-
   const [buttonDesign, setButtonDesign] = useState(window.innerWidth <= 767 ? 'servicesButtonsColumn' : 'servicesButtonsRow');
 
   function getIcon(type: string){
@@ -117,9 +114,6 @@ function Services() {
         </div>
 
       </div>
-
-
-   
 
     </div>
   );
