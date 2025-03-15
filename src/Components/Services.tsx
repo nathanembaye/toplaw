@@ -101,12 +101,12 @@ function Services() {
         </div>
 
         <div className={buttonDesign}>
-          <div className="servicesButton" onClick={() => buttonClick()}>
+          <button className="servicesButton" onClick={() => buttonClick()}>
             <p className="servicesButtonText">Get Quote</p>
-          </div>
-          <div className="servicesButtonTwo" onClick={() => buttonClick()}>
+          </button>
+          <button className="servicesButtonTwo" onClick={() => buttonClick()}>
             <p className="servicesButtonTextTwo">Learn More</p>
-          </div>
+          </button>
         </div>
 
         <div className="serviceItemsGridContainer">
