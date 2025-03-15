@@ -100,40 +100,56 @@
     font-size: 30px;
     max-width: 40vw;
 
-    @media only screen and (max-width: 1100px) {
+}
+
+@media only screen and (max-width: 1100px) {
+    .servicesTextSummary {
         max-width: 45vw;
     }
-    
-    @media only screen and (max-width: 1000px) {
+}
+
+@media only screen and (max-width: 1000px) {
+    .servicesTextSummary {
         max-width: 50vw;
         font-size: 25px;
     }
-    
-    @media only screen and (max-width: 900px) {
+}
+
+@media only screen and (max-width: 900px) {
+    .servicesTextSummary {
         max-width: 55vw;
     }
-    
-    @media only screen and (max-width: 800px) {
+}
+
+@media only screen and (max-width: 800px) {
+    .servicesTextSummary {
         max-width: 60vw;
     }
-    
-    @media only screen and (max-width: 700px) {
-        max-width: 65vw;
-        font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .servicesTextSummary {
+    max-width: 65vw;
+    font-size: 20px;
     }
-    
-    @media only screen and (max-width: 600px) {
-        max-width: 70vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .servicesTextSummary {
+    max-width: 70vw;
     }
-    
-    @media only screen and (max-width: 500px) {
-        max-width: 75vw;
+}
+
+@media only screen and (max-width: 500px) {
+    .servicesTextSummary {
+    max-width: 75vw;
     }
-    
-    @media only screen and (max-width: 480px) {
-        max-width: 80vw;
+}
+
+@media only screen and (max-width: 480px) {
+    .servicesTextSummary {
+    max-width: 80vw;
     }
-    
 }
 
 
