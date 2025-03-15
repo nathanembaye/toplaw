@@ -45,7 +45,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    height: 60%;
+    height: 53%;
 }
 
 .serviceItemMiddle {
@@ -63,6 +63,8 @@
     width: 100%;
     height: 30%;
 }
+
+.serviceItemFooter { height: 7%; }
 
 
 
@@ -177,15 +179,15 @@
     align-items: center;
     margin-top: 15vh;
     margin-bottom: 15vh;
-    gap: 10vh;
+    gap: 5vw;
 }
 
-.servicesButton:hover { 
+.sservicesButton:hover { 
     opacity: 0.5;
 }
 
-.servicesButtonTwo:hover { 
-    opacity: 0.5;
+.sservicesButtonTwo:hover { 
+    opacity: 01;
 }
 
 .servicesButtonsRow {
@@ -194,10 +196,6 @@
     align-items: center;
     flex-direction: row;
     gap: 1vw;
-
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
 }
 
 .servicesButtonsColumn {
