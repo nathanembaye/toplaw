@@ -15,7 +15,6 @@ function App() {
 
   const App = () => {
     return <>
-              <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
               <LandingPage />
               <Services />
               <Team />

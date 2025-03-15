@@ -50,6 +50,12 @@ function LandingPage() {
                     ['is a', 'computing company', 'based in Shanghai']]
 
 
+  const LandingPageButton = () => {
+    return <div className="landingPageButton">
+        <p className="landingPageButtonText">See More</p>
+    </div>
+  }
+
   return (
     <div id="landing" className="landingPageContainer">
             <div className="carouselContainer">

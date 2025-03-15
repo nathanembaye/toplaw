@@ -11,94 +11,116 @@ import { CiViewTimeline } from "react-icons/ci";
 
 function Services() {
 
-  const [iconSize, setIconSize] = useState(window.innerWidth <= 767 ? '4vw' : '2vw');
 
-  function getIcon(type: number){
-    if (type === 1){
-      return  <GoLaw size={iconSize} color='white'/>
+  const COLORS = {'0': 'serviceItemLogoContainer', '1': 'serviceItemLogoContainerOne', '2': 'serviceItemLogoContainerTwo', '3': 'serviceItemLogoContainerThree'}
+
+  const [buttonDesign, setButtonDesign] = useState(window.innerWidth <= 767 ? 'servicesButtonsColumn' : 'servicesButtonsRow');
+
+  function getIcon(type: string){
+    if (type === '0'){
+      return  <GoLaw size={30} color='black'/>
     }
-    else if (type === 2){
-      return  <PiGavel size={iconSize} color='white'/>
+    else if (type === '1'){
+      return  <PiGavel size={30} color='black'/>
     }
-    else if (type === 3) {
-      return  <GiPoliceOfficerHead size={iconSize} color='white'/>
+    else if (type === '2') {
+      return  <GiPoliceOfficerHead size={30} color='black'/>
     }
-    else if (type === 4) {
-      return  <RiGovernmentLine size={iconSize} color='white'/>
+    else if (type === '3') {
+      return  <RiGovernmentLine size={30} color='black'/>
     }
-    else if (type === 5) {
-      return  <HiOutlinePencil size={iconSize} color='white'/>
+    else if (type === '4') {
+      return  <HiOutlinePencil size={30} color='black'/>
     }
-    else if (type === 6) {
-      return  <CiViewTimeline size={iconSize} color='white'/>
+    else if (type === '5') {
+      return  <CiViewTimeline size={30} color='black'/>
     }
   }
 
-  function getText(type: number){
-    if (type === 1){
-      return <p className="serviceItemTextDetails">Frauds or Mislead</p>
+  function getText(type: string){
+    if (type === '0'){
+      return <p className="serviceItemTextHeader">Frauds or Mislead</p>
     } 
-    else if (type === 2){
-      return <p className="serviceItemTextDetails">Bailes & Warrants</p>
+    else if (type === '1'){
+      return <p className="serviceItemTextHeader">Bailes & Warrants</p>
     }
-    else if (type === 3) {
-      return <p className="serviceItemTextDetails">Federal Drug Crimes</p>
+    else if (type === '2') {
+      return <p className="serviceItemTextHeader">Federal Drug Crimes</p>
     }
-    else if (type === 4) {
-      return <p className="serviceItemTextDetails">Traffic Related Crimes</p>
+    else if (type === '3') {
+      return <p className="serviceItemTextHeader">Traffic Related Crimes</p>
     }
-    else if (type === 5) {
-      return <p className="serviceItemTextDetails">Family Law</p>
+    else if (type === '4') {
+      return <p className="serviceItemTextHeader">Family Law</p>
     }
-    else if (type === 6) {
-      return <p className="serviceItemTextDetails">Business Law</p>
+    else if (type === '5') {
+      return <p className="serviceItemTextHeader">Business Law</p>
     }
     
   }
 
        
   window.addEventListener('resize', function(){
-    if (window.innerWidth <= 767 && iconSize !== '4vw'){
-      setIconSize('4vw');
+    if (window.innerWidth <= 767 && buttonDesign !== 'servicesButtonsColumn'){
+      setButtonDesign('servicesButtonsColumn');
     }
-    else if (window.innerWidth > 767 && iconSize !== '2vw'){
-      setIconSize('2vw');
+    else if (window.innerWidth > 767 && buttonDesign !== 'servicesButtonsRow'){
+      setButtonDesign('servicesButtonsRow');
     }
+
+
   });
 
-  const ServiceItem = (type: number) => {
-    return <div className="serviceItemContainer">
-              <div className="serviceItemLeftContainer">
+  const ServiceItem = (index: string) => {
+    return <div className="serviceItemOuterContainer">
+              <div className="serviceItemTop">
                 <div className="serviceItemLogoContainer">
-                    {getIcon(type)}
+                  {getIcon(index)}
                 </div>
               </div>
-              <div className="serviceItemRightContainer">
-                <div className="serviceItemTextContainer">
-                  {getText(type)}
-                </div>
+              <div className="serviceItemMiddle">
+                {getText(index)}
+              </div>
+              <div className="serviceItemBottom">
+                <p className="serviceItemTextDetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
               </div>
           </div>
   }
 
+
   return (
     <div id="services" className="servicesContainer">
-      <div className="servicesTextContainer">
-        <p className="servicesTextIntro">TOPLAW IS A LEADING CANADIAN CRIMINAL DEFENCE FIRM.</p>
-        <p className="servicesTextIntro">WE ARE BASED IN TORONTO AND TAKE CASES ACROSS THE COUNTRY.</p>
-        <p className="servicesTextIntro">WE SPECIALIZE IN ALL ASPECTS OF CRIMINAL LAW.</p>
-      </div>
 
       <div className="servicesItemsContainer">
-        <div className="serviceItemsGridContainer">
-          {ServiceItem(1)}
-          {ServiceItem(2)}
-          {ServiceItem(3)}
-          {ServiceItem(4)}
-          {ServiceItem(5)}
-          {ServiceItem(6)}
+
+        <div className="servicesTextContainer">
+          <p className="servicesTextTitle">Our Services</p>
+          <p className="servicesTextSummary">Tailored solutions for your success, elevate your experience with out exceptional and comprehensive services today</p>
         </div>
+
+        <div className={buttonDesign}>
+          <div className="servicesButton">
+            <p className="servicesButtonText">Get Quote</p>
+          </div>
+          <div className="servicesButtonTwo">
+            <p className="servicesButtonTextTwo">Learn More</p>
+          </div>
+        </div>
+
+        <div className="serviceItemsGridContainer">
+          {ServiceItem('0')}
+          {ServiceItem('1')}
+          {ServiceItem('2')}
+          {ServiceItem('3')}
+          {ServiceItem('4')}
+          {ServiceItem('5')}
+        </div>
+
       </div>
+
+
+   
+
     </div>
   );
 }
