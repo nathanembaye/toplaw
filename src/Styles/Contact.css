@@ -229,6 +229,9 @@ textarea {
     .getInTouchButton {
         width: 250px;
     }
+    .getInTouchButton:hover {
+        width: 250px;
+    }
 }
 
 

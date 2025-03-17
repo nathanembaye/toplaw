@@ -14,15 +14,6 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [clickedNavItem, setClickedNavitem] = useState<string>("");
 
-  const App = () => {
-    return <>
-              <LandingPage />
-              <Services />
-              <Team />
-              <Contact />
-              <Footer />
-            </>
-  }
 
   function navClicked(itemClicked: string) {
     setClickedNavitem(itemClicked);
@@ -76,14 +67,18 @@ function App() {
             </>
   }
 
-
+  //         {isMenuOpen ? <Navigation/> : <App/>}
+  // <div className={isMenuOpen ? "AppContainerForMenu" : "AppContainer"}>
   return (
-    <div className={isMenuOpen ? "AppContainerForMenu" : "AppContainer"}>
-        {isMenuOpen ? <Navigation/> : <App/>}
+    <div className="AppContainer">
+      <LandingPage />
+      <Services />
+      <Team />
+      <Contact />
+      <Footer />
     </div>
   );
-
-  
+ 
 }
 
 export default App;

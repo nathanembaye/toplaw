@@ -8,17 +8,14 @@ import { IconContext } from "react-icons";
 function Footer() {
 
   const [containerDesign, setContainerDesign] = useState(window.innerWidth <= 767 ? 'footerContainerColumn' : 'footerContainerRow');
-  const [splits, setSplits] = useState(window.innerWidth <= 767 ? true : false);
 
 
   window.addEventListener('resize', function(){
     if (window.innerWidth <= 767 && containerDesign !== 'footerContainerColumn'){
       setContainerDesign('footerContainerColumn');
-      setSplits(true);
     }
     else if (window.innerWidth > 767 && containerDesign !== 'footerContainerRow'){
       setContainerDesign('footerContainerRow');
-      setSplits(false);
     }
 });
 
