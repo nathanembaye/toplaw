@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/toplaw/static/css/main.eada300a.css",
+    "main.css": "/toplaw/static/css/main.cba1c8b3.css",
     "main.js": "/toplaw/static/js/main.4ec98f2c.js",
     "static/media/bush.jpg": "/toplaw/static/media/bush.4196c7887fe2d9e77946.jpg",
     "static/media/test.svg": "/toplaw/static/media/test.7d8eb74f70a26be7dd49bed6667880e8.svg",
     "index.html": "/toplaw/index.html",
-    "main.eada300a.css.map": "/toplaw/static/css/main.eada300a.css.map",
+    "main.cba1c8b3.css.map": "/toplaw/static/css/main.cba1c8b3.css.map",
     "main.4ec98f2c.js.map": "/toplaw/static/js/main.4ec98f2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.eada300a.css",
+    "static/css/main.cba1c8b3.css",
     "static/js/main.4ec98f2c.js"
   ]
 }
