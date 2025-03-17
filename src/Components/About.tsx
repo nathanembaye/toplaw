@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styles/About.css';
 import Menu from './Menu.tsx';
-import Bush from '../bush.jpg';
 
 function About() {
 
@@ -9,7 +8,7 @@ function About() {
         return <div className="personContainer">
 
                   <div className="personImageContainer">
-                    <img className="personImage" src={Bush} alt="Headshot" />
+                    <img className="personImage" src={require('../Assets/bush.jpg')} alt="Headshot" />
                   </div>                 
 
               <div className="personInfo">

@@ -222,11 +222,27 @@
     border-width: 1px;
     border-color: black;
     border-style: solid;
+    color: white;
+}
+
+.servicesButton:hover {
+    width: 180px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    color: black;
 }
 
 .servicesButtonText {
-    color: white;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
 }
 
 .servicesButtonTwo {
@@ -241,11 +257,27 @@
     border-width: 1px;
     border-color: black;
     border-style: solid;
+    color: black;
+}
+
+.servicesButtonTwo:hover {
+    width: 180px;
+    height: 50px;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    color: white;
 }
 
 
 .servicesButtonTextTwo {
-    color: black;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
 }
  

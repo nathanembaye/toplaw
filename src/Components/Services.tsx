@@ -58,14 +58,12 @@ function Services() {
 
        
   window.addEventListener('resize', function(){
-    if (window.innerWidth <= 767 && buttonDesign !== 'servicesButtonsColumn'){
-      setButtonDesign('servicesButtonsColumn');
-    }
-    else if (window.innerWidth > 767 && buttonDesign !== 'servicesButtonsRow'){
-      setButtonDesign('servicesButtonsRow');
-    }
-
-
+      if (window.innerWidth <= 767 && buttonDesign !== 'servicesButtonsColumn'){
+        setButtonDesign('servicesButtonsColumn');
+      }
+      else if (window.innerWidth > 767 && buttonDesign !== 'servicesButtonsRow'){
+        setButtonDesign('servicesButtonsRow');
+      }
   });
 
   const ServiceItem = (index: string) => {
@@ -92,15 +90,15 @@ function Services() {
 
         <div className="servicesTextContainer">
           <p className="servicesTextTitle">Our Services</p>
-          <p className="servicesTextSummary">Tailored solutions for your success, elevate your experience with out exceptional and comprehensive services today</p>
+          <p className="servicesTextSummary">Tailored solutions for your success, elevate your experience with our exceptional and comprehensive services today</p>
         </div>
 
         <div className={buttonDesign}>
           <button className="servicesButton" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
-            <p className="servicesButtonText">Get Quote</p>
+            <p className="servicesButtonText">Contact Us</p>
           </button>
           <button className="servicesButtonTwo" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
-            <p className="servicesButtonTextTwo">Learn More</p>
+            <p className="servicesButtonTextTwo">Locate Us</p>
           </button>
         </div>
 

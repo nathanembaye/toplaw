@@ -1,5 +1,292 @@
-.contactContainer {
-    width: 100vw;
-    height: 100vh;
+.contactColumnContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
+    gap: 50px;
+}
+
+.contactRowContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
+    gap: 50px;
+}
+
+
+.mapContainer {
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
+}
+
+.getInTouchButton {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 350px;
+    height: 40px;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.getInTouchButton:hover {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 350px;
+    height: 40px;
     background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+
+textarea {
+    resize: none;
+}
+
+.messageEntry {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.messageText {
+    margin: 0px;
+    margin-bottom: 3px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.messageInput {
+    height: 130px;
+    width: 340px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    padding-top: 5px;
+}
+
+.phoneEntry {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.phoneText {
+    margin: 0px;
+    margin-bottom: 3px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.phoneInput {
+    height: 20px;
+    width: 340px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.emailEntry {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.emailText {
+    margin: 0px;
+    margin-bottom: 3px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.emailInput {
+    height: 20px;
+    width: 340px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+
+.nameInput {
+    height: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+
+::placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nameText {
+    margin: 0px;
+    margin-bottom: 3px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nameRow {
+    display: flex;
+    flex-direction: row;
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
+    margin-top: 30px;
+    margin-left: 30px;
+    gap: 50px;
+}
+
+.nameEntry {
+    border-width: 0px;
+    border-color: green;
+    border-style: solid;
+}
+
+.getInTouchSummary {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    margin: 0px;
+    margin-left: 30px;
+}
+.getInTouchTitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.getInTouchContainer {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 420px;
+    height: 560px;
+    border-radius: 20px;
+}
+
+
+.contactContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin-top: 125px;
+    margin-bottom: 125px;
+}
+
+
+
+.contactContainer {
+    max-width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+.contactTextContainer {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactTextTitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 1vw;
+}
+
+.contactTextSummary {
+    margin: 0px;
+    font-size: 30px;
+    max-width: 40vw;
+}
+
+@media only screen and (max-width: 1100px) {
+    .contactTextSummary {
+        max-width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contactTextSummary {
+        max-width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .contactTextSummary {
+        max-width: 55vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contactTextSummary {
+        max-width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .contactTextSummary {
+        max-width: 65vw;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contactTextSummary {
+        max-width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .contactTextSummary {
+        max-width: 75vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contactTextSummary {
+        max-width: 80vw;
+    }
 }
