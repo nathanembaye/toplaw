@@ -172,7 +172,7 @@ textarea {
         border-width: 0px;
         border-color: red;
         border-style: solid;
-        gap: 0px;
+        gap: 20px;
     }
 }
 
@@ -228,9 +228,6 @@ textarea {
     }
     .getInTouchButton {
         width: 250px;
-    }
-    .nameRow {
-        gap: 35px;
     }
 }
 
