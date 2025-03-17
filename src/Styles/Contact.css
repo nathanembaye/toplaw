@@ -46,26 +46,6 @@
     font-weight: bold;
 }
 
-.getInTouchButton:hover {
-    margin-top: 20px;
-    margin-left: 30px;
-    width: 350px;
-    height: 40px;
-    background-color: white;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    color: black;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-}
-
-
 textarea {
     resize: none;
 }

@@ -83,6 +83,18 @@ function Services() {
           </div>
   }
 
+  /*
+
+         <div className={buttonDesign}>
+          <button className="servicesButton" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
+            <p className="servicesButtonText">Contact Us</p>
+          </button>
+          <button className="servicesButtonTwo" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
+            <p className="servicesButtonTextTwo">Locate Us</p>
+          </button>
+        </div>
+
+  */
   return (
     <div id="services" className="servicesContainer">
 
@@ -91,15 +103,6 @@ function Services() {
         <div className="servicesTextContainer">
           <p className="servicesTextTitle">Our Services</p>
           <p className="servicesTextSummary">Tailored solutions for your success, elevate your experience with our exceptional and comprehensive services today</p>
-        </div>
-
-        <div className={buttonDesign}>
-          <button className="servicesButton" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
-            <p className="servicesButtonText">Contact Us</p>
-          </button>
-          <button className="servicesButtonTwo" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
-            <p className="servicesButtonTextTwo">Locate Us</p>
-          </button>
         </div>
 
         <div className="serviceItemsGridContainer">
