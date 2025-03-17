@@ -172,7 +172,7 @@ textarea {
         border-width: 0px;
         border-color: red;
         border-style: solid;
-        gap: 10px;
+        gap: 0px;
     }
 }
 
@@ -212,6 +212,7 @@ textarea {
 @media only screen and (max-width: 500px) {
     .getInTouchContainer {
         width: 310px;
+        height: 650px;
     }
     .nameInput {
         width: 250px;
