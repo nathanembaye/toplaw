@@ -4,7 +4,7 @@ import { GoLaw } from "react-icons/go";
 import { PiGavel } from "react-icons/pi";
 import { GiPoliceOfficerHead } from "react-icons/gi";
 import { RiGovernmentLine } from "react-icons/ri";
-import { HiOutlinePencil } from "react-icons/hi2";
+import { IoCar } from "react-icons/io5";
 import { CiViewTimeline } from "react-icons/ci";
 
 
@@ -27,7 +27,7 @@ function Services() {
       return  <RiGovernmentLine size={30} color='black'/>
     }
     else if (type === '4') {
-      return  <HiOutlinePencil size={30} color='black'/>
+      return  <IoCar size={30} color='black'/>
     }
     else if (type === '5') {
       return  <CiViewTimeline size={30} color='black'/>
