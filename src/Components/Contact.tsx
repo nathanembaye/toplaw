@@ -21,6 +21,8 @@ function Contact() {
 
          
   window.addEventListener('resize', function(){
+
+    // general card design
     if (window.innerWidth <= 767 && contentDesign !== 'contactColumnContent'){
       setContentDesign('contactColumnContent');
     }
@@ -28,6 +30,7 @@ function Contact() {
       setContentDesign('contactRowContent');
     }
 
+    // map design
     if (window.innerWidth <= 500) {
       setMapDesign("310");
     }
@@ -53,7 +56,7 @@ function Contact() {
             </div>
 
             <div className={contentDesign}>
-              
+
               <div className="getInTouchContainer">
                 <p className="getInTouchTitle">Get In Touch</p>
                 <p className="getInTouchSummary">Hear what our experts have to say.</p>

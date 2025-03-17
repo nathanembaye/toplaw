@@ -165,6 +165,17 @@ textarea {
     gap: 50px;
 }
 
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 500px) {
+    .nameRow {
+        flex-direction: column;
+        border-width: 0px;
+        border-color: red;
+        border-style: solid;
+        gap: 10px;
+    }
+}
+
 .nameEntry {
     border-width: 0px;
     border-color: green;
@@ -203,7 +214,7 @@ textarea {
         width: 310px;
     }
     .nameInput {
-        width: 105px;
+        width: 250px;
     }
     .emailInput {
         width: 250px;
