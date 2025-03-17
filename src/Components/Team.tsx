@@ -21,9 +21,9 @@ function Team() {
     <div id="team" className="teamContainer">
 
         <div className="teamItemsContainer">
-          <div className="servicesTextContainer">
-            <p className="servicesTextTitle">Our Team</p>
-            <p className="servicesTextSummary">We are a legal team made up of innovative, experienced, and proficient individuals. We will put up the best fight for you.</p>
+          <div className="teamTextContainer">
+            <p className="teamTextTitle">Our Team</p>
+            <p className="teamTextSummary">We are a legal team made up of innovative, experienced, and proficient individuals. We will put up the best fight for you.</p>
           </div>
 
           <div className={userCardDesign}>

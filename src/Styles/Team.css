@@ -147,12 +147,8 @@ a, a:visited, a:hover, a:active {
     color: black;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: blue;
 }
 
 .teamTextTitle {
