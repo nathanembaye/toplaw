@@ -5,11 +5,9 @@ function Contact() {
 
 
   function getMapDesign(){
-
     if (window.innerWidth <= 500) {
       return "310"
     }
-
     else if (window.innerWidth > 500 && window.innerWidth <= 767) {
       return "420"
     }
@@ -55,6 +53,7 @@ function Contact() {
             </div>
 
             <div className={contentDesign}>
+              
               <div className="getInTouchContainer">
                 <p className="getInTouchTitle">Get In Touch</p>
                 <p className="getInTouchSummary">Hear what our experts have to say.</p>

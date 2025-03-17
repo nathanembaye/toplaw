@@ -197,6 +197,31 @@ textarea {
     border-radius: 20px;
 }
 
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 500px) {
+    .getInTouchContainer {
+        width: 310px;
+    }
+    .nameInput {
+        width: 105px;
+    }
+    .emailInput {
+        width: 250px;
+    }
+    .phoneInput {
+        width: 250px;
+    }
+    .messageInput {
+        width: 250px;
+    }
+    .getInTouchButton {
+        width: 250px;
+    }
+    .nameRow {
+        gap: 35px;
+    }
+}
+
 
 .contactContentContainer {
     display: flex;
