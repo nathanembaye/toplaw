@@ -3,9 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
     gap: 50px;
 }
 
@@ -14,9 +11,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
     gap: 50px;
 }
 
@@ -29,7 +23,6 @@
 
 .getInTouchButton {
     margin-top: 20px;
-    margin-left: 30px;
     width: 350px;
     height: 40px;
     background-color: black;
@@ -52,7 +45,6 @@ textarea {
 
 .messageEntry {
     margin-top: 20px;
-    margin-left: 30px;
 }
 
 .messageText {
@@ -69,12 +61,11 @@ textarea {
     border-style: solid;
     border-color: gray;
     border-width: 1px;
-    padding-top: 5px;
+    padding: 5px;
 }
 
 .phoneEntry {
     margin-top: 20px;
-    margin-left: 30px;
 }
 
 .phoneText {
@@ -91,11 +82,11 @@ textarea {
     border-style: solid;
     border-color: gray;
     border-width: 1px;
+    padding: 5px;
 }
 
 .emailEntry {
     margin-top: 20px;
-    margin-left: 30px;
 }
 
 .emailText {
@@ -112,17 +103,25 @@ textarea {
     border-style: solid;
     border-color: gray;
     border-width: 1px;
+    padding: 5px;
 }
 
 
 .nameInput {
+    width: 140px;
     height: 20px;
     border-radius: 5px;
     border-style: solid;
     border-color: gray;
     border-width: 1px;
+    padding: 5px;
 }
 
+.getInTouchHeader {
+    display: flex;
+    flex-direction: column;
+    width: 352px;
+}
 
 ::placeholder {
     font-family: 'Source Sans Pro', sans-serif;
@@ -137,11 +136,7 @@ textarea {
 .nameRow {
     display: flex;
     flex-direction: row;
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
     margin-top: 30px;
-    margin-left: 30px;
     gap: 50px;
 }
 
@@ -166,23 +161,21 @@ textarea {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     margin: 0px;
-    margin-left: 30px;
 }
 .getInTouchTitle {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     font-size: 30px;
     margin: 0px;
-    margin-top: 20px;
-    margin-left: 30px;
 }
 
 .getInTouchContainer {
-    background-color: #f8f8f8;
+    background-color: transparent;
+    /*     background-color: #ebebeb; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 420px;
     height: 560px;
     border-radius: 20px;
@@ -190,9 +183,12 @@ textarea {
 
 /* Extra small devices (phones, 500px and down) */
 @media only screen and (max-width: 500px) {
+    .getInTouchHeader {
+        width: 250px;
+    }
     .getInTouchContainer {
         width: 310px;
-        height: 650px;
+        height: 670px;
     }
     .nameInput {
         width: 250px;
@@ -220,9 +216,9 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5vw;
-    margin-top: 125px;
-    margin-bottom: 125px;
+    gap: 100px;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
 }
 
 
@@ -254,6 +250,7 @@ textarea {
 }
 
 .contactTextSummary {
+    font-family: "Source Sans 3", sans-serif;
     margin: 0px;
     font-size: 30px;
     max-width: 40vw;
@@ -305,5 +302,11 @@ textarea {
 @media only screen and (max-width: 480px) {
     .contactTextSummary {
         max-width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .getInTouchButton {
+        font-weight: normal;
     }
 }

@@ -5,7 +5,7 @@
     justify-content: space-evenly;
     max-width: 100vw;
     height: 40vh;
-    background-color: #f8f8f8;
+    background-color: #ebebeb;
 }
 
 .footerContainerColumn {
@@ -15,7 +15,7 @@
     justify-content: space-evenly;
     max-width: 100vw;
     height: 100vh;
-    background-color: #f8f8f8;
+    background-color: #ebebeb;
     padding-top: 25px;
 }
 
@@ -31,15 +31,6 @@
     border-style: solid;
 }
 
-
-/* Extra small devices (phones, 767px and down) */
-@media only screen and (max-width: 767px) {
-    .footerTextContainer {
-       width: 340px;
-       justify-content: center;
-       align-items: flex-start;
-    }
-}
 
 
 .footerLogoContainerMobile {
@@ -146,4 +137,13 @@
     flex-direction: row;
     margin: 0px;
     margin-bottom: 10px;
+}
+
+/* Extra small devices (phones, 767px and down) */
+@media only screen and (max-width: 767px) {
+    .footerTextContainer {
+       width: 340px;
+       justify-content: center;
+       align-items: flex-start;
+    }
 }

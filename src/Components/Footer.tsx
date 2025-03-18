@@ -49,7 +49,6 @@ function Footer() {
 
 
         <div className={containerDesign === "footerContainerColumn" ? "footerLinksListMobile" : "footerLinksListDesktop"}>
-          <p className="footerLinks" onClick={() => document.getElementById('landing')?.scrollIntoView({behavior: "smooth"})}>Home</p>
           <p className="footerLinks" onClick={() => document.getElementById('services')?.scrollIntoView({behavior: "smooth"})}>Services</p>
           <p className="footerLinks" onClick={() => document.getElementById('team')?.scrollIntoView({behavior: "smooth"})}>Team</p>
           <p className="footerLinks" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>Contact</p>
