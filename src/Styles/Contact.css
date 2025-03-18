@@ -23,7 +23,7 @@
 .getInTouchButton {
     font-size: 15px;
     margin-top: 20px;
-    width: 350px;
+    width: 462px;
     height: 50px;
     background-color: black;
     border-radius: 10px;
@@ -57,10 +57,10 @@ textarea {
 
 .messageInput {
     height: 150px;
-    width: 340px;
+    width: 450px;
     border-radius: 5px;
     border-style: solid;
-    border-color: gray;
+    border-color: #d1d1d1;
     border-width: 1px;
     padding: 5px;
 }
@@ -78,10 +78,10 @@ textarea {
 
 .phoneInput {
     height: 25px;
-    width: 340px;
+    width: 450px;
     border-radius: 5px;
     border-style: solid;
-    border-color: gray;
+    border-color: #d1d1d1;
     border-width: 1px;
     padding: 5px;
 }
@@ -99,21 +99,21 @@ textarea {
 
 .emailInput {
     height: 25px;
-    width: 340px;
+    width: 450px;
     border-radius: 5px;
     border-style: solid;
-    border-color: gray;
+    border-color: #d1d1d1;
     border-width: 1px;
     padding: 5px;
 }
 
 
 .nameInput {
-    width: 150px;
+    width: 205px;
     height: 25px;
     border-radius: 5px;
     border-style: solid;
-    border-color: gray;
+    border-color: #d1d1d1;
     border-width: 1px;
     padding: 5px;
 }
@@ -121,7 +121,7 @@ textarea {
 .getInTouchHeader {
     display: flex;
     flex-direction: column;
-    width: 352px;
+    width: 462px;
 }
 
 ::placeholder {
@@ -139,6 +139,10 @@ textarea {
     flex-direction: row;
     margin-top: 30px;
     gap: 30px;
+}
+
+input {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Extra small devices (phones, 500px and down) */
@@ -161,6 +165,8 @@ textarea {
 .getInTouchSummary {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0px;
+    font-size: 18px;
+    font-weight: 100;
 }
 .getInTouchTitle {
     font-family: 'Source Sans Pro', sans-serif;
@@ -176,9 +182,13 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 420px;
+    width: 500px;
     height: 600px;
     border-radius: 20px;
+
+    border-width: 0px;
+    border-color: #efeef3;
+    border-style: solid;
 }
 
 
@@ -229,7 +239,9 @@ textarea {
 
 .googleMap {
     border-radius: 25px;
-    border-width: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d1d1d1;
     width: 580px;
     height: 600px;
 }

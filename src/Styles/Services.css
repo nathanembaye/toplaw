@@ -4,6 +4,9 @@
     height: 58px;
     border-radius: 29px;
     background-color: white;
+    border-style: solid;
+    border-color: #d1d1d1;
+    border-width: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,9 +116,6 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: white;
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
 }
 
 .servicesItemsContainer {
