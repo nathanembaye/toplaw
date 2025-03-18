@@ -3,21 +3,7 @@ import '../Styles/Contact.css';
 
 function Contact() {
 
-
-  function getMapDesign(){
-    if (window.innerWidth <= 500) {
-      return "310"
-    }
-    else if (window.innerWidth > 500 && window.innerWidth <= 767) {
-      return "420"
-    }
-    else {
-      return "600"
-    }
-  }
-
   const [contentDesign, setContentDesign] = useState(window.innerWidth <= 767 ? 'contactColumnContent' : 'contactRowContent');
-  const [mapDesign, setMapDesign] = useState(getMapDesign());
 
          
   window.addEventListener('resize', function(){
@@ -30,16 +16,6 @@ function Contact() {
       setContentDesign('contactRowContent');
     }
 
-    // map design
-    if (window.innerWidth <= 500) {
-      setMapDesign("310");
-    }
-    else if (window.innerWidth > 500 && window.innerWidth <= 767) {
-      setMapDesign("420");
-    }
-    else {
-      setMapDesign("600");
-    }
   });
 
   
@@ -60,13 +36,11 @@ function Contact() {
             <div className="mapContainer">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5610.854600776958!2d-75.6052527!3d45.3199932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce098e73832777%3A0x96b1c3ec7ec30452!2s624%20White%20Alder%20Ave%2C%20Gloucester%2C%20ON%20K1T%200E5!5e0!3m2!1sen!2sca!4v1742157057305!5m2!1sen!2sca"
-                    width={mapDesign}
-                    height="580"
                     frameborder="0"
-                    style={{ borderRadius: 20, borderWidth: 0}}
                     allowfullscreen=""
                     aria-hidden="false"
                     tabindex="0"
+                    className="googleMap"
                 />
             </div>
             
@@ -103,7 +77,7 @@ function Contact() {
 
                 <div className="messageEntry">
                   <p className="messageText">Message</p>
-                  <textarea className="messageInput" placeholder="Hello, my name is John and I wanted to discuss something..."/>
+                  <textarea className="messageInput" placeholder="Hello, my name is John and I'm looking for representation..."/>
                 </div>
 
                 <button className="getInTouchButton">
