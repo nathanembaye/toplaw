@@ -2,9 +2,10 @@ body {
   margin: 0px; 
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: #ebebeb;
+  overflow-x: hidden;
 }
 
 html {
-  background-color: white;
+  background-color: #ebebeb;
 }

@@ -1,3 +1,104 @@
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-top-width: 0px;
+    border-left-width: 0.5px;
+    width: 75%;
+    border-top-color: #d1d1d1;
+    border-bottom-color: #d1d1d1;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    gap: 5px;
+    padding: 10px;
+}
+
+.testOne {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.testTwo {
+    margin: 0px;
+    font-size: 15px;
+    color: gray;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.blurbTitle {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.blurbText {
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.blurbEntry {
+    width: 30%;
+}
+
+.blurbTestRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 5%;
+}
+
+.testTextRowTitle{
+    margin: 0px;
+    font-size: 15px;
+    color: black;
+    font-weight: 100;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.testTextRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    border-width: 0px;
+    border-color: gray;
+    border-style: solid;
+}
+
+.testTextTitle {
+    margin: 0px;
+    font-size: 80px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    border-width: 0px;
+    border-color: green;
+    border-style: solid;
+}
+
+.testTextSummary {
+    margin: 0px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-width: 0px;
+    border-color: blue;
+    border-style: solid;
+}
+
+
+.testTextContainer {
+    height: 600px;
+    width: 700px;
+    font-family: Switzer, sans-serif;
+}
+
 .contactColumnContent {
     display: flex;
     flex-direction: column;
@@ -15,9 +116,6 @@
 }
 
 .mapContainer {
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
 }
 
 .getInTouchButton {
@@ -39,10 +137,6 @@
     font-weight: bold;
 }
 
-textarea {
-    resize: none;
-    font-family: 'Source Sans Pro', sans-serif;
-}
 
 .messageEntry {
     margin-top: 20px;
@@ -143,9 +237,32 @@ textarea {
 
 input {
     font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f4f4f5;
 }
 
-/* Extra small devices (phones, 500px and down) */
+textarea {
+    resize: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f4f4f5;
+}
+
+/* for desktop only active hover color on inputs */
+@media (min-width: 450px) {
+    input:hover {
+        border-width: 1px;
+        border-color: gray;
+        border-style: solid;
+        transition: border-color 0.5s ease; 
+    }
+    textarea:hover {
+        border-width: 1px;
+        border-color: gray;
+        border-style: solid;
+        transition: border-color 0.5s ease; 
+    }
+}
+
+/* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {
     .nameRow {
         flex-direction: column;
@@ -185,10 +302,6 @@ input {
     width: 500px;
     height: 600px;
     border-radius: 20px;
-
-    border-width: 0px;
-    border-color: #efeef3;
-    border-style: solid;
 }
 
 
@@ -214,90 +327,28 @@ input {
     background-color: white;
 }
 
-.contactTextContainer {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: black;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contactTextTitle {
-    font-size: 40px;
-    font-weight: bold;
-    margin: 0px;
-    margin-bottom: 1vw;
-}
-
-.contactTextSummary {
-    font-family: "Source Sans 3", sans-serif;
-    margin: 0px;
-    font-size: 30px;
-    max-width: 40vw;
-}
-
-.googleMap {
-    border-radius: 25px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #d1d1d1;
-    width: 580px;
-    height: 600px;
-}
-
-
 @media only screen and (max-width: 1100px) {
-    .contactTextSummary {
-        max-width: 45vw;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
-    .contactTextSummary {
-        max-width: 50vw;
-    }
 }
 
 @media only screen and (max-width: 900px) {
-    .contactTextSummary {
-        max-width: 55vw;
-    }
 }
 
 @media only screen and (max-width: 800px) {
-    .contactTextSummary {
-        max-width: 60vw;
-    }
 }
 
 @media only screen and (max-width: 700px) {
-    .contactTextSummary {
-        max-width: 65vw;
-        font-size: 20px;
-    }
-    .googleMap {
-        width: 400px;
-        height: 420px;
-    }
 }
 
 @media only screen and (max-width: 600px) {
-    .contactTextSummary {
-        max-width: 70vw;
-    }
 }
 
 @media only screen and (max-width: 500px) {
-    .contactTextSummary {
-        max-width: 75vw;
-    }
 }
 
 @media only screen and (max-width: 480px) {
-    .contactTextSummary {
-        max-width: 80vw;
-    }
 }
 
 
@@ -310,12 +361,6 @@ input {
 
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {
-
-    .googleMap {
-        width: calc(85vw + 12.5px);
-        height: 400px;
-    }
-    
     input, textarea {
         font-size: 16px;
     }
@@ -325,9 +370,6 @@ input {
     .getInTouchContainer {
         width: 90vw;
         height: 670px;
-        border-width: 0px;
-        border-color: red;
-        border-style: solid;
     }
     .nameInput {
         width: 85vw;

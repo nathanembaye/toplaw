@@ -7,7 +7,7 @@ import Services from './Services.tsx';
 import Team from './Team.tsx';
 import Contact from './Contact.tsx';
 import Footer from './Footer.tsx'
-
+import LocateUs from './LocateUs.tsx';
 
 function App() {
 
@@ -75,6 +75,7 @@ function App() {
       <Services />
       <Team />
       <Contact />
+      <LocateUs />
       <Footer />
     </>
   );
