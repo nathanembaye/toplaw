@@ -6,11 +6,6 @@
         "src": "favicon-light.png",
         "sizes": "180x180",
         "type": "image/x-icon "
-      },
-      {
-        "src": "favicon-dark.png",
-        "sizes": "180x180",
-        "type": "image/x-icon "
       }
     ],
     "start_url": ".",
