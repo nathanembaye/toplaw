@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/toplaw/static/css/main.c3241ba2.css",
-    "main.js": "/toplaw/static/js/main.ccefea2a.js",
+    "main.css": "/toplaw/static/css/main.a64fa9b8.css",
+    "main.js": "/toplaw/static/js/main.f2ae69f8.js",
     "static/media/judge.png": "/toplaw/static/media/judge.4c6c4e879e786c4d625b.png",
     "static/media/bush.jpg": "/toplaw/static/media/bush.4196c7887fe2d9e77946.jpg",
+    "static/media/stripe.png": "/toplaw/static/media/stripe.1ed38f8992c6355e2cba.png",
     "static/media/underline.svg": "/toplaw/static/media/underline.7d8eb74f70a26be7dd49bed6667880e8.svg",
     "index.html": "/toplaw/index.html",
-    "main.c3241ba2.css.map": "/toplaw/static/css/main.c3241ba2.css.map",
-    "main.ccefea2a.js.map": "/toplaw/static/js/main.ccefea2a.js.map"
+    "main.a64fa9b8.css.map": "/toplaw/static/css/main.a64fa9b8.css.map",
+    "main.f2ae69f8.js.map": "/toplaw/static/js/main.f2ae69f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3241ba2.css",
-    "static/js/main.ccefea2a.js"
+    "static/css/main.a64fa9b8.css",
+    "static/js/main.f2ae69f8.js"
   ]
 }
