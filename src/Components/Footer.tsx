@@ -20,49 +20,19 @@ function Footer() {
 });
 
   return (
-    <div id="footer" className={containerDesign}>
-
-        <div className={containerDesign === "footerContainerColumn" ? "footerLogoContainerMobile" : "footerLogoContainerDesktop"}>
-          <div className="footerLogo">
-            <p className="footerLogoText">TopLaw</p>
+      
+      <footer>
+        <div class="footer-container">
+        
+          <div class="footer-section logo">
+            <img src={require('../Assets/judge.png')} alt="Company Logo" class="logo-img"/>
           </div>
         </div>
-
-
-
-      <div className="footerTextContainer">
-          <p className="footerMiddleText">26 Soho Street, Suite 400, Toronto, ON</p>
-          <div className="footerBullets">
-            <p className="footerBulletText">OFFICE:</p>
-            <p className="footerBulletTextEntry">+1 (416) 629-4800</p>
-          </div>
-          <div className="footerBullets">
-            <p className="footerBulletText">COLLECT:</p>
-            <p className="footerBulletTextEntry">+1 (833) 629-4800</p>
-          </div>
-          <p className="footerMiddleText">Privacy Policy</p>
-          <div className="footerBullets">
-            <p className="footerBulletText">Website by</p>
-            <p className="footerBulletTextEntry">M81 Creative</p>
-          </div>
-      </div>
-
-
-        <div className={containerDesign === "footerContainerColumn" ? "footerLinksListMobile" : "footerLinksListDesktop"}>
-          <p className="footerLinks" onClick={() => document.getElementById('services')?.scrollIntoView({behavior: "smooth"})}>Services</p>
-          <p className="footerLinks" onClick={() => document.getElementById('team')?.scrollIntoView({behavior: "smooth"})}>Team</p>
-          <p className="footerLinks" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>Contact</p>
-          <div className="footerSocialMediaList">
-            <IconContext.Provider value={{ size: 20, color: "black", className: "footerIcon" }}>
-              <FaTwitter/>
-              <FaInstagram />
-              <FaLinkedinIn/>
-            </IconContext.Provider>
-          </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 TopLaw. All rights reserved.</p>
         </div>
-
-
-    </div>
+      </footer>
+ 
   );
 }
 

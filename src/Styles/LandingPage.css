@@ -28,8 +28,8 @@
     height: 100vh;
     max-width: 100vw;
     
-    background: url('../Assets/aa.webp') no-repeat center center; 
-    background-position: 90% 0%;
+    background: url('../Assets/judge.png') no-repeat center center; 
+    background-position: 100% 0%;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -43,6 +43,16 @@
     /* 647769 */
     /* 575160 */
 }
+
+/* Define the fade-in animation */
+@keyframes test {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .carouselItemHide {
     opacity: 0;
@@ -142,7 +152,8 @@
     .landingPageContainer {
         height: 100vh;
         max-width: 100vw;
-        background-position: 0% 100%;
+        background-position: center 100%;
+        background-size: 150%;
     }
 
     .carouselContainer {

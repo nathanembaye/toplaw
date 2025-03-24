@@ -17,3 +17,17 @@
     border-color: #d1d1d1;
     border-style: solid;
 }
+
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 900px) {
+    .googleMap {
+        margin-bottom: 10%;
+    }
+}
+
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
+    .googleMap {
+        margin-bottom: 20%;
+    }
+}

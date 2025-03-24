@@ -3,21 +3,22 @@ import '../Styles/Contact.css';
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
+import { PiBuildingOffice } from "react-icons/pi";
 
 
 
 function Contact() {
 
-  const [contentDesign, setContentDesign] = useState(window.innerWidth <= 767 ? 'contactColumnContent' : 'contactRowContent');
+  const [contentDesign, setContentDesign] = useState(window.innerWidth <= 900 ? 'contactColumnContent' : 'contactRowContent');
 
          
   window.addEventListener('resize', function(){
 
     // general card design
-    if (window.innerWidth <= 767 && contentDesign !== 'contactColumnContent'){
+    if (window.innerWidth <= 900 && contentDesign !== 'contactColumnContent'){
       setContentDesign('contactColumnContent');
     }
-    else if (window.innerWidth > 767 && contentDesign !== 'contactRowContent'){
+    else if (window.innerWidth > 900 && contentDesign !== 'contactRowContent'){
       setContentDesign('contactRowContent');
     }
 
@@ -34,44 +35,26 @@ function Contact() {
             <div className={contentDesign}>
 
               <div className="testTextContainer">
+
                 <p className="testTextTitle">Contact Us</p>
                 <p className="testTextSummary">Reach out to us with any questions or inquiries. We're here to help!</p>
+
                 <div className="test">
-                  <p className="testOne">Email support</p>
-                  <p className="testTwo">Email us and we'll get back to you within 24 hours</p>
                   <div className="testTextRow">
-                    <MdOutlineEmail size={20}/>
+                    <MdOutlineEmail size={25}/>
                     <p className="testTextRowTitle">info@toplaw.com</p>
                   </div>
                 </div>
                 <div className="test">
-                  <p className="testOne">Call us</p>
-                  <p className="testTwo">Give us a call and we'll get back to you</p>
                   <div className="testTextRow">
-                    <FiPhone size={20}/>
+                    <FiPhone size={25}/>
                     <p className="testTextRowTitle">+1 (123)-456-7890</p>
                   </div>
                 </div>
                 <div className="test">
-                  <p className="testOne">Toronto</p>
-                  <p className="testTwo">Visit our offices Mon - Fri from 9am-5pm</p>
                   <div className="testTextRow">
-                    <IoLocationOutline size={20}/>
-                    <p className="testTextRowTitle">624 White Alder Ave</p>
-                  </div>
-                </div>
-                <div className="blurbTestRow">
-                  <div className="blurbEntry">
-                    <p className="blurbTitle">Customer Support</p>
-                    <p className="blurbText">Our support team is available around the clock to address any questions or concerns you may have.</p>
-                  </div>
-                  <div className="blurbEntry">
-                    <p className="blurbTitle">Feedback & Suggestions</p>
-                    <p className="blurbText">We value your feedback and are continously working to improve. Your input is cruical in shaping our future.</p>
-                  </div>
-                  <div className="blurbEntry">
-                    <p className="blurbTitle">Media Inquires</p>
-                    <p className="blurbText">For media-related questions or press inquires, please contact us with your outlet and the subject matter.</p>
+                    <PiBuildingOffice size={25}/>
+                    <p className="testTextRowTitle">26 Soho St Unit 400, Toronto, ON M5T 1Z7</p>
                   </div>
                 </div>
               </div>
@@ -118,6 +101,7 @@ function Contact() {
               </div>
 
          </div>
+  
 
           </div>
 

@@ -45,9 +45,9 @@ function LandingPage() {
   }, [enabledAnimation]);
 
 
-  const messages = [['is a', 'quantitative trading', 'firm based in New York'], 
-                    ['is a', 'criminal defense', 'firm based in Toronto'],
-                    ['is a', 'computing company', 'based in Shanghai']]
+  const messages = [['is a', 'criminal defense', 'firm based in Toronto.'], 
+                    ['is', 'small enough to care,', 'but big enough to fight.'],
+                    ['will', 'answer your call.', 'Anytime. Anywhere.']]
 
 
   const LandingPageButton = () => {

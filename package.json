@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://nathanembaye.github.io/toplaw",
   "dependencies": {
+    "@govuk-react/footer": "^0.10.7",
     "clsx": "^2.1.1",
     "cra-template-typescript": "1.2.0",
     "lib-utils-ts": "^0.0.0-test",

@@ -67,13 +67,9 @@ function App() {
             </>
   }
 
-  //         {isMenuOpen ? <Navigation/> : <App/>}
-  // <div className={isMenuOpen ? "AppContainerForMenu" : "AppContainer"}>
   return (
     <>
       <LandingPage />
-      <Services />
-      <Team />
       <Contact />
       <LocateUs />
       <Footer />

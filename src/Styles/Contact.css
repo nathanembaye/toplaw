@@ -3,15 +3,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border-top-width: 0px;
-    border-left-width: 0.5px;
+    border-width: 0px;
     width: 75%;
     border-top-color: #d1d1d1;
     border-bottom-color: #d1d1d1;
     border-top-style: solid;
     border-bottom-style: solid;
     gap: 5px;
-    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .testOne {
@@ -56,7 +55,11 @@
     color: black;
     font-weight: 100;
     font-family: 'Source Sans Pro', sans-serif;
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
 }
+
 
 .testTextRow{
     display: flex;
@@ -75,7 +78,6 @@
     color: black;
     font-weight: 600;
     margin-bottom: 20px;
-
     border-width: 0px;
     border-color: green;
     border-style: solid;
@@ -94,9 +96,13 @@
 
 
 .testTextContainer {
-    height: 600px;
-    width: 700px;
+    height: auto;
+    width: 50vw;
     font-family: Switzer, sans-serif;
+
+    border-width: 0px;
+    border-color: red;
+    border-style: solid;
 }
 
 .contactColumnContent {
@@ -105,18 +111,27 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
+
+    border-width: 0px;
+    border-style: solid;
+    border-color: green;
 }
 
 .contactRowContent {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
+
+    border-width: 0px;
+    border-style: solid;
+    border-color: red;
 }
 
 .mapContainer {
 }
+
 
 .getInTouchButton {
     font-size: 15px;
@@ -300,7 +315,7 @@ textarea {
     justify-content: center;
     align-items: center;
     width: 500px;
-    height: 600px;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -327,13 +342,77 @@ textarea {
     background-color: white;
 }
 
+@media only screen and (max-width: 1200px) {
+    .testTextContainer {
+        width: 45vw;
+    }
+}
+
 @media only screen and (max-width: 1100px) {
+    .testTextContainer {
+        width: 40vw;
+    }
+    .testTextTitle {
+        font-size: 70px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
+    .testTextContainer {
+        width: 35vw;
+    }
+    .testTextTitle {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .testTextContainer {
+        width: 33vw;
+    }
+    .testTextTitle {
+        font-size: 55px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
+    .getInTouchHeader {
+        width: calc(85vw + 12.5px);
+    }
+    .getInTouchContainer {
+        width: 90vw;
+        height: auto;
+        align-items: flex-start;
+    }
+    .testTextContainer {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .testTextRowTitle {
+        width: 70vw;
+    }
+    .nameRow {
+        flex-direction: column;
+    }
+    .nameInput {
+        width: 85vw;
+    }
+    .emailInput {
+        width: 85vw;
+    }
+    .phoneInput {
+        width: 85vw;
+    }
+    .messageInput {
+        width: 85vw;
+    }
+    .getInTouchButton {
+        width: calc(85vw + 12.5px);
+    }
+    .contactContentContainer {
+        margin-bottom: 10vh;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -369,8 +448,24 @@ textarea {
     }
     .getInTouchContainer {
         width: 90vw;
-        height: 670px;
     }
+    .testTextContainer {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .testTextTitle {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .testTextSummary {
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .testTextRowTitle {
+        width: 70vw;
+    }
+
     .nameInput {
         width: 85vw;
     }
