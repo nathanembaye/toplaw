@@ -70,6 +70,7 @@ function AppTest() {
     <>
       <LandingPage />
       <Services/>
+      <Team/>
       <Contact />
       <LocateUs />
       <Footer />
