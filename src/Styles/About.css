@@ -23,6 +23,7 @@
     object-fit: cover;
     width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 .personInfo {
@@ -42,8 +43,16 @@
     margin-bottom: 10px;
 }
 
+.personContactText {
+}
+
 .personContactTextBold {
+    font-family: Switzer, sans-serif;
     margin-right: 5px;
+}
+
+.personName {
+    font-family: Switzer, sans-serif;
 }
 
 
