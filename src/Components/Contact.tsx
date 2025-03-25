@@ -42,13 +42,13 @@ function Contact() {
                 <div className="test">
                   <div className="testTextRow">
                     <MdOutlineEmail size={25}/>
-                    <p className="testTextRowTitle">info@toplaw.com</p>
+                    <a className="testTextRowTitle" href="mailto:info@toplaw.com">info@toplaw.com</a>
                   </div>
                 </div>
                 <div className="test">
                   <div className="testTextRow">
                     <FiPhone size={25}/>
-                    <p className="testTextRowTitle">+1 (123)-456-7890</p>
+                    <a className="testTextRowTitle" href="tel:(123)-456-7890">+1 (123)-456-7890</a>
                   </div>
                 </div>
                 <div className="test">

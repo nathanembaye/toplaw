@@ -7,7 +7,7 @@ import About from './About.tsx';
 function Main() {
   return (
     <div id="main" className="mainContainer">
-            <HashRouter basename={process.env.PUBLIC_URL}>
+            <HashRouter>
                 <Routes>
                     <Route path="/" element={<App />}/>
                     <Route path="/about" element={<About />}/>
