@@ -7,12 +7,7 @@ import About from './About.tsx';
 function Main() {
   return (
     <div id="main" className="mainContainer">
-            <HashRouter>
-                <Routes>
-                    <Route path="/" element={<App />}/>
-                    <Route path="/about" element={<About />}/>
-                </Routes>
-            </HashRouter>
+            <App/>
     </div>
   );
 }
