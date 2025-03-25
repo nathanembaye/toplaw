@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosClose } from "react-icons/io";
 import '../Styles/App.css';
-import Menu from './Menu.tsx';
 import LandingPage from './LandingPage.tsx';
 import Services from './Services.tsx';
 import Team from './Team.tsx';

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../Styles/Contact.css';
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
-import { IoLocationOutline } from "react-icons/io5";
 import { PiBuildingOffice } from "react-icons/pi";
 
 
@@ -42,19 +41,19 @@ function Contact() {
                 <div className="test">
                   <div className="testTextRow">
                     <MdOutlineEmail size={25}/>
-                    <a className="testTextRowTitle" href="mailto:info@toplaw.com">info@toplaw.com</a>
+                    <a className="testTextRowTitle" href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
                   </div>
                 </div>
                 <div className="test">
                   <div className="testTextRow">
                     <FiPhone size={25}/>
-                    <a className="testTextRowTitle" href="tel:(123)-456-7890">+1 (123)-456-7890</a>
+                    <a className="testTextRowTitle" href="tel:(647)-977-5354">+1 (647)-977-5354</a>
                   </div>
                 </div>
                 <div className="test">
                   <div className="testTextRow">
                     <PiBuildingOffice size={25}/>
-                    <p className="testTextRowTitle">26 Soho St Unit 400, Toronto, ON M5T 1Z7</p>
+                    <p className="testTextRowTitle">55 University Ave Suite No. 1100, Toronto, ON M5J 2H7</p>
                   </div>
                 </div>
               </div>

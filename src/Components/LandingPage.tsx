@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/LandingPage.css';
-//  'TopLaw is a criminal defense firm based in Toronto.',
-// 'TopLaw represents clients across all of Canada',
-// 'Toplaw specializes in all aspects of criminal law.',
 import Underline from '../Assets/underline.svg';
 function LandingPage() {
 
