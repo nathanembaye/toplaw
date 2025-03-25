@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/About.css';
 import Menu from './Menu.tsx';
+import Footer from './Footer.tsx';
 
 function About() {
 
