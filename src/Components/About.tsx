@@ -15,19 +15,22 @@ function About() {
               <div className="personInfo">
 
                   <div className="personName">
-                    <h1>GEORGE W. BUSH</h1>
+                    <h1>Tobias Okada Phillips</h1>
                   </div>
 
                   <div className="personContact">
-                    <p><b>OFFICE</b>: (333) 321-643, ext 444</p>
+                    <b className="personContactTextBold">OFFICE:</b>
+                    <a href="tel:(647)-977-53543">+1 (647)-977-53543</a>
                   </div>
 
                   <div className="personContact">
-                    <p className="personContactText"><b>COLLECT</b>: 1 (321) 431-6543</p>
+                  <b className="personContactTextBold">DIRECT:</b>
+                    <a className="personContactText" href="tel: (647)-915-9325">+1 (647)-915-9325</a>
                   </div>
 
                   <div className="personContact">
-                    <p personContactText><b>EMAIL</b>: NATHANEMBAYE@TOPLAW.COM</p>
+                    <b className="personContactTextBold">EMAIL:</b>
+                    <a className="personContactText" href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
                   </div>
 
                   <div className="personBio">

@@ -38,6 +38,14 @@
     font-size: 2.5vh;
 }
 
+.personContact {
+    margin-bottom: 10px;
+}
+
+.personContactTextBold {
+    margin-right: 5px;
+}
+
 
 
 /* Extra small devices (phones, 767px and down) */
