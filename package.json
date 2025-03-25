@@ -2,7 +2,7 @@
   "name": "top-law",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nathanembaye.github.io/toplaw",
+  "homepage": "http://nathanembaye.github.io",
   "dependencies": {
     "@govuk-react/footer": "^0.10.7",
     "clsx": "^2.1.1",
