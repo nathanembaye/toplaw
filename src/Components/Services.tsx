@@ -18,13 +18,13 @@ function Services() {
       return  <GoLaw size={30} color='black'/>
     }
     else if (type === '1'){
-      return  <PiGavel size={30} color='black'/>
+      return  <RiGovernmentLine size={30} color='black'/>
     }
     else if (type === '2') {
-      return  <GiPoliceOfficerHead size={30} color='black'/>
+      return  <PiGavel size={30} color='black'/>
     }
     else if (type === '3') {
-      return  <RiGovernmentLine size={30} color='black'/>
+      return  <GiPoliceOfficerHead size={30} color='black'/>
     }
     else if (type === '4') {
       return  <IoCar size={30} color='black'/>
@@ -36,13 +36,13 @@ function Services() {
 
   function getText(type: string){
     if (type === '0'){
-      return <p className="serviceItemTextHeader">Frauds or Mislead</p>
+      return <p className="serviceItemTextHeader">Consultations</p>
     } 
     else if (type === '1'){
-      return <p className="serviceItemTextHeader">Bailes & Warrants</p>
+      return <p className="serviceItemTextHeader">Bailes</p>
     }
     else if (type === '2') {
-      return <p className="serviceItemTextHeader">Federal Drug Crimes</p>
+      return <p className="serviceItemTextHeader">Criminal Trials</p>
     }
     else if (type === '3') {
       return <p className="serviceItemTextHeader">Traffic Related Crimes</p>
