@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6a0f189.css",
-    "main.js": "/static/js/main.dd520ebd.js",
+    "main.css": "/static/css/main.bf633166.css",
+    "main.js": "/static/js/main.bbf80a80.js",
+    "static/media/cheney.jpg": "/static/media/cheney.084c25865619a0be32d5.jpg",
     "static/media/judge.png": "/static/media/judge.4c6c4e879e786c4d625b.png",
+    "static/media/bush.jpg": "/static/media/bush.4196c7887fe2d9e77946.jpg",
     "static/media/underline.svg": "/static/media/underline.7d8eb74f70a26be7dd49bed6667880e8.svg",
     "index.html": "/index.html",
-    "main.d6a0f189.css.map": "/static/css/main.d6a0f189.css.map",
-    "main.dd520ebd.js.map": "/static/js/main.dd520ebd.js.map"
+    "main.bf633166.css.map": "/static/css/main.bf633166.css.map",
+    "main.bbf80a80.js.map": "/static/js/main.bbf80a80.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6a0f189.css",
-    "static/js/main.dd520ebd.js"
+    "static/css/main.bf633166.css",
+    "static/js/main.bbf80a80.js"
   ]
 }
