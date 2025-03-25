@@ -20,7 +20,6 @@ function Footer() {
 });
 
   return (
-      
       <footer>
         <div class="footer-container">
         
@@ -32,7 +31,6 @@ function Footer() {
           <p>&copy; 2025 TopLaw. All rights reserved.</p>
         </div>
       </footer>
- 
   );
 }
 

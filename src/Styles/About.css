@@ -7,7 +7,6 @@
     flex-direction: row;
     width: 100vw;
     height: auto;
-    top: 64px;
     justify-content: center;
     gap: 2%;
 }

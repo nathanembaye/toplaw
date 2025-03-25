@@ -55,8 +55,8 @@ function About() {
 
   return (
          <>
-        <Menu />
         <Person />
+        <Footer/>
         </>
   );
 }

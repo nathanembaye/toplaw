@@ -39,7 +39,7 @@ function Services() {
       return <p className="serviceItemTextHeader">Consultations</p>
     } 
     else if (type === '1'){
-      return <p className="serviceItemTextHeader">Bailes</p>
+      return <p className="serviceItemTextHeader">Bails</p>
     }
     else if (type === '2') {
       return <p className="serviceItemTextHeader">Criminal Trials</p>
