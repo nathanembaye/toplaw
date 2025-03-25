@@ -246,7 +246,7 @@
 .nameRow {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 20px;
     gap: 30px;
 }
 

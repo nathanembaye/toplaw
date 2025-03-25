@@ -62,7 +62,6 @@ function Contact() {
                 
                 <div className="getInTouchHeader">
                   <p className="getInTouchTitle">Get In Touch</p>
-                  <p className="getInTouchSummary">Hear what our experts have to say.</p>
                 </div>
      
 
