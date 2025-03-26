@@ -28,39 +28,22 @@ function Team() {
 
           <div className={userCardDesign}>
 
-
-            <div className="usersAcheivementsCards">
-              <div className="userAcheivment">
-                <p className="userAcheivmentValue">30+</p>
-                <p className="userAcheivmentTitle">YEARS OF EXPERIENCE</p>
-              </div>
-              <div className="userAcheivment">
-                <p className="userAcheivmentValue">5m+</p>
-                <p className="userAcheivmentTitle">IN BAIL MADE</p>
-              </div>
-              <div className="userAcheivment">
-                <p className="userAcheivmentValue">3k+</p>
-                <p className="userAcheivmentTitle">MINIMUM PENALTY VERDICTS</p>
-              </div>
-              <div className="userAcheivment">
-                <p className="userAcheivmentValue">91%</p>
-                <p className="userAcheivmentTitle">NON-GUILTY RATE</p>
-              </div>
-            </div>
-
-
             <div className="userCard">
               <img className="userCardImage"src={require('../Assets/bush.jpg')}/>
               <p className="userCardName">George W. Bush</p>
               <p className="userCardJobTitle">Criminal Defense Attorney</p>
-              <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read bio</a>
+              <div className="readBioButton">
+               <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read About George →</a>
+              </div>
             </div>
 
             <div className="userCard">
               <img className="userCardImage" src={require('../Assets/cheney.jpg')}/>
               <p className="userCardName">Vince Cheney</p>
               <p className="userCardJobTitle">Law Clerk</p>
-              <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read bio</a>
+              <div className="readBioButton">
+               <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read about Vince →</a>
+              </div>
             </div>
 
           </div>
