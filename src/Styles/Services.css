@@ -22,9 +22,6 @@
 }
 
 .servicesItemsContainer {
-    border-width: 0;
-    border-color: green;
-    border-style: solid;
     width: 100%;
     height: auto;
     display: flex;
@@ -129,6 +126,9 @@
     .servicesTextSummary { max-width: 75vw; }
 }
 @media only screen and (max-width: 480px) {
+    .servicesItemsContainer {
+        margin-bottom: 10vh;
+    }
     .servicesTextSummary { max-width: 80vw; }
 }
 
