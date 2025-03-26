@@ -11,111 +11,69 @@ import { CiViewTimeline } from "react-icons/ci";
 
 function Services() {
 
-  const [buttonDesign, setButtonDesign] = useState(window.innerWidth <= 767 ? 'servicesButtonsColumn' : 'servicesButtonsRow');
-
-  function getIcon(type: string){
-    if (type === '0'){
-      return  <GoLaw size={30} color='black'/>
-    }
-    else if (type === '1'){
-      return  <RiGovernmentLine size={30} color='black'/>
-    }
-    else if (type === '2') {
-      return  <PiGavel size={30} color='black'/>
-    }
-    else if (type === '3') {
-      return  <GiPoliceOfficerHead size={30} color='black'/>
-    }
-    else if (type === '4') {
-      return  <IoCar size={30} color='black'/>
-    }
-    else if (type === '5') {
-      return  <CiViewTimeline size={30} color='black'/>
+  function getServiceSummary(service_id: string) {
+    switch (service_id) {
+      case "0":
+        return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      case "1":
+        return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      case "2":
+        return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      case "3":
+          return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      case "4":
+        return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      default:
+        return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
     }
   }
 
-  function getText(type: string){
-    if (type === '0'){
-      return <p className="serviceItemTextHeader">Consultations</p>
-    } 
-    else if (type === '1'){
-      return <p className="serviceItemTextHeader">Bails</p>
-    }
-    else if (type === '2') {
-      return <p className="serviceItemTextHeader">Criminal Trials</p>
-    }
-    else if (type === '3') {
-      return <p className="serviceItemTextHeader">Traffic Related Crimes</p>
-    }
-    else if (type === '4') {
-      return <p className="serviceItemTextHeader">Family Law</p>
-    }
-    else if (type === '5') {
-      return <p className="serviceItemTextHeader">Business Law</p>
-    }
-    
+  function getIcon(type: string) {
+    const iconMap: Record<string, any> = {
+      "0": <GoLaw size={30} color="black" />,
+      "1": <RiGovernmentLine size={30} color="black" />,
+      "2": <PiGavel size={30} color="black" />,
+      "3": <GiPoliceOfficerHead size={30} color="black" />,
+      "4": <IoCar size={30} color="black" />,
+      "5": <CiViewTimeline size={30} color="black" />,
+    };
+  
+    return iconMap[type] || null;
   }
 
-       
-  window.addEventListener('resize', function(){
-      if (window.innerWidth <= 767 && buttonDesign !== 'servicesButtonsColumn'){
-        setButtonDesign('servicesButtonsColumn');
-      }
-      else if (window.innerWidth > 767 && buttonDesign !== 'servicesButtonsRow'){
-        setButtonDesign('servicesButtonsRow');
-      }
-  });
+  
+  function getText(type: string) {
+    const textMap: Record<string, string> = {
+      "0": "Consultations",
+      "1": "Bails",
+      "2": "Criminal Trials",
+      "3": "Traffic Related Crimes",
+      "4": "Family Law",
+      "5": "Business Law",
+    };
+  
+    return textMap[type] || "";
+  }
 
+  
   const ServiceItem = (index: string) => {
-    return <div className="serviceItemOuterContainer">
-              <div className="serviceItemTop">
-                <div className="serviceItemLogoContainer">
-                  {getIcon(index)}
-                </div>
-              </div>
-              <div className="serviceItemMiddle">
-                {getText(index)}
-              </div>
-              <div className="serviceItemBottom">
-                <p className="serviceItemTextDetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-              </div>
-              <div className="serviceItemFooter"/>
-          </div>
+    return           <div class="grid-item">
+                          <div class="circle">{getIcon(index)}</div>
+                          <h3 className="gridItemHeader">{getText(index)}</h3>
+                          <p className="gridItemText">{getServiceSummary(index)}</p>
+                        </div>
   }
 
-  /*
-
-         <div className={buttonDesign}>
-          <button className="servicesButton" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
-            <p className="servicesButtonText">Contact Us</p>
-          </button>
-          <button className="servicesButtonTwo" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: "smooth"})}>
-            <p className="servicesButtonTextTwo">Locate Us</p>
-          </button>
-        </div>
-
-  */
   return (
-    <div id="services" className="servicesContainer">
-
-      <div className="servicesItemsContainer">
-
-        <div className="servicesTextContainer">
-          <p className="servicesTextTitle">Our Services</p>
-          <p className="servicesTextSummary">Tailored solutions for your success, elevate your experience with our exceptional and comprehensive services today</p>
-        </div>
-
-        <div className="serviceItemsGridContainer">
-          {ServiceItem('0')}
-          {ServiceItem('1')}
-          {ServiceItem('2')}
-          {ServiceItem('3')}
-          {ServiceItem('4')}
-          {ServiceItem('5')}
-        </div>
-
+    <div class="servicesContainer">
+      <div class="grid-container">
+        {ServiceItem('0')}
+        {ServiceItem('1')}
+        {ServiceItem('2')}
+        {ServiceItem('3')}
+        {ServiceItem('4')}
+        {ServiceItem('5')}
       </div>
-
     </div>
   );
 }
