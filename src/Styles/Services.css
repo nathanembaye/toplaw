@@ -1,3 +1,40 @@
+.servicesTextTitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1vw;
+}
+
+.servicesTextSummary {
+    font-family: "Source Sans 3", sans-serif;
+    margin: 0;
+    font-size: 30px;
+    max-width: 40vw;
+}
+
+.servicesTextContainer {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicesItemsContainer {
+    border-width: 0;
+    border-color: green;
+    border-style: solid;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+}
+
 .servicesContainer {
     max-width: 100vw;
     min-height: 100vh;
@@ -32,7 +69,7 @@
     flex-grow: 1;
     text-align: left;
     position: relative;
-    gap: clamp(4px, 0.8vw, 8px); /* Increased gap slightly to match bigger text */
+    gap: clamp(4px, 0.8vw, 8px);
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -50,25 +87,51 @@
 .circle::before {
     content: "";
     display: block;
-    padding-top: 100%; /* Forces height to always be equal to width */
+    padding-top: 100%;
 }
 
-
 .gridItemHeader {
-    font-size: 22.5px; /* Fixed size */
+    font-size: 22.5px;
     font-weight: bold;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     text-align: left;
 }
 
 .gridItemText {
-    font-size: 15px; /* Fixed size */
+    font-size: 15px;
     width: 100%;
     text-align: left;
     margin-top: 2px;
 }
 
-/* Better responsiveness for different screen sizes */
+@media only screen and (max-width: 1100px) {
+    .servicesTextSummary { max-width: 45vw; }
+}
+@media only screen and (max-width: 1000px) {
+    .servicesTextSummary { max-width: 50vw; }
+}
+@media only screen and (max-width: 900px) {
+    .servicesTextSummary { max-width: 55vw; }
+}
+@media only screen and (max-width: 800px) {
+    .servicesTextSummary { max-width: 60vw; }
+}
+@media only screen and (max-width: 700px) {
+    .servicesTextSummary {
+        max-width: 65vw;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .servicesTextSummary { max-width: 70vw; }
+}
+@media only screen and (max-width: 500px) {
+    .servicesTextSummary { max-width: 75vw; }
+}
+@media only screen and (max-width: 480px) {
+    .servicesTextSummary { max-width: 80vw; }
+}
+
 @media (max-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(2, minmax(280px, 1fr));
@@ -94,7 +157,7 @@
     }
     .grid-item {
         width: 90%;
-        min-height: 300px; /* Decreased from 420px */
+        min-height: 300px;
         padding: 20px;
     }
 }

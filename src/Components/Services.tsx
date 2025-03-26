@@ -66,14 +66,25 @@ function Services() {
 
   return (
     <div class="servicesContainer">
-      <div class="grid-container">
-        {ServiceItem('0')}
-        {ServiceItem('1')}
-        {ServiceItem('2')}
-        {ServiceItem('3')}
-        {ServiceItem('4')}
-        {ServiceItem('5')}
+      <div className="servicesItemsContainer">
+
+        <div className="servicesTextContainer">
+          <p className="servicesTextTitle">Our Services</p>
+          <p className="servicesTextSummary">Tailored solutions for your success, elevate your experience with our exceptional and comprehensive services today</p>
+        </div>
+
+        <div class="grid-container">
+          {ServiceItem('0')}
+          {ServiceItem('1')}
+          {ServiceItem('2')}
+          {ServiceItem('3')}
+          {ServiceItem('4')}
+          {ServiceItem('5')}
+        </div>
+
+
       </div>
+
     </div>
   );
 }
