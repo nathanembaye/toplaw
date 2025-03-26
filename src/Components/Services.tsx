@@ -47,7 +47,7 @@ function Services() {
       "0": "Consultations",
       "1": "Bails",
       "2": "Criminal Trials",
-      "3": "Traffic Related Crimes",
+      "3": "Traffic Crimes",
       "4": "Family Law",
       "5": "Business Law",
     };

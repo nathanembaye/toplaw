@@ -44,6 +44,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: auto;
 }
 
 .circle::before {
@@ -51,7 +52,6 @@
     display: block;
     padding-top: 100%; /* Forces height to always be equal to width */
 }
-
 
 
 .gridItemHeader {
