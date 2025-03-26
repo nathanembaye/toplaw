@@ -127,7 +127,7 @@
 }
 @media only screen and (max-width: 480px) {
     .servicesItemsContainer {
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
     }
     .servicesTextSummary { max-width: 80vw; }
 }
