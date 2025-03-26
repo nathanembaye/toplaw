@@ -9,13 +9,13 @@
     border-color: black;
     border-style: solid;
     align-self: flex-start;
-    padding-top: 5px;
+    padding-top: 4px;
     padding-left: 6px;
     padding-right: 6px;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     min-width: 90px;
     min-height: 25px;
-    border-radius: 12.5px;
+    border-radius: 5px;
 }
 
 .readBioButton:hover {
@@ -75,11 +75,11 @@
 }
 
 .userLink {
-    text-decoration: none;
+    text-decoration: underline;
     margin: 0px;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Source Sans Pro', sans-serif;
-    align-self: center;
+    align-self: flex-start;
 }
 
 a, a:visited, a:hover, a:active {

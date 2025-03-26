@@ -32,18 +32,14 @@ function Team() {
               <img className="userCardImage"src={require('../Assets/bush.jpg')}/>
               <p className="userCardName">George W. Bush</p>
               <p className="userCardJobTitle">Criminal Defense Attorney</p>
-              <div className="readBioButton">
-               <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read About George →</a>
-              </div>
+               <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read bio</a>
             </div>
 
             <div className="userCard">
               <img className="userCardImage" src={require('../Assets/cheney.jpg')}/>
               <p className="userCardName">Vince Cheney</p>
               <p className="userCardJobTitle">Law Clerk</p>
-              <div className="readBioButton">
-               <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read about Vince →</a>
-              </div>
+               <a className="userLink" href={"#" + process.env.PUBLIC_URL + "/about"}>Read bio</a>
             </div>
 
           </div>
