@@ -1,3 +1,11 @@
+.emailSent {
+    width: 462px;
+    height: 100%;
+}
+.emailSentText {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .test {
     display: flex;
     flex-direction: column;

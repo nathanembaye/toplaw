@@ -7,6 +7,7 @@
     "@govuk-react/footer": "^0.10.7",
     "clsx": "^2.1.1",
     "cra-template-typescript": "1.2.0",
+    "emailjs-com": "^3.2.0",
     "lib-utils-ts": "^0.0.0-test",
     "motion": "^12.4.10",
     "react": "^19.0.0",
