@@ -105,20 +105,20 @@ function Contact() {
     e.preventDefault()
     if (validateForm()) {
       setEmailSent(true);
-       /*
-    emailjs
-      .sendForm(
-        'service_lppu577', 'template_v5ciqyd', e.target, '_C31_bPVMJZ8EznL_'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
-        */
+       
+      emailjs
+        .sendForm(
+          'service_tcsszs4', 'template_v5ciqyd', e.target, '_C31_bPVMJZ8EznL_'
+        )
+        .then(
+          (result) => {
+            console.log(result.text)
+          },
+          (error) => {
+            console.log(error.text)
+          }
+        )
+
     }
    
   }
