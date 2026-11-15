@@ -21,6 +21,114 @@
   background-color: rgb(255, 255, 255);
 }
 
+.homeSectionMenu {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 44px);
+  padding: 14px 24px;
+  background-color: #152621;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+
+.homeSectionMenu--visible {
+  visibility: visible;
+  pointer-events: auto;
+  animation: homeSectionMenuFadeIn 300ms ease-out both;
+}
+
+.homeSectionMenu--hidden {
+  animation: homeSectionMenuFadeOut 250ms ease-in both;
+}
+
+@keyframes homeSectionMenuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes homeSectionMenuFadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeSectionMenu--visible,
+  .homeSectionMenu--hidden {
+    animation: none;
+  }
+
+  .homeSectionMenu--visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  .homeSectionMenu--hidden {
+    opacity: 0;
+    transform: none;
+    visibility: hidden;
+  }
+}
+
+.homeSectionMenu button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #F2F1ED;
+  cursor: pointer;
+  font: 300 14px 'Jost', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.homeSectionMenu button:hover,
+.homeSectionMenu button:focus-visible {
+  color: #dccbb3;
+}
+
+.homeSectionMenu button.homeSectionMenuActive {
+  color: #dccbb3;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .homeSectionMenu {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 12px 8px;
+    overflow: hidden;
+  }
+
+  .homeSectionMenu button {
+    font-size: clamp(9px, 3vw, 12px);
+    letter-spacing: 0;
+  }
+}
+
 
 
 .NavigationTop {
@@ -90,3 +198,4 @@
   bottom: 64px;
   cursor: pointer;
 }
+

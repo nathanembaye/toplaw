@@ -7,6 +7,11 @@ import Team from './Team.tsx';
 import Contact from './Contact.tsx';
 import Footer from './Footer.tsx'
 import LocateUs from './LocateUs.tsx';
+import Cases from './Cases.tsx';
+import About from './About.tsx';
+import Motto from './Motto.tsx';
+import Media from './Media.tsx';
+import Home from './Home.tsx';
 
 function AppTest() {
 
@@ -68,11 +73,13 @@ function AppTest() {
 
   return (
     <>
-      <LandingPage />
+      <Home/>
+      <Motto/>
       <Services/>
-      <Team/>
+      <Cases/>
+      <About/>
       <Contact />
-      <LocateUs />
+      <Media />
       <Footer />
     </>
   );

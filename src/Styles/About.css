@@ -1,117 +1,205 @@
-.personContainer {
-    background-color: white;
-    padding-top: 10%;
-    padding-bottom: 10%;
+
+.aboutContainer {
+    background-color: #152621;
+    min-height: 100vh;
+    max-width: 100vw;
+
     display: flex;
-    position: relative;
-    flex-direction: row;
-    width: 100vw;
-    height: auto;
     justify-content: center;
-    gap: 2%;
+    align-items: center;
 }
 
-.personImageContainer {
-    width: 40vw;
-    height: auto;
-    border-width: 0px;
-    border-style: solid;
-    border-color: red;
+.aboutLayout {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 0;
+    padding: 64px clamp(24px, 8vw, 120px);
+    width: min(1200px, 100%);
+
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 650px;
+    width: 100%;
+    transform: translateX(-40px);
+
+}
+
+.aboutHeading {
+    position: relative;
+    left: 40px;
+    z-index: 2;
+
+}
+
+.aboutImageWrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.aboutTitle {
+    position: relative;
+    margin: 0 -220px 0 0;
+  font-family: 'Nanum Myeongjo', serif;
+  
+
+    color: white;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1.1;
+    width: calc(100% + 220px);
+    max-width: 900px;
+    pointer-events: none;
+
+}
+
+.aboutSubtitle {
+    width: 80%;
+    margin: 12px 0 0;
+    color: #dccbb3;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+
 }
 
 .personImage {
+    width: 25vw;
+    min-width: 310px;
+    height: 60vh;
+    min-height: 360px;
     object-fit: cover;
+    object-position: center;
+    display: block;
+
+}
+
+.aboutBlurb {
+    font-weight: 300;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: clamp(16px, 1.5vw, 20px);
+    color: white;
+    text-align: left;
+    line-height: 130%;
+    margin: 0;
     width: 100%;
-    height: auto;
-    border-radius: 0px;
+
 }
 
-.personInfo {
-    width: 45vw;
-    height: auto;
-    border-width: 0px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
+.aboutBlurb1 {
+    display: none;
+
 }
 
+.aboutBlurb2 {
+    display: none;
 
-.personBioText {
-    font-size: 2.5vh;
 }
 
-.personContact {
-    margin-bottom: 10px;
+.aboutLink {
+    margin-top: 30px;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    color: #dccbb3;
+    text-decoration: underline;
+
 }
 
-.personContactText {
+.aboutLink:hover {
+    color: #dccbb3;
 }
 
-.personContactTextBold {
-    font-family: Switzer, sans-serif;
-    margin-right: 5px;
-}
-
-.personName {
-    font-family: Switzer, sans-serif;
-}
-
-
-
-/* Extra small devices (phones, 767px and down) */
-@media only screen and (max-width: 767px) {
-
-    .personInfo {
-        width: auto;
-        height: auto;
-        border-width: 0px;
-        border-color: rgb(255, 255, 255);
-        border-style: solid;
+@media (max-width: 1018px) {
+    .aboutContainer {
+        align-items: flex-start;
     }
-    
 
-    .personContainer {
-        flex-direction: column;
-        gap: 0%;
+    .aboutLayout {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 48px 24px;
+        max-width: 640px;
+        box-sizing: border-box;
+        margin-inline: auto;
+    }
+
+    .aboutTitle {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(36px, 10vw, 58px);
+        text-align: left;
+    }
+
+    .aboutSubtitle {
+        width: 100%;
+        margin: 12px 0 0;
+        text-align: left;
+    }
+
+    .aboutHeading {
+        left: 0;
+        margin-bottom: 30px;
+    }
+
+    .aboutContent {
+        max-width: none;
         align-items: center;
+        transform: none;
     }
 
-    .personImageContainer {
-        width: 90vw;
-        height: auto;
-        border-width: 0px;
-        border-style: solid;
-        border-color: red;
+    .aboutImageWrapper {
+        display: flex;
+        justify-content: center;
     }
 
     .personImage {
-        object-fit: cover;
         width: 100%;
-        height: 100%;
+        min-width: 0;
+        height: 52vh;
+        margin-inline: auto;
+        object-position: center center;
     }
 
-    .personName {
-        width: 90vw;
-        height: auto;
-        margin-top: 5%;
+    .aboutBlurb {
+        text-align: center;
     }
 
-    .personContact {
-        width: 90vw;
-        height: auto;
+    .aboutBlurb1 {
+        text-align: left;
     }
 
-    .personContactText{
-        margin: 0.5%;
+    .aboutBlurb2 {
+        text-align: left;
     }
 
-    .personBio {
-        width: 90vw;
-        height: auto;
-        margin-top: 5%;
+    .aboutBlurb1,
+    .aboutBlurb2 {
+        display: block;
     }
 
-    .personBioText {
-        font-size: 16px;
+    .aboutBlurb1 {
+        margin-bottom: 30px;
     }
 
+    .aboutContent > .aboutBlurb:not(.aboutBlurb1):not(.aboutBlurb2) {
+        display: none;
+    }
+
+    .aboutLink {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 690px) {
+    .personImage {
+        height: min(80vh, calc(52vh - 30vw + 207px));
+    }
 }

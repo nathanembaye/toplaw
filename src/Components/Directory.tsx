@@ -1,0 +1,89 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { cases } from './Cases.tsx';
+import '../Styles/Directory.css';
+
+function Directory() {
+  const [minusRows, setMinusRows] = useState<number[]>([]);
+  const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      setHasEnteredViewport(true);
+      observer.disconnect();
+    }, { threshold: 0.15 });
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleRow = (index: number) => {
+    setMinusRows((rows) => rows.includes(index)
+      ? rows.filter((row) => row !== index)
+      : [...rows, index]
+    );
+  };
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`directoryContainer${hasEnteredViewport ? ' directoryContainer--visible' : ''}`}
+    >
+      <div className="directoryContent">
+        <p className="directoryIntro">
+          Mr. Okada-Phillips has gained the respect of Crown’s and Judge’s alike. He has separated himself from his peers through his winning record. For instance, Mr. Okada-Phillips has secured the following results:
+        </p>
+        <h2 className="directorySectionLabel">CASE WORK</h2>
+        <table className="directoryTable">
+          <thead>
+            <tr>
+              <th scope="col">Case</th>
+              <th scope="col">Citation</th>
+              <th scope="col">CanLii</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cases.map((caseItem, index) => (
+              <React.Fragment key={caseItem.name}>
+                <tr
+                  tabIndex={0}
+                  onClick={() => toggleRow(index)}
+                  onKeyDown={(event) => {
+                    if (event.target instanceof HTMLElement && event.target.closest('a')) return;
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      toggleRow(index);
+                    }
+                  }}
+                >
+                  <td>{caseItem.name}</td>
+                  <td>{caseItem.citation}</td>
+                  <td>
+                    <a
+                      href={caseItem.pdfUrl}
+                      aria-label={`Open ${caseItem.name} PDF`}
+                      onClick={(event) => event.stopPropagation()}
+                    >
+                      ↗
+                    </a>
+                  </td>
+                </tr>
+                {minusRows.includes(index) && (
+                  <tr className="directoryExpandedRow">
+                    <td colSpan={3}>{caseItem.description}</td>
+                  </tr>
+                )}
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
+export default Directory;

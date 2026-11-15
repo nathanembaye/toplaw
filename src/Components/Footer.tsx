@@ -24,11 +24,13 @@ function Footer() {
         <div class="footer-container">
         
           <div class="footer-section logo">
-            <img src={require('../Assets/judge.png')} alt="Company Logo" class="logo-img"/>
+            <svg className="footerCube" viewBox="0 0 131 111" role="img" aria-label="Geometric cube outline">
+              <path d="M71.4622 55.5L34.063 110M71.4622 55.5L34.063 1M71.4622 55.5L130 55.5M34.063 110L1 55.5L34.063 1M34.063 110L91.5168 108.365L130 55.5M34.063 1L92.0588 1L130 55.5" />
+            </svg>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 TopLaw. All rights reserved.</p>
+          <p>&copy; 2025 TOP LAW CRIMINAL DEFENSE. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
   );

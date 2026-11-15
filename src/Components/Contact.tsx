@@ -134,7 +134,7 @@ function Contact() {
               <div className="testTextContainer">
 
                 <p className="testTextTitle">Contact Us</p>
-                <p className="testTextSummary">Reach out to us with any questions or inquiries. We're here to help!</p>
+                <p className="testTextSummary">Reach out to us with any questions or inquiries. We're here to help.</p>
 
                 <div className="test">
                   <div className="testTextRow">
@@ -151,7 +151,7 @@ function Contact() {
                 <div className="test">
                   <div className="testTextRow">
                     <PiBuildingOffice size={25}/>
-                    <p className="testTextRowTitle">55 University Ave Suite No. 1100, Toronto, ON M5J 2H7</p>
+                    <p className="testTextRowTitle">439 University Ave Suite No. 1200, Toronto, ON M5G 1Y8</p>
                   </div>
                 </div>
               </div>

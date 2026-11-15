@@ -1,7 +1,7 @@
 footer {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #e1e1e1;
-    color: black;
+    background-color: #101c18;
+    color: #dccbb3;
     padding: 20px 0;
     display: flex;
     flex-direction: column;
@@ -25,6 +25,18 @@ footer {
     width: 200px;
     height: auto;
     margin-bottom: -40px;
+  }
+
+  .footerCube {
+    display: block;
+    width: 120px;
+    height: auto;
+    fill: none;
+    stroke: rgba(242, 241, 237, 0.5);
+    stroke-width: 0.5px;
+    vector-effect: non-scaling-stroke;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
   
   .footer-bottom {

@@ -1,0 +1,70 @@
+.valuesContainer {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #152621;
+    outline: 1px solid red;
+}
+
+.valuesContainer * {
+    outline: 1px solid red;
+}
+
+.valuesContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    background-color: #F2F1ED;
+    opacity: 0.5;
+    transform: translateX(-50%);
+    outline: 1px solid red;
+}
+
+.valuesLineLabel {
+    position: absolute;
+    top: calc(5% + 12px);
+    left: 10%;
+    color: #dccbb3;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: 300;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.valuesIdeas {
+    position: absolute;
+    top: calc(5% + 50px);
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.valuesSecondaryLabel {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    height: max-content;
+    color: #F2F1ED;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: min(15.3vw, 22vh, 204px);
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 100ms linear;
+}
+
+.valuesSecondaryLabel:nth-child(1),
+.valuesSecondaryLabel:nth-child(3) {
+    justify-content: flex-start;
+}
+
+.valuesSecondaryLabel:nth-child(2) {
+    justify-content: flex-end;
+}

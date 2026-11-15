@@ -1,0 +1,77 @@
+.homeContainer {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #152621;
+}
+
+.homeTitle {
+    position: absolute;
+    top: 4%;
+    left: clamp(24px, 6vw, 80px);
+    margin: 0;
+    color: #dccbb3;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+    font-size: clamp(40px, 5.5vw, 88px);
+    line-height: 1.1;
+    text-align: left;
+}
+
+.homeSubtitle {
+    position: absolute;
+    top: calc(4% + clamp(60px, 7.5vw, 125px));
+    left: clamp(24px, 6vw, 80px);
+    margin: 0;
+    color: #F2F1ED;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    line-height: 1.3;
+}
+
+.homeContainer::before {
+    content: '';
+    position: absolute;
+    top: 2.5%;
+    bottom: 2.5%;
+    right: 30%;
+    width: 0.5px;
+    background-color: #F2F1ED;
+    opacity: 0.5;
+}
+
+.homeCube {
+    position: absolute;
+    bottom: 2.5%;
+    left: 70%;
+    right: 0;
+    display: block;
+    width: clamp(120px, 12vw, 192px);
+    height: auto;
+    margin-inline: auto;
+    fill: none;
+    stroke: rgba(242, 241, 237, 0.5);
+    stroke-width: 0.5px;
+    vector-effect: non-scaling-stroke;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: homeCubeBounce 2.7s ease-in-out infinite;
+}
+
+@keyframes homeCubeBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-21px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .homeCube {
+        animation: none;
+    }
+}
+

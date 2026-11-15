@@ -82,13 +82,6 @@
     align-self: flex-start;
 }
 
-a, a:visited, a:hover, a:active {
-    color: black;
-}
-
-
-
-
 .teamContainer {
     max-width: 100vw;
     height: auto;

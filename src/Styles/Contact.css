@@ -3,7 +3,7 @@
     height: 100%;
 }
 .emailSentText {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 .test {
@@ -30,7 +30,7 @@
     margin: 0px;
     font-size: 15px;
     color: gray;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 .blurbTitle {
     margin: 0px;
@@ -40,7 +40,7 @@
 
 .blurbText {
     margin: 0px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 
 }
 
@@ -60,9 +60,9 @@
 .testTextRowTitle{
     margin: 0px;
     font-size: 15px;
-    color: black;
+    color: #F2F1ED;
     font-weight: 100;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
     border-width: 0px;
     border-color: red;
     border-style: solid;
@@ -82,9 +82,11 @@
 
 .testTextTitle {
     margin: 0px;
-    font-size: 80px;
-    color: black;
-    font-weight: 600;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: clamp(36px, 5vw, 72px);
+    color: #F2F1ED;
+    font-weight: 300;
+    line-height: 1.1;
     margin-bottom: 20px;
     border-width: 0px;
     border-color: green;
@@ -93,20 +95,28 @@
 
 .testTextSummary {
     margin: 0px;
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #F2F1ED;
+    font-weight: 300;
+    line-height: 1.5;
     margin-bottom: 40px;
     border-width: 0px;
     border-color: blue;
     border-style: solid;
 }
 
+@media only screen and (max-width: 1018px) {
+    .testTextTitle {
+        font-size: clamp(36px, 10vw, 58px);
+    }
+}
+
 
 .testTextContainer {
     height: auto;
     width: 50vw;
-    font-family: Switzer, sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 
     border-width: 0px;
     border-color: red;
@@ -146,18 +156,30 @@
     margin-top: 20px;
     width: 462px;
     height: 50px;
-    background-color: black;
+    background-color: #101c18;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     border-width: 1px;
-    border-color: black;
+    border-color: #dccbb3;
     border-style: solid;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
+    color: #dccbb3;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+@media (hover: hover) {
+    .getInTouchButton:hover {
+        background-color: #dccbb3;
+        color: #152621;
+    }
+}
+
+.getInTouchButton:focus-visible {
+    background-color: #dccbb3;
+    color: #152621;
 }
 
 
@@ -168,7 +190,7 @@
 .messageText {
     margin: 0px;
     margin-bottom: 3px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 
@@ -189,7 +211,7 @@
 .phoneText {
     margin: 0px;
     margin-bottom: 3px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 
@@ -210,7 +232,7 @@
 .emailText {
     margin: 0px;
     margin-bottom: 3px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 
@@ -235,6 +257,22 @@
     padding: 5px;
 }
 
+.nameInput,
+.emailInput,
+.phoneInput,
+.messageInput {
+    background-color: #101c18;
+    border-color: #dccbb3;
+    border-radius: 10px;
+    color: #dccbb3;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+.contactContainer input::placeholder,
+.contactContainer textarea::placeholder {
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
 .getInTouchHeader {
     display: flex;
     flex-direction: column;
@@ -242,13 +280,13 @@
 }
 
 ::placeholder {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 .nameText {
     margin: 0px;
     margin-bottom: 3px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 .nameRow {
@@ -259,13 +297,13 @@
 }
 
 input {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
     background-color: #f4f4f5;
 }
 
 textarea {
     resize: none;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
     background-color: #f4f4f5;
 }
 
@@ -283,6 +321,13 @@ textarea {
         border-style: solid;
         transition: border-color 0.5s ease; 
     }
+}
+
+.nameInput:hover,
+.emailInput:hover,
+.phoneInput:hover,
+.messageInput:hover {
+    border-color: #dccbb3;
 }
 
 /* Extra small devices (phones, 400px and down) */
@@ -303,15 +348,16 @@ textarea {
 }
 
 .getInTouchSummary {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
     margin: 0px;
     font-size: 18px;
     font-weight: 100;
 }
 .getInTouchTitle {
-    font-family: Switzer, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: clamp(36px, 5vw, 72px);
+    line-height: 1.1;
     margin: 0px;
 }
 
@@ -347,7 +393,16 @@ textarea {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: white;
+    background-color: #152621;
+    color: #F2F1ED;
+}
+
+.testTextRow a.testTextRowTitle {
+    color: #dccbb3;
+}
+
+.testTextRow p.testTextRowTitle {
+    color: #dccbb3;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -360,7 +415,8 @@ textarea {
     .testTextContainer {
         width: 40vw;
     }
-    .testTextTitle {
+    .testTextTitle,
+    .getInTouchTitle {
         font-size: 70px;
     }
 }
@@ -369,7 +425,8 @@ textarea {
     .testTextContainer {
         width: 35vw;
     }
-    .testTextTitle {
+    .testTextTitle,
+    .getInTouchTitle {
         font-size: 60px;
     }
 }
@@ -378,7 +435,8 @@ textarea {
     .testTextContainer {
         width: 33vw;
     }
-    .testTextTitle {
+    .testTextTitle,
+    .getInTouchTitle {
         font-size: 55px;
     }
 }
@@ -462,7 +520,8 @@ textarea {
         flex-direction: column;
         width: 90vw;
     }
-    .testTextTitle {
+    .testTextTitle,
+    .getInTouchTitle {
         font-size: 40px;
         margin-bottom: 10px;
     }
@@ -488,5 +547,12 @@ textarea {
     }
     .getInTouchButton {
         width: calc(85vw + 12.5px);
+    }
+}
+
+@media only screen and (max-width: 1018px) {
+    .testTextTitle,
+    .getInTouchTitle {
+        font-size: clamp(36px, 10vw, 58px);
     }
 }
