@@ -27,8 +27,7 @@ practice with a large, well-known criminal defence firm.
 
   const blurb2 = (
     <p className="aboutBlurb aboutBlurb2">
-      In 2019, he returned home to Toronto to
-practice with a large, well-known criminal defence firm. He has conducted hundreds of bail
+      He has conducted hundreds of bail
 hearings and hundreds of trials, securing full acquittals before both judges and juries. He has
 represented clients on virtually every charge under the Criminal Code and Controlled Drugs
 and Substances Act. He understands how judges and juries think. He uses that judgement to
