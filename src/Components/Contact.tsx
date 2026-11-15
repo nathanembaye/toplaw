@@ -145,7 +145,7 @@ function Contact() {
                 <div className="test">
                   <div className="testTextRow">
                     <FiPhone size={25}/>
-                    <a className="testTextRowTitle" href="tel:(647)-977-5354">+1 (647)-977-5354</a>
+                    <a className="testTextRowTitle" href="tel:(647) 915-9325">(647) 915-9325</a>
                   </div>
                 </div>
                 <div className="test">

@@ -73,7 +73,7 @@
 
 .tobiasContact a {
     color: #dccbb3;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .tobiasBlurb {
