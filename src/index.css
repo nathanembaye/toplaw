@@ -2,11 +2,18 @@ body {
   margin: 0px; 
   width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: #152621;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
-html,
+html {
+  height: 100%;
+  background-color: #152621;
+  overscroll-behavior-y: none;
+}
+
 #root {
   min-height: 100%;
   background-color: #152621;
