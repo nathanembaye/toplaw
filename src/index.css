@@ -1,11 +1,13 @@
 body {
   margin: 0px; 
   width: 100vw;
-  height: 100vh;
-  background-color: #e1e1e1;
+  min-height: 100vh;
+  background-color: #152621;
   overflow-x: hidden;
 }
 
-html {
-  background-color: #e1e1e1;
+html,
+#root {
+  min-height: 100%;
+  background-color: #152621;
 }

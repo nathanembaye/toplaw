@@ -68,7 +68,9 @@ function Directory() {
                       aria-label={`Open ${caseItem.name} PDF`}
                       onClick={(event) => event.stopPropagation()}
                     >
-                      ↗
+                      <svg className="directoryLinkArrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                        <path d="M4 12 12 4M5 4h7v7" />
+                      </svg>
                     </a>
                   </td>
                 </tr>

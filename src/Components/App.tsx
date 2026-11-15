@@ -26,6 +26,7 @@ const pageSections = [
 
 function App() {
   const [showSectionMenu, setShowSectionMenu] = useState(false);
+  const [hasShownSectionMenu, setHasShownSectionMenu] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
@@ -45,7 +46,11 @@ function App() {
     if (!homeSection) return;
 
     const observer = new IntersectionObserver(([entry]) => {
-      setShowSectionMenu(entry.intersectionRatio <= 0.5);
+      const shouldShowMenu = entry.intersectionRatio <= 0.5;
+      if (shouldShowMenu) {
+        setHasShownSectionMenu(true);
+      }
+      setShowSectionMenu(shouldShowMenu);
     }, { threshold: [0, 0.5, 1] });
 
     observer.observe(homeSection);
@@ -84,7 +89,7 @@ function App() {
   return (
     <>
       <nav
-        className={`homeSectionMenu${showSectionMenu ? ' homeSectionMenu--visible' : ' homeSectionMenu--hidden'}`}
+        className={`homeSectionMenu${showSectionMenu ? ' homeSectionMenu--visible' : hasShownSectionMenu ? ' homeSectionMenu--hidden' : ''}`}
         aria-label="Page sections"
         aria-hidden={!showSectionMenu}
         inert={!showSectionMenu}
