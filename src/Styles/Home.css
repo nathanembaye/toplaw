@@ -40,6 +40,15 @@
     width: 0.5px;
     background-color: #F2F1ED;
     opacity: 0.5;
+    transform: scaleY(0);
+    transform-origin: top center;
+    animation: homeDividerDraw 1.2s ease-out forwards;
+}
+
+@keyframes homeDividerDraw {
+    to {
+        transform: scaleY(1);
+    }
 }
 
 .homeCube {
@@ -71,6 +80,11 @@
 
 @media (prefers-reduced-motion: reduce) {
     .homeCube {
+        animation: none;
+    }
+
+    .homeContainer::before {
+        transform: scaleY(1);
         animation: none;
     }
 }

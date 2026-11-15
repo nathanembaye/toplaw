@@ -16,7 +16,7 @@ import LocateUs from './LocateUs.tsx';
 
 const pageSections = [
   ['home', 'Home'],
-  ['motto', 'Motto'],
+  ['motto', 'Values'],
   ['services', 'Services'],
   ['cases', 'Cases'],
   ['about', 'About'],
