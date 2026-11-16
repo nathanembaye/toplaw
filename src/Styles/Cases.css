@@ -255,6 +255,8 @@
 @media (max-width: 632px) {
     .casesHeading {
         width: calc(100% - clamp(48px, 12vw, 160px));
+        justify-self: start;
+        margin-left: clamp(24px, 6vw, 80px);
     }
 
     .casesPeriodHeader {
