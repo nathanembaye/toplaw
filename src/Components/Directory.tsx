@@ -37,7 +37,7 @@ function Directory() {
         <p className="directoryIntro">
           Mr. Okada-Phillips has gained the respect of Crown’s and Judge’s alike. He has separated himself from his peers through his winning record. For instance, Mr. Okada-Phillips has secured the following results:
         </p>
-        <h2 className="directorySectionLabel">CASE WORK</h2>
+        <h2 className="directorySectionLabel">NOTABLE CASES</h2>
         <table className="directoryTable">
           <thead>
             <tr>

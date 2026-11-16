@@ -7,7 +7,7 @@ function Tobias() {
       <div className="tobiasSquare">
         <div className="tobiasCopy">
           <h1 className="tobiasHeading">Tobias Okada-Phillips</h1>
-          <p className="tobiasRole">Lead Counsel</p>
+          <p className="tobiasRole">Founding Partner</p>
           <div className="tobiasContact">
             <a href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
             <a href="tel:+16479155325">(647) 915-9325</a>

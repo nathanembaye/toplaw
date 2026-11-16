@@ -148,7 +148,14 @@ function Contact() {
                 <div className="test">
                   <div className="testTextRow">
                     <span className="testTextRowLabel">OFFICE</span>
-                    <p className="testTextRowTitle">439 University Ave Suite No. 1200, Toronto, ON M5G 1Y8</p>
+                    <a
+                      className="testTextRowTitle"
+                      href="https://www.google.com/maps/search/?api=1&query=439+University+Ave+Suite+No.+1200%2C+Toronto%2C+ON+M5G+1Y8"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      439 University Ave Suite No. 1200, Toronto, ON M5G 1Y8
+                    </a>
                   </div>
                 </div>
               </div>
