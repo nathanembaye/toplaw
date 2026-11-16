@@ -122,6 +122,12 @@
 }
 
 @media (max-width: 632px) {
+    .servicesTextTitle {
+        justify-self: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
     .servicesList {
         grid-template-columns: minmax(0, 1fr);
         row-gap: 28px;
