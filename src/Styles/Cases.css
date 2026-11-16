@@ -254,9 +254,14 @@
 
 @media (max-width: 632px) {
     .casesHeading {
-        width: calc(100% - clamp(48px, 12vw, 160px));
-        justify-self: start;
-        margin-left: clamp(24px, 6vw, 80px);
+        width: 100%;
+        justify-self: stretch;
+        margin-left: 0;
+        padding-left: clamp(24px, 6vw, 80px);
+    }
+
+    .casesHeader {
+        text-indent: -0.04em;
     }
 
     .casesPeriodHeader {
@@ -299,5 +304,4 @@
         height: 9px;
     }
 }
-
 
