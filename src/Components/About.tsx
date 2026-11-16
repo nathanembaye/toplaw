@@ -41,7 +41,7 @@ get the best possible result for every client.
         <div className="aboutHeading">
           <h1 className="aboutTitle">About TOP Law Criminal Defence</h1>
           <p className="aboutSubtitle">
-            A CRIMINAL DEFENSE FIRM WITH PROVEN RESULTS
+            We provide strategic defence when it matters most
           </p>
         </div>
         <div className="aboutContent">
@@ -62,7 +62,10 @@ get the best possible result for every client.
             className="aboutLink"
             href="#/tobias"
           >
-            LEARN MORE
+            <span className="aboutLinkText">MEET TOBIAS</span>
+            <svg className="aboutLinkArrow" viewBox="0 0 18 16" aria-hidden="true" focusable="false">
+              <path d="M2 8h13m0 0-6-6m6 6-6 6" />
+            </svg>
           </a>
         </div>
       </div>

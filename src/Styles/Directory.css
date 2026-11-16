@@ -38,6 +38,13 @@
         transform: translateX(-50%) scaleY(1);
         animation: none;
     }
+
+    .directoryIntro,
+    .directorySectionLabel {
+        opacity: 1;
+        transform: translateY(-50%);
+        transition: none;
+    }
 }
 
 .directorySectionLabel {
@@ -53,7 +60,9 @@
     letter-spacing: normal;
     line-height: 1.3;
     text-align: center;
-    transform: translateY(-50%);
+    opacity: 0;
+    transform: translateY(calc(-50% - 18px));
+    transition: opacity 900ms ease, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .directoryContent {
@@ -76,6 +85,15 @@
     font-weight: 300;
     line-height: 1.3;
     text-align: left;
+    opacity: 0;
+    transform: translateY(calc(-50% - 18px));
+    transition: opacity 900ms ease, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 100ms;
+}
+
+.directoryContainer--visible .directoryIntro,
+.directoryContainer--visible .directorySectionLabel {
+    opacity: 1;
     transform: translateY(-50%);
 }
 
@@ -96,20 +114,46 @@
 }
 
 .directoryTable th:nth-child(1),
-.directoryTable td:nth-child(1),
-.directoryTable th:nth-child(2),
-.directoryTable td:nth-child(2) {
-    width: 40%;
+.directoryTable td:nth-child(1) {
+    width: 4%;
 }
 
+.directoryTable th:nth-child(2),
+.directoryTable td:nth-child(2),
 .directoryTable th:nth-child(3),
 .directoryTable td:nth-child(3) {
+    width: 38%;
+}
+
+.directoryTable th:nth-child(4),
+.directoryTable td:nth-child(4) {
     width: 20%;
     text-align: right;
 }
 
 .directoryTable tbody td {
     border-bottom: 1px solid rgba(242, 241, 237, 0.35);
+}
+
+.directoryChevronCell {
+    text-align: left;
+    padding-right: 0 !important;
+}
+
+.directoryRowChevron {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: #dccbb3;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 350ms ease;
+}
+
+.directoryTable tbody tr.isOpen .directoryRowChevron {
+    transform: rotate(180deg);
 }
 
 .directoryTable tbody tr {
@@ -125,12 +169,22 @@
     text-decoration: none;
 }
 
+.directoryTable td:nth-child(4) a {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
 .directoryLinkArrow {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 14px;
+    height: 14px;
     overflow: visible;
-    vertical-align: -0.12em;
     fill: none;
     stroke: currentColor;
     stroke-width: 1.5;
@@ -139,20 +193,54 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+    .directoryTable td:nth-child(4) a:hover {
+        background-color: rgba(220, 203, 179, 0.18);
+    }
+
     .directoryTable tbody tr:hover {
-        background-color: rgba(242, 241, 237, 0.16);
         cursor: pointer;
     }
 
     .directoryTable tbody tr.directoryExpandedRow:hover {
-        background-color: rgba(242, 241, 237, 0.08);
+        background-color: transparent;
         cursor: default;
     }
 }
 
 .directoryExpandedRow td {
-    padding-block: 16px;
+    padding-block: 0;
+    border-bottom: 0 !important;
     color: #F2F1ED;
+}
+
+.directoryExpandedContent {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 700ms cubic-bezier(0.22, 1, 0.36, 1), opacity 500ms ease;
+}
+
+.directoryExpandedInner {
+    min-height: 0;
+    overflow: hidden;
+    padding-block: 0;
+    transition: padding-block 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.directoryExpandedRow.isOpen .directoryExpandedContent {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.directoryExpandedRow.isOpen .directoryExpandedInner {
+    padding-block: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .directoryExpandedContent,
+    .directoryExpandedInner {
+        transition: none;
+    }
 }
 
 @media (max-width: 700px) {

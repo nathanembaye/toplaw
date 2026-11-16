@@ -41,6 +41,7 @@ function Directory() {
         <table className="directoryTable">
           <thead>
             <tr>
+              <th scope="col" aria-label="Expand case"></th>
               <th scope="col">Case</th>
               <th scope="col">Citation</th>
               <th scope="col">CanLii</th>
@@ -50,7 +51,9 @@ function Directory() {
             {cases.map((caseItem, index) => (
               <React.Fragment key={caseItem.name}>
                 <tr
+                  className={minusRows.includes(index) ? 'isOpen' : ''}
                   tabIndex={0}
+                  aria-expanded={minusRows.includes(index)}
                   onClick={() => toggleRow(index)}
                   onKeyDown={(event) => {
                     if (event.target instanceof HTMLElement && event.target.closest('a')) return;
@@ -60,6 +63,11 @@ function Directory() {
                     }
                   }}
                 >
+                  <td className="directoryChevronCell">
+                    <svg className="directoryRowChevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                      <path d="m3 6 5 5 5-5" />
+                    </svg>
+                  </td>
                   <td>{caseItem.name}</td>
                   <td>{caseItem.citation}</td>
                   <td>
@@ -74,11 +82,13 @@ function Directory() {
                     </a>
                   </td>
                 </tr>
-                {minusRows.includes(index) && (
-                  <tr className="directoryExpandedRow">
-                    <td colSpan={3}>{caseItem.description}</td>
-                  </tr>
-                )}
+                <tr className={`directoryExpandedRow${minusRows.includes(index) ? ' isOpen' : ''}`} aria-hidden={!minusRows.includes(index)}>
+                  <td colSpan={4}>
+                    <div className="directoryExpandedContent">
+                      <div className="directoryExpandedInner">{caseItem.description}</div>
+                    </div>
+                  </td>
+                </tr>
               </React.Fragment>
             ))}
           </tbody>
