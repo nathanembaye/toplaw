@@ -46,6 +46,18 @@ function Services() {
     <section className="servicesContainer" id="services">
       <div className="servicesContent">
         <h1 className="servicesTextTitle">Our Services</h1>
+        <div className="servicesStatusQuoPreview">
+          <h2 className="servicesComparisonHeading">Status Quo</h2>
+          <ul>
+            {serviceTitles.map((title, index) => (
+              <li key={`status-quo-${title}-${index}`}>
+                <h3>{title}</h3>
+                <p>{serviceDescription}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <h2 className="servicesComparisonHeading servicesStaggeredHeading">Staggered / Zigzag</h2>
         <ul className="servicesList" ref={servicesListRef}>
           {serviceTitles.map((title, index) => (
             <li
@@ -53,11 +65,26 @@ function Services() {
               data-service-index={index}
               className={visibleItems.includes(index) ? 'servicesListItem--visible' : ''}
             >
+              <span className="servicesNumber">{String(index + 1).padStart(2, '0')}</span>
               <h2>{title}</h2>
               <p>{serviceDescription}</p>
             </li>
           ))}
         </ul>
+        <div className="servicesNumberingPreview">
+          <h2 className="servicesPreviewHeading">Alternative Design: Oversized Numbering</h2>
+          <ol className="servicesPreviewList">
+            {serviceTitles.map((title, index) => (
+              <li key={`numbered-${title}-${index}`}>
+                <span className="servicesPreviewNumber">{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{serviceDescription}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );
