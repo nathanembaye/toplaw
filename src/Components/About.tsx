@@ -41,7 +41,7 @@ get the best possible result for every client.
         <div className="aboutHeading">
           <h1 className="aboutTitle">About TOP Law Criminal Defence</h1>
           <p className="aboutSubtitle">
-            We provide strategic defence when it matters most
+            WE APPROACH EVERY CASE WITH PRECISION AND PURPOSE
           </p>
         </div>
         <div className="aboutContent">

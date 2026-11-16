@@ -126,7 +126,10 @@
 
 .casesSubheader {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: 18px;
     font-weight: 300;
+    line-height: 1.5;
+    color: #dccbb3;
 
 }
 

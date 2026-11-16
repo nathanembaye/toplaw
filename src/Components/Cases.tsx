@@ -55,7 +55,7 @@ function Cases() {
         <div className="casesHeading">
           <h2 className="casesHeader">Our Performance</h2>
           <h2 className="casesSubheader">
-            Criminal Defence with Proven Results
+            CRIMINAL DEFENCE WITH PROVEN RESULTS
           </h2>
         </div>
       </div>
