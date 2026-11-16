@@ -9,6 +9,12 @@ export const cases = [
     description: 'Successfully challenged a police search involving racial profiling, resulting in the exclusion of a firearm discovered on the client. The ruling reinforced the importance of protecting Charter rights against discriminatory policing practices.',
   },
   {
+    name: 'R. v. McIntyre',
+    citation: '2022 ONSC 6966',
+    pdfUrl: 'https://www.canlii.org/en/on/onsc/doc/2022/2022onsc6966/2022onsc6966.pdf',
+    description: 'Secured a full acquittal on appeal after challenging the unlawful collection of a blood sample. The successful appeal demonstrated the importance of constitutional protections surrounding the collection and use of evidence.',
+  },
+  {
     name: 'R. v. Ellis',
     citation: '2021 ONSC 8155',
     pdfUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc8155/2021onsc8155.pdf',
@@ -21,10 +27,10 @@ export const cases = [
     description: "Secured a full acquittal in a home invasion robbery case by challenging the reliability and credibility of a key Crown witness. The weaknesses in the witness's testimony undermined the prosecution's case.",
   },
   {
-    name: 'R. v. McIntyre',
-    citation: '2022 ONSC 6966',
-    pdfUrl: 'https://www.canlii.org/en/on/onsc/doc/2022/2022onsc6966/2022onsc6966.pdf',
-    description: 'Secured a full acquittal on appeal after challenging the unlawful collection of a blood sample. The successful appeal demonstrated the importance of constitutional protections surrounding the collection and use of evidence.',
+    name: 'R. v. DaSilva Smith',
+    citation: '2021 ONSC 5521',
+    pdfUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc5521/2021onsc5521.pdf',
+    description: 'Secured a full acquittal for a client facing serious charges of attempted murder and aggravated assault. The successful defence resulted in the client being cleared of both charges, avoiding the severe consequences associated with convictions for violent offences.',
   },
   {
     name: 'R. v. Ahmed',
@@ -38,12 +44,6 @@ export const cases = [
     pdfUrl: 'https://www.canlii.org/en/on/oncj/doc/2016/2016oncj108/2016oncj108.pdf',
     description: 'Successfully challenged the constitutionality of the mandatory victim surcharge imposed on convicted individuals. The court struck down the requirement, recognizing the disproportionate financial burden it could place on vulnerable offenders.',
   },
-  {
-    name: 'R. v. DaSilva Smith',
-    citation: '2021 ONSC 5521',
-    pdfUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc5521/2021onsc5521.pdf',
-    description: 'Secured a full acquittal for a client facing serious charges of attempted murder and aggravated assault. The successful defence resulted in the client being cleared of both charges, avoiding the severe consequences associated with convictions for violent offences.',
-  },
 ];
  
 function Cases() {
@@ -53,7 +53,7 @@ function Cases() {
       <div className="casesTopSpacer">
         <div className="casesSpacerBlock" aria-hidden="true" />
         <div className="casesHeading">
-          <h2 className="casesHeader">Our Firm's Performance</h2>
+          <h2 className="casesHeader">Our Performance</h2>
           <h2 className="casesSubheader">
             Criminal Defence with Proven Results
           </h2>

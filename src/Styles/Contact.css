@@ -162,8 +162,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-width: 1px;
-    border-color: #dccbb3;
+    border-width: 0.5px;
+    border-color: rgba(220, 203, 179, 0.5);
     border-style: solid;
     color: #dccbb3;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
@@ -262,8 +262,9 @@
 .phoneInput,
 .messageInput {
     background-color: #101c18;
-    border-color: #dccbb3;
+    border-color: rgba(220, 203, 179, 0.5);
     border-radius: 10px;
+    border-width: 0.5px;
     color: #dccbb3;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
@@ -310,13 +311,13 @@ textarea {
 /* for desktop only active hover color on inputs */
 @media (min-width: 450px) {
     input:hover {
-        border-width: 1px;
+        border-width: 0.5px;
         border-color: gray;
         border-style: solid;
         transition: border-color 0.5s ease; 
     }
     textarea:hover {
-        border-width: 1px;
+        border-width: 0.5px;
         border-color: gray;
         border-style: solid;
         transition: border-color 0.5s ease; 
@@ -327,7 +328,7 @@ textarea {
 .emailInput:hover,
 .phoneInput:hover,
 .messageInput:hover {
-    border-color: #dccbb3;
+    border-color: rgba(220, 203, 179, 0.5);
 }
 
 /* Extra small devices (phones, 400px and down) */

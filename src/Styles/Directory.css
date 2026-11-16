@@ -138,14 +138,16 @@
     stroke-linejoin: round;
 }
 
-.directoryTable tbody tr:hover {
-    background-color: rgba(242, 241, 237, 0.16);
-    cursor: pointer;
-}
+@media (hover: hover) and (pointer: fine) {
+    .directoryTable tbody tr:hover {
+        background-color: rgba(242, 241, 237, 0.16);
+        cursor: pointer;
+    }
 
-.directoryTable tbody tr.directoryExpandedRow:hover {
-    background-color: rgba(242, 241, 237, 0.08);
-    cursor: default;
+    .directoryTable tbody tr.directoryExpandedRow:hover {
+        background-color: rgba(242, 241, 237, 0.08);
+        cursor: default;
+    }
 }
 
 .directoryExpandedRow td {

@@ -196,17 +196,7 @@
     }
 
     .casesPeriod::before {
-        position: absolute;
-        top: 21px;
-        left: 50%;
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background-color: #dccbb3;
-        content: '';
-        transform: translate(-50%, -50%);
-        z-index: 1;
-
+        display: none;
     }
 
     .casesPeriodHeader,
@@ -255,10 +245,6 @@
         pointer-events: none;
     }
 
-    .casesContainer::before {
-        display: none;
-    }
-
     .casesContainer::after {
         display: none;
     }
@@ -291,6 +277,13 @@
     content: '';
     transform: translateX(-50%);
     pointer-events: none;
+}
+
+@media (max-width: 1018px) {
+    .casesContainer::before {
+        width: 9px;
+        height: 9px;
+    }
 }
 
 
