@@ -20,7 +20,7 @@
 
 .homeSubtitle {
     position: absolute;
-    top: calc(4% + clamp(60px, 7.5vw, 125px));
+    top: calc(4% + clamp(42px, 6.05vw, 100px));
     left: clamp(24px, 6vw, 80px);
     margin: 0;
     color: #F2F1ED;

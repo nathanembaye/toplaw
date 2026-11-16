@@ -18,7 +18,7 @@
     border-top-style: solid;
     border-bottom-style: solid;
     gap: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
 }
 
 .testOne {
@@ -68,13 +68,22 @@
     border-style: solid;
 }
 
+.testTextRowLabel {
+    margin: 0;
+    color: #F2F1ED;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+}
+
 
 .testTextRow{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 4px;
     border-width: 0px;
     border-color: gray;
     border-style: solid;
@@ -165,7 +174,7 @@
     border-width: 1px;
     border-color: #68756F;
     border-style: solid;
-    color: #dccbb3;
+    color: rgba(220, 203, 179, 0.54);
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
@@ -271,6 +280,7 @@
 .contactContainer input::placeholder,
 .contactContainer textarea::placeholder {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
+    color: rgba(220, 203, 179, 0.54);
 }
 
 .getInTouchHeader {

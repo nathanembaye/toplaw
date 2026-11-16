@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import '../Styles/Contact.css';
-import { MdOutlineEmail } from "react-icons/md";
-import { FiPhone } from "react-icons/fi";
-import { PiBuildingOffice } from "react-icons/pi";
 import emailjs from 'emailjs-com';
 
 
@@ -138,30 +135,25 @@ function Contact() {
 
                 <div className="test">
                   <div className="testTextRow">
-                    <MdOutlineEmail size={25}/>
+                    <span className="testTextRowLabel">EMAIL</span>
                     <a className="testTextRowTitle" href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
                   </div>
                 </div>
                 <div className="test">
                   <div className="testTextRow">
-                    <FiPhone size={25}/>
+                    <span className="testTextRowLabel">PHONE</span>
                     <a className="testTextRowTitle" href="tel:(647) 915-9325">(647) 915-9325</a>
                   </div>
                 </div>
                 <div className="test">
                   <div className="testTextRow">
-                    <PiBuildingOffice size={25}/>
+                    <span className="testTextRowLabel">OFFICE</span>
                     <p className="testTextRowTitle">439 University Ave Suite No. 1200, Toronto, ON M5G 1Y8</p>
                   </div>
                 </div>
               </div>
             
               <div className="getInTouchContainer">
-                
-                <div className="getInTouchHeader">
-                  <p className="getInTouchTitle">Get In Touch</p>
-                </div>
-
                 {emailSent ? 
                 <div className="emailSent">
                   <p className="emailSentText">Thank you for your message. One of our team members will be in touch with you shortly.</p>
