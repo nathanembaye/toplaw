@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.64932d17.css",
+    "main.css": "/static/css/main.cd587c0d.css",
     "main.js": "/static/js/main.54d3d4c6.js",
     "static/media/tobias4.jpeg": "/static/media/tobias4.4d243a4c062dcd062dca.jpeg",
     "static/media/cbc.jpg": "/static/media/cbc.6dcb3fdb9625534dcb21.jpg",
     "static/media/ottawa_citizen.webp": "/static/media/ottawa_citizen.f216c214806ccbf0367c.webp",
     "static/media/law_times.svg": "/static/media/law_times.ca23207243dad03267da4c345976adda.svg",
     "index.html": "/index.html",
-    "main.64932d17.css.map": "/static/css/main.64932d17.css.map",
+    "main.cd587c0d.css.map": "/static/css/main.cd587c0d.css.map",
     "main.54d3d4c6.js.map": "/static/js/main.54d3d4c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.64932d17.css",
+    "static/css/main.cd587c0d.css",
     "static/js/main.54d3d4c6.js"
   ]
 }
