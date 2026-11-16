@@ -297,15 +297,19 @@
     gap: 30px;
 }
 
-input {
+.contactContainer input {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    background-color: #f4f4f5;
+    background-color: #101c18;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
-textarea {
+.contactContainer textarea {
     resize: none;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    background-color: #f4f4f5;
+    background-color: #101c18;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 /* for desktop only active hover color on inputs */
