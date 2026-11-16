@@ -163,7 +163,7 @@
     align-items: center;
     cursor: pointer;
     border-width: 0.5px;
-    border-color: rgba(220, 203, 179, 0.5);
+    border-color: #68756F;
     border-style: solid;
     color: #dccbb3;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
@@ -262,9 +262,8 @@
 .phoneInput,
 .messageInput {
     background-color: #101c18;
-    border-color: rgba(220, 203, 179, 0.75);
+    border: 1px solid #68756F;
     border-radius: 10px;
-    border-width: 0.5px;
     color: #dccbb3;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
@@ -310,29 +309,6 @@
     background-color: #101c18;
     -webkit-appearance: none;
     appearance: none;
-}
-
-/* for desktop only active hover color on inputs */
-@media (min-width: 450px) {
-    input:hover {
-        border-width: 0.5px;
-        border-color: gray;
-        border-style: solid;
-        transition: border-color 0.5s ease; 
-    }
-    textarea:hover {
-        border-width: 0.5px;
-        border-color: gray;
-        border-style: solid;
-        transition: border-color 0.5s ease; 
-    }
-}
-
-.nameInput:hover,
-.emailInput:hover,
-.phoneInput:hover,
-.messageInput:hover {
-    border-color: rgba(220, 203, 179, 0.75);
 }
 
 /* Extra small devices (phones, 400px and down) */
