@@ -76,15 +76,6 @@
     text-align: left;
 }
 
-.servicesNumberingPreview {
-    display: none;
-}
-
-.servicesStatusQuoPreview,
-.servicesStaggeredHeading {
-    display: none;
-}
-
 .servicesList li.servicesListItem--visible {
     opacity: 1;
     transform: translateX(0);
@@ -131,67 +122,10 @@
 }
 
 @media (max-width: 632px) {
-    .servicesStatusQuoPreview,
-    .servicesStaggeredHeading {
-        display: block;
-        grid-column: 1 / -1;
-        justify-self: center;
-        width: min(94vw, 900px);
-    }
-
-    .servicesStatusQuoPreview {
-        margin-top: 36px;
-    }
-
-    .servicesComparisonHeading {
-        margin: 0 0 18px;
-        color: #F2F1ED;
-        font-family: 'Jost', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 300;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-
-    .servicesStatusQuoPreview ul {
-        display: grid;
-        gap: 18px;
-        margin: 0;
-        padding: 0;
-        color: #F2F1ED;
-        font-family: 'Jost', Arial, Helvetica, sans-serif;
-        list-style: none;
-    }
-
-    .servicesStatusQuoPreview li {
-        padding-top: 14px;
-        border-top: 1px solid rgba(242, 241, 237, 0.2);
-    }
-
-    .servicesStatusQuoPreview h3 {
-        margin: 0 0 4px;
-        color: #dccbb3;
-        font-family: 'Nanum Myeongjo', serif;
-        font-size: clamp(20px, 5vw, 28px);
-        font-weight: 400;
-    }
-
-    .servicesStatusQuoPreview p {
-        margin: 0;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 1.3;
-    }
-
-    .servicesStaggeredHeading {
-        width: min(94vw, 900px);
-        margin: 56px auto 0;
-    }
-
     .servicesList {
         grid-template-columns: minmax(0, 1fr);
         row-gap: 28px;
-        margin-top: 16px;
+        margin-top: 48px;
     }
 
     .servicesList li {
@@ -213,6 +147,19 @@
         text-align: right;
     }
 
+    .servicesList li:nth-child(odd):not(.servicesListItem--visible) {
+        transform: translateX(-56px);
+    }
+
+    .servicesList li:nth-child(even):not(.servicesListItem--visible) {
+        transform: translateX(56px);
+    }
+
+    .servicesList li:nth-child(odd).servicesListItem--visible,
+    .servicesList li:nth-child(even).servicesListItem--visible {
+        transform: translateX(0);
+    }
+
     .servicesList li h2 {
         width: 100%;
         font-size: clamp(20px, 5vw, 28px);
@@ -231,63 +178,14 @@
         text-align: right;
     }
 
-    .servicesNumberingPreview {
-        display: block;
-        grid-column: 1 / -1;
-        justify-self: center;
-        width: min(94vw, 900px);
-        margin: 64px auto 0;
-    }
+}
 
-    .servicesPreviewHeading {
-        margin: 0 0 24px;
-        color: #F2F1ED;
-        font-family: 'Jost', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 300;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-
-    .servicesPreviewList {
-        margin: 0;
-        padding: 0;
-        color: #F2F1ED;
-        font-family: 'Jost', Arial, Helvetica, sans-serif;
-        list-style: none;
-    }
-
-    .servicesPreviewList li {
-        display: grid;
-        grid-template-columns: clamp(64px, 20vw, 92px) minmax(0, 1fr);
-        align-items: center;
-        gap: 16px;
-        padding: 20px 0;
-        border-top: 1px solid rgba(242, 241, 237, 0.2);
-    }
-
-    .servicesPreviewNumber {
-        color: #dccbb3;
-        font-family: 'Nanum Myeongjo', serif;
-        font-size: clamp(48px, 15vw, 76px);
-        font-weight: 400;
-        line-height: 0.9;
-    }
-
-    .servicesPreviewList h3 {
-        margin: 0 0 6px;
-        color: #dccbb3;
-        font-family: 'Nanum Myeongjo', serif;
-        font-size: clamp(19px, 5vw, 26px);
-        font-weight: 400;
-    }
-
-    .servicesPreviewList p {
-        margin: 0;
-        color: #F2F1ED;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 1.3;
+@media (max-width: 632px) and (prefers-reduced-motion: reduce) {
+    .servicesList li:nth-child(odd):not(.servicesListItem--visible),
+    .servicesList li:nth-child(even):not(.servicesListItem--visible),
+    .servicesList li:nth-child(odd).servicesListItem--visible,
+    .servicesList li:nth-child(even).servicesListItem--visible {
+        transform: none;
     }
 }
 
