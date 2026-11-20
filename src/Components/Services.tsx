@@ -43,34 +43,19 @@ function Services() {
 
     const items = Array.from(list.querySelectorAll<HTMLLIElement>('li[data-service-index]'));
     const isMobile = window.matchMedia('(max-width: 632px)').matches;
-    const rowByTrigger = new Map<HTMLLIElement, HTMLLIElement[]>();
-
-    if (!isMobile) {
-      const rows = new Map<number, HTMLLIElement[]>();
-      items.forEach((item) => {
-        const row = rows.get(item.offsetTop) ?? [];
-        row.push(item);
-        rows.set(item.offsetTop, row);
-      });
-      rows.forEach((row) => rowByTrigger.set(row[0], row));
-    }
-
     const timeoutIds: number[] = [];
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
 
         observer.unobserve(entry.target);
+        const triggeredItems = isMobile ? [entry.target as HTMLLIElement] : items;
 
-        const rowItems = isMobile
-          ? [entry.target as HTMLLIElement]
-          : rowByTrigger.get(entry.target as HTMLLIElement) ?? [];
-
-        rowItems.forEach((item, rowIndex) => {
+        triggeredItems.forEach((item) => {
           const index = Number(item.dataset.serviceIndex);
           const timeoutId = window.setTimeout(() => {
             setVisibleItems((current) => current.includes(index) ? current : [...current, index]);
-          }, isMobile ? 0 : rowIndex * 220);
+          }, isMobile ? 0 : index * 90);
           timeoutIds.push(timeoutId);
         });
       });
@@ -79,7 +64,7 @@ function Services() {
     if (isMobile) {
       items.forEach((item) => observer.observe(item));
     } else {
-      rowByTrigger.forEach((_, trigger) => observer.observe(trigger));
+      observer.observe(list);
     }
 
     return () => {

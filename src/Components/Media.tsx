@@ -1,27 +1,38 @@
 import React, { useRef, useState } from 'react';
-import cbcImage from '../Assets/cbc.jpg';
-import lawTimesImage from '../Assets/law_times.svg';
-import ottawaCitizenImage from '../Assets/ottawa_citizen.webp';
+import carouselImage from '../Assets/carousel_1.jpg';
+import carouselImage2 from '../Assets/carousel_2.jpg';
+import carouselImage3 from '../Assets/carousel_3.jpg';
+import carouselImage4 from '../Assets/carousel_4.jpg';
 import '../Styles/Media.css';
 
 const mediaItems = [
   {
-    title: 'Human Trafficking',
+    title: 'Human trafficking case ends on ‘significant disclosure issue,’ Hamilton Crown drops charges',
+    sourceLabel: 'CBC News',
     description: "RCMP-CBSA investigation began in 2018, trial cancelled after plea deal reached.",
     url: 'https://ici.radio-canada.ca/rci/en/news/2177828/human-trafficking-case-ends-on-significant-disclosure-issue-hamilton-crown-drops-charges',
-    image: cbcImage,
+    image: carouselImage,
   },
   {
-    title: 'Pimps Spared Prison',
+    title: 'Pimps spared prison, judge strikes down mandatory minimum sentence for trafficking minors',
+    sourceLabel: 'Ottawa Citizen',
     description: 'Judge strikes down mandatory minimum sentence for trafficking minors',
     url: 'https://ottawacitizen.com/news/local-news/pimps-spared-prison-judge-strikes-down-mandatory-minimum-sentence-for-trafficking-minors',
-    image: ottawaCitizenImage,
+    image: carouselImage2,
   },
   {
-    title: 'Judicial Training',
+    title: 'Judges to receive training on human trafficking',
+    sourceLabel: 'Law Times',
     description: 'Judges to receive human trafficking training.',
     url: 'https://www.lawtimesnews.com/news/general/judges-to-receive-training-on-human-trafficking/324008',
-    image: lawTimesImage,
+    image: carouselImage3,
+  },
+  {
+    title: 'Panel speaker at the 12th Annual Recent Call Conference',
+    sourceLabel: 'Criminal Lawyers’ Association',
+    description: '12th Annual Criminal Lawyers Association Conference',
+    url: 'https://criminallawyers.ca/events/12th-annual-recent-call-conference/',
+    image: carouselImage4,
   },
 ];
 
@@ -167,7 +178,7 @@ function Media() {
               </svg>
             </button>
           </div>
-          <span className="mediaLatestTitle">IN THE NEWS</span>
+          <span className="mediaLatestTitle">In the press</span>
         </div>
       </div>
 
@@ -189,30 +200,31 @@ function Media() {
         >
           {orderedItems.map((item, index) => (
             <article className="mediaSlide" key={`${item.title}-${item.description}-${index}`}>
-              <div className="mediaCard">
-                <a
-                  className="mediaSquare"
-                  href={item.url ?? 'https://www.google.com'}
-                  aria-label={`Read ${item.title}`}
-                  style={{
-                    backgroundImage: `url(${item.image})`,
-                    backgroundColor: item.image === lawTimesImage ? 'white' : undefined,
-                    backgroundSize: item.image === lawTimesImage ? '90% auto' : 'contain',
-                  }}
-                />
-                <div className="mediaCardCopy">
-                  <div className="mediaCaseHeading">
-                    <span className="mediaCaseKicker">
-                      <span className="mediaCaseKickerWhite">INSIGHT</span>
-                      <span className="mediaCaseKickerWhite"> | </span>
-                      {item.sourceLabel ?? 'ARTICLE'}
-                    </span>
-                    <span className="mediaCaseTitle">{item.title}</span>
+              <a className="mediaCardLink" href={item.url ?? 'https://www.google.com'} aria-label={`Read ${item.title}`}>
+                <div className="mediaCard">
+                  <div className="mediaSquare">
+                    <img
+                      className="mediaSquareImage"
+                      src={item.image}
+                      alt=""
+                    />
                   </div>
-                  <span className="mediaCaseDescription">{item.description}</span>
-                  <a className="mediaReadMore" href={item.url ?? 'https://www.google.com'}>READ MORE</a>
+                  <div className="mediaCardCopy">
+                    <div className="mediaCaseHeading">
+                      <span className="mediaCaseKicker">
+                        {item.sourceLabel}
+                      </span>
+                      <span className="mediaCaseTitle">{item.title}</span>
+                    </div>
+                    <span className="mediaReadMore">
+                      Read article
+                      <svg className="mediaExternalArrow" viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M4 12 12 4M5 4h7v7" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </a>
             </article>
           ))}
         </div>

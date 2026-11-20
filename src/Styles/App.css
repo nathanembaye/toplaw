@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   gap: clamp(16px, 3vw, 44px);
-  padding: 14px 24px;
+  padding: 17px 24px;
   background-color: #152621;
   visibility: hidden;
   opacity: 0;
@@ -43,11 +43,14 @@
 .homeSectionMenu--visible {
   visibility: visible;
   pointer-events: auto;
-  animation: homeSectionMenuFadeIn 300ms ease-out both;
+  opacity: 1;
+  transform: none;
 }
 
 .homeSectionMenu--hidden {
-  animation: homeSectionMenuFadeOut 250ms ease-in both;
+  visibility: hidden;
+  opacity: 0;
+  transform: none;
 }
 
 @keyframes homeSectionMenuFadeIn {
@@ -94,6 +97,8 @@
 }
 
 .homeSectionMenu button {
+  position: relative;
+  left: 20vw;
   padding: 0;
   border: 0;
   background: none;
@@ -102,6 +107,56 @@
   font: 300 14px 'Jost', Arial, Helvetica, sans-serif;
   letter-spacing: 0.06em;
   white-space: nowrap;
+}
+
+.homeSectionMenuBrand {
+  position: absolute;
+  left: clamp(24px, 6vw, 80px);
+  color: #F2F1ED;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.homeSectionMenuHeader {
+  display: contents;
+}
+
+.homeSectionMenuFooter {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes mobileMenuContentReveal {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.homeSectionMenuNumber {
+  display: none;
+}
+
+.homeSectionMenuBrandTitle {
+  font: 700 18px/1.1 'Nanum Myeongjo', serif;
+}
+
+.homeSectionMenuBrandSubtitle {
+  margin-top: 2px;
+  font: 300 8px/1.3 'Jost', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.homeSectionMenuToggle {
+  display: none;
 }
 
 .homeSectionMenu button:hover,
@@ -116,16 +171,302 @@
 
 @media (max-width: 600px) {
   .homeSectionMenu {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    isolation: isolate;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
     gap: 4px;
-    padding: 12px 8px;
+    height: 46.464px;
+    padding: 0 8px;
+    box-sizing: border-box;
     overflow: hidden;
+    background-color: transparent;
+  }
+
+  .homeSectionMenu::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46.464px;
+    background-color: #152621;
+    transition: height 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .homeSectionMenuHeader {
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .homeSectionMenu button {
+    position: static;
+    left: auto;
+    align-self: center;
+    font-size: clamp(9px, 3vw, 12px);
+    letter-spacing: 0;
+  }
+
+  .homeSectionMenuBrand {
+    position: static;
+  }
+
+  .homeSectionMenuToggle {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-right: calc(5vw - 27.25px);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #F2F1ED;
+    cursor: pointer;
+  }
+
+  .homeSectionMenuToggle svg {
+    display: block;
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: #F2F1ED;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+
+  .homeSectionMenuToggle line {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 250ms ease, opacity 180ms ease;
+  }
+
+  .homeMenuIconOpen .homeMenuIconTop {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .homeMenuIconOpen .homeMenuIconMiddle {
+    opacity: 0;
+  }
+
+  .homeMenuIconOpen .homeMenuIconBottom {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .homeSectionMenu > button:not(.homeSectionMenuToggle) {
+    display: block;
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    text-align: center;
+  }
+
+  .homeSectionMenu--mobile-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 12px 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  .homeSectionMenu--mobile-open::before {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .homeSectionMenu--mobile-open.homeSectionMenu--mobile-closing::before {
+    height: 46.464px;
+    transition-delay: 400ms;
+  }
+
+  .homeSectionMenu--mobile-open .homeSectionMenuHeader {
+    flex: 0 0 46px;
+    width: 100%;
+    height: 46px;
+    padding-right: 4px;
+    justify-content: flex-end;
+    transform: translateY(-12px);
+  }
+
+  .homeSectionMenu--mobile-open .homeSectionMenuBrand {
+    display: none;
+  }
+
+  .homeSectionMenuFooter {
+    display: none;
+  }
+
+  .homeSectionMenu--mobile-open .homeSectionMenuFooter {
+    position: relative;
+    display: flex;
+    flex: 0 0 54px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 0;
+    box-sizing: border-box;
+    border-top: 0;
+    color: #F2F1ED;
+    font: 300 14px 'Jost', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    text-align: left;
+    animation: mobileMenuContentReveal 50ms ease 500ms both;
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle) {
+    display: flex;
+    position: relative;
+    flex: 0 0 44px;
+    align-self: stretch;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-bottom: 35.64px;
+    max-height: 44px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    font-size: clamp(14.4px, 4vw, 19.2px);
+    text-align: left;
+    transition-delay: 0s;
+    animation: mobileMenuContentReveal 50ms ease 500ms both;
+  }
+
+  .homeSectionMenu--mobile-open > button:nth-of-type(1) { animation-delay: 500ms; }
+  .homeSectionMenu--mobile-open > button:nth-of-type(2) { animation-delay: 550ms; }
+  .homeSectionMenu--mobile-open > button:nth-of-type(3) { animation-delay: 600ms; }
+  .homeSectionMenu--mobile-open > button:nth-of-type(4) { animation-delay: 650ms; }
+  .homeSectionMenu--mobile-open > button:nth-of-type(5) { animation-delay: 700ms; }
+  .homeSectionMenu--mobile-open > button:nth-of-type(6) { animation-delay: 750ms; }
+  .homeSectionMenu--mobile-open > button:nth-of-type(7) { animation-delay: 800ms; }
+
+  .homeSectionMenu--mobile-open .homeSectionMenuFooter {
+    animation-delay: 850ms;
+  }
+
+  .homeSectionMenu--mobile-open .homeSectionMenuNumber {
+    display: block;
+    order: 2;
+    flex: 0 0 2em;
+    margin-left: auto;
+    color: #F2F1ED;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: 0.6em;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-align: right;
+  }
+
+  .homeSectionMenu--mobile-open .homeSectionMenuLabel {
+    order: 1;
+    line-height: 1;
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 6.6px;
+    left: 0;
+    height: 0.5px;
+    background-color: #F2F1ED;
+    opacity: 0.5;
+  }
+
+  .homeSectionMenu--mobile-open .homeSectionMenuFooter {
+    margin-top: auto;
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):first-of-type {
+    margin-top: auto;
+  }
+
+  .homeSectionMenu--mobile-open > button:nth-of-type(7) {
+    margin-bottom: 0;
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle),
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):hover,
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):focus-visible,
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle).homeSectionMenuActive {
+    color: #F2F1ED;
+    font-weight: 300;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .homeSectionMenu > button:not(.homeSectionMenuToggle) {
+      transition: none;
+      transform: none;
+    }
+
+    .homeSectionMenu {
+      transition: none;
+    }
+
+    .homeSectionMenu::before {
+      transition: none;
+    }
+
+    .homeSectionMenuToggle line {
+      transition: none;
+    }
+
+    .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle),
+    .homeSectionMenu--mobile-open .homeSectionMenuFooter {
+      animation: none;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .homeSectionMenuBrandTitle {
+    font-size: 12px;
+  }
+
+  .homeSectionMenuBrandSubtitle {
+    margin-top: 0;
+    font-size: 5px;
   }
 
   .homeSectionMenu button {
     font-size: clamp(9px, 3vw, 12px);
     letter-spacing: 0;
+  }
+}
+
+.tobiasPageContent {
+  padding-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .tobiasPageContent {
+    padding-top: 46.464px;
   }
 }
 
@@ -138,6 +479,20 @@
     flex-direction: row;
     top: 0;
     position: fixed;
+}
+
+@media (max-width: 600px) {
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):first-of-type {
+    display: none;
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):nth-of-type(2) {
+    margin-top: max(0px, calc((100dvh - 363px) / 2 - 58px));
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):nth-of-type(6) {
+    margin-bottom: 0;
+  }
 }
 
 .CancelButtonContainer {

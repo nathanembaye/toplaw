@@ -31,6 +31,7 @@ function Directory() {
   return (
     <section
       ref={sectionRef}
+      id="directory"
       className={`directoryContainer${hasEnteredViewport ? ' directoryContainer--visible' : ''}`}
     >
       <div className="directoryContent">

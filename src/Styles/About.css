@@ -87,6 +87,7 @@
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-size: clamp(16px, 1.5vw, 20px);
     color: white;
+    opacity: 0.8;
     text-align: left;
     line-height: 130%;
     margin: 0;

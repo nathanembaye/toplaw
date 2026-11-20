@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../Styles/Cases.css';
 
 export const cases = [
@@ -47,6 +47,32 @@ export const cases = [
 ];
  
 function Cases() {
+  const casesListRef = useRef<HTMLDivElement | null>(null);
+  const [visibleCases, setVisibleCases] = useState<number[]>([]);
+
+  useEffect(() => {
+    const list = casesListRef.current;
+    if (!list) return;
+
+    const caseElements = Array.from(list.querySelectorAll<HTMLElement>('[data-case-index]'));
+    if (!('IntersectionObserver' in window)) {
+      setVisibleCases(caseElements.map((_, index) => index));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const index = Number((entry.target as HTMLElement).dataset.caseIndex);
+        setVisibleCases((current) => current.includes(index) ? current : [...current, index]);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.15 });
+
+    caseElements.forEach((caseElement) => observer.observe(caseElement));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="casesContainer" id="cases">
@@ -60,9 +86,13 @@ function Cases() {
         </div>
       </div>
       <div className="casesLeft" />
-      <div className="casesRight">
-        {cases.map((caseItem) => (
-          <article className="casesPeriod" key={caseItem.name}>
+      <div className="casesRight" ref={casesListRef}>
+        {cases.map((caseItem, index) => (
+          <article
+            className={`casesPeriod${visibleCases.includes(index) ? ' casesPeriod--visible' : ''}`}
+            data-case-index={index}
+            key={caseItem.name}
+          >
             <h3 className="casesPeriodHeader">{caseItem.name}</h3>
             <p className="casesPeriodText">{caseItem.description}</p>
             <a className="casesPeriodCitation" href={caseItem.pdfUrl}>{caseItem.citation}</a>

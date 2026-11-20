@@ -3,7 +3,7 @@ import '../Styles/Tobias.css';
 
 function Tobias() {
   return (
-    <section className="tobiasSection">
+    <section className="tobiasSection" id="tobias">
       <div className="tobiasSquare">
         <div className="tobiasCopy">
           <h1 className="tobiasHeading">Tobias Okada-Phillips</h1>

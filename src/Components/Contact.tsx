@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../Styles/Contact.css';
 import emailjs from 'emailjs-com';
 
@@ -8,6 +8,27 @@ function Contact() {
 
   const [contentDesign, setContentDesign] = useState(window.innerWidth <= 900 ? 'contactColumnContent' : 'contactRowContent');
   const [emailSent, setEmailSent] = useState(false);
+  const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    if (!('IntersectionObserver' in window)) {
+      setHasEnteredViewport(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      setHasEnteredViewport(true);
+      observer.disconnect();
+    }, { threshold: 0.15 });
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -121,7 +142,11 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="contactContainer">
+    <div
+      ref={sectionRef}
+      id="contact"
+      className={`contactContainer${hasEnteredViewport ? ' contactContainer--visible' : ''}`}
+    >
 
           <div className="contactContentContainer">
             
@@ -131,7 +156,7 @@ function Contact() {
               <div className="testTextContainer">
 
                 <p className="testTextTitle">Contact Us</p>
-                <p className="testTextSummary">Reach out to us with any questions or inquiries. We're here to help.</p>
+                <p className="testTextSummary">Every defence begins with a conversation. Speak with us in confidence.</p>
 
                 <div className="test">
                   <div className="testTextRow">
@@ -146,10 +171,10 @@ function Contact() {
                   </div>
                 </div>
                 <div className="test">
-                  <div className="testTextRow">
+                  <div className="testTextRow officeAddressRow">
                     <span className="testTextRowLabel">OFFICE</span>
                     <a
-                      className="testTextRowTitle"
+                      className="testTextRowTitle officeAddress"
                       href="https://www.google.com/maps/search/?api=1&query=439+University+Ave+Suite+No.+1200%2C+Toronto%2C+ON+M5G+1Y8"
                       target="_blank"
                       rel="noreferrer"
@@ -159,6 +184,8 @@ function Contact() {
                   </div>
                 </div>
               </div>
+
+              <div className="contactDivider" aria-hidden="true" />
             
               <div className="getInTouchContainer">
                 {emailSent ? 
@@ -180,7 +207,7 @@ function Contact() {
 
 
                     <div className="emailEntry">
-                      <p className="emailText">Email</p>
+                      <p className="emailText">Email Address</p>
                       <input className="emailInput" placeholder="johndoe@gmail.com" name="email" onChange={handleChange} value={formData.email}/>
                     </div>
 
@@ -196,7 +223,7 @@ function Contact() {
                     </div>
 
                     <button className="getInTouchButton">
-                      Send Message
+                      Send Inquiry
                     </button>
                   </form>
                 }

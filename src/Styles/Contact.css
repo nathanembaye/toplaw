@@ -11,12 +11,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border-width: 0px;
     width: 75%;
-    border-top-color: #d1d1d1;
-    border-bottom-color: #d1d1d1;
-    border-top-style: solid;
-    border-bottom-style: solid;
     gap: 5px;
     margin-bottom: 36px;
 }
@@ -63,9 +58,13 @@
     color: #F2F1ED;
     font-weight: 300;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
+}
+
+.testTextRowTitle.officeAddress {
+    display: block;
+    width: 100%;
+    align-self: flex-start;
+    text-align: left;
 }
 
 .testTextRowLabel {
@@ -84,12 +83,15 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 4px;
-    border-width: 0px;
-    border-color: gray;
-    border-style: solid;
+}
+
+.testTextRow.officeAddressRow {
+    width: 100%;
 }
 
 .testTextTitle {
+    width: 75%;
+    align-self: flex-start;
     margin: 0px;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-size: clamp(36px, 5vw, 72px);
@@ -97,22 +99,18 @@
     font-weight: 300;
     line-height: 1.1;
     margin-bottom: 20px;
-    border-width: 0px;
-    border-color: green;
-    border-style: solid;
 }
 
 .testTextSummary {
+    width: 75%;
+    align-self: flex-start;
     margin: 0px;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: #F2F1ED;
     font-weight: 300;
     line-height: 1.5;
-    margin-bottom: 40px;
-    border-width: 0px;
-    border-color: blue;
-    border-style: solid;
+    margin-bottom: 70px;
 }
 
 @media only screen and (max-width: 1018px) {
@@ -123,13 +121,14 @@
 
 
 .testTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     height: auto;
-    width: 50vw;
+    width: min(50vw, 550px);
     font-family: 'Jost', Arial, Helvetica, sans-serif;
+    text-align: left;
 
-    border-width: 0px;
-    border-color: red;
-    border-style: solid;
 }
 
 .contactColumnContent {
@@ -139,9 +138,6 @@
     align-items: center;
     gap: 50px;
 
-    border-width: 0px;
-    border-style: solid;
-    border-color: green;
 }
 
 .contactRowContent {
@@ -151,9 +147,69 @@
     align-items: flex-start;
     gap: 50px;
 
-    border-width: 0px;
-    border-style: solid;
-    border-color: red;
+}
+
+.contactDivider {
+    align-self: stretch;
+    flex: 0 0 1px;
+    background-color: #F2F1ED;
+    opacity: 0.5;
+    clip-path: inset(0 0 100% 0);
+}
+
+.contactContainer--visible .contactDivider {
+    animation: contactDividerDraw 1.2s ease-out forwards;
+}
+
+@keyframes contactDividerDraw {
+    to {
+        clip-path: inset(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contactDivider {
+        clip-path: none;
+        animation: none;
+    }
+}
+
+.contactColumnContent .contactDivider {
+    display: block;
+    align-self: center;
+    margin-inline: auto;
+    flex: 0 0 1px;
+    width: min(80vw, 462px);
+    height: 1px;
+}
+
+@media only screen and (min-width: 1001px) {
+    .contactRowContent {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .contactRowContent .nameRow {
+        margin-top: 0;
+    }
+
+    .contactRowContent > .testTextContainer,
+    .contactRowContent > .getInTouchContainer {
+        justify-self: center;
+    }
+
+    .contactRowContent .contactDivider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(50% - 4vw);
+        width: 1px;
+        transform: translateX(-50%);
+    }
 }
 
 .mapContainer {
@@ -165,8 +221,8 @@
     margin-top: 20px;
     width: 462px;
     height: 50px;
-    background-color: #101c18;
-    border-radius: 10px;
+    background-color: #152621;
+    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,14 +237,32 @@
 
 @media (hover: hover) {
     .getInTouchButton:hover {
-        background-color: #dccbb3;
-        color: #152621;
+        background-color: #152621;
+        color: #fff;
+        border-color: #fff;
     }
 }
 
 .getInTouchButton:focus-visible {
     background-color: #dccbb3;
     color: #152621;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .getInTouchButton {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .getInTouchButton:focus:not(:active) {
+        background-color: #152621;
+        color: #87918B;
+        border-color: #68756F;
+    }
+
+    .getInTouchButton:active {
+        color: #fff;
+        border-color: #fff;
+    }
 }
 
 
@@ -200,6 +274,13 @@
     margin: 0px;
     margin-bottom: 3px;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+.nameText,
+.emailText,
+.phoneText,
+.messageText {
+    font-weight: 300;
 }
 
 
@@ -270,11 +351,15 @@
 .emailInput,
 .phoneInput,
 .messageInput {
-    background-color: #101c18;
+    background-color: #152621;
     border: 1px solid #68756F;
     border-radius: 10px;
-    color: #dccbb3;
+    color: #F2F1ED;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+.nameInput {
+    border-radius: 6px;
 }
 
 .contactContainer input::placeholder,
@@ -308,7 +393,7 @@
 
 .contactContainer input {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    background-color: #101c18;
+    background-color: #152621;
     -webkit-appearance: none;
     appearance: none;
 }
@@ -316,26 +401,36 @@
 .contactContainer textarea {
     resize: none;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    background-color: #101c18;
+    background-color: #152621;
     -webkit-appearance: none;
     appearance: none;
+}
+
+.contactContainer input:focus,
+.contactContainer textarea:focus {
+    outline: none;
+    border-color: #F2F1ED;
+    box-shadow: none;
+}
+
+.contactContainer input:-webkit-autofill,
+.contactContainer input:-webkit-autofill:hover,
+.contactContainer input:-webkit-autofill:focus,
+.contactContainer textarea:-webkit-autofill,
+.contactContainer textarea:-webkit-autofill:hover,
+.contactContainer textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #152621 inset;
+    -webkit-text-fill-color: #F2F1ED;
+    caret-color: #F2F1ED;
+    transition: background-color 9999s ease-out 0s;
 }
 
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {
     .nameRow {
-        flex-direction: column;
-        border-width: 0px;
-        border-color: red;
-        border-style: solid;
-        gap: 20px;
+        flex-direction: row;
+        gap: 12px;
     }
-}
-
-.nameEntry {
-    border-width: 0px;
-    border-color: green;
-    border-style: solid;
 }
 
 .getInTouchSummary {
@@ -433,6 +528,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+    .contactColumnContent .contactDivider {
+        display: none;
+    }
+
     .getInTouchHeader {
         width: calc(85vw + 12.5px);
     }
@@ -450,10 +549,18 @@
         width: 70vw;
     }
     .nameRow {
-        flex-direction: column;
+        flex-direction: row;
+        width: calc(85vw + 12px);
+        gap: 16px;
+    }
+    .nameEntry {
+        flex: 1;
+        min-width: 0;
     }
     .nameInput {
-        width: 85vw;
+        width: 100%;
+        height: 37px;
+        box-sizing: border-box;
     }
     .emailInput {
         width: 85vw;
@@ -500,6 +607,15 @@
     input, textarea {
         font-size: 16px;
     }
+    .contactColumnContent {
+        gap: 32px;
+    }
+    .testTextContainer > .test:last-child {
+        margin-bottom: 23.04px;
+    }
+    .contactColumnContent .nameRow {
+        margin-top: 12.8px;
+    }
     .getInTouchHeader {
         width: calc(85vw + 12.5px);
     }
@@ -517,15 +633,17 @@
         margin-bottom: 10px;
     }
     .testTextSummary {
+        width: 90%;
         font-weight: 300;
-        margin-bottom: 20px;
+        margin-bottom: 67.84px;
     }
     .testTextRowTitle {
         width: 70vw;
     }
 
     .nameInput {
-        width: 85vw;
+        width: 100%;
+        box-sizing: border-box;
     }
     .emailInput {
         width: 85vw;
