@@ -43,17 +43,43 @@ function Media() {
   const [isTouchDragging, setIsTouchDragging] = useState(false);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [pendingDirection, setPendingDirection] = useState<'next' | 'previous' | null>(null);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
   const wheelGestureActive = useRef(false);
   const wheelGestureTimeout = useRef<number | null>(null);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
+  const scrollNativeCarousel = (direction: -1 | 1) => {
+    const carousel = carouselRef.current;
+    const firstSlide = carousel?.querySelector<HTMLElement>('.mediaSlide');
+    const track = carousel?.querySelector<HTMLElement>('.mediaTrack');
+    if (!carousel || !firstSlide || !track) return;
+
+    const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 0;
+    const step = firstSlide.getBoundingClientRect().width + gap;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    let nextScroll = carousel.scrollLeft + direction * step;
+
+    if (direction > 0 && carousel.scrollLeft >= maxScroll - 2) nextScroll = 0;
+    if (direction < 0 && carousel.scrollLeft <= 2) nextScroll = maxScroll;
+
+    carousel.scrollTo({ left: nextScroll, behavior: 'smooth' });
+  };
+
   const goNext = () => {
+    if (window.matchMedia('(max-width: 990px)').matches) {
+      scrollNativeCarousel(1);
+      return;
+    }
     if (pendingDirection) return;
     setPendingDirection('next');
     setTrackOffset(1);
   };
 
   const goPrevious = () => {
+    if (window.matchMedia('(max-width: 990px)').matches) {
+      scrollNativeCarousel(-1);
+      return;
+    }
     if (pendingDirection) return;
 
     setPendingDirection('previous');
@@ -70,6 +96,7 @@ function Media() {
   };
 
   const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
+    if (window.matchMedia('(max-width: 990px)').matches) return;
     // Trackpads report horizontal swipes through deltaX. Only capture a
     // predominantly horizontal gesture so ordinary page scrolling still works.
     if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
@@ -101,6 +128,7 @@ function Media() {
   };
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (window.matchMedia('(max-width: 990px)').matches) return;
     const touch = event.touches[0];
     if (touch) {
       touchStart.current = { x: touch.clientX, y: touch.clientY };
@@ -109,6 +137,7 @@ function Media() {
   };
 
   const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (window.matchMedia('(max-width: 990px)').matches) return;
     if (!touchStart.current) return;
     const touch = event.touches[0];
     if (!touch) return;
@@ -119,6 +148,7 @@ function Media() {
   };
 
   const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (window.matchMedia('(max-width: 990px)').matches) return;
     if (!touchStart.current) return;
     const touch = event.changedTouches[0];
     const deltaX = touch.clientX - touchStart.current.x;
@@ -183,6 +213,7 @@ function Media() {
       </div>
 
       <div
+        ref={carouselRef}
         className="mediaCarousel"
         onWheel={handleWheel}
         onTouchStart={handleTouchStart}

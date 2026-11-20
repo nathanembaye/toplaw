@@ -236,6 +236,34 @@
         gap: 18px;
     }
 
+    .mediaCarousel {
+        overflow-x: auto;
+        overflow-y: hidden;
+        touch-action: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .mediaCarousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mediaTrack {
+        transform: none;
+        transition: none;
+    }
+
+    .mediaTrack[data-offset='1'] {
+        transform: none;
+    }
+
+    .mediaSlide {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
     .mediaCircle {
         width: 30px;
         height: 30px;

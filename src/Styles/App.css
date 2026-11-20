@@ -141,6 +141,13 @@
   }
 }
 
+@keyframes mobileMenuItemRetract {
+  to {
+    transform: translateY(-8px);
+    visibility: hidden;
+  }
+}
+
 .homeSectionMenuNumber {
   display: none;
 }
@@ -368,6 +375,16 @@
   .homeSectionMenu--mobile-open .homeSectionMenuFooter {
     animation-delay: 850ms;
   }
+
+  .homeSectionMenu--mobile-closing > button:not(.homeSectionMenuToggle) {
+    animation: mobileMenuItemRetract 180ms ease-in both;
+  }
+
+  .homeSectionMenu--mobile-closing > button:not(.homeSectionMenuToggle):nth-of-type(2) { animation-delay: 200ms; }
+  .homeSectionMenu--mobile-closing > button:not(.homeSectionMenuToggle):nth-of-type(3) { animation-delay: 150ms; }
+  .homeSectionMenu--mobile-closing > button:not(.homeSectionMenuToggle):nth-of-type(4) { animation-delay: 100ms; }
+  .homeSectionMenu--mobile-closing > button:not(.homeSectionMenuToggle):nth-of-type(5) { animation-delay: 50ms; }
+  .homeSectionMenu--mobile-closing > button:not(.homeSectionMenuToggle):nth-of-type(6) { animation-delay: 0ms; }
 
   .homeSectionMenu--mobile-open .homeSectionMenuNumber {
     display: block;
