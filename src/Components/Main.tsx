@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../Styles/Main.css';
 import App from './App.tsx';
-import AppTest from './AppTest.tsx';
 import About from './About.tsx'
 import Tobias from './Tobias.tsx';
 import Footer from './Footer.tsx';
@@ -193,7 +192,6 @@ function Main() {
         <SectionNavigation />
         <Routes>
                 <Route path="/" element={<App />}/>
-                <Route path="/progress" element={<AppTest />}/>
                 <Route path="/about" element={<About />}/>
                 <Route path="/tobias" element={<TobiasPage />}/>
         </Routes>
