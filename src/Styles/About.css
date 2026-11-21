@@ -178,6 +178,7 @@
     .aboutImageWrapper {
         display: flex;
         justify-content: center;
+        margin-bottom: 12px;
     }
 
     .personImage {
@@ -206,7 +207,7 @@
     }
 
     .aboutBlurb1 {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
     }
 
     .aboutContent > .aboutBlurb:not(.aboutBlurb1):not(.aboutBlurb2) {
