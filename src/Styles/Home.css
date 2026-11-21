@@ -7,12 +7,13 @@
 
 .homeLogo {
     position: absolute;
-    top: 4%;
+    top: 50%;
     left: clamp(24px, 6vw, 80px);
     display: block;
     width: auto;
     height: clamp(42px, 6.05vw, 100px);
     opacity: 0;
+    transform: translateY(-50%);
     animation: homeTextReveal 600ms ease-out 1.2s forwards;
 }
 
