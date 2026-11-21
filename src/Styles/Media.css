@@ -264,6 +264,16 @@
         scroll-snap-stop: always;
     }
 
+    .mediaCardLink:hover .mediaSquareImage,
+    .mediaCardLink:focus-visible .mediaSquareImage {
+        transform: scale(1);
+    }
+
+    .mediaCardLink:hover .mediaExternalArrow,
+    .mediaCardLink:focus-visible .mediaExternalArrow {
+        transform: none;
+    }
+
     .mediaCircle {
         width: 30px;
         height: 30px;
@@ -280,6 +290,8 @@
 
     .mediaCaseTitle {
         font-size: clamp(19px, 3vw, 24px);
+        color: #fff;
+        transition: none;
     }
 }
 
