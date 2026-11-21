@@ -215,6 +215,10 @@
     transition: transform 250ms ease;
 }
 
+.mediaPagination {
+    display: none;
+}
+
 .mediaCardLink:hover .mediaExternalArrow,
 .mediaCardLink:focus-visible .mediaExternalArrow {
     transform: translate(3px, -3px);
@@ -232,8 +236,13 @@
         font-size: clamp(26px, 5vw, 36px);
     }
 
+    .mediaLatest {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
     .mediaCirclePair {
-        gap: 18px;
+        display: none;
     }
 
     .mediaCarousel {
@@ -248,6 +257,37 @@
 
     .mediaCarousel::-webkit-scrollbar {
         display: none;
+    }
+
+    .mediaPagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-top: 24px;
+    }
+
+    .mediaPaginationDot {
+        appearance: none;
+        display: block;
+        width: 6px;
+        height: 6px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(242, 241, 237, 0.42);
+        cursor: pointer;
+        transition: background-color 180ms ease, transform 180ms ease;
+    }
+
+    .mediaPaginationDot.is-active {
+        background: #f2f1ed;
+        transform: scale(1.25);
+    }
+
+    .mediaPaginationDot:focus-visible {
+        outline: 1px solid #f2f1ed;
+        outline-offset: 4px;
     }
 
     .mediaTrack {

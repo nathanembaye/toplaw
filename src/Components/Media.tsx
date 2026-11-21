@@ -43,6 +43,7 @@ function Media() {
   const [isTouchDragging, setIsTouchDragging] = useState(false);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [pendingDirection, setPendingDirection] = useState<'next' | 'previous' | null>(null);
+  const [activeMobileSlide, setActiveMobileSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const wheelGestureActive = useRef(false);
   const wheelGestureTimeout = useRef<number | null>(null);
@@ -63,6 +64,34 @@ function Media() {
     if (direction < 0 && carousel.scrollLeft <= 2) nextScroll = maxScroll;
 
     carousel.scrollTo({ left: nextScroll, behavior: 'smooth' });
+  };
+
+  const handleNativeScroll = () => {
+    const carousel = carouselRef.current;
+    const slides = carousel?.querySelectorAll<HTMLElement>('.mediaSlide');
+    if (!carousel || !slides?.length) return;
+
+    const carouselLeft = carousel.getBoundingClientRect().left;
+    let nearestIndex = 0;
+    let nearestDistance = Number.POSITIVE_INFINITY;
+    slides.forEach((slide, index) => {
+      const slideLeft = slide.getBoundingClientRect().left - carouselLeft + carousel.scrollLeft;
+      const distance = Math.abs(slideLeft - carousel.scrollLeft);
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearestIndex = index;
+      }
+    });
+    setActiveMobileSlide(nearestIndex);
+  };
+
+  const scrollToMobileSlide = (index: number) => {
+    const carousel = carouselRef.current;
+    const slide = carousel?.querySelectorAll<HTMLElement>('.mediaSlide')[index];
+    if (!carousel || !slide) return;
+
+    const slideLeft = slide.getBoundingClientRect().left - carousel.getBoundingClientRect().left + carousel.scrollLeft;
+    carousel.scrollTo({ left: slideLeft, behavior: 'smooth' });
   };
 
   const goNext = () => {
@@ -215,6 +244,7 @@ function Media() {
       <div
         ref={carouselRef}
         className="mediaCarousel"
+        onScroll={handleNativeScroll}
         onWheel={handleWheel}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -259,6 +289,18 @@ function Media() {
             </article>
           ))}
         </div>
+      </div>
+      <div className="mediaPagination" role="group" aria-label="Choose a press article">
+        {mediaItems.map((item, index) => (
+          <button
+            className={`mediaPaginationDot${activeMobileSlide === index ? ' is-active' : ''}`}
+            type="button"
+            key={item.title}
+            aria-label={`Show article ${index + 1} of ${mediaItems.length}`}
+            aria-current={activeMobileSlide === index ? 'true' : undefined}
+            onClick={() => scrollToMobileSlide(index)}
+          />
+        ))}
       </div>
     </section>
   );
