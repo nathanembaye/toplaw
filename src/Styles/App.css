@@ -38,6 +38,7 @@
   opacity: 0;
   transform: translateY(-8px);
   pointer-events: none;
+  transition: opacity 450ms ease, transform 450ms ease, visibility 0s linear 450ms;
 }
 
 .homeSectionMenu--visible {
@@ -45,12 +46,14 @@
   pointer-events: auto;
   opacity: 1;
   transform: none;
+  transition-delay: 0s;
 }
 
 .homeSectionMenu--hidden {
   visibility: hidden;
   opacity: 0;
   transform: none;
+  transition-delay: 0s, 0s, 450ms;
 }
 
 @keyframes homeSectionMenuFadeIn {
@@ -81,6 +84,7 @@
   .homeSectionMenu--visible,
   .homeSectionMenu--hidden {
     animation: none;
+    transition: none;
   }
 
   .homeSectionMenu--visible {
@@ -152,14 +156,10 @@
   display: none;
 }
 
-.homeSectionMenuBrandTitle {
-  font: 700 18px/1.1 'Nanum Myeongjo', serif;
-}
-
-.homeSectionMenuBrandSubtitle {
-  margin-top: 2px;
-  font: 300 8px/1.3 'Jost', Arial, Helvetica, sans-serif;
-  letter-spacing: 0.12em;
+.homeSectionMenuBrandLogo {
+  display: block;
+  width: auto;
+  height: 30px;
 }
 
 .homeSectionMenuToggle {
@@ -468,13 +468,8 @@
     }
   }
 
-  .homeSectionMenuBrandTitle {
-    font-size: 12px;
-  }
-
-  .homeSectionMenuBrandSubtitle {
-    margin-top: 0;
-    font-size: 5px;
+  .homeSectionMenuBrandLogo {
+    height: 17px;
   }
 
   .homeSectionMenu button {

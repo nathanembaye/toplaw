@@ -1,11 +1,11 @@
 import React from 'react';
 import '../Styles/Home.css';
+import logo from '../Assets/logo.svg';
 
 function Home() {
   return (
     <section className="homeContainer" id="home">
-      <h1 className="homeTitle">TOP LAW</h1>
-      <p className="homeSubtitle">CRIMINAL DEFENCE</p>
+      <img className="homeLogo" src={logo} alt="Top Law" />
     </section>
   );
 }

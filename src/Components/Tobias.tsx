@@ -30,7 +30,7 @@ function Tobias() {
         <div className="tobiasImageFrame">
           <img
             className="tobiasImage"
-            src={require('../Assets/tobias4.jpeg')}
+            src={require('../Assets/tobias.jpeg')}
             alt="Tobias Okada-Phillips"
           />
         </div>

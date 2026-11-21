@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../Styles/Main.css';
+import logo from '../Assets/logo.svg';
 import App from './App.tsx';
 import About from './About.tsx'
 import Tobias from './Tobias.tsx';
@@ -146,8 +147,7 @@ function SectionNavigation() {
             document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
           } : undefined}
         >
-          <span className="homeSectionMenuBrandTitle">TOP LAW</span>
-          <span className="homeSectionMenuBrandSubtitle">CRIMINAL DEFENCE</span>
+          <img className="homeSectionMenuBrandLogo" src={logo} alt="Top Law" />
         </Link>
         <button
           type="button"

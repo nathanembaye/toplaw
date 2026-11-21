@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/Footer.css';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../Assets/logo.svg';
 
 const footerLinks = [
   ['about', 'Firm'],
@@ -36,8 +37,7 @@ function Footer() {
           aria-label="TOP LAW home"
           onClick={location.pathname === '/' ? (event) => scrollToSection(event, 'home') : undefined}
         >
-          <span className="footerBrandTitle">TOP LAW</span>
-          <span className="footerBrandSubtitle">CRIMINAL DEFENCE</span>
+          <img className="footerBrandTitle" src={logo} alt="Top Law" />
         </Link>
 
         <div className="footerInformation">

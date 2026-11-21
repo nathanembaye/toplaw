@@ -50,7 +50,7 @@ get the best possible result for every client.
           <div className="aboutImageWrapper">
             <img
               className="personImage"
-              src={require('../Assets/tobias4.jpeg')}
+              src={require('../Assets/tobias.jpeg')}
               alt="Headshot"
             />
           </div>
