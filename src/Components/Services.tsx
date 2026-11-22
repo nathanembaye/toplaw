@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FiArrowRight } from 'react-icons/fi';
 import '../Styles/Services.css';
 
 const services = [
@@ -84,9 +86,14 @@ function Services() {
               data-service-index={index}
               className={visibleItems.includes(index) ? 'servicesListItem--visible' : ''}
             >
-              <span className="servicesNumber">{String(index + 1).padStart(2, '0')}</span>
-              <h2>{service.title}</h2>
-              <p>{service.description}</p>
+              <Link className="servicesItemLink" to="/bailhearings">
+                <span className="servicesNumber">
+                  <span className="servicesNumberText">{String(index + 1).padStart(2, '0')}</span>
+                  <FiArrowRight className="servicesNumberArrow" size={18} strokeWidth={2} aria-hidden="true" focusable="false" />
+                </span>
+                <h2>{service.title}</h2>
+                <p>{service.description}</p>
+              </Link>
             </li>
           ))}
         </ul>
