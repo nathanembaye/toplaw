@@ -115,24 +115,31 @@
 
 .directoryTable th:nth-child(1),
 .directoryTable td:nth-child(1) {
-    width: 4%;
+    width: 5%;
 }
 
 .directoryTable th:nth-child(2),
-.directoryTable td:nth-child(2),
+.directoryTable td:nth-child(2) {
+    width: 60%;
+}
+
 .directoryTable th:nth-child(3),
 .directoryTable td:nth-child(3) {
-    width: 38%;
+    width: 25%;
 }
 
 .directoryTable th:nth-child(4),
 .directoryTable td:nth-child(4) {
-    width: 20%;
+    width: 10%;
+    text-align: right;
+}
+
+.directoryTable thead th:nth-child(4) {
     text-align: right;
 }
 
 .directoryTable tbody td {
-    border-bottom: 1px solid rgba(242, 241, 237, 0.35);
+    border-bottom: 0.25px solid rgba(242, 241, 237, 0.5);
 }
 
 .directoryChevronCell {
@@ -165,8 +172,10 @@
 }
 
 .directoryTable th {
-    color: #dccbb3;
-    font-weight: 500;
+    color: #f2f1ed;
+    font-family: 'Nanum Myeongjo', Georgia, serif;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 400;
 }
 
 .directoryTable a {
@@ -232,6 +241,14 @@
     transition: padding-block 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+@media (min-width: 701px) {
+    .directoryExpandedInner {
+        max-width: 65%;
+        padding-left: 5%;
+        box-sizing: border-box;
+    }
+}
+
 .directoryExpandedDescription {
     margin: 0;
 }
@@ -239,24 +256,18 @@
 .directoryTable .directoryReadMore {
     display: none;
     width: 100%;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: baseline;
+    justify-content: flex-start;
     gap: 8px;
     margin-top: 12px;
     color: #dccbb3;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    text-decoration: none;
 }
 
-.directoryReadMoreArrow {
-    width: 16px;
-    height: 14px;
-    flex: 0 0 auto;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.25;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.directoryReadMorePdf {
+    color: #9EADA2;
+    font-size: 0.75em;
+    line-height: 1;
 }
 
 .directoryExpandedRow.isOpen .directoryExpandedContent {
@@ -329,8 +340,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        height: 1px;
-        background: rgba(242, 241, 237, 0.35);
+        height: 0.25px;
+        background: rgba(242, 241, 237, 0.5);
         content: '';
         pointer-events: none;
     }

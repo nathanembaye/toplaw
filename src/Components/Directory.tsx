@@ -45,7 +45,7 @@ function Directory() {
               <th scope="col" aria-label="Expand case"></th>
               <th scope="col">Case</th>
               <th scope="col">Citation</th>
-              <th scope="col">CanLii</th>
+              <th scope="col" aria-label="CanLII"></th>
             </tr>
           </thead>
           <tbody>
@@ -92,13 +92,10 @@ function Directory() {
                         <a
                           className="directoryReadMore"
                           href={caseItem.pdfUrl}
-                          aria-label={`Read more about ${caseItem.name}`}
+                          aria-label={`Read decision for ${caseItem.name}`}
                           onClick={(event) => event.stopPropagation()}
                         >
-                          Read more
-                          <svg className="directoryReadMoreArrow" viewBox="0 0 18 16" aria-hidden="true" focusable="false">
-                            <path d="M2 8h13m0 0-6-6m6 6-6 6" />
-                          </svg>
+                          Read decision <span className="directoryReadMorePdf">PDF</span>
                         </a>
                       </div>
                     </div>
