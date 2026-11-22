@@ -400,6 +400,14 @@
         text-align: left;
     }
 
+    .directoryExpandedContent {
+        transition: opacity 250ms ease;
+    }
+
+    .directoryExpandedInner {
+        transition: none;
+    }
+
     .directoryTable td:nth-child(4) a {
         width: 22px;
         height: 22px;
