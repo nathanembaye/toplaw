@@ -10,7 +10,7 @@ function Tobias() {
           <p className="tobiasRole">Founding Partner</p>
           <div className="tobiasContact">
             <a href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
-            <a href="tel:+16479155325">(647) 915-9325</a>
+            <a href="tel:6479775354">647-977-5354</a>
           </div>
           <div className="tobiasBlurb">
             <p>

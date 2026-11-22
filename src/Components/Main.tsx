@@ -6,6 +6,7 @@ import About from './About.tsx'
 import Tobias from './Tobias.tsx';
 import Footer from './Footer.tsx';
 import Directory from './Directory.tsx';
+import BailHearings from './Services/BailHearings.tsx';
 import { HashRouter, Routes, Route, useLocation, Link, useNavigate } from "react-router-dom";
 
 function ScrollToTop() {
@@ -19,7 +20,7 @@ function ScrollToTop() {
 }
 
 const mainPageSections = [
-  ['home', 'Home'],
+  ['landing', 'Landing'],
   ['about', 'About'],
   ['cases', 'Cases'],
   ['services', 'Services'],
@@ -32,9 +33,10 @@ function SectionNavigation() {
   const navigate = useNavigate();
   const isMainPage = location.pathname === '/';
   const isTobiasPage = location.pathname === '/tobias';
+  const isBailHearingsPage = location.pathname === '/bailhearings';
   const [showSectionMenu, setShowSectionMenu] = useState(false);
   const [hasShownSectionMenu, setHasShownSectionMenu] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('landing');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuClosing, setIsMobileMenuClosing] = useState(false);
 
@@ -58,7 +60,7 @@ function SectionNavigation() {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    if (isTobiasPage) {
+    if (isTobiasPage || isBailHearingsPage) {
       setShowSectionMenu(true);
       setHasShownSectionMenu(true);
       return;
@@ -70,7 +72,7 @@ function SectionNavigation() {
 
     setShowSectionMenu(false);
     setHasShownSectionMenu(false);
-    const homeSection = document.getElementById('home');
+    const homeSection = document.getElementById('landing');
     if (!homeSection) return;
 
     const observer = new IntersectionObserver(([entry]) => {
@@ -81,7 +83,7 @@ function SectionNavigation() {
 
     observer.observe(homeSection);
     return () => observer.disconnect();
-  }, [isMainPage, isTobiasPage]);
+  }, [isMainPage, isTobiasPage, isBailHearingsPage]);
 
   useEffect(() => {
     if (!isMainPage) return;
@@ -126,8 +128,8 @@ function SectionNavigation() {
     closeMobileMenu();
   };
 
-  const isVisible = isTobiasPage || showSectionMenu;
-  const navClassName = `homeSectionMenu${isVisible ? ' homeSectionMenu--visible' : hasShownSectionMenu ? ' homeSectionMenu--hidden' : ''}${isMobileMenuOpen ? ' homeSectionMenu--mobile-open' : ''}${isMobileMenuClosing ? ' homeSectionMenu--mobile-closing' : ''}`;
+  const isVisible = isTobiasPage || isBailHearingsPage || showSectionMenu;
+  const navClassName = `homeSectionMenu${isVisible ? ' homeSectionMenu--visible' : hasShownSectionMenu ? ' homeSectionMenu--hidden' : ''}${isMobileMenuOpen ? ' homeSectionMenu--mobile-open' : ''}${isMobileMenuClosing ? ' homeSectionMenu--mobile-closing' : ''}${isBailHearingsPage ? ' homeSectionMenu--bailHearings' : ''}`;
 
   return (
     <nav
@@ -140,11 +142,11 @@ function SectionNavigation() {
         <Link
           className="homeSectionMenuBrand"
           to="/"
-          state={!isMainPage ? { scrollTo: 'home' } : undefined}
+          state={!isMainPage ? { scrollTo: 'landing' } : undefined}
           aria-label="TOP LAW home"
           onClick={isMainPage ? (event) => {
             event.preventDefault();
-            document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('landing')?.scrollIntoView({ behavior: 'smooth' });
           } : undefined}
         >
           <img className="homeSectionMenuBrandLogo" src={logo} alt="Top Law" />
@@ -194,6 +196,7 @@ function Main() {
                 <Route path="/" element={<App />}/>
                 <Route path="/about" element={<About />}/>
                 <Route path="/tobias" element={<TobiasPage />}/>
+                <Route path="/bailhearings" element={<BailHearings />}/>
         </Routes>
       </HashRouter>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../Styles/App.css';
 import Services from './Services.tsx';
-import Home from './Home.tsx';
+import Landing from './Landing.tsx';
 import Media from './Media.tsx';
 import About from './About.tsx';
 import Cases from './Cases.tsx';
@@ -10,7 +10,7 @@ import Footer from './Footer.tsx'
 import { useLocation } from 'react-router-dom';
 
 const pageSections = [
-  ['home', 'Home'],
+  ['landing', 'Landing'],
   ['about', 'About'],
   ['cases', 'Cases'],
   ['services', 'Services'],
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <>
-      <Home/>
+      <Landing/>
       <About/>
       <Cases/>
       <Services/>

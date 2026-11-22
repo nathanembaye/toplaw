@@ -161,13 +161,13 @@ function Contact() {
                 <div className="test">
                   <div className="testTextRow">
                     <span className="testTextRowLabel">EMAIL</span>
-                    <a className="testTextRowTitle" href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
+                    <a className="testTextRowTitle" href="mailto:info@top-law.ca">info@top-law.ca</a>
                   </div>
                 </div>
                 <div className="test">
                   <div className="testTextRow">
                     <span className="testTextRowLabel">PHONE</span>
-                    <a className="testTextRowTitle" href="tel:(647) 915-9325">(647) 915-9325</a>
+                    <a className="testTextRowTitle" href="tel:6479775354">647-977-5354</a>
                   </div>
                 </div>
                 <div className="test">

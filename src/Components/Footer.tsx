@@ -33,7 +33,7 @@ function Footer() {
         <Link
           className="footerBrand"
           to="/"
-          state={location.pathname === '/' ? undefined : { scrollTo: 'home' }}
+          state={location.pathname === '/' ? undefined : { scrollTo: 'landing' }}
           aria-label="TOP LAW home"
           onClick={location.pathname === '/' ? (event) => scrollToSection(event, 'home') : undefined}
         >
@@ -58,11 +58,11 @@ function Footer() {
           <div className="footerContact">
             <div className="footerContactItem">
               <h2 className="footerColumnHeading">Call</h2>
-              <a href="tel:+16479159325">(647) 915-9325</a>
+              <a href="tel:6479775354">647-977-5354</a>
             </div>
             <div className="footerContactItem">
               <h2 className="footerColumnHeading">Email</h2>
-              <a href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
+              <a href="mailto:info@top-law.ca">info@top-law.ca</a>
             </div>
             <div className="footerContactItem">
               <h2 className="footerColumnHeading">Visit</h2>

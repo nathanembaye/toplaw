@@ -1,9 +1,9 @@
 import React from 'react';
-import '../Styles/Home.css';
+import '../Styles/Landing.css';
 
 function Temp() {
   return (
-    <section className="homeContainer" id="home">
+    <section className="homeContainer" id="landing">
       <h1 className="homeTitle">TOP LAW</h1>
       <p className="homeSubtitle">CRIMINAL DEFENCE</p>
       <svg className="homeCube" viewBox="0 0 131 111" role="img" aria-label="Geometric cube outline">
