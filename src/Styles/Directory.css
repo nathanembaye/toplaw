@@ -345,8 +345,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        height: 0.25px;
-        background: rgba(242, 241, 237, 0.5);
+        height: 1px;
+        background: rgba(242, 241, 237, 0.25);
         content: '';
         pointer-events: none;
     }
@@ -398,14 +398,6 @@
 
     .directoryExpandedInner {
         text-align: left;
-    }
-
-    .directoryExpandedContent {
-        transition: opacity 250ms ease;
-    }
-
-    .directoryExpandedInner {
-        transition: none;
     }
 
     .directoryTable td:nth-child(4) a {
