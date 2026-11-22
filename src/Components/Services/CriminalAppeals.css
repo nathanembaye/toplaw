@@ -1,0 +1,218 @@
+.bailHearingsPage {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 112px;
+  background-color: #152621;
+  color: #f2f1ed;
+}
+
+.bailHearingsLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  width: min(1440px, 100%);
+  min-height: calc(100vh - 112px);
+  margin-inline: auto;
+}
+
+.bailHearingsSidebar {
+  position: sticky;
+  top: 104px;
+  align-self: start;
+  box-sizing: border-box;
+  padding: 48px clamp(28px, 5vw, 76px) 64px clamp(28px, 6vw, 88px);
+}
+
+.bailHearingsSidebarContent {
+  max-width: 440px;
+}
+
+.bailHearingsEyebrow,
+.bailHearingsSectionNumber {
+  margin: 0;
+  color: rgba(242, 241, 237, 0.56);
+  font-family: 'Jost', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+}
+
+.bailHearingsTitle {
+  margin: 22px 0 18px;
+  color: #f2f1ed;
+  font-family: 'Nanum Myeongjo', Georgia, serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.06;
+}
+
+.bailHearingsIntroduction {
+  max-width: 370px;
+  margin: 0;
+  color: rgba(242, 241, 237, 0.78);
+  font-family: 'Jost', Arial, Helvetica, sans-serif;
+  font-size: clamp(15px, 1.35vw, 18px);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.bailHearingsIndex {
+  display: grid;
+  gap: 12px;
+  margin-top: clamp(40px, 7vh, 72px);
+}
+
+.bailHearingsIndexItem {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  width: fit-content;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  color: rgba(242, 241, 237, 0.48);
+  cursor: pointer;
+  font-family: 'Jost', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  transition: color 180ms ease;
+}
+
+.bailHearingsIndexItem:hover,
+.bailHearingsIndexItem--active {
+  color: #f2f1ed;
+}
+
+.bailHearingsIndexNumber {
+  color: rgba(242, 241, 237, 0.42);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.bailHearingsIndexItem--active .bailHearingsIndexNumber {
+  color: #dccbb3;
+}
+
+.bailHearingsIndexItem:focus-visible {
+  outline: 1px solid #dccbb3;
+  outline-offset: 5px;
+}
+
+.bailHearingsContent {
+  min-width: 0;
+  padding: 0 clamp(32px, 7vw, 104px);
+}
+
+.bailHearingsSection {
+  min-height: 64vh;
+  box-sizing: border-box;
+  padding: clamp(44px, 7vh, 76px) 0 clamp(52px, 8vh, 88px);
+  border-bottom: 1px solid rgba(242, 241, 237, 0.22);
+  scroll-margin-top: 100px;
+}
+
+.bailHearingsSection:first-child {
+  padding-top: 48px;
+}
+
+.bailHearingsSection:last-child {
+  border-bottom: 0;
+}
+
+.bailHearingsQuestion {
+  max-width: 700px;
+  margin: 22px 0 28px;
+  color: #f2f1ed;
+  font-family: 'Nanum Myeongjo', Georgia, serif;
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.bailHearingsAnswer {
+  max-width: 620px;
+  color: rgba(242, 241, 237, 0.78);
+  font-family: 'Jost', Arial, Helvetica, sans-serif;
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.bailHearingsAnswer p {
+  margin: 0 0 18px;
+}
+
+.bailHearingsAnswer p:last-child {
+  margin-bottom: 0;
+}
+
+.bailHearingsAnswer ul {
+  margin: 0 0 18px;
+  padding-left: 1.25em;
+}
+
+.bailHearingsAnswer li {
+  padding-left: 0.25em;
+}
+
+.bailHearingsAnswer li + li {
+  margin-top: 4px;
+}
+
+@media (max-width: 760px) {
+  .bailHearingsPage {
+    padding-top: 92px;
+  }
+
+  .bailHearingsLayout {
+    display: block;
+    min-height: 0;
+  }
+
+  .bailHearingsSidebar {
+    position: static;
+    padding: 44px clamp(24px, 7vw, 48px) 42px;
+  }
+
+  .bailHearingsSidebarContent {
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .bailHearingsTitle {
+    font-size: clamp(42px, 10vw, 58px);
+  }
+
+  .bailHearingsIndex {
+    display: none;
+  }
+
+  .bailHearingsContent {
+    padding-inline: clamp(24px, 7vw, 48px);
+  }
+
+  .bailHearingsSection,
+  .bailHearingsSection:first-child {
+    min-height: 0;
+    padding: 40px 0 48px;
+    scroll-margin-top: 80px;
+  }
+
+  .bailHearingsQuestion {
+    margin: 18px 0 22px;
+    font-size: clamp(30px, 8vw, 40px);
+  }
+
+  .bailHearingsAnswer {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bailHearingsIndexItem {
+    transition: none;
+  }
+}

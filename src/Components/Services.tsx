@@ -1,32 +1,37 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
-import '../Styles/Services.css';
+import '../Styles/services/Services.css';
 
 const services = [
   {
     title: 'Bail Hearings',
     description: 'Strong representation to help secure your release while you await trial.',
+    route: '/services/bail-hearings',
   },
   {
     title: 'Criminal Appeals',
     description: 'Challenging convictions and sentences with careful, thorough legal argument.',
+    route: '/services/criminal-appeals',
   },
   {
     title: 'Criminal Trials',
     description: 'Skilled courtroom advocacy to defend your rights from start to verdict.',
+    route: '/services/criminal-trials',
   },
   {
     title: 'Violent Offences',
     description: 'Defending assault and related charges with a strategic, careful approach.',
+    route: '/services/violent-offences',
   },
   {
     title: 'Sexual Offences',
     description: 'Discreet, respectful defence that protects your rights and reputation.',
+    route: '/services/sexual-offences',
   },
   {
     title: 'Drug Offences',
     description: 'Defending possession, trafficking, and related charges with clear guidance.',
+    route: '/services/drug-offences',
   },
 ];
 
@@ -86,11 +91,8 @@ function Services() {
               data-service-index={index}
               className={visibleItems.includes(index) ? 'servicesListItem--visible' : ''}
             >
-              <Link className="servicesItemLink" to="/bailhearings">
-                <span className="servicesNumber">
-                  <span className="servicesNumberText">{String(index + 1).padStart(2, '0')}</span>
-                  <FiArrowRight className="servicesNumberArrow" size={18} strokeWidth={2} aria-hidden="true" focusable="false" />
-                </span>
+              <Link className="servicesItemLink" to={service.route}>
+                <span className="servicesNumber">{String(index + 1).padStart(2, '0')}</span>
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
               </Link>

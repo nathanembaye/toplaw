@@ -7,29 +7,6 @@
   color: #f2f1ed;
 }
 
-.homeSectionMenu.homeSectionMenu--bailHearings {
-  border-bottom: 1px solid rgba(242, 241, 237, 0.28);
-}
-
-.bailHearingsPage::after {
-  position: fixed;
-  z-index: 1;
-  top: 112px;
-  right: auto;
-  bottom: 0;
-  left: 40vw;
-  width: 1px;
-  background-color: rgba(242, 241, 237, 0.28);
-  content: '';
-  pointer-events: none;
-}
-
-@media (min-width: 1440px) {
-  .bailHearingsPage::after {
-    left: calc((100vw - 1440px) / 2 + 576px);
-  }
-}
-
 .bailHearingsLayout {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
@@ -171,6 +148,19 @@
   margin-bottom: 0;
 }
 
+.bailHearingsAnswer ul {
+  margin: 0 0 18px;
+  padding-left: 1.25em;
+}
+
+.bailHearingsAnswer li {
+  padding-left: 0.25em;
+}
+
+.bailHearingsAnswer li + li {
+  margin-top: 4px;
+}
+
 @media (max-width: 760px) {
   .bailHearingsPage {
     padding-top: 92px;
@@ -202,11 +192,6 @@
   .bailHearingsContent {
     padding-inline: clamp(24px, 7vw, 48px);
   }
-
-  .bailHearingsPage::after {
-    display: none;
-  }
-
 
   .bailHearingsSection,
   .bailHearingsSection:first-child {

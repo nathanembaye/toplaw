@@ -83,53 +83,14 @@
 }
 
 .servicesNumber {
-    position: relative;
     display: block;
-    width: 100%;
-    height: 18px;
-    overflow: hidden;
     margin-bottom: 4px;
     color: #F2F1ED;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-size: 0.7em;
     font-weight: 300;
     letter-spacing: 0.12em;
-    line-height: 18px;
     text-align: left;
-}
-
-.servicesNumberText {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: max-content;
-    color: #F2F1ED;
-    transform: translateX(0);
-    transition: opacity 300ms ease-out, transform 300ms ease-out;
-}
-
-.servicesNumberArrow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    color: #F2F1ED;
-    opacity: 0;
-    transform: translateX(-14px);
-    transition: opacity 300ms ease-out, transform 300ms ease-out;
-}
-
-.servicesItemLink:hover .servicesNumberText,
-.servicesItemLink:focus-visible .servicesNumberText {
-    opacity: 0;
-    transform: translateX(14px);
-}
-
-.servicesItemLink:hover .servicesNumberArrow,
-.servicesItemLink:focus-visible .servicesNumberArrow {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .servicesList li.servicesListItem--visible {
@@ -155,22 +116,6 @@
         transition: none;
     }
 
-    .servicesNumberText,
-    .servicesNumberArrow {
-        transition: opacity 100ms linear;
-        transform: none;
-    }
-}
-
-@media (hover: none) {
-    .servicesNumberText {
-        opacity: 0;
-    }
-
-    .servicesNumberArrow {
-        opacity: 1;
-        transform: none;
-    }
 }
 
 .servicesList li h2 {
@@ -181,6 +126,9 @@
     font-size: clamp(24px, 3vw, 34px);
     font-weight: 400;
     color: #dccbb3;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 4px;
     white-space: nowrap;
 }
 
@@ -301,11 +249,6 @@
         text-align: right;
     }
 
-    .servicesList li:nth-child(even) .servicesNumberText,
-    .servicesList li:nth-child(even) .servicesNumberArrow {
-        right: 0;
-        left: auto;
-    }
 }
 
 @media (max-width: 632px) and (prefers-reduced-motion: reduce) {
@@ -314,75 +257,6 @@
     .servicesList li:nth-child(odd).servicesListItem--visible,
     .servicesList li:nth-child(even).servicesListItem--visible {
         transform: none;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .servicesItemLink:hover .servicesNumberText,
-    .servicesItemLink:focus-visible .servicesNumberText,
-    .servicesItemLink:hover .servicesNumberArrow,
-    .servicesItemLink:focus-visible .servicesNumberArrow {
-        transform: none;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .servicesNumberText,
-    .servicesNumberArrow {
-        transition: none;
-    }
-}
-
-@media (max-width: 1022px) {
-    .servicesNumberText,
-    .servicesNumberArrow {
-        transition: none;
-    }
-
-    .servicesNumber {
-        width: 100%;
-    }
-
-    .servicesNumberText {
-        opacity: 1;
-        transform: none;
-    }
-
-    .servicesNumberArrow {
-        display: none;
-    }
-
-    .servicesItemLink:hover .servicesNumberText,
-    .servicesItemLink:focus-visible .servicesNumberText {
-        opacity: 1;
-        transform: none;
-    }
-
-    .servicesList li h2 {
-        text-decoration: underline;
-        text-decoration-thickness: 0.5px;
-        text-underline-offset: 4px;
-    }
-}
-
-@media (max-width: 632px) {
-    .servicesNumber {
-        width: auto;
-        height: auto;
-        overflow: visible;
-        line-height: normal;
-    }
-
-    .servicesNumberText {
-        position: static;
-        display: inline;
-        width: auto;
-        opacity: 1;
-        transform: none;
-    }
-
-    .servicesNumberArrow {
-        display: none;
     }
 }
 
