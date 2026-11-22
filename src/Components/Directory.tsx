@@ -65,8 +65,9 @@ function Directory() {
                   }}
                 >
                   <td className="directoryChevronCell">
-                    <svg className="directoryRowChevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                      <path d="m3 6 5 5 5-5" />
+                    <svg className="directoryRowToggleIcon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                      <path className="directoryToggleHorizontal" d="M3 8h10" />
+                      <path className="directoryToggleVertical" d="M8 3v10" />
                     </svg>
                   </td>
                   <td>{caseItem.name}</td>
@@ -86,7 +87,20 @@ function Directory() {
                 <tr className={`directoryExpandedRow${minusRows.includes(index) ? ' isOpen' : ''}`} aria-hidden={!minusRows.includes(index)}>
                   <td colSpan={4}>
                     <div className="directoryExpandedContent">
-                      <div className="directoryExpandedInner">{caseItem.description}</div>
+                      <div className="directoryExpandedInner">
+                        <p className="directoryExpandedDescription">{caseItem.description}</p>
+                        <a
+                          className="directoryReadMore"
+                          href={caseItem.pdfUrl}
+                          aria-label={`Read more about ${caseItem.name}`}
+                          onClick={(event) => event.stopPropagation()}
+                        >
+                          Read more
+                          <svg className="directoryReadMoreArrow" viewBox="0 0 18 16" aria-hidden="true" focusable="false">
+                            <path d="M2 8h13m0 0-6-6m6 6-6 6" />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </td>
                 </tr>
