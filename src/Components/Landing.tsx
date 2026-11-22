@@ -5,12 +5,6 @@ import logo from '../Assets/logo.svg';
 function Landing() {
   return (
     <section className="homeContainer" id="landing">
-      <nav className="landingMenu" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#cases">Cases</a>
-        <a href="#contact">Contact</a>
-      </nav>
       <svg className="homeBackground" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true">
         <path
           className="homeBackgroundPath"
