@@ -178,6 +178,12 @@
     font-weight: 400;
 }
 
+@media (min-width: 701px) {
+    .directoryTable th {
+        color: #9EADA2;
+    }
+}
+
 .directoryTable a {
     color: #F2F1ED;
     text-decoration: none;
@@ -323,6 +329,15 @@
         text-align: center;
         direction: ltr;
         box-sizing: border-box;
+    }
+
+    .directoryTable th {
+        color: #9EADA2;
+        font-family: 'Jost', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
     }
 
     .directoryTable thead tr,
