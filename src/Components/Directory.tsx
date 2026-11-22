@@ -96,7 +96,7 @@ function Directory() {
                           onClick={(event) => event.stopPropagation()}
                         >
                           <span className="directoryReadMoreText">Read decision</span>
-                          <span className="directoryReadMorePdf">PDF</span>
+                          <span className="directoryReadMorePdf">[PDF]</span>
                         </a>
                       </div>
                     </div>
