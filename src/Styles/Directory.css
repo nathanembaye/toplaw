@@ -457,7 +457,8 @@
 
 @media (max-width: 600px) {
     .directoryTable .directoryReadMore {
-        display: flex;
+        display: inline-flex;
+        width: auto;
     }
 }
 
