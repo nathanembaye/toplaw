@@ -270,6 +270,11 @@
     line-height: 1;
 }
 
+.directoryReadMoreText {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .directoryExpandedRow.isOpen .directoryExpandedContent {
     grid-template-rows: 1fr;
     opacity: 1;

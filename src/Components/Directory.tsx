@@ -95,7 +95,8 @@ function Directory() {
                           aria-label={`Read decision for ${caseItem.name}`}
                           onClick={(event) => event.stopPropagation()}
                         >
-                          Read decision <span className="directoryReadMorePdf">PDF</span>
+                          <span className="directoryReadMoreText">Read decision</span>
+                          <span className="directoryReadMorePdf">PDF</span>
                         </a>
                       </div>
                     </div>
