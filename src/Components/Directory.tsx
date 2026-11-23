@@ -1,26 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { cases } from './Cases.tsx';
 import '../Styles/Directory.css';
 
+const directoryIntroduction = {
+  statement: 'Mr. Okada-Phillips has gained the respect of Crown’s and Judge’s alike. He has separated himself from his peers through his winning record.',
+  conclusion: 'For instance, Mr. Okada-Phillips has secured the following results:',
+};
+
 function Directory() {
   const [minusRows, setMinusRows] = useState<number[]>([]);
-  const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      setHasEnteredViewport(true);
-      observer.disconnect();
-    }, { threshold: 0.15 });
-
-    observer.observe(section);
-    return () => observer.disconnect();
-  }, []);
-
   const toggleRow = (index: number) => {
     setMinusRows((rows) => rows.includes(index)
       ? rows.filter((row) => row !== index)
@@ -29,16 +17,14 @@ function Directory() {
   };
 
   return (
-    <section
-      ref={sectionRef}
-      id="directory"
-      className={`directoryContainer${hasEnteredViewport ? ' directoryContainer--visible' : ''}`}
-    >
-      <div className="directoryContent">
-        <p className="directoryIntro">
-          Mr. Okada-Phillips has gained the respect of Crown’s and Judge’s alike. He has separated himself from his peers through his winning record. For instance, Mr. Okada-Phillips has secured the following results:
-        </p>
-        <h2 className="directorySectionLabel">NOTABLE CASES</h2>
+    <div className="directoryMeasureContainer">
+      <section id="directory" className="directoryContainer">
+        <div className="directoryContent">
+          <div className="directoryIntro">
+            <p className="directoryIntroLabel">Notable Cases</p>
+            <p className="directoryIntroStatement">{directoryIntroduction.statement}</p>
+            <p className="directoryIntroConclusion">{directoryIntroduction.conclusion}</p>
+          </div>
         <table className="directoryTable">
           <thead>
             <tr>
@@ -106,8 +92,9 @@ function Directory() {
             ))}
           </tbody>
         </table>
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 }
 

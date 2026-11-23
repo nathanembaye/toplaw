@@ -3,7 +3,7 @@ import '../Styles/Main.css';
 import logo from '../Assets/logo.svg';
 import App from './App.tsx';
 import About from './About.tsx'
-import Tobias from './Tobias.tsx';
+import Profile from './Profile.tsx';
 import Footer from './Footer.tsx';
 import Directory from './Directory.tsx';
 import BailHearings from './Services/BailHearings.tsx';
@@ -240,7 +240,7 @@ function SectionNavigation() {
 }
 
 function TobiasPage() {
-  return <div className="tobiasPageContent"><Tobias /><Directory /><Footer /></div>;
+  return <div className="tobiasPageContent"><Profile /><Directory /><Footer /></div>;
 }
 
 function Main() {

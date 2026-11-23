@@ -1,0 +1,210 @@
+.tobiasSection {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    container-type: inline-size;
+    padding: 24px clamp(24px, 3vw, 40px) 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    background: #152621;
+    box-sizing: border-box;
+}
+
+.tobiasSquare {
+    display: grid;
+    grid-template-columns: minmax(0, clamp(300px, 36vw, 560px)) minmax(0, 1fr);
+    grid-template-areas: "portrait content";
+    align-items: stretch;
+    column-gap: clamp(40px, 4vw, 64px);
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin-inline: auto;
+}
+
+.tobiasCredentials {
+    width: 100%;
+    margin: clamp(20px, 2vw, 28px) 0 0;
+    padding-top: clamp(14px, 1.5vw, 18px);
+    border-top: 1px solid rgba(255, 255, 255, 0.19);
+    box-sizing: border-box;
+    color: #F2F1ED;
+}
+
+.tobiasCredentialsGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) minmax(0, 1.35fr);
+    gap: clamp(12px, 1.5vw, 20px);
+    min-width: 0;
+}
+
+.tobiasCredentialGroup {
+    min-width: 0;
+}
+
+.tobiasCredentialGroup h2 {
+    margin: 0 0 8px;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.tobiasCredentialGroup p {
+    margin: 0;
+    color: #F2F1ED;
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.tobiasCredentialMuted {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.tobiasImageFrame {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-area: portrait;
+    width: 100%;
+    min-width: 0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tobiasImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 16px;
+}
+
+.tobiasCopy {
+    position: static;
+    grid-area: content;
+    width: 100%;
+    min-width: 0;
+}
+
+.tobiasHeading {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Nanum Myeongjo', Georgia, serif;
+    font-size: clamp(48px, 5cqw, 60px);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.18;
+}
+
+.tobiasRole {
+    margin-top: 12px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: 'Nanum Myeongjo', Georgia, serif;
+    font-size: clamp(20px, 2cqw, 25px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.tobiasContact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 4px 28px;
+    margin: 14px 0 25px;
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: clamp(17px, 1.6cqw, 20px);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.tobiasContact a {
+    color: #D8C9AE;
+    text-decoration: underline;
+    text-decoration-color: rgba(216, 201, 174, 0.55);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.tobiasBlurb {
+    margin: 16px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-family: 'Nanum Myeongjo', Georgia, serif;
+    font-size: clamp(16px, 1.4cqw, 17px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.tobiasBlurb p {
+    margin: 0 0 13px;
+}
+
+.tobiasBlurb p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .tobiasSection {
+        padding: 24px 5vw 32px;
+    }
+
+    .tobiasSquare {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "portrait"
+            "content";
+        gap: 32px;
+    }
+
+    .tobiasCredentials {
+        width: 100%;
+        padding-bottom: clamp(14px, 1.5vw, 18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+    }
+
+    .tobiasImageFrame {
+        width: 100%;
+        aspect-ratio: 1366 / 2049;
+    }
+}
+
+@media (max-width: 900px) {
+    .tobiasCredentialsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tobiasSection {
+        padding-inline: 5vw;
+    }
+
+    .tobiasSquare {
+        gap: 24px;
+    }
+
+    .tobiasCredentialsGrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .tobiasCredentialGroup h2 {
+        margin-bottom: 10px;
+    }
+}

@@ -1,12 +1,12 @@
 import React from 'react';
-import '../Styles/Tobias.css';
+import '../Styles/Profile.css';
 
-function Tobias() {
+function Profile() {
   return (
     <section className="tobiasSection" id="tobias">
       <div className="tobiasSquare">
         <div className="tobiasCopy">
-          <h1 className="tobiasHeading">Tobias Okada-Phillips</h1>
+          <h1 className="tobiasHeading">Tobias<br />Okada-Phillips</h1>
           <p className="tobiasRole">Founding Partner</p>
           <div className="tobiasContact">
             <a href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
@@ -26,6 +26,28 @@ function Tobias() {
               If you or a loved one are facing criminal charges, please do not hesitate to reach out to Mr. Okada-Phillips. In his view, it is critically important to begin the defence of criminal allegations as soon as possible.
             </p>
           </div>
+
+          <section className="tobiasCredentials" aria-label="Credentials">
+            <div className="tobiasCredentialsGrid">
+              <div className="tobiasCredentialGroup">
+                <h2>Education</h2>
+                <p><span>Juris Doctor, </span><span className="tobiasCredentialMuted">Queen’s University</span></p>
+                <p><span>Bachelor of Arts, </span><span className="tobiasCredentialMuted">University of Toronto</span></p>
+              </div>
+
+              <div className="tobiasCredentialGroup">
+                <h2>Admitted</h2>
+                <p><span>Ontario </span><span className="tobiasCredentialMuted">(2012)</span></p>
+              </div>
+
+              <div className="tobiasCredentialGroup">
+                <h2>Experience</h2>
+                <p><span>TOP Law Criminal Defence </span><span className="tobiasCredentialMuted">(2024–Present)</span></p>
+                <p><span>Edward Royle &amp; Partners LLP </span><span className="tobiasCredentialMuted">(2012–2024)</span></p>
+              </div>
+            </div>
+          </section>
+
         </div>
         <div className="tobiasImageFrame">
           <img
@@ -35,8 +57,9 @@ function Tobias() {
           />
         </div>
       </div>
+
     </section>
   );
 }
 
-export default Tobias;
+export default Profile;
