@@ -151,51 +151,18 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 50px;
+    gap: 10px;
 
-}
-
-.contactDivider {
-    align-self: stretch;
-    flex: 0 0 1px;
-    background-color: #F2F1ED;
-    opacity: 0.5;
-    clip-path: inset(0 0 100% 0);
-}
-
-.contactContainer--visible .contactDivider {
-    animation: contactDividerDraw 1.2s ease-out forwards;
-}
-
-@keyframes contactDividerDraw {
-    to {
-        clip-path: inset(0);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .contactDivider {
-        clip-path: none;
-        animation: none;
-    }
-}
-
-.contactColumnContent .contactDivider {
-    display: block;
-    align-self: center;
-    margin-inline: auto;
-    flex: 0 0 1px;
-    width: min(80vw, 462px);
-    height: 1px;
 }
 
 @media only screen and (min-width: 1001px) {
     .contactRowContent {
         position: relative;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: clamp(1001px, 92vw, 100vw);
-        gap: 0;
+        grid-template-columns: max-content max-content;
+        justify-content: center;
+        column-gap: clamp(8px, 0.7vw, 10px);
+        width: min(1200px, calc(100vw - 48px));
         box-sizing: border-box;
     }
 
@@ -203,19 +170,6 @@
         margin-top: 0;
     }
 
-    .contactRowContent > .testTextContainer,
-    .contactRowContent > .getInTouchContainer {
-        justify-self: center;
-    }
-
-    .contactRowContent .contactDivider {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: calc(50% - 4vw);
-        width: 1px;
-        transform: translateX(-50%);
-    }
 }
 
 .mapContainer {
@@ -534,10 +488,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .contactColumnContent .contactDivider {
-        display: none;
-    }
-
     .getInTouchHeader {
         width: calc(85vw + 12.5px);
     }

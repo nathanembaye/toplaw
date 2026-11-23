@@ -10,7 +10,7 @@ function Profile() {
           <p className="tobiasRole">Founding Partner</p>
           <div className="tobiasContact">
             <a href="mailto:tobias@top-law.ca">tobias@top-law.ca</a>
-            <a href="tel:6479775354">647-977-5354</a>
+            <a href="tel:6479159325">647-915-9325</a>
           </div>
           <div className="tobiasBlurb">
             <p>
@@ -37,13 +37,13 @@ function Profile() {
 
               <div className="tobiasCredentialGroup">
                 <h2>Admitted</h2>
-                <p><span>Ontario </span><span className="tobiasCredentialMuted">(2012)</span></p>
+                <p><span>Ontario </span><span className="tobiasCredentialMuted">(xxxx)</span></p>
               </div>
 
               <div className="tobiasCredentialGroup">
                 <h2>Experience</h2>
-                <p><span>TOP Law Criminal Defence </span><span className="tobiasCredentialMuted">(2024–Present)</span></p>
-                <p><span>Edward Royle &amp; Partners LLP </span><span className="tobiasCredentialMuted">(2012–2024)</span></p>
+                <p><span>TOP Law Criminal Defence </span><span className="tobiasCredentialMuted">(xxxx-xxxx)</span></p>
+                <p><span>Edward Royle &amp; Partners LLP </span><span className="tobiasCredentialMuted">(xxxx-xxxx)</span></p>
               </div>
             </div>
           </section>

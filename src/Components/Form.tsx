@@ -185,8 +185,6 @@ function Form() {
                 </div>
               </div>
 
-              <div className="contactDivider" aria-hidden="true" />
-            
               <div className="getInTouchContainer">
                 {emailSent ? 
                 <div className="emailSent">
