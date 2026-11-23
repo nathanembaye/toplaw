@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { cases } from './Cases.tsx';
-import '../Styles/Directory.css';
+import { cases } from '../Cases.tsx';
+import '../../Styles/Profile/Directory.css';
 
 const directoryIntroduction = {
   statement: 'Mr. Okada-Phillips has gained the respect of Crown’s and Judge’s alike. He has separated himself from his peers through his winning record.',

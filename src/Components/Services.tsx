@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles/services/Services.css';
+import '../Styles/Services/Services.css';
 
 const services = [
   {

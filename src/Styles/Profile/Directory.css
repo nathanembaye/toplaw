@@ -5,10 +5,8 @@
 }
 
 .directoryContainer {
-    min-height: 100vh;
     box-sizing: border-box;
     margin-top: 10px;
-    padding: 0 0 120px;
     background-color: #152621;
 }
 
@@ -400,3 +398,4 @@
         width: auto;
     }
 }
+

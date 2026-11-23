@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/Profile.css';
+import '../../Styles/Profile/Profile.css';
 
 function Profile() {
   return (
@@ -52,7 +52,7 @@ function Profile() {
         <div className="tobiasImageFrame">
           <img
             className="tobiasImage"
-            src={require('../Assets/tobias.jpeg')}
+            src={require('../../Assets/tobias.jpeg')}
             alt="Tobias Okada-Phillips"
           />
         </div>

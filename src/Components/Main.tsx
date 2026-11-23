@@ -3,9 +3,10 @@ import '../Styles/Main.css';
 import logo from '../Assets/logo.svg';
 import App from './App.tsx';
 import About from './About.tsx'
-import Profile from './Profile.tsx';
+import Profile from './Profile/Profile.tsx';
 import Footer from './Footer.tsx';
-import Directory from './Directory.tsx';
+import Directory from './Profile/Directory.tsx';
+import ContactCTA from './Services/ContactCTA.tsx';
 import BailHearings from './Services/BailHearings.tsx';
 import CriminalAppeals from './Services/CriminalAppeals.tsx';
 import CriminalTrials from './Services/CriminalTrials.tsx';
@@ -240,7 +241,7 @@ function SectionNavigation() {
 }
 
 function TobiasPage() {
-  return <div className="tobiasPageContent"><Profile /><Directory /><Footer /></div>;
+  return <div className="tobiasPageContent"><Profile /><Directory /><ContactCTA /><Footer /></div>;
 }
 
 function Main() {
