@@ -640,7 +640,7 @@
 }
 
 .testTextContainer .testTextSummary {
-    color: #87918B;
+    color: #AEB7B1;
     margin-bottom: 20px;
 }
 
@@ -661,7 +661,7 @@
 
 .testTextContainer .contactInfoBlurb {
     margin: 0 0 4px;
-    color: #87918B;
+    color: #AEB7B1;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -684,6 +684,14 @@
 @media only screen and (min-width: 901px) {
     .contactRowContent {
         align-items: center;
+    }
+
+    .contactRowContent .testTextContainer .testTextSummary {
+        margin-bottom: 3vh;
+    }
+
+    .testTextContainer .test.contactInfoSection {
+        margin-bottom: 3vh;
     }
 
     .contactRowContent .testTextContainer .testTextTitle {
