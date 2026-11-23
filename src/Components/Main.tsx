@@ -7,6 +7,7 @@ import Profile from './Profile/Profile.tsx';
 import Footer from './Footer.tsx';
 import Directory from './Profile/Directory.tsx';
 import ContactCTA from './Services/ContactCTA.tsx';
+import ContactPage from './Contact/Contact.tsx';
 import BailHearings from './Services/BailHearings.tsx';
 import CriminalAppeals from './Services/CriminalAppeals.tsx';
 import CriminalTrials from './Services/CriminalTrials.tsx';
@@ -91,6 +92,7 @@ function SectionNavigation() {
   const navigate = useNavigate();
   const isMainPage = location.pathname === '/';
   const isTobiasPage = location.pathname === '/tobias';
+  const isContactPage = location.pathname === '/contact';
   const isPracticeAreaPage = practiceAreaPaths.includes(location.pathname);
   const [showSectionMenu, setShowSectionMenu] = useState(false);
   const [hasShownSectionMenu, setHasShownSectionMenu] = useState(false);
@@ -118,7 +120,7 @@ function SectionNavigation() {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    if (isTobiasPage || isPracticeAreaPage) {
+    if (isTobiasPage || isContactPage || isPracticeAreaPage) {
       setShowSectionMenu(true);
       setHasShownSectionMenu(true);
       return;
@@ -141,7 +143,7 @@ function SectionNavigation() {
 
     observer.observe(homeSection);
     return () => observer.disconnect();
-  }, [isMainPage, isTobiasPage, isPracticeAreaPage]);
+  }, [isMainPage, isTobiasPage, isContactPage, isPracticeAreaPage]);
 
   useEffect(() => {
     if (!isMainPage) return;
@@ -186,7 +188,7 @@ function SectionNavigation() {
     closeMobileMenu();
   };
 
-  const isVisible = isTobiasPage || isPracticeAreaPage || showSectionMenu;
+  const isVisible = isTobiasPage || isContactPage || isPracticeAreaPage || showSectionMenu;
   const navClassName = `homeSectionMenu${isVisible ? ' homeSectionMenu--visible' : hasShownSectionMenu ? ' homeSectionMenu--hidden' : ''}${isMobileMenuOpen ? ' homeSectionMenu--mobile-open' : ''}${isMobileMenuClosing ? ' homeSectionMenu--mobile-closing' : ''}`;
 
   return (
@@ -255,6 +257,7 @@ function Main() {
                 <Route path="/" element={<App />}/>
                 <Route path="/about" element={<About />}/>
                 <Route path="/tobias" element={<TobiasPage />}/>
+                <Route path="/contact" element={<ContactPage />}/>
                 <Route path="/services/bail-hearings" element={<BailHearings />}/>
                 <Route path="/services/criminal-appeals" element={<CriminalAppeals />}/>
                 <Route path="/services/criminal-trials" element={<CriminalTrials />}/>

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../Styles/Contact.css';
+import '../Styles/Contact/Contact.css';
 import emailjs from 'emailjs-com';
 
 
 
-function Contact() {
+function Form() {
 
   const [contentDesign, setContentDesign] = useState(window.innerWidth <= 900 ? 'contactColumnContent' : 'contactRowContent');
   const [emailSent, setEmailSent] = useState(false);
@@ -156,7 +156,7 @@ function Contact() {
               <div className="testTextContainer">
 
                 <p className="testTextTitle">Contact Us</p>
-                <p className="testTextSummary">Every defence begins with a conversation. Speak with us in confidence.</p>
+                <p className="testTextSummary">Your circumstances deserve careful attention. We invite you to get in touch, share your concerns, and begin a conversation about your legal options.</p>
 
                 <div className="test">
                   <div className="testTextRow">
@@ -170,7 +170,7 @@ function Contact() {
                     <a className="testTextRowTitle" href="tel:6479775354">647-977-5354</a>
                   </div>
                 </div>
-                <div className="test">
+                <div className="test officeEntry">
                   <div className="testTextRow officeAddressRow">
                     <span className="testTextRowLabel">OFFICE</span>
                     <a
@@ -239,6 +239,6 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Form;
 
 

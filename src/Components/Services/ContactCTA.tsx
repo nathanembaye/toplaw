@@ -10,7 +10,7 @@ function ContactCTA() {
         <h2 className="contactCTAHeading" id="contactCTAHeading">Discuss your case.</h2>
         <div className="contactCTARow">
           <p className="contactCTADescription">Legal representation begins with a conversation.</p>
-          <Link className="contactCTALink" to="/" state={{ scrollTo: 'contact' }}>
+          <Link className="contactCTALink" to="/contact">
             Contact the firm
           </Link>
         </div>

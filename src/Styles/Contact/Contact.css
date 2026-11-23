@@ -16,6 +16,12 @@
     margin-bottom: 36px;
 }
 
+@media only screen and (min-width: 901px) {
+    .test.officeEntry {
+        width: 37.5%;
+    }
+}
+
 .testOne {
     margin: 0px;
     font-size: 18px;
@@ -188,7 +194,7 @@
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 100vw;
+        width: clamp(1001px, 92vw, 100vw);
         gap: 0;
         box-sizing: border-box;
     }

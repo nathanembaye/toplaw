@@ -42,22 +42,23 @@
     width: 32px;
     height: 32px;
     padding: 0;
-    border: 1px solid rgba(242, 241, 237, 0.7);
+    border: 1px solid rgba(242, 241, 237, 0.55);
     border-radius: 50%;
     background: transparent;
-    color: #F2F1ED;
+    color: rgba(242, 241, 237, 0.55);
     cursor: pointer;
-    transition: color 180ms ease;
+    transition: color 180ms ease, border-color 180ms ease;
 }
 
 .mediaCircle:disabled {
-    color: #F2F1ED;
+    color: rgba(242, 241, 237, 0.55);
     opacity: 1;
 }
 
 .mediaCircle:hover,
 .mediaCircle:focus-visible {
-    color: #dccbb3;
+    color: #fff;
+    border-color: #fff;
 }
 
 .mediaCircle:focus-visible,

@@ -5,7 +5,7 @@ import Landing from './Landing.tsx';
 import Media from './Media.tsx';
 import About from './About.tsx';
 import Cases from './Cases.tsx';
-import Contact from './Contact.tsx';
+import Form from './Form.tsx';
 import Footer from './Footer.tsx'
 import { useLocation } from 'react-router-dom';
 
@@ -56,7 +56,7 @@ function App() {
       <About/>
       <Cases/>
       <Services/>
-      <Contact />
+      <Form />
       <Media />
       <Footer />
     </>
