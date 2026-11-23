@@ -17,6 +17,15 @@
 }
 
 @media only screen and (min-width: 901px) {
+    .contactRowContent {
+        align-items: center;
+    }
+
+    .contactRowContent .testTextTitle {
+        transform: translateY(-0.58em);
+        margin-bottom: calc(8px - 0.58em);
+    }
+
     .test.officeEntry {
         width: 37.5%;
     }
@@ -161,6 +170,7 @@
         display: grid;
         grid-template-columns: max-content max-content;
         justify-content: center;
+        align-items: center;
         column-gap: clamp(8px, 0.7vw, 10px);
         width: min(1200px, calc(100vw - 48px));
         box-sizing: border-box;
@@ -589,7 +599,7 @@
         margin-bottom: 10px;
     }
     .testTextSummary {
-        width: 90%;
+        width: 95%;
         font-weight: 300;
         margin-bottom: 67.84px;
     }
@@ -619,5 +629,134 @@
     .testTextTitle,
     .getInTouchTitle {
         font-size: clamp(36px, 10vw, 58px);
+    }
+}
+
+/* Left column contact details */
+.testTextContainer .testTextTitle {
+    font-family: 'Nanum Myeongjo', Georgia, serif;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.testTextContainer .testTextSummary {
+    color: #87918B;
+    margin-bottom: 20px;
+}
+
+.testTextContainer .test.contactInfoSection {
+    width: 100%;
+    gap: 0;
+    margin-bottom: 20px;
+}
+
+.testTextContainer .contactInfoHeading {
+    margin: 0 0 4px;
+    color: #F2F1ED;
+    font-family: 'Nanum Myeongjo', Georgia, serif;
+    font-size: clamp(24px, 2.2vw, 30px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.testTextContainer .contactInfoBlurb {
+    margin: 0 0 4px;
+    color: #87918B;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.testTextContainer .testTextRowTitle,
+.testTextContainer .testTextRow a.testTextRowTitle {
+    width: auto;
+    color: #DCCBB3;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.testTextContainer .testTextRow.officeAddressRow a.testTextRowTitle {
+    width: 100%;
+}
+
+@media only screen and (min-width: 901px) {
+    .contactRowContent {
+        align-items: center;
+    }
+
+    .contactRowContent .testTextContainer .testTextTitle {
+        transform: translateY(-0.58em);
+        margin-bottom: calc(8px - 0.58em);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .testTextContainer .testTextSummary {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+
+    .testTextContainer .test.contactInfoSection {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Preserve the existing desktop flow while grouping mobile spacing. */
+.contactIntro,
+.contactInfoList {
+    display: contents;
+}
+
+@media only screen and (max-width: 900px) {
+    .contactIntro,
+    .contactInfoList {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactIntro {
+        gap: 1vh;
+    }
+
+    .contactInfoList {
+        gap: 5vh;
+    }
+
+    .testTextContainer {
+        gap: 5vh;
+    }
+
+    .contactColumnContent {
+        gap: 5vh;
+    }
+
+    .testTextContainer .testTextTitle,
+    .testTextContainer .testTextSummary,
+    .testTextContainer .test.contactInfoSection,
+    .testTextContainer .contactInfoHeading,
+    .testTextContainer .contactInfoBlurb,
+    .testTextContainer .testTextRowTitle {
+        margin: 0;
+    }
+
+    .testTextContainer .test.contactInfoSection {
+        width: 100%;
+        gap: 0;
+    }
+
+    .contactColumnContent .nameRow {
+        margin-top: 0;
+    }
+
+    .testTextContainer .testTextRow {
+        gap: 4px;
+    }
+
+    .testTextContainer .contactInfoHeading,
+    .testTextContainer .contactInfoBlurb {
+        margin: 0;
     }
 }

@@ -154,33 +154,39 @@ function Form() {
             <div className={contentDesign}>
 
               <div className="testTextContainer">
-
-                <p className="testTextTitle">Contact Us</p>
-                <p className="testTextSummary">Your circumstances deserve careful attention. We invite you to get in touch, share your concerns, and begin a conversation about your legal options.</p>
-
-                <div className="test">
-                  <div className="testTextRow">
-                    <span className="testTextRowLabel">EMAIL</span>
-                    <a className="testTextRowTitle" href="mailto:info@top-law.ca">info@top-law.ca</a>
-                  </div>
+                <div className="contactIntro">
+                  <h1 className="testTextTitle">Contact Us</h1>
+                  <p className="testTextSummary">Whether you have a question or need legal representation, our office is available to discuss your matter. Choose the way you'd prefer to get in touch.</p>
                 </div>
-                <div className="test">
-                  <div className="testTextRow">
-                    <span className="testTextRowLabel">PHONE</span>
-                    <a className="testTextRowTitle" href="tel:6479775354">647-977-5354</a>
+
+                <div className="contactInfoList">
+                  <div className="test contactInfoSection">
+                    <div className="testTextRow">
+                      <h2 className="contactInfoHeading">Phone</h2>
+                      <p className="contactInfoBlurb">Speak directly with our office about your legal matter.</p>
+                      <a className="testTextRowTitle" href="tel:6479775354">647-977-5354</a>
+                    </div>
                   </div>
-                </div>
-                <div className="test officeEntry">
-                  <div className="testTextRow officeAddressRow">
-                    <span className="testTextRowLabel">OFFICE</span>
-                    <a
-                      className="testTextRowTitle officeAddress"
-                      href="https://www.google.com/maps/search/?api=1&query=439+University+Ave+Suite+No.+1200%2C+Toronto%2C+ON+M5G+1Y8"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      439 University Ave Suite No. 1200, Toronto, ON M5G 1Y8
-                    </a>
+                  <div className="test contactInfoSection">
+                    <div className="testTextRow">
+                      <h2 className="contactInfoHeading">Email</h2>
+                      <p className="contactInfoBlurb">Prefer to write? Send us a message at your convenience.</p>
+                      <a className="testTextRowTitle" href="mailto:info@top-law.ca">info@top-law.ca</a>
+                    </div>
+                  </div>
+                  <div className="test officeEntry contactInfoSection">
+                    <div className="testTextRow officeAddressRow">
+                      <h2 className="contactInfoHeading">Address</h2>
+                      <p className="contactInfoBlurb">Visit our Toronto office by appointment.</p>
+                      <a
+                        className="testTextRowTitle officeAddress"
+                        href="https://www.google.com/maps/search/?api=1&query=439+University+Ave+Suite+No.+1200%2C+Toronto%2C+ON+M5G+1Y8"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        439 University Ave Suite No. 1200,<br /> Toronto, ON M5G 1Y8
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
