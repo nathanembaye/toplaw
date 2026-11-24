@@ -121,7 +121,7 @@ function SectionNavigation() {
   const underlineRef = useRef<HTMLSpanElement | null>(null);
   const menuLabelRefs = useRef<Array<HTMLSpanElement | null>>([]);
 
-  const activeMenuSection = clickedSection ?? (isMainPage
+  const activeMenuSection = isCaseLibraryPage ? 'cases' : clickedSection ?? (isMainPage
     ? activeSection
     : isTobiasPage
       ? 'about'

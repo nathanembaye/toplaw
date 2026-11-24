@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../Styles/Cases.css';
+import { Link } from 'react-router-dom';
 
 export const cases = [
   {
@@ -101,6 +102,10 @@ function Cases() {
             </a> */}
           </article>
         ))}
+        <Link className="casesViewAll" to="/case-library">
+          <span className="casesViewAllText">View all cases</span>
+          <span className="casesViewAllArrow" aria-hidden="true">→</span>
+        </Link>
       </div>
     </div>
   );
