@@ -98,7 +98,7 @@
 .caseLibraryLayout::before {
   position: absolute;
   top: 0;
-  height: 557px;
+  bottom: 0;
   left: 372px;
   width: 1px;
   background: rgba(242, 241, 237, 0.14);

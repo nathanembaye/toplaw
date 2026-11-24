@@ -42,7 +42,7 @@ const cases: CaseEntry[] = [
     summary: 'The defence challenged the constitutionality of a five-year mandatory minimum sentence for human trafficking involving a person under the age of 18. The Court found that the mandatory minimum constituted cruel and unusual punishment under section 12 of the Charter. The accused was sentenced to one additional day in custody after receiving credit for pre-sentence custody.',
   },
   {
-    title: 'Constitutional Challenge to Mandatory Victim Surcharge', caseName: 'R. v. Madeley', citation: '2016 ONCJ 108', category: 'Charter', area: 'Uttering Threats & Breach of Probation', outcome: 'Prima Facie Charter Violation Established', year: '2016', court: 'Ontario Court of Justice', issue: 'Charter ss. 7 & 15; Equality Rights; Mandatory Victim Surcharge',
+    title: 'Constitutional Challenge to Victim Surcharge', caseName: 'R. v. Madeley', citation: '2016 ONCJ 108', category: 'Charter', area: 'Uttering Threats & Breach of Probation', outcome: 'Prima Facie Charter Violation Established', year: '2016', court: 'Ontario Court of Justice', issue: 'Charter ss. 7 & 15; Equality Rights; Mandatory Victim Surcharge',
     summary: 'The defence challenged the constitutionality of the mandatory victim surcharge on the basis that it disproportionately disadvantaged individuals with mental disabilities. The Court found that the legislation had a discriminatory impact, establishing a prima facie violation of equality rights under section 15 of the Charter. Further submissions were requested to determine whether the infringement could be constitutionally justified.',
   },
 ];
