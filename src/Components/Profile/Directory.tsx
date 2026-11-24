@@ -4,7 +4,7 @@ import '../../Styles/Profile/Directory.css';
 
 const directoryIntroduction = {
   statement: 'Mr. Okada-Phillips has gained the respect of Crown’s and Judge’s alike. He has separated himself from his peers through his winning record.',
-  conclusion: 'For instance, Mr. Okada-Phillips has secured the following results:',
+  conclusion: 'For instance, Mr. Okada-Phillips has secured the following results',
 };
 
 function Directory() {
@@ -23,7 +23,9 @@ function Directory() {
           <div className="directoryIntro">
             <p className="directoryIntroLabel">Notable Cases</p>
             <p className="directoryIntroStatement">{directoryIntroduction.statement}</p>
-            <p className="directoryIntroConclusion">{directoryIntroduction.conclusion}</p>
+            <p className="directoryIntroConclusion">
+              {directoryIntroduction.conclusion}<span className="directoryConclusionColon">:</span>
+            </p>
           </div>
         <table className="directoryTable">
           <thead>

@@ -54,7 +54,7 @@ function Cases() {
     const list = casesListRef.current;
     if (!list) return;
 
-    const caseElements = Array.from(list.querySelectorAll<HTMLElement>('[data-case-index]'));
+    const caseElements = Array.from(list.querySelectorAll<HTMLElement>('[data-case-position]'));
     if (!('IntersectionObserver' in window)) {
       setVisibleCases(caseElements.map((_, index) => index));
       return;
@@ -64,7 +64,7 @@ function Cases() {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
 
-        const index = Number((entry.target as HTMLElement).dataset.caseIndex);
+        const index = Number((entry.target as HTMLElement).dataset.casePosition);
         setVisibleCases((current) => current.includes(index) ? current : [...current, index]);
         observer.unobserve(entry.target);
       });
@@ -90,7 +90,7 @@ function Cases() {
         {cases.map((caseItem, index) => (
           <article
             className={`casesPeriod${visibleCases.includes(index) ? ' casesPeriod--visible' : ''}`}
-            data-case-index={index}
+            data-case-position={index}
             key={caseItem.name}
           >
             <h3 className="casesPeriodHeader">{caseItem.name}</h3>

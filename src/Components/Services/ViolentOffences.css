@@ -7,6 +7,12 @@
   color: #f2f1ed;
 }
 
+@media (min-width: 768px) {
+  .bailHearingsPage {
+    padding-top: calc(var(--desktop-navigation-height) + 10vh - 48px);
+  }
+}
+
 .bailHearingsLayout {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
@@ -214,5 +220,15 @@
 @media (prefers-reduced-motion: reduce) {
   .bailHearingsIndexItem {
     transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .bailHearingsLayout {
+    min-height: calc(100vh - (var(--desktop-navigation-height) + 10vh - 48px));
+  }
+
+  .bailHearingsSidebar {
+    top: calc(var(--desktop-navigation-height) + 10vh - 48px);
   }
 }

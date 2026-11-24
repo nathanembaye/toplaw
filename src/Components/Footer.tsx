@@ -11,12 +11,12 @@ const footerLinks = [
 ];
 
 const serviceLinks = [
-  'Bail Hearings',
-  'Criminal Appeals',
-  'Criminal Trials',
-  'Drug Offences',
-  'Sexual Offences',
-  'Violent Offences',
+  ['Bail Hearings', '/services/bail-hearings'],
+  ['Criminal Appeals', '/services/criminal-appeals'],
+  ['Criminal Trials', '/services/criminal-trials'],
+  ['Drug Offences', '/services/drug-offences'],
+  ['Sexual Offences', '/services/sexual-offences'],
+  ['Violent Offences', '/services/violent-offences'],
 ];
 
 function Footer() {
@@ -50,14 +50,14 @@ function Footer() {
 
           <nav className="footerServices" aria-label="Footer services">
             <h2 className="footerColumnHeading">Services</h2>
-            {serviceLinks.map((service) => (
-              <a key={service} href="#services" onClick={(event) => scrollToSection(event, 'services')}>{service}</a>
+            {serviceLinks.map(([service, path]) => (
+              <Link key={path} to={path}>{service}</Link>
             ))}
           </nav>
 
           <div className="footerContact">
             <div className="footerContactItem">
-              <h2 className="footerColumnHeading">Call</h2>
+              <h2 className="footerColumnHeading">Phone</h2>
               <a href="tel:6479775354">647-977-5354</a>
             </div>
             <div className="footerContactItem">

@@ -79,10 +79,10 @@
 
 .casesPeriodCitation {
     display: inline-block;
-    margin: 16px 0 0;
+    margin: 1.2vh 0 0;
     color: #dccbb3;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    font-size: clamp(14px, 1.4vw, 20px);
+    font-size: clamp(16px, 1.4vw, 18px);
     font-weight: 300;
     line-height: 1.3;
     text-decoration: underline;
@@ -93,16 +93,16 @@
 .casesPeriodHeader {
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 400;
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(26px, 3vw, 34px);
     color: #dccbb3;
 
 }
 
 .casesPeriodText {
-    margin-top: 10px;
+    margin-top: 1vh;
     opacity: 0.8;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    font-size: clamp(14px, 1.5vw, 20px);
+    font-size: clamp(15px, 1.3vw, 17px);
     font-weight: 300;
     line-height: 1.3;
 
@@ -150,15 +150,15 @@
 
 @media (min-width: 1019px) {
     .casesPeriodHeader {
-        font-size: clamp(26px, 3.6vw, 38px);
+        font-size: clamp(26px, 3vw, 34px);
     }
 
     .casesPeriodText {
-        font-size: clamp(14px, 1.35vw, 18px);
+        font-size: clamp(15px, 1.3vw, 17px);
     }
 
     .casesPeriodCitation {
-        font-size: clamp(13px, 1.25vw, 18px);
+        font-size: clamp(16px, 1.4vw, 18px);
     }
 }
 
@@ -252,7 +252,7 @@
     .casesPeriodCitation {
         grid-area: citation;
         justify-self: start;
-        margin: 16px 0 0 clamp(12px, 3vw, 40px);
+        margin: 1.2vh 0 0 clamp(12px, 3vw, 40px);
     }
 
     .casesPeriodText {
@@ -316,6 +316,12 @@
     content: '';
     z-index: 1;
 
+}
+
+@media (min-width: 1440px) {
+    .casesContainer::before {
+        top: 72px;
+    }
 }
 
 .casesContainer::after {

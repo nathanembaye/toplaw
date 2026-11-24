@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import '../Styles/Main.css';
 import logo from '../Assets/logo.svg';
+import desktopNavLogo from '../Assets/logo-nav.svg';
 import App from './App.tsx';
 import About from './About.tsx'
 import Profile from './Profile/Profile.tsx';
@@ -8,6 +9,7 @@ import Footer from './Footer.tsx';
 import Directory from './Profile/Directory.tsx';
 import ContactCTA from './Services/ContactCTA.tsx';
 import ContactPage from './Contact/Contact.tsx';
+import CaseLibrary from './CaseLibrary/CaseLibrary.tsx';
 import BailHearings from './Services/BailHearings.tsx';
 import CriminalAppeals from './Services/CriminalAppeals.tsx';
 import CriminalTrials from './Services/CriminalTrials.tsx';
@@ -27,13 +29,24 @@ function ScrollToTop() {
 }
 
 const mainPageSections = [
-  ['landing', 'Landing'],
-  ['about', 'About'],
+  ['landing', 'Home'],
+  ['about', 'Firm'],
+  ['services', 'Services'],
+  ['cases', 'Cases'],
+  ['contact', 'Contact'],
+  ['media', 'Press'],
+];
+
+const desktopMenuSections = [
+  ['landing', 'Home'],
+  ['about', 'Firm'],
   ['cases', 'Cases'],
   ['services', 'Services'],
   ['contact', 'Contact'],
   ['media', 'Press'],
 ];
+
+const homeSectionOrder = ['landing', 'about', 'cases', 'services', 'contact', 'media'];
 
 const practiceAreaPaths = [
   '/services/bail-hearings',
@@ -45,6 +58,7 @@ const practiceAreaPaths = [
 ];
 
 const pageTitles: Record<string, string> = {
+  '/case-library': 'Case Library | TOP Law Criminal Defence',
   '/services/bail-hearings': 'Bail Hearing Lawyer in Toronto, Ontario | TOP Law',
   '/services/criminal-appeals': 'Criminal Appeal Lawyer in Toronto, Ontario | TOP Law',
   '/services/criminal-trials': 'Criminal Trial Lawyer in Toronto, Ontario | TOP Law',
@@ -54,6 +68,7 @@ const pageTitles: Record<string, string> = {
 };
 
 const pageDescriptions: Record<string, string> = {
+  '/case-library': 'Explore the TOP Law criminal defence case library.',
   '/services/bail-hearings': 'Facing a bail hearing in Toronto, Ontario? TOP Law provides strategic criminal defence representation for bail proceedings and release conditions.',
   '/services/criminal-appeals': 'Appealing a criminal conviction or sentence in Toronto, Ontario? TOP Law provides strategic legal representation for criminal appeals and appellate proceedings.',
   '/services/criminal-trials': 'Facing criminal charges in Toronto, Ontario? TOP Law provides strategic trial representation, challenging evidence and protecting your rights in court.',
@@ -93,12 +108,36 @@ function SectionNavigation() {
   const isMainPage = location.pathname === '/';
   const isTobiasPage = location.pathname === '/tobias';
   const isContactPage = location.pathname === '/contact';
+  const isCaseLibraryPage = location.pathname === '/case-library';
   const isPracticeAreaPage = practiceAreaPaths.includes(location.pathname);
   const [showSectionMenu, setShowSectionMenu] = useState(false);
   const [hasShownSectionMenu, setHasShownSectionMenu] = useState(false);
   const [activeSection, setActiveSection] = useState('landing');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuClosing, setIsMobileMenuClosing] = useState(false);
+  const [isDesktopMenu, setIsDesktopMenu] = useState(window.innerWidth >= 768);
+  const [clickedSection, setClickedSection] = useState<string | null>(null);
+  const menuRef = useRef<HTMLElement | null>(null);
+  const underlineRef = useRef<HTMLSpanElement | null>(null);
+  const menuLabelRefs = useRef<Array<HTMLSpanElement | null>>([]);
+
+  const activeMenuSection = clickedSection ?? (isMainPage
+    ? activeSection
+    : isTobiasPage
+      ? 'about'
+      : isContactPage
+        ? 'contact'
+        : isPracticeAreaPage
+          ? 'services'
+          : null);
+  const underlineSection = activeMenuSection;
+  const displayedMenuSections = isDesktopMenu ? desktopMenuSections : mainPageSections;
+
+  useEffect(() => {
+    const updateDesktopMenu = () => setIsDesktopMenu(window.innerWidth >= 768);
+    window.addEventListener('resize', updateDesktopMenu);
+    return () => window.removeEventListener('resize', updateDesktopMenu);
+  }, []);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
@@ -120,7 +159,7 @@ function SectionNavigation() {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    if (isTobiasPage || isContactPage || isPracticeAreaPage) {
+    if (isTobiasPage || isContactPage || isCaseLibraryPage || isPracticeAreaPage) {
       setShowSectionMenu(true);
       setHasShownSectionMenu(true);
       return;
@@ -143,18 +182,36 @@ function SectionNavigation() {
 
     observer.observe(homeSection);
     return () => observer.disconnect();
-  }, [isMainPage, isTobiasPage, isContactPage, isPracticeAreaPage]);
+  }, [isMainPage, isTobiasPage, isContactPage, isCaseLibraryPage, isPracticeAreaPage]);
 
   useEffect(() => {
     if (!isMainPage) return;
     const updateActiveSection = () => {
-      const marker = window.innerHeight * 0.35;
-      let currentSection = mainPageSections[0][0];
-      mainPageSections.forEach(([id]) => {
+      const viewportHeight = window.innerHeight;
+      const viewportCenter = viewportHeight / 2;
+      let currentSection = activeSection;
+      let greatestVisibleHeight = 0;
+      let closestToCenter = Number.POSITIVE_INFINITY;
+
+      homeSectionOrder.forEach((id) => {
         const section = document.getElementById(id);
-        if (section && section.getBoundingClientRect().top <= marker) currentSection = id;
+        if (!section) return;
+        const rect = section.getBoundingClientRect();
+        const visibleHeight = Math.max(0, Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0));
+        const centerDistance = rect.top <= viewportCenter && rect.bottom >= viewportCenter
+          ? 0
+          : Math.min(Math.abs(rect.top - viewportCenter), Math.abs(rect.bottom - viewportCenter));
+
+        if (visibleHeight > greatestVisibleHeight || (visibleHeight > 0 && visibleHeight === greatestVisibleHeight && centerDistance < closestToCenter)) {
+          currentSection = id;
+          greatestVisibleHeight = visibleHeight;
+          closestToCenter = centerDistance;
+        }
       });
-      setActiveSection(currentSection);
+      if (greatestVisibleHeight > 0) {
+        setActiveSection(currentSection);
+        if (clickedSection === currentSection) setClickedSection(null);
+      }
     };
 
     window.addEventListener('scroll', updateActiveSection, { passive: true });
@@ -164,7 +221,55 @@ function SectionNavigation() {
       window.removeEventListener('scroll', updateActiveSection);
       window.removeEventListener('resize', updateActiveSection);
     };
-  }, [isMainPage]);
+  }, [isMainPage, activeSection, clickedSection]);
+
+  useLayoutEffect(() => {
+    const menu = menuRef.current;
+    const underline = underlineRef.current;
+    if (!menu || !underline) return;
+    let readyFrame: number | null = null;
+
+    const syncUnderline = () => {
+      const sectionIndex = displayedMenuSections.findIndex(([section]) => section === underlineSection);
+      const label = sectionIndex >= 0 ? menuLabelRefs.current[sectionIndex] : null;
+
+      if (!label || isMobileMenuOpen || window.innerWidth < 768) {
+        underline.style.width = '0px';
+        underline.classList.remove('homeSectionMenuUnderline--visible');
+        return;
+      }
+
+      const menuRect = menu.getBoundingClientRect();
+      const labelRect = label.getBoundingClientRect();
+      underline.style.setProperty('--underline-x', `${labelRect.left - menuRect.left}px`);
+      underline.style.setProperty('--underline-y', `${labelRect.bottom - menuRect.top + 6}px`);
+      underline.style.width = `${labelRect.width}px`;
+      underline.classList.add('homeSectionMenuUnderline--visible');
+      if (!underline.classList.contains('homeSectionMenuUnderline--ready') && readyFrame === null) {
+        readyFrame = window.requestAnimationFrame(() => {
+          underline.classList.add('homeSectionMenuUnderline--ready');
+          readyFrame = null;
+        });
+      }
+    };
+
+    syncUnderline();
+    window.addEventListener('resize', syncUnderline);
+    const resizeObserver = typeof ResizeObserver === 'undefined'
+      ? null
+      : new ResizeObserver(syncUnderline);
+    resizeObserver?.observe(menu);
+    menuLabelRefs.current.forEach((label) => {
+      if (label) resizeObserver?.observe(label);
+    });
+    document.fonts?.ready.then(syncUnderline);
+
+    return () => {
+      window.removeEventListener('resize', syncUnderline);
+      resizeObserver?.disconnect();
+      if (readyFrame !== null) window.cancelAnimationFrame(readyFrame);
+    };
+  }, [underlineSection, isMobileMenuOpen, isDesktopMenu]);
 
   const closeMobileMenu = () => {
     if (!isMobileMenuOpen || isMobileMenuClosing) return;
@@ -180,6 +285,7 @@ function SectionNavigation() {
   };
 
   const goToSection = (sectionId: string) => {
+    setClickedSection(sectionId);
     if (isMainPage) {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
@@ -188,11 +294,12 @@ function SectionNavigation() {
     closeMobileMenu();
   };
 
-  const isVisible = isTobiasPage || isContactPage || isPracticeAreaPage || showSectionMenu;
+  const isVisible = isTobiasPage || isContactPage || isCaseLibraryPage || isPracticeAreaPage || showSectionMenu;
   const navClassName = `homeSectionMenu${isVisible ? ' homeSectionMenu--visible' : hasShownSectionMenu ? ' homeSectionMenu--hidden' : ''}${isMobileMenuOpen ? ' homeSectionMenu--mobile-open' : ''}${isMobileMenuClosing ? ' homeSectionMenu--mobile-closing' : ''}`;
 
   return (
     <nav
+      ref={menuRef}
       className={navClassName}
       aria-label="Page sections"
       aria-hidden={!isVisible}
@@ -209,7 +316,10 @@ function SectionNavigation() {
             document.getElementById('landing')?.scrollIntoView({ behavior: 'smooth' });
           } : undefined}
         >
-          <img className="homeSectionMenuBrandLogo" src={logo} alt="Top Law" />
+          <picture>
+            <source media="(min-width: 768px)" srcSet={desktopNavLogo} />
+            <img className="homeSectionMenuBrandLogo" src={logo} alt="Top Law" />
+          </picture>
         </Link>
         <button
           type="button"
@@ -225,18 +335,20 @@ function SectionNavigation() {
           </svg>
         </button>
       </div>
-      {mainPageSections.map(([id, label], index) => (
+      {displayedMenuSections.map(([id, label], index) => (
         <button
           key={id}
           type="button"
-          className={activeSection === id ? 'homeSectionMenuActive' : ''}
-          aria-current={activeSection === id ? 'location' : undefined}
+          ref={(element) => { menuLabelRefs.current[index] = element?.querySelector<HTMLSpanElement>('.homeSectionMenuLabel') ?? null; }}
+          className={activeMenuSection === id ? 'homeSectionMenuActive' : ''}
+          aria-current={activeMenuSection === id ? 'location' : undefined}
           onClick={() => goToSection(id)}
         >
           <span className="homeSectionMenuNumber">{String(isMobileMenuOpen ? index : index + 1).padStart(2, '0')}</span>
           <span className="homeSectionMenuLabel">{label}</span>
         </button>
       ))}
+      <span ref={underlineRef} className="homeSectionMenuUnderline" aria-hidden="true" />
       <div className="homeSectionMenuFooter">TOP Law · Criminal Defence</div>
     </nav>
   );
@@ -258,6 +370,7 @@ function Main() {
                 <Route path="/about" element={<About />}/>
                 <Route path="/tobias" element={<TobiasPage />}/>
                 <Route path="/contact" element={<ContactPage />}/>
+                <Route path="/case-library" element={<CaseLibrary />}/>
                 <Route path="/services/bail-hearings" element={<BailHearings />}/>
                 <Route path="/services/criminal-appeals" element={<CriminalAppeals />}/>
                 <Route path="/services/criminal-trials" element={<CriminalTrials />}/>

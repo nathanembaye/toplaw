@@ -172,8 +172,81 @@
 }
 
 .homeSectionMenu button.homeSectionMenuActive {
-  color: #dccbb3;
-  font-weight: 500;
+  color: #F2F1ED;
+  font-weight: 300;
+}
+
+.homeSectionMenuUnderline {
+  position: absolute;
+  top: var(--underline-y, 0px);
+  left: 0;
+  z-index: 1;
+  width: 0;
+  height: 1px;
+  background-color: #DCCBB3;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateX(var(--underline-x, 0px));
+}
+
+.homeSectionMenuUnderline--visible {
+  visibility: visible;
+}
+
+.homeSectionMenuUnderline--ready {
+  transition:
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    width 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeSectionMenuUnderline--ready {
+    transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --desktop-navigation-height: 64px;
+  }
+
+  .homeSectionMenu {
+    box-sizing: border-box;
+    height: 64px;
+    justify-content: flex-end;
+    padding-right: 5vw;
+  }
+
+  .homeSectionMenu button {
+    left: 0;
+    font-family: 'Nanum Myeongjo', Georgia, serif;
+    color: #FFFFFF;
+  }
+
+  .homeSectionMenu button:hover,
+  .homeSectionMenu button:focus-visible,
+  .homeSectionMenu button.homeSectionMenuActive {
+    color: #FFFFFF;
+  }
+
+  .homeSectionMenuBrand {
+    left: 5vw;
+  }
+
+  .homeSectionMenuBrandLogo {
+    width: 121px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --desktop-navigation-height: 72px;
+  }
+
+  .homeSectionMenu {
+    height: 72px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -478,6 +551,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .homeSectionMenuUnderline {
+    display: none;
+  }
+}
+
 .tobiasPageContent {
   padding-top: 50px;
 }
@@ -485,6 +564,12 @@
 @media (max-width: 600px) {
   .tobiasPageContent {
     padding-top: 46.464px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tobiasPageContent {
+    padding-top: calc(var(--desktop-navigation-height) + 10vh - 25px);
   }
 }
 
