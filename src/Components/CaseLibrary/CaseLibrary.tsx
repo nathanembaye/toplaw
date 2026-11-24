@@ -5,7 +5,9 @@ import '../../Styles/CaseLibrary/CaseLibrary.css';
 
 type CaseEntry = {
   title: string;
-  category: 'Appeals' | 'Bail' | 'Constitutional challenges';
+  caseName: string;
+  citation: string;
+  category: 'Appeals' | 'Charter' | 'Trials';
   area: string;
   outcome: string;
   year: string;
@@ -16,36 +18,36 @@ type CaseEntry = {
 
 const cases: CaseEntry[] = [
   {
-    title: 'Roadside stop ruled unlawful', category: 'Constitutional challenges', area: 'Impaired driving', outcome: 'Charges withdrawn', year: '2026', court: 'Ontario Court of Justice', issue: 'Charter s. 9 and s. 8',
-    summary: 'Our client was stopped without a clear articulable reason and asked for a breath sample. We challenged the stop and the demand and argued the evidence should be excluded. The Crown withdrew all charges before trial.',
+    title: 'Racial Profiling and Unlawful Search', caseName: 'R. v. Morgan', citation: '2023 ONSC 6855', category: 'Charter', area: 'Firearm & Drug Offences', outcome: 'Evidence Excluded', year: '2023', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 9, 10(a), 10(b) & 24(2); Racial Profiling',
+    summary: 'The defence successfully challenged a police traffic stop and subsequent vehicle search that led to the discovery of a firearm and cannabis. The Court found that racial bias influenced the police encounter and that multiple Charter rights had been violated. The seized evidence was excluded.',
   },
   {
-    title: 'Delay leads to stay of proceedings', category: 'Constitutional challenges', area: 'Assault', outcome: 'Charges stayed', year: '2026', court: 'Superior Court of Justice', issue: 'Charter s. 11(b)',
-    summary: 'The matter ran well past the presumptive ceiling to reach trial. We built a detailed timeline showing the delay was not caused by the defence. The court entered a stay.',
+    title: 'Impaired Driving Conviction Overturned', caseName: 'R. v. McIntyre', citation: '2022 ONSC 6966', category: 'Appeals', area: 'Impaired Driving', outcome: 'Appeal Allowed — Acquitted', year: '2022', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 10(a), 10(b) & 24(2); Admissibility of Evidence',
+    summary: 'The defence successfully appealed an impaired driving conviction on the basis that blood sample evidence had been obtained in violation of the accused’s Charter rights. The Court excluded the evidence, overturned the conviction and entered an acquittal.',
   },
   {
-    title: 'Vehicle searched without grounds', category: 'Constitutional challenges', area: 'Drug offences', outcome: 'Acquitted', year: '2025', court: 'Superior Court of Justice', issue: 'Charter s. 8',
-    summary: 'Police searched a parked vehicle on an unverified tip. Cross-examination exposed the weak grounds and the evidence was excluded under s. 24(2). Acquittal on all counts.',
+    title: 'Unlawful Vehicle Search and Drug Seizure', caseName: 'R. v. Ellis', citation: '2021 ONSC 8155', category: 'Charter', area: 'Drug Offences', outcome: 'Evidence Excluded', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 10(b) & 24(2); Search and Seizure',
+    summary: 'The accused faced multiple drug trafficking-related charges following a police vehicle search that uncovered fentanyl, cocaine and other controlled substances. The defence successfully challenged the constitutionality of the search, resulting in the exclusion of all evidence obtained during the search.',
   },
   {
-    title: 'Release ordered on bail review', category: 'Bail', area: 'Fraud', outcome: 'Released on bail', year: '2025', court: 'Superior Court of Justice', issue: 'Detention review',
-    summary: 'Our client was detained after a show-cause hearing. We presented a stronger release plan with strong sureties and supervision, and the court ordered release on conditions.',
+    title: 'Armed Home Invasion Acquittal', caseName: 'R. v. Johnson and Bancroft', citation: '2021 ONSC 6441', category: 'Trials', area: 'Robbery & Home Invasion', outcome: 'Acquitted on All Counts', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Witness Credibility; Reasonable Doubt',
+    summary: 'The accused faced serious criminal charges arising from an alleged armed home invasion. The defence challenged the reliability and credibility of the Crown’s evidence. The Court found that the Crown had failed to establish guilt beyond a reasonable doubt and acquitted both defendants on all counts.',
   },
   {
-    title: 'Bail granted despite reverse onus', category: 'Bail', area: 'Weapons', outcome: 'Released on bail', year: '2024', court: 'Ontario Court of Justice', issue: 'Reverse onus',
-    summary: 'Although the onus was on our client, we showed a workable plan and a weak Crown case. The justice ordered release with house arrest and a surety.',
+    title: 'Attempted Murder and Self-Defence', caseName: 'R. v. DaSilva Smith', citation: '2021 ONSC 5521', category: 'Trials', area: 'Attempted Murder, Assault & Robbery', outcome: 'Acquitted on Three Charges', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Criminal Code s. 34; Self-Defence; Mens Rea',
+    summary: 'The accused faced charges of attempted murder, aggravated assault and robbery. The defence raised issues of self-defence and criminal intent. The Court found that the Crown had failed to meet its burden of proof and acquitted the accused of all three charges. The accused had separately pleaded guilty to failure to comply.',
   },
   {
-    title: 'Sentence reduced on appeal', category: 'Appeals', area: 'Drug offences', outcome: 'Appeal allowed', year: '2024', court: 'Court of Appeal', issue: 'Sentencing principles',
-    summary: 'The sentencing judge gave too little weight to the mitigating factors. We argued the sentence was demonstrably unfit and the court substituted a shorter one.',
+    title: 'Mandatory Minimum Sentence Struck Down', caseName: 'R. v. Ahmed', citation: '2019 ONSC 4822', category: 'Charter', area: 'Human Trafficking', outcome: 'Mandatory Minimum Struck Down', year: '2019', court: 'Ontario Superior Court of Justice', issue: 'Charter s. 12; Mandatory Minimum Sentences; Sentencing Principles',
+    summary: 'The defence challenged the constitutionality of a five-year mandatory minimum sentence for human trafficking involving a person under the age of 18. The Court found that the mandatory minimum constituted cruel and unusual punishment under section 12 of the Charter. The accused was sentenced to one additional day in custody after receiving credit for pre-sentence custody.',
   },
   {
-    title: 'Conviction overturned on appeal', category: 'Appeals', area: 'Assault', outcome: 'Appeal allowed', year: '2023', court: 'Court of Appeal', issue: 'Jury instructions',
-    summary: 'The trial judge’s instructions on reasonable doubt were incomplete. We focused the appeal on the legal error and its effect on the verdict. New trial ordered.',
+    title: 'Constitutional Challenge to Mandatory Victim Surcharge', caseName: 'R. v. Madeley', citation: '2016 ONCJ 108', category: 'Charter', area: 'Uttering Threats & Breach of Probation', outcome: 'Prima Facie Charter Violation Established', year: '2016', court: 'Ontario Court of Justice', issue: 'Charter ss. 7 & 15; Equality Rights; Mandatory Victim Surcharge',
+    summary: 'The defence challenged the constitutionality of the mandatory victim surcharge on the basis that it disproportionately disadvantaged individuals with mental disabilities. The Court found that the legislation had a discriminatory impact, establishing a prima facie violation of equality rights under section 15 of the Charter. Further submissions were requested to determine whether the infringement could be constitutionally justified.',
   },
 ];
 
-const intro = 'Notable results from our criminal defence work, from withdrawn charges to acquittals and successful appeals. Matters are anonymized, and every case turns on its own facts.';
+const intro = 'Notable results from our criminal defence work, from withdrawn charges to acquittals and successful appeals. Every case turns on its own facts.';
 
 function CaseDetail({ entry }: { entry: CaseEntry }) {
   return (
@@ -54,6 +56,8 @@ function CaseDetail({ entry }: { entry: CaseEntry }) {
       <h2 className="caseLibraryTitle">{entry.title}</h2>
       <p className="caseLibraryOutcome">{entry.outcome}</p>
       <dl className="caseLibraryFacts">
+        <dt>Name</dt><dd>{entry.caseName}</dd>
+        <dt>Citation</dt><dd>{entry.citation}</dd>
         <dt>Area</dt><dd>{entry.area}</dd>
         <dt>Court</dt><dd>{entry.court}</dd>
         <dt>Issue</dt><dd>{entry.issue}</dd>
@@ -64,14 +68,18 @@ function CaseDetail({ entry }: { entry: CaseEntry }) {
 }
 
 function CaseLibrary() {
-  const categories = ['All', 'Appeals', 'Bail', 'Constitutional challenges'] as const;
+  const categories = ['All', 'Appeals', 'Charter', 'Trials'] as const;
+  const matchesCategory = (entry: CaseEntry, category: (typeof categories)[number]) => {
+    if (category === 'All') return true;
+    return entry.category === category;
+  };
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>('All');
   const [selectedTitle, setSelectedTitle] = useState(cases[0].title);
   const [mobileDetailOpen, setMobileDetailOpen] = useState(false);
   const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const visibleCases = activeCategory === 'All'
     ? cases
-    : cases.filter((entry) => entry.category === activeCategory);
+    : cases.filter((entry) => matchesCategory(entry, activeCategory));
   const selectedIndex = Math.max(0, visibleCases.findIndex((entry) => entry.title === selectedTitle));
   const selected = visibleCases[selectedIndex];
 
@@ -107,7 +115,7 @@ function CaseLibrary() {
               className={`caseLibraryFilter${activeCategory === category ? ' isActive' : ''}`}
               onClick={() => {
                 setActiveCategory(category);
-                const nextCases = category === 'All' ? cases : cases.filter((entry) => entry.category === category);
+                const nextCases = cases.filter((entry) => matchesCategory(entry, category));
                 setSelectedTitle(nextCases[0].title);
                 setMobileDetailOpen(false);
               }}
