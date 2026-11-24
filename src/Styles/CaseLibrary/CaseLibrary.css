@@ -274,7 +274,7 @@
   }
 
   .caseLibraryHeader {
-    padding-top: 10vh;
+    padding-top: calc(5vh + 46.464px);
     padding-bottom: 0;
   }
 

@@ -169,7 +169,7 @@
 
 @media (max-width: 760px) {
   .bailHearingsPage {
-    padding-top: 10vh;
+    padding-top: calc(5vh + 46.464px);
   }
 
   .bailHearingsLayout {
@@ -179,7 +179,7 @@
 
   .bailHearingsSidebar {
     position: static;
-    padding: 44px clamp(24px, 7vw, 48px) 42px;
+    padding: 0 clamp(24px, 7vw, 48px) 42px;
   }
 
   .bailHearingsSidebarContent {
@@ -235,6 +235,10 @@
 
 @media (min-width: 761px) and (max-width: 767px) {
   .bailHearingsPage {
-    padding-top: 10vh;
+    padding-top: calc(5vh + 46.464px);
+  }
+
+  .bailHearingsSidebar {
+    padding-top: 0;
   }
 }

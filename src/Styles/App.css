@@ -563,7 +563,7 @@
 
 @media (max-width: 767px) {
   .tobiasPageContent {
-    padding-top: 10vh;
+    padding-top: calc(5vh + 46.464px);
   }
 }
 
