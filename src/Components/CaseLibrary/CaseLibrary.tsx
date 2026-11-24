@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ContactCTA from '../Services/ContactCTA.tsx';
 import Footer from '../Footer.tsx';
 import '../../Styles/CaseLibrary/CaseLibrary.css';
@@ -81,6 +81,18 @@ function CaseLibrary() {
     optionRefs.current[next]?.focus();
   };
 
+  useEffect(() => {
+    if (!mobileDetailOpen) return;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousRootOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousRootOverflow;
+    };
+  }, [mobileDetailOpen]);
+
   return (
     <div className="caseLibraryPage">
       <header className="caseLibraryHeader">
@@ -134,6 +146,7 @@ function CaseLibrary() {
                 }}
               >
                 <span className="caseLibraryOptionTitle">{entry.title}</span>
+                <span className="caseLibraryOptionOutcome">{entry.outcome}</span>
                 <span className="caseLibraryOptionMeta">
                   {entry.area} · <span className="caseLibraryOptionYear">{entry.year}</span>
                 </span>

@@ -173,6 +173,10 @@
   color: #F2F1ED;
 }
 
+.caseLibraryOptionOutcome {
+  display: none;
+}
+
 .caseLibraryDetail {
   position: static;
   align-self: start;
@@ -313,6 +317,19 @@
     text-align: left;
   }
 
+  .caseLibraryOptionTitle {
+    color: #FFFFFF;
+  }
+
+  .caseLibraryOptionOutcome {
+    display: block;
+    color: #DCCBB3;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
   .caseLibraryOption:hover,
   .caseLibraryOption.isSelected {
     color: rgba(242, 241, 237, 0.58);
@@ -332,7 +349,7 @@
     z-index: 1200;
     inset: 0;
     display: block;
-    overflow-y: auto;
+    overflow: hidden;
     box-sizing: border-box;
     padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(32px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
     background: #152621;
@@ -353,6 +370,10 @@
 
   .caseLibraryMobileOverlay .caseLibraryDetailContent {
     padding-bottom: 24px;
+  }
+
+  .caseLibraryMobileOverlay .caseLibraryTitle {
+    color: #FFFFFF;
   }
 
   .caseLibraryMobileOverlay .caseLibraryFacts {

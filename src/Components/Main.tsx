@@ -371,6 +371,7 @@ function Main() {
                 <Route path="/tobias" element={<TobiasPage />}/>
                 <Route path="/contact" element={<ContactPage />}/>
                 <Route path="/case-library" element={<CaseLibrary />}/>
+                <Route path="/case-index" element={<Navigate to="/case-library" replace />}/>
                 <Route path="/services/bail-hearings" element={<BailHearings />}/>
                 <Route path="/services/criminal-appeals" element={<CriminalAppeals />}/>
                 <Route path="/services/criminal-trials" element={<CriminalTrials />}/>
