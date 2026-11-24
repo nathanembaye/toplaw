@@ -29,21 +29,17 @@ function ScrollToTop() {
 }
 
 const mainPageSections = [
-  ['landing', 'Home'],
   ['about', 'Firm'],
   ['services', 'Services'],
   ['cases', 'Cases'],
   ['contact', 'Contact'],
-  ['media', 'Press'],
 ];
 
 const desktopMenuSections = [
-  ['landing', 'Home'],
   ['about', 'Firm'],
   ['cases', 'Cases'],
   ['services', 'Services'],
   ['contact', 'Contact'],
-  ['media', 'Press'],
 ];
 
 const homeSectionOrder = ['landing', 'about', 'cases', 'services', 'contact', 'media'];
@@ -55,6 +51,15 @@ const practiceAreaPaths = [
   '/services/violent-offences',
   '/services/sexual-offences',
   '/services/drug-offences',
+];
+
+const serviceMenuItems = [
+  ['Bail Hearings', '/services/bail-hearings'],
+  ['Criminal Appeals', '/services/criminal-appeals'],
+  ['Criminal Trials', '/services/criminal-trials'],
+  ['Violent Offences', '/services/violent-offences'],
+  ['Sexual Offences', '/services/sexual-offences'],
+  ['Drug Offences', '/services/drug-offences'],
 ];
 
 const pageTitles: Record<string, string> = {
@@ -116,8 +121,13 @@ function SectionNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuClosing, setIsMobileMenuClosing] = useState(false);
   const [isDesktopMenu, setIsDesktopMenu] = useState(window.innerWidth >= 768);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
   const [clickedSection, setClickedSection] = useState<string | null>(null);
   const menuRef = useRef<HTMLElement | null>(null);
+  const servicesMenuRef = useRef<HTMLDivElement | null>(null);
+  const servicesTriggerRef = useRef<HTMLAnchorElement | null>(null);
+  const servicesCloseTimeoutRef = useRef<number | null>(null);
+  const suppressServicesFocusOpenRef = useRef(false);
   const underlineRef = useRef<HTMLSpanElement | null>(null);
   const menuLabelRefs = useRef<Array<HTMLSpanElement | null>>([]);
 
@@ -137,6 +147,12 @@ function SectionNavigation() {
     const updateDesktopMenu = () => setIsDesktopMenu(window.innerWidth >= 768);
     window.addEventListener('resize', updateDesktopMenu);
     return () => window.removeEventListener('resize', updateDesktopMenu);
+  }, []);
+
+  useEffect(() => () => {
+    if (servicesCloseTimeoutRef.current !== null) {
+      window.clearTimeout(servicesCloseTimeoutRef.current);
+    }
   }, []);
 
   useEffect(() => {
@@ -285,13 +301,40 @@ function SectionNavigation() {
   };
 
   const goToSection = (sectionId: string) => {
-    setClickedSection(sectionId);
     if (isMainPage) {
+      setClickedSection(sectionId);
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      navigate('/', { state: { scrollTo: sectionId } });
+      const destinationBySection: Record<string, string> = {
+        about: '/tobias',
+        cases: '/case-library',
+        services: '/',
+        contact: '/contact',
+      };
+      setClickedSection(null);
+      navigate(destinationBySection[sectionId] ?? '/', sectionId === 'services' ? { state: { scrollTo: sectionId } } : undefined);
     }
     closeMobileMenu();
+  };
+
+  const openServicesMenu = () => {
+    suppressServicesFocusOpenRef.current = false;
+    if (servicesCloseTimeoutRef.current !== null) {
+      window.clearTimeout(servicesCloseTimeoutRef.current);
+      servicesCloseTimeoutRef.current = null;
+    }
+    setIsServicesMenuOpen(true);
+  };
+
+  const scheduleServicesMenuClose = () => {
+    if (servicesCloseTimeoutRef.current !== null) {
+      window.clearTimeout(servicesCloseTimeoutRef.current);
+    }
+    servicesCloseTimeoutRef.current = window.setTimeout(() => {
+      setIsServicesMenuOpen(false);
+      suppressServicesFocusOpenRef.current = false;
+      servicesCloseTimeoutRef.current = null;
+    }, 100);
   };
 
   const isVisible = isTobiasPage || isContactPage || isCaseLibraryPage || isPracticeAreaPage || showSectionMenu;
@@ -335,7 +378,66 @@ function SectionNavigation() {
           </svg>
         </button>
       </div>
-      {displayedMenuSections.map(([id, label], index) => (
+      {displayedMenuSections.map(([id, label], index) => isDesktopMenu && id === 'services' ? (
+        <div
+          key={id}
+          ref={servicesMenuRef}
+          className={`homeServicesMenu${isServicesMenuOpen ? ' homeServicesMenu--open' : ''}`}
+          onMouseEnter={openServicesMenu}
+          onMouseLeave={scheduleServicesMenuClose}
+          onFocus={() => {
+            if (!suppressServicesFocusOpenRef.current) openServicesMenu();
+          }}
+          onBlur={(event) => {
+            if (!servicesMenuRef.current?.contains(event.relatedTarget as Node | null)) {
+              scheduleServicesMenuClose();
+            }
+          }}
+          onKeyDown={(event) => {
+            if (event.key !== 'Escape') return;
+            event.preventDefault();
+            if (servicesCloseTimeoutRef.current !== null) {
+              window.clearTimeout(servicesCloseTimeoutRef.current);
+              servicesCloseTimeoutRef.current = null;
+            }
+            suppressServicesFocusOpenRef.current = true;
+            setIsServicesMenuOpen(false);
+            servicesTriggerRef.current?.focus();
+          }}
+        >
+          <Link
+            ref={(element) => {
+              servicesTriggerRef.current = element;
+              menuLabelRefs.current[index] = element?.querySelector<HTMLSpanElement>('.homeSectionMenuLabel') ?? null;
+            }}
+            className={`homeServicesTrigger${activeMenuSection === id ? ' homeSectionMenuActive' : ''}`}
+            to="/"
+            state={{ scrollTo: 'services' }}
+            aria-haspopup="true"
+            aria-expanded={isServicesMenuOpen}
+            aria-current={activeMenuSection === id ? 'location' : undefined}
+            onClick={(event) => {
+              if (isMainPage) {
+                event.preventDefault();
+                goToSection('services');
+              } else {
+                setIsServicesMenuOpen(false);
+                closeMobileMenu();
+              }
+            }}
+          >
+            <span className="homeSectionMenuNumber">{String(index + 1).padStart(2, '0')}</span>
+            <span className="homeSectionMenuLabel">{label}</span>
+          </Link>
+          <nav className="homeServicesDropdown" aria-label="Service pages" aria-hidden={!isServicesMenuOpen} inert={!isServicesMenuOpen}>
+            <ul>
+              {serviceMenuItems.map(([serviceLabel, path]) => (
+                <li key={path}><Link to={path} onClick={() => setIsServicesMenuOpen(false)}>{serviceLabel}</Link></li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      ) : (
         <button
           key={id}
           type="button"
