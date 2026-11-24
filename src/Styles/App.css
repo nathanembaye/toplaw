@@ -561,9 +561,9 @@
   padding-top: 50px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .tobiasPageContent {
-    padding-top: 46.464px;
+    padding-top: 10vh;
   }
 }
 

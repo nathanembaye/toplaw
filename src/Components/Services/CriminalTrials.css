@@ -169,7 +169,7 @@
 
 @media (max-width: 760px) {
   .bailHearingsPage {
-    padding-top: 92px;
+    padding-top: 10vh;
   }
 
   .bailHearingsLayout {
@@ -230,5 +230,11 @@
 
   .bailHearingsSidebar {
     top: calc(var(--desktop-navigation-height) + 10vh - 48px);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 767px) {
+  .bailHearingsPage {
+    padding-top: 10vh;
   }
 }
