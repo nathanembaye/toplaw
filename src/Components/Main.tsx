@@ -120,6 +120,7 @@ function SectionNavigation() {
   const [activeSection, setActiveSection] = useState('landing');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuClosing, setIsMobileMenuClosing] = useState(false);
+  const [isMobileServicesExpanded, setIsMobileServicesExpanded] = useState(false);
   const [isDesktopMenu, setIsDesktopMenu] = useState(window.innerWidth >= 768);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
   const [clickedSection, setClickedSection] = useState<string | null>(null);
@@ -128,6 +129,8 @@ function SectionNavigation() {
   const servicesTriggerRef = useRef<HTMLAnchorElement | null>(null);
   const servicesCloseTimeoutRef = useRef<number | null>(null);
   const suppressServicesFocusOpenRef = useRef(false);
+  const currentLocationRef = useRef(location);
+  currentLocationRef.current = location;
   const underlineRef = useRef<HTMLSpanElement | null>(null);
   const menuLabelRefs = useRef<Array<HTMLSpanElement | null>>([]);
 
@@ -159,6 +162,7 @@ function SectionNavigation() {
     if (!isMobileMenuOpen) return;
 
     const scrollY = window.scrollY;
+    const menuOpenedOnLocationKey = location.key;
     const { overflow, position, top, width } = document.body.style;
     document.body.style.overflow = 'hidden';
     document.body.style.position = 'fixed';
@@ -170,7 +174,19 @@ function SectionNavigation() {
       document.body.style.position = position;
       document.body.style.top = top;
       document.body.style.width = width;
-      window.scrollTo(0, scrollY);
+      const currentLocation = currentLocationRef.current;
+      if (currentLocation.key !== menuOpenedOnLocationKey) {
+        const requestedSection = (currentLocation.state as { scrollTo?: string } | null)?.scrollTo;
+        if (requestedSection) {
+          window.requestAnimationFrame(() => {
+            document.getElementById(requestedSection)?.scrollIntoView({ behavior: 'smooth' });
+          });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      } else {
+        window.scrollTo(0, scrollY);
+      }
     };
   }, [isMobileMenuOpen]);
 
@@ -288,6 +304,7 @@ function SectionNavigation() {
   }, [underlineSection, isMobileMenuOpen, isDesktopMenu]);
 
   const closeMobileMenu = () => {
+    setIsMobileServicesExpanded(false);
     if (!isMobileMenuOpen || isMobileMenuClosing) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setIsMobileMenuOpen(false);
@@ -304,6 +321,9 @@ function SectionNavigation() {
     if (isMainPage) {
       setClickedSection(sectionId);
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    } else if (!isDesktopMenu) {
+      setClickedSection(null);
+      navigate('/', { state: { scrollTo: sectionId } });
     } else {
       const destinationBySection: Record<string, string> = {
         about: '/tobias',
@@ -437,16 +457,55 @@ function SectionNavigation() {
             </ul>
           </nav>
         </div>
+      ) : !isDesktopMenu && id === 'services' ? (
+        <React.Fragment key={id}>
+          <button
+            type="button"
+            ref={(element) => { menuLabelRefs.current[index] = element?.querySelector<HTMLSpanElement>('.homeSectionMenuLabel') ?? null; }}
+            className={`homeMobileServicesToggle${activeMenuSection === id ? ' homeSectionMenuActive' : ''}`}
+            aria-current={activeMenuSection === id ? 'location' : undefined}
+            aria-expanded={isMobileServicesExpanded}
+            aria-controls="mobile-service-links"
+            onClick={() => setIsMobileServicesExpanded((expanded) => !expanded)}
+          >
+            <span className="homeSectionMenuNumber">{String(index + 1).padStart(2, '0')}</span>
+            <span className="homeMobileServicesLabelGroup">
+              <span className="homeSectionMenuLabel">{label}</span>
+              <svg className={`homeMobileServicesIndicator${isMobileServicesExpanded ? ' isExpanded' : ''}`} viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+                <path d="m4.5 6.75 4.5 4.5 4.5-4.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+          </button>
+          <nav
+            className={`homeMobileServicesList${isMobileServicesExpanded ? ' isExpanded' : ''}`}
+            aria-label="Service pages"
+            aria-hidden={!isMobileServicesExpanded}
+            inert={!isMobileServicesExpanded}
+          >
+            <ul id="mobile-service-links">
+              <li>
+                <Link to="/" state={{ scrollTo: 'services' }} onClick={() => closeMobileMenu()}>
+                  All services
+                </Link>
+              </li>
+              {serviceMenuItems.map(([serviceLabel, path]) => (
+                <li key={path}>
+                  <Link to={path} onClick={() => closeMobileMenu()}>{serviceLabel}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </React.Fragment>
       ) : (
         <button
           key={id}
           type="button"
           ref={(element) => { menuLabelRefs.current[index] = element?.querySelector<HTMLSpanElement>('.homeSectionMenuLabel') ?? null; }}
-          className={activeMenuSection === id ? 'homeSectionMenuActive' : ''}
+          className={`${!isDesktopMenu && id === 'services' ? 'homeMobileServicesToggle ' : ''}${activeMenuSection === id ? 'homeSectionMenuActive' : ''}`.trim()}
           aria-current={activeMenuSection === id ? 'location' : undefined}
           onClick={() => goToSection(id)}
         >
-          <span className="homeSectionMenuNumber">{String(isMobileMenuOpen ? index : index + 1).padStart(2, '0')}</span>
+          <span className="homeSectionMenuNumber">{String(index + 1).padStart(2, '0')}</span>
           <span className="homeSectionMenuLabel">{label}</span>
         </button>
       ))}

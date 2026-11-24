@@ -238,6 +238,14 @@
   display: none;
 }
 
+.homeMobileServicesIndicator {
+  display: none;
+}
+
+.homeMobileServicesLabelGroup {
+  display: none;
+}
+
 .homeSectionMenuBrandLogo {
   display: block;
   width: auto;
@@ -500,21 +508,7 @@
   }
 
   .homeSectionMenu--mobile-open .homeSectionMenuFooter {
-    position: relative;
-    display: flex;
-    flex: 0 0 54px;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding-left: 0;
-    box-sizing: border-box;
-    border-top: 0;
-    color: #F2F1ED;
-    font: 300 14px 'Jost', Arial, Helvetica, sans-serif;
-    letter-spacing: 0.08em;
-    white-space: nowrap;
-    text-align: left;
-    animation: mobileMenuContentReveal 50ms ease 500ms both;
+    display: none;
   }
 
   .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle) {
@@ -533,6 +527,12 @@
     text-align: left;
     transition-delay: 0s;
     animation: mobileMenuContentReveal 50ms ease 500ms both;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
   }
 
   .homeSectionMenu--mobile-open > button:nth-of-type(1) { animation-delay: 500ms; }
@@ -542,10 +542,6 @@
   .homeSectionMenu--mobile-open > button:nth-of-type(5) { animation-delay: 700ms; }
   .homeSectionMenu--mobile-open > button:nth-of-type(6) { animation-delay: 750ms; }
   .homeSectionMenu--mobile-open > button:nth-of-type(7) { animation-delay: 800ms; }
-
-  .homeSectionMenu--mobile-open .homeSectionMenuFooter {
-    animation-delay: 850ms;
-  }
 
   .homeSectionMenu--mobile-closing > button:not(.homeSectionMenuToggle) {
     animation: mobileMenuItemRetract 180ms ease-in both;
@@ -575,6 +571,92 @@
     letter-spacing: 0.12em;
     line-height: 1;
     text-align: right;
+  }
+
+  .homeSectionMenu--mobile-open .homeMobileServicesIndicator {
+    display: block;
+    order: 2;
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    color: currentColor;
+    transition: transform 200ms ease-out;
+  }
+
+  .homeMobileServicesIndicator.isExpanded {
+    transform: rotate(180deg);
+  }
+
+  .homeSectionMenu--mobile-open .homeMobileServicesLabelGroup {
+    display: flex;
+    order: 1;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .homeSectionMenu--mobile-open > button.homeMobileServicesToggle[aria-expanded='true'] {
+    margin-bottom: 0;
+    color: #F2F1ED;
+  }
+
+  .homeSectionMenu--mobile-open > button.homeMobileServicesToggle[aria-expanded='true']::after {
+    display: none;
+  }
+
+  .homeSectionMenu--mobile-open > .homeMobileServicesList {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    max-height: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 200ms ease-out, opacity 200ms ease-out, margin 200ms ease-out, padding 200ms ease-out;
+  }
+
+  .homeSectionMenu--mobile-open > .homeMobileServicesList.isExpanded {
+    max-height: 340px;
+    margin-bottom: 35.64px;
+    padding-bottom: 6px;
+    opacity: 1;
+  }
+
+  .homeMobileServicesList ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .homeMobileServicesList li a {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    box-sizing: border-box;
+    padding: 9px 0 9px 14px;
+    color: rgba(242, 241, 237, 0.5);
+    font: 400 12px/1.4 'Jost', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .homeMobileServicesList li a:active,
+  .homeMobileServicesList li a:focus-visible {
+    color: #F2F1ED;
+    opacity: 1;
+  }
+
+  .homeMobileServicesList.isExpanded::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0.5px;
+    background-color: #F2F1ED;
+    opacity: 0.5;
+    content: '';
+    pointer-events: none;
   }
 
   .homeSectionMenu--mobile-open .homeSectionMenuLabel {
@@ -631,6 +713,11 @@
       transition: none;
     }
 
+    .homeMobileServicesList,
+    .homeMobileServicesIndicator {
+      transition: none;
+    }
+
     .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle),
     .homeSectionMenu--mobile-open .homeSectionMenuFooter {
       animation: none;
@@ -684,14 +771,10 @@
 
 @media (max-width: 600px) {
   .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):first-of-type {
-    display: none;
-  }
-
-  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):nth-of-type(2) {
     margin-top: max(0px, calc((100dvh - 363px) / 2 - 58px));
   }
 
-  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):nth-of-type(6) {
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):nth-of-type(4) {
     margin-bottom: 0;
   }
 }
