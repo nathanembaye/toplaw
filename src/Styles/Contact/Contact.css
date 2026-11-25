@@ -436,7 +436,7 @@
     justify-content: center;
     align-items: center;
     gap: 100px;
-    margin-top: calc(5vh + 46.464px);
+    margin-top: 0;
     margin-bottom: 15vh;
 }
 
