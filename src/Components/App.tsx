@@ -54,8 +54,8 @@ function App() {
     <>
       <Landing/>
       <About/>
-      <Cases/>
       <Services/>
+      <Cases/>
       <Form />
       <Media />
       <Footer />

@@ -80,9 +80,9 @@ function Cases() {
       <div className="casesTopSpacer">
         <div className="casesSpacerBlock" aria-hidden="true" />
         <div className="casesHeading">
-          <h2 className="casesHeader">Our Performance</h2>
+          <h2 className="casesHeader">Our Results</h2>
           <h2 className="casesSubheader">
-            CRIMINAL DEFENCE WITH PROVEN RESULTS
+            CRIMINAL DEFENCE WITH A RECORD OF SUCCESS
           </h2>
         </div>
       </div>
