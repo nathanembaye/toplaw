@@ -170,7 +170,7 @@ function CaseLibrary() {
 
       {mobileDetailOpen && (
         <section className="caseLibraryMobileOverlay" role="dialog" aria-modal="true" aria-label={selected.title} aria-live="polite">
-          <button className="caseLibraryBack" type="button" onClick={() => setMobileDetailOpen(false)}>← All cases</button>
+          <button className="caseLibraryBack" type="button" onClick={() => setMobileDetailOpen(false)}>← Back to cases</button>
           <CaseDetail entry={selected} />
         </section>
       )}

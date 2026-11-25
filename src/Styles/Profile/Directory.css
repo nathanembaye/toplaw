@@ -230,12 +230,6 @@
     text-decoration: none;
 }
 
-.directoryReadMorePdf {
-    color: #9EADA2;
-    font-size: 0.75em;
-    line-height: 1;
-}
-
 .directoryReadMoreText {
     text-decoration: underline;
     text-underline-offset: 3px;

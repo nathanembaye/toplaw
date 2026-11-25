@@ -362,7 +362,9 @@
     z-index: 1200;
     inset: 0;
     display: block;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(32px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
     background: #152621;

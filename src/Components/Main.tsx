@@ -30,8 +30,8 @@ function ScrollToTop() {
 
 const mainPageSections = [
   ['about', 'Firm'],
-  ['services', 'Services'],
   ['cases', 'Cases'],
+  ['services', 'Services'],
   ['contact', 'Contact'],
 ];
 
@@ -131,6 +131,7 @@ function SectionNavigation() {
   const suppressServicesFocusOpenRef = useRef(false);
   const currentLocationRef = useRef(location);
   currentLocationRef.current = location;
+  const mobileMenuScrollTargetRef = useRef<string | null>(null);
   const underlineRef = useRef<HTMLSpanElement | null>(null);
   const menuLabelRefs = useRef<Array<HTMLSpanElement | null>>([]);
 
@@ -177,6 +178,7 @@ function SectionNavigation() {
       const currentLocation = currentLocationRef.current;
       if (currentLocation.key !== menuOpenedOnLocationKey) {
         const requestedSection = (currentLocation.state as { scrollTo?: string } | null)?.scrollTo;
+        mobileMenuScrollTargetRef.current = null;
         if (requestedSection) {
           window.requestAnimationFrame(() => {
             document.getElementById(requestedSection)?.scrollIntoView({ behavior: 'smooth' });
@@ -185,7 +187,14 @@ function SectionNavigation() {
           window.scrollTo(0, 0);
         }
       } else {
+        const requestedSection = mobileMenuScrollTargetRef.current;
+        mobileMenuScrollTargetRef.current = null;
         window.scrollTo(0, scrollY);
+        if (requestedSection) {
+          window.requestAnimationFrame(() => {
+            document.getElementById(requestedSection)?.scrollIntoView({ behavior: 'smooth' });
+          });
+        }
       }
     };
   }, [isMobileMenuOpen]);
@@ -320,10 +329,11 @@ function SectionNavigation() {
   const goToSection = (sectionId: string) => {
     if (isMainPage) {
       setClickedSection(sectionId);
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    } else if (!isDesktopMenu) {
-      setClickedSection(null);
-      navigate('/', { state: { scrollTo: sectionId } });
+      if (!isDesktopMenu && isMobileMenuOpen) {
+        mobileMenuScrollTargetRef.current = sectionId;
+      } else {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
       const destinationBySection: Record<string, string> = {
         about: '/tobias',
@@ -484,8 +494,15 @@ function SectionNavigation() {
           >
             <ul id="mobile-service-links">
               <li>
-                <Link to="/" state={{ scrollTo: 'services' }} onClick={() => closeMobileMenu()}>
-                  All services
+                <Link
+                  to="/"
+                  state={{ scrollTo: 'services' }}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    goToSection('services');
+                  }}
+                >
+                  All Services
                 </Link>
               </li>
               {serviceMenuItems.map(([serviceLabel, path]) => (
