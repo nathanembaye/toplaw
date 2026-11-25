@@ -171,7 +171,7 @@ function Form() {
                     <div className="testTextRow">
                       <h2 className="contactInfoHeading">Text</h2>
                       <p className="contactInfoBlurb">Send our office a text message to arrange a consultation.</p>
-                      <a className="testTextRowTitle" href="sms:6479159325">647-915-9325</a>
+                      <a className="testTextRowTitle" href="sms:+16479159325">647-915-9325</a>
                     </div>
                   </div>
                   <div className="test contactInfoSection">
