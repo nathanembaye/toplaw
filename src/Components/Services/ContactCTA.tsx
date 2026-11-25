@@ -11,10 +11,8 @@ function ContactCTA() {
         <div className="contactCTARow">
           <p className="contactCTADescription">Legal representation begins with a conversation.</p>
           <Link className="contactCTALink" to="/contact">
-            Contact the firm
-            <svg className="contactCTAArrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-              <path d="M4 12 13 3M6 3h7v7" />
-            </svg>
+            <span className="contactCTALinkText">Contact the firm</span>
+            <span className="contactCTAArrow" aria-hidden="true">→</span>
           </Link>
         </div>
       </div>

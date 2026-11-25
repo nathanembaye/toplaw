@@ -203,19 +203,17 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 1.4;
+}
+
+.mediaReadMoreText {
     text-decoration: underline;
     text-decoration-thickness: 0.5px;
     text-underline-offset: 3px;
 }
 
 .mediaExternalArrow {
-    width: 12px;
-    height: 12px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    font-size: 12px;
+    line-height: 1;
 }
 
 .mediaPagination {

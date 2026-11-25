@@ -63,9 +63,7 @@ get the best possible result for every client.
             href="#/tobias"
           >
             <span className="aboutLinkText">Meet Tobias</span>
-            <svg className="aboutLinkArrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-              <path d="M4 12 13 3M6 3h7v7" />
-            </svg>
+            <span className="aboutLinkArrow" aria-hidden="true">→</span>
           </a>
         </div>
       </div>

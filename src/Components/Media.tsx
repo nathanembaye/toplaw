@@ -278,10 +278,8 @@ function Media() {
                       <span className="mediaCaseTitle">{item.title}</span>
                     </div>
                     <span className="mediaReadMore">
-                      Read article
-                      <svg className="mediaExternalArrow" viewBox="0 0 16 16" aria-hidden="true">
-                        <path d="M4 12 12 4M5 4h7v7" />
-                      </svg>
+                      <span className="mediaReadMoreText">Read article</span>
+                      <span className="mediaExternalArrow" aria-hidden="true">→</span>
                     </span>
                   </div>
                 </div>
