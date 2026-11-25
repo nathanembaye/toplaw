@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ContactCTA from '../Services/ContactCTA.tsx';
 import Footer from '../Footer.tsx';
 import '../../Styles/CaseLibrary/CaseLibrary.css';
@@ -70,6 +71,8 @@ function CaseDetail({ entry }: { entry: CaseEntry }) {
 }
 
 function CaseLibrary() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const categories = ['All', 'Appeals', 'Charter', 'Trials'] as const;
   const matchesCategory = (entry: CaseEntry, category: (typeof categories)[number]) => {
     if (category === 'All') return true;
@@ -78,7 +81,9 @@ function CaseLibrary() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>('All');
   const [selectedTitle, setSelectedTitle] = useState(cases[0].title);
   const [mobileDetailOpen, setMobileDetailOpen] = useState(false);
+  const mobileListScrollYRef = useRef(0);
   const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const mobileCaseTitle = new URLSearchParams(location.search).get('case');
   const visibleCases = activeCategory === 'All'
     ? cases
     : cases.filter((entry) => matchesCategory(entry, activeCategory));
@@ -92,7 +97,25 @@ function CaseLibrary() {
   };
 
   useEffect(() => {
+    if (!mobileCaseTitle) {
+      setMobileDetailOpen(false);
+      return;
+    }
+
+    const mobileCase = cases.find((entry) => entry.title === mobileCaseTitle);
+    if (!mobileCase) {
+      navigate('/case-library', { replace: true });
+      setMobileDetailOpen(false);
+      return;
+    }
+
+    setSelectedTitle(mobileCase.title);
+    setMobileDetailOpen(true);
+  }, [mobileCaseTitle, navigate]);
+
+  useEffect(() => {
     if (!mobileDetailOpen) return;
+    mobileListScrollYRef.current = window.scrollY;
     const previousBodyOverflow = document.body.style.overflow;
     const previousRootOverflow = document.documentElement.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -100,6 +123,7 @@ function CaseLibrary() {
     return () => {
       document.body.style.overflow = previousBodyOverflow;
       document.documentElement.style.overflow = previousRootOverflow;
+      window.scrollTo(0, mobileListScrollYRef.current);
     };
   }, [mobileDetailOpen]);
 
@@ -120,6 +144,7 @@ function CaseLibrary() {
                 const nextCases = cases.filter((entry) => matchesCategory(entry, category));
                 setSelectedTitle(nextCases[0].title);
                 setMobileDetailOpen(false);
+                  if (mobileCaseTitle) navigate('/case-library', { replace: true });
               }}
             >
               {category}
@@ -152,7 +177,12 @@ function CaseLibrary() {
                 ref={(element) => { optionRefs.current[index] = element; }}
                 onClick={() => {
                   setSelectedTitle(entry.title);
-                  if (window.matchMedia('(max-width: 799px)').matches) setMobileDetailOpen(true);
+                  if (window.matchMedia('(max-width: 799px)').matches) {
+                    navigate(
+                      { pathname: location.pathname, search: `?case=${encodeURIComponent(entry.title)}` },
+                      { state: { fromCaseLibrary: true } },
+                    );
+                  }
                 }}
               >
                 <span className="caseLibraryOptionTitle">{entry.title}</span>
@@ -172,7 +202,18 @@ function CaseLibrary() {
 
       {mobileDetailOpen && (
         <section className="caseLibraryMobileOverlay" role="dialog" aria-modal="true" aria-label={selected.title} aria-live="polite">
-          <button className="caseLibraryBack" type="button" onClick={() => setMobileDetailOpen(false)}>← Back to cases</button>
+          <button
+            className="caseLibraryBack"
+            type="button"
+            onClick={() => {
+              setMobileDetailOpen(false);
+              const detailNavigationState = location.state as { fromCaseLibrary?: boolean } | null;
+              if (detailNavigationState?.fromCaseLibrary) navigate(-1);
+              else navigate('/case-library', { replace: true });
+            }}
+          >
+            ← Back to cases
+          </button>
           <CaseDetail entry={selected} />
         </section>
       )}
