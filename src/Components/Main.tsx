@@ -323,7 +323,7 @@ function SectionNavigation() {
     window.setTimeout(() => {
       setIsMobileMenuOpen(false);
       setIsMobileMenuClosing(false);
-    }, 700);
+    }, 300);
   };
 
   const goToSection = (sectionId: string) => {
