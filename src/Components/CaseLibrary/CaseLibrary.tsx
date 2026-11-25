@@ -32,6 +32,10 @@ const cases: CaseEntry[] = [
     summary: 'The accused faced multiple drug trafficking-related charges following a police vehicle search that uncovered fentanyl, cocaine and other controlled substances. The defence successfully challenged the constitutionality of the search, resulting in the exclusion of all evidence obtained during the search.',
   },
   {
+    title: 'Unlawful Searches and Denial of Counsel', caseName: 'R. v. Khan', citation: '2021 ONSC 5663', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc8550/2021onsc8550.html?resultId=9f056077672641139d5fa5de4ec93c87&searchId=2026-11-25T15:26:26:146/de0fe0544c96457e928fe04ac5c99e50', category: 'Charter', area: 'Armed Robbery, Sexual Assault & Weapons Offences', outcome: 'Key Evidence Excluded', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 10(a), 10(b) & 24(2); Search and Seizure; Right to Counsel',
+    summary: 'The accused faced 27 charges arising from a series of alleged armed robberies in Toronto. The defence successfully challenged the admissibility of evidence obtained through unlawful searches and violations of the accused’s right to counsel. The Court found serious Charter violations, including bad faith on the part of the lead investigator, and excluded key physical and surveillance evidence linking the accused to the alleged offences.',
+  },
+  {
     title: 'Armed Home Invasion Acquittal', caseName: 'R. v. Johnson and Bancroft', citation: '2021 ONSC 6441', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc6441/2021onsc6441.pdf', category: 'Trials', area: 'Robbery & Home Invasion', outcome: 'Acquitted on All Counts', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Witness Credibility; Reasonable Doubt',
     summary: 'The accused faced serious criminal charges arising from an alleged armed home invasion. The defence challenged the reliability and credibility of the Crown’s evidence. The Court found that the Crown had failed to establish guilt beyond a reasonable doubt and acquitted both defendants on all counts.',
   },

@@ -17,10 +17,10 @@ function Profile() {
               Tobias Okada-Phillips has been fighting for his client’s rights as a criminal defence lawyer for over a decade. Mr. Okada-Phillips has practiced all over the province of Ontario. In 2014, he began practicing criminal law in Ottawa, Ontario.
             </p>
             <p>
-              In 2019, he returned home to Toronto to practice with a large, well-known criminal defence firm. He has conducted hundreds of bail hearings and hundreds of trials, securing full acquittals before both judges and juries. He has represented clients on virtually every charge under the Criminal Code and Controlled Drugs and Substances Act. He understands how judges and juries think. He uses that judgement to get the best possible result for every client.
+              In 2019, he returned home to Toronto to practice with a large, well-known criminal defence firm. He has conducted hundreds of bail hearings and hundreds of trials, securing full acquittals before both judges and juries. He has represented clients on virtually every charge under the <i>Criminal Code</i> and <i>Controlled Drugs and Substances Act</i>. He understands how judges and juries think. He uses that judgement to get the best possible result for every client.
             </p>
             <p>
-              At trial, Mr. Okada-Phillips searches tirelessly for every possible defence. He prides himself on searching for defences that other lawyers may miss. Fundamentally, he believes that the best possible results are secured after trial, where a defence can be presented, either under the Canadian Charter of Rights and Freedoms or based on the evidence.
+              At trial, Mr. Okada-Phillips searches tirelessly for every possible defence. He prides himself on searching for defences that other lawyers may miss. Fundamentally, he believes that the best possible results are secured after trial, where a defence can be presented, either under the <i>Canadian Charter of Rights and Freedoms</i> or based on the evidence.
             </p>
             <p>
               If you or a loved one are facing criminal charges, please do not hesitate to reach out to Mr. Okada-Phillips. In his view, it is critically important to begin the defence of criminal allegations as soon as possible.
@@ -37,14 +37,9 @@ function Profile() {
 
               <div className="tobiasCredentialGroup">
                 <h2>Admitted</h2>
-                <p><span>Ontario </span><span className="tobiasCredentialMuted">(xxxx)</span></p>
+                <p><span>Ontario </span><span className="tobiasCredentialMuted">(2012)</span></p>
               </div>
 
-              <div className="tobiasCredentialGroup">
-                <h2>Experience</h2>
-                <p><span>TOP Law Criminal Defence </span><span className="tobiasCredentialMuted">(xxxx-xxxx)</span></p>
-                <p><span>Edward Royle &amp; Partners LLP </span><span className="tobiasCredentialMuted">(xxxx-xxxx)</span></p>
-              </div>
             </div>
           </section>
 

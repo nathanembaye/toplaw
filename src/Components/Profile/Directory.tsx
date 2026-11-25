@@ -3,7 +3,7 @@ import { cases } from '../Cases.tsx';
 import '../../Styles/Profile/Directory.css';
 
 const directoryIntroduction = {
-  statement: 'Mr. Okada-Phillips has gained the respect of Crown’s and Judge’s alike. He has separated himself from his peers through his winning record.',
+  statement: 'Mr. Okada-Phillips has gained the respect of Crowns and Judges alike. He has separated himself from his peers through his winning record.',
   conclusion: 'For instance, Mr. Okada-Phillips has secured the following results',
 };
 

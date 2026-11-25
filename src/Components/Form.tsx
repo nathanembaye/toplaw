@@ -165,16 +165,9 @@ function Form() {
                 <div className="contactInfoList">
                   <div className="test contactInfoSection">
                     <div className="testTextRow">
-                      <h2 className="contactInfoHeading">Call</h2>
+                      <h2 className="contactInfoHeading">Phone</h2>
                       <p className="contactInfoBlurb">Speak directly with our office about your legal matter.</p>
-                      <a className="testTextRowTitle" href="tel:6479775354">647-977-5354</a>
-                    </div>
-                  </div>
-                  <div className="test contactInfoSection">
-                    <div className="testTextRow">
-                      <h2 className="contactInfoHeading">Text</h2>
-                      <p className="contactInfoBlurb">Send our office a text message to arrange a consultation.</p>
-                      <a className="testTextRowTitle" href="sms:+16479159325">647-915-9325</a>
+                      <a className="testTextRowTitle" href="tel:6479159325">647-915-9325</a>
                     </div>
                   </div>
                   <div className="test contactInfoSection">

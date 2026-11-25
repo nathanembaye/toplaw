@@ -63,7 +63,7 @@ function Footer() {
           <div className="footerContact">
             <div className="footerContactItem">
               <h2 className="footerColumnHeading">Phone</h2>
-              <a href="tel:6479775354">647-977-5354</a>
+              <a href="tel:6479159325">647-915-9325</a>
             </div>
             <div className="footerContactItem">
               <h2 className="footerColumnHeading">Email</h2>

@@ -22,6 +22,12 @@ export const cases = [
     description: "Successfully challenged an unlawful vehicle search that led to the discovery of fentanyl in the client's trunk. The court excluded the evidence after finding that the search violated the client's constitutional rights.",
   },
   {
+    name: 'R. v. Khan',
+    citation: '2021 ONSC 5663',
+    pdfUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc8550/2021onsc8550.html?resultId=9f056077672641139d5fa5de4ec93c87&searchId=2026-11-25T15:26:26:146/de0fe0544c96457e928fe04ac5c99e50',
+    description: "Successfully challenged a search warrant, established a breach of the client's right to counsel, and secured the exclusion of critical evidence, undermining the prosecution's case.",
+  },
+  {
     name: 'R. v. Johnson and Bancroft',
     citation: '2021 ONSC 6441',
     pdfUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc6441/2021onsc6441.pdf',
