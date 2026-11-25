@@ -234,7 +234,7 @@
 
     .casesViewAll {
         left: 50%;
-        bottom: 0;
+        bottom: -20px;
     }
 
     .casesPeriod {
@@ -298,7 +298,7 @@
     .casesRight::after {
         position: absolute;
         top: 0;
-        bottom: 60px;
+        bottom: 40px;
         left: 50%;
         width: 1px;
         background-color: #F2F1ED;
@@ -374,8 +374,10 @@
 
 @media (max-width: 1018px) {
     .casesContainer::before {
+        grid-row: 2;
         width: 12px;
         height: 12px;
+        margin-bottom: 40px;
     }
 }
 
