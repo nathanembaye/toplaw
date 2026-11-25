@@ -313,6 +313,16 @@
     }
 }
 
+@media (max-width: 767px) {
+    .casesTopSpacer {
+        padding-top: 6vh;
+    }
+
+    .casesHeading {
+        padding-top: 24px;
+    }
+}
+
 @media (max-width: 632px) {
     .casesHeading {
         width: 100%;

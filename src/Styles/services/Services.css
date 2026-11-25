@@ -5,6 +5,12 @@
     background-color: #152621;
 }
 
+@media (max-width: 767px) {
+    .servicesContainer {
+        padding-bottom: 7.5vh;
+    }
+}
+
 .servicesContent {
     position: relative;
     width: 100%;

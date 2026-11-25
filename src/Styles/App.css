@@ -355,7 +355,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .homeSectionMenu {
     isolation: isolate;
     transform: none;
@@ -777,6 +777,16 @@
 
   .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):nth-of-type(4) {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle) {
+    align-items: center;
+  }
+
+  .homeSectionMenu--mobile-open > button:not(.homeSectionMenuToggle):first-of-type {
+    margin-top: max(0px, calc((100dvh - 363px) / 2 - 58px));
   }
 }
 

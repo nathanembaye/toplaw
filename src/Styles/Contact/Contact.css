@@ -775,6 +775,12 @@
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .contactContainer--page .contactContentContainer {
+        margin-top: calc(6vh + 46.464px);
+    }
+}
+
 @media only screen and (min-width: 901px) {
     .testTextContainer .testTextTitle,
     .testTextContainer .testTextSummary {

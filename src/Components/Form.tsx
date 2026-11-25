@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../Styles/Contact/Contact.css';
 import emailjs from 'emailjs-com';
+import { useLocation } from 'react-router-dom';
 
 
 
 function Form() {
+  const location = useLocation();
+  const isContactPage = location.pathname === '/contact';
 
   const [contentDesign, setContentDesign] = useState(window.innerWidth <= 900 ? 'contactColumnContent' : 'contactRowContent');
   const [emailSent, setEmailSent] = useState(false);
@@ -145,7 +148,7 @@ function Form() {
     <div
       ref={sectionRef}
       id="contact"
-      className={`contactContainer${hasEnteredViewport ? ' contactContainer--visible' : ''}`}
+      className={`contactContainer${isContactPage ? ' contactContainer--page' : ''}${hasEnteredViewport ? ' contactContainer--visible' : ''}`}
     >
 
           <div className="contactContentContainer">
