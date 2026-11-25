@@ -212,7 +212,7 @@ function CaseLibrary() {
               else navigate('/case-library', { replace: true });
             }}
           >
-            ← Back to cases
+            ← Back to case library
           </button>
           <CaseDetail entry={selected} />
         </section>
