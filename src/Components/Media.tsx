@@ -237,7 +237,7 @@ function Media() {
               </svg>
             </button>
           </div>
-          <span className="mediaLatestTitle">In the press</span>
+          <span className="mediaLatestTitle">In the Press</span>
         </div>
       </div>
 

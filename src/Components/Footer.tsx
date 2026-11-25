@@ -4,10 +4,10 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../Assets/logo.svg';
 
 const footerLinks = [
-  ['about', 'Firm'],
-  ['services', 'Services'],
-  ['cases', 'Results'],
-  ['contact', 'Contact'],
+  ['/tobias', 'Firm'],
+  ['/case-library', 'Cases'],
+  ['/', 'Services'],
+  ['/contact', 'Contact'],
 ];
 
 const serviceLinks = [
@@ -21,11 +21,6 @@ const serviceLinks = [
 
 function Footer() {
   const location = useLocation();
-
-  const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>, section: string) => {
-    event.preventDefault();
-    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <footer className="siteFooter">
@@ -43,8 +38,18 @@ function Footer() {
         <div className="footerInformation">
           <nav className="footerNav" aria-label="Footer navigation">
             <h2 className="footerColumnHeading">Overview</h2>
-            {footerLinks.map(([section, label]) => (
-              <a key={section} href={`#${section}`} onClick={(event) => scrollToSection(event, section)}>{label}</a>
+            {footerLinks.map(([path, label]) => (
+              <Link
+                key={path}
+                to={path}
+                state={path === '/' ? { scrollTo: 'services' } : undefined}
+                onClick={path === '/' && location.pathname === '/' ? (event) => {
+                  event.preventDefault();
+                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                } : undefined}
+              >
+                {label}
+              </Link>
             ))}
           </nav>
 
