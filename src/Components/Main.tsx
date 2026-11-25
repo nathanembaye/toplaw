@@ -30,15 +30,15 @@ function ScrollToTop() {
 
 const mainPageSections = [
   ['about', 'Firm'],
-  ['cases', 'Cases'],
   ['services', 'Services'],
+  ['cases', 'Cases'],
   ['contact', 'Contact'],
 ];
 
 const desktopMenuSections = [
   ['about', 'Firm'],
-  ['cases', 'Cases'],
   ['services', 'Services'],
+  ['cases', 'Cases'],
   ['contact', 'Contact'],
 ];
 
