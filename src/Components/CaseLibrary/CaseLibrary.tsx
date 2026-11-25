@@ -7,6 +7,7 @@ type CaseEntry = {
   title: string;
   caseName: string;
   citation: string;
+  canliiUrl: string;
   category: 'Appeals' | 'Charter' | 'Trials';
   area: string;
   outcome: string;
@@ -18,31 +19,31 @@ type CaseEntry = {
 
 const cases: CaseEntry[] = [
   {
-    title: 'Racial Profiling and Unlawful Search', caseName: 'R. v. Morgan', citation: '2023 ONSC 6855', category: 'Charter', area: 'Firearm & Drug Offences', outcome: 'Evidence Excluded', year: '2023', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 9, 10(a), 10(b) & 24(2); Racial Profiling',
+    title: 'Racial Profiling and Unlawful Search', caseName: 'R. v. Morgan', citation: '2023 ONSC 6855', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2023/2023onsc6855/2023onsc6855.pdf', category: 'Charter', area: 'Firearm & Drug Offences', outcome: 'Evidence Excluded', year: '2023', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 9, 10(a), 10(b) & 24(2); Racial Profiling',
     summary: 'The defence successfully challenged a police traffic stop and subsequent vehicle search that led to the discovery of a firearm and cannabis. The Court found that racial bias influenced the police encounter and that multiple Charter rights had been violated. The seized evidence was excluded.',
   },
   {
-    title: 'Impaired Driving Conviction Overturned', caseName: 'R. v. McIntyre', citation: '2022 ONSC 6966', category: 'Appeals', area: 'Impaired Driving', outcome: 'Appeal Allowed — Acquitted', year: '2022', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 10(a), 10(b) & 24(2); Admissibility of Evidence',
+    title: 'Impaired Driving Conviction Overturned', caseName: 'R. v. McIntyre', citation: '2022 ONSC 6966', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2022/2022onsc6966/2022onsc6966.pdf', category: 'Appeals', area: 'Impaired Driving', outcome: 'Appeal Allowed — Acquitted', year: '2022', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 10(a), 10(b) & 24(2); Admissibility of Evidence',
     summary: 'The defence successfully appealed an impaired driving conviction on the basis that blood sample evidence had been obtained in violation of the accused’s Charter rights. The Court excluded the evidence, overturned the conviction and entered an acquittal.',
   },
   {
-    title: 'Unlawful Vehicle Search and Drug Seizure', caseName: 'R. v. Ellis', citation: '2021 ONSC 8155', category: 'Charter', area: 'Drug Offences', outcome: 'Evidence Excluded', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 10(b) & 24(2); Search and Seizure',
+    title: 'Unlawful Vehicle Search and Drug Seizure', caseName: 'R. v. Ellis', citation: '2021 ONSC 8155', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc8155/2021onsc8155.pdf', category: 'Charter', area: 'Drug Offences', outcome: 'Evidence Excluded', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Charter ss. 8, 10(b) & 24(2); Search and Seizure',
     summary: 'The accused faced multiple drug trafficking-related charges following a police vehicle search that uncovered fentanyl, cocaine and other controlled substances. The defence successfully challenged the constitutionality of the search, resulting in the exclusion of all evidence obtained during the search.',
   },
   {
-    title: 'Armed Home Invasion Acquittal', caseName: 'R. v. Johnson and Bancroft', citation: '2021 ONSC 6441', category: 'Trials', area: 'Robbery & Home Invasion', outcome: 'Acquitted on All Counts', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Witness Credibility; Reasonable Doubt',
+    title: 'Armed Home Invasion Acquittal', caseName: 'R. v. Johnson and Bancroft', citation: '2021 ONSC 6441', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc6441/2021onsc6441.pdf', category: 'Trials', area: 'Robbery & Home Invasion', outcome: 'Acquitted on All Counts', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Witness Credibility; Reasonable Doubt',
     summary: 'The accused faced serious criminal charges arising from an alleged armed home invasion. The defence challenged the reliability and credibility of the Crown’s evidence. The Court found that the Crown had failed to establish guilt beyond a reasonable doubt and acquitted both defendants on all counts.',
   },
   {
-    title: 'Attempted Murder and Self-Defence', caseName: 'R. v. DaSilva Smith', citation: '2021 ONSC 5521', category: 'Trials', area: 'Attempted Murder, Assault & Robbery', outcome: 'Acquitted on Three Charges', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Criminal Code s. 34; Self-Defence; Mens Rea',
+    title: 'Attempted Murder and Self-Defence', caseName: 'R. v. DaSilva Smith', citation: '2021 ONSC 5521', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2021/2021onsc5521/2021onsc5521.pdf', category: 'Trials', area: 'Attempted Murder, Assault & Robbery', outcome: 'Acquitted on Three Charges', year: '2021', court: 'Ontario Superior Court of Justice', issue: 'Criminal Code s. 34; Self-Defence; Mens Rea',
     summary: 'The accused faced charges of attempted murder, aggravated assault and robbery. The defence raised issues of self-defence and criminal intent. The Court found that the Crown had failed to meet its burden of proof and acquitted the accused of all three charges. The accused had separately pleaded guilty to failure to comply.',
   },
   {
-    title: 'Mandatory Minimum Sentence Struck Down', caseName: 'R. v. Ahmed', citation: '2019 ONSC 4822', category: 'Charter', area: 'Human Trafficking', outcome: 'Mandatory Minimum Struck Down', year: '2019', court: 'Ontario Superior Court of Justice', issue: 'Charter s. 12; Mandatory Minimum Sentences; Sentencing Principles',
+    title: 'Mandatory Minimum Sentence Struck Down', caseName: 'R. v. Ahmed', citation: '2019 ONSC 4822', canliiUrl: 'https://www.canlii.org/en/on/onsc/doc/2019/2019onsc4822/2019onsc4822.pdf', category: 'Charter', area: 'Human Trafficking', outcome: 'Mandatory Minimum Struck Down', year: '2019', court: 'Ontario Superior Court of Justice', issue: 'Charter s. 12; Mandatory Minimum Sentences; Sentencing Principles',
     summary: 'The defence challenged the constitutionality of a five-year mandatory minimum sentence for human trafficking involving a person under the age of 18. The Court found that the mandatory minimum constituted cruel and unusual punishment under section 12 of the Charter. The accused was sentenced to one additional day in custody after receiving credit for pre-sentence custody.',
   },
   {
-    title: 'Constitutional Challenge to Victim Surcharge', caseName: 'R. v. Madeley', citation: '2016 ONCJ 108', category: 'Charter', area: 'Uttering Threats & Breach of Probation', outcome: 'Prima Facie Charter Violation Established', year: '2016', court: 'Ontario Court of Justice', issue: 'Charter ss. 7 & 15; Equality Rights; Mandatory Victim Surcharge',
+    title: 'Constitutional Challenge to Victim Surcharge', caseName: 'R. v. Madeley', citation: '2016 ONCJ 108', canliiUrl: 'https://www.canlii.org/en/on/oncj/doc/2016/2016oncj108/2016oncj108.pdf', category: 'Charter', area: 'Uttering Threats & Breach of Probation', outcome: 'Prima Facie Charter Violation Established', year: '2016', court: 'Ontario Court of Justice', issue: 'Charter ss. 7 & 15; Equality Rights; Mandatory Victim Surcharge',
     summary: 'The defence challenged the constitutionality of the mandatory victim surcharge on the basis that it disproportionately disadvantaged individuals with mental disabilities. The Court found that the legislation had a discriminatory impact, establishing a prima facie violation of equality rights under section 15 of the Charter. Further submissions were requested to determine whether the infringement could be constitutionally justified.',
   },
 ];
@@ -58,6 +59,7 @@ function CaseDetail({ entry }: { entry: CaseEntry }) {
       <dl className="caseLibraryFacts">
         <dt>Name</dt><dd>{entry.caseName}</dd>
         <dt>Citation</dt><dd>{entry.citation}</dd>
+        <dt>CanLII</dt><dd><a className="caseLibraryCanliiLink" href={entry.canliiUrl} target="_blank" rel="noreferrer">View decision</a></dd>
         <dt>Area</dt><dd>{entry.area}</dd>
         <dt>Court</dt><dd>{entry.court}</dd>
         <dt>Issue</dt><dd>{entry.issue}</dd>
