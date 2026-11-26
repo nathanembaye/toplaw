@@ -3,7 +3,6 @@ import '../Styles/Main.css';
 import logo from '../Assets/logo.svg';
 import desktopNavLogo from '../Assets/logo-nav.svg';
 import App from './App.tsx';
-import About from './About.tsx'
 import Profile from './Profile/Profile.tsx';
 import Footer from './Footer.tsx';
 import Directory from './Profile/Directory.tsx';
@@ -64,6 +63,8 @@ const serviceMenuItems = [
 
 const pageTitles: Record<string, string> = {
   '/case-library': 'Case Library | TOP Law Criminal Defence',
+  '/tobias': 'Tobias Okada-Phillips | Criminal Defence Lawyer | TOP Law',
+  '/contact': 'Contact a Toronto Criminal Defence Lawyer | TOP Law',
   '/services/bail-hearings': 'Bail Hearing Lawyer in Toronto, Ontario | TOP Law',
   '/services/criminal-appeals': 'Criminal Appeal Lawyer in Toronto, Ontario | TOP Law',
   '/services/criminal-trials': 'Criminal Trial Lawyer in Toronto, Ontario | TOP Law',
@@ -73,7 +74,9 @@ const pageTitles: Record<string, string> = {
 };
 
 const pageDescriptions: Record<string, string> = {
-  '/case-library': 'Explore the TOP Law criminal defence case library.',
+  '/case-library': 'Review notable criminal defence results from TOP Law, a Toronto, Ontario firm handling bail hearings, criminal appeals and trials, and drug, sexual and violent offence cases.',
+  '/tobias': 'Learn about Tobias Okada-Phillips, founding partner and Toronto criminal defence lawyer representing clients in bail hearings, trials and appeals across Ontario.',
+  '/contact': 'Contact TOP Law Criminal Defence in Toronto, Ontario to discuss bail hearings, criminal appeals or charges involving drug, sexual or violent offences.',
   '/services/bail-hearings': 'Facing a bail hearing in Toronto, Ontario? TOP Law provides strategic criminal defence representation for bail proceedings and release conditions.',
   '/services/criminal-appeals': 'Appealing a criminal conviction or sentence in Toronto, Ontario? TOP Law provides strategic legal representation for criminal appeals and appellate proceedings.',
   '/services/criminal-trials': 'Facing criminal charges in Toronto, Ontario? TOP Law provides strategic trial representation, challenging evidence and protecting your rights in court.',
@@ -545,11 +548,9 @@ function Main() {
         <SectionNavigation />
         <Routes>
                 <Route path="/" element={<App />}/>
-                <Route path="/about" element={<About />}/>
                 <Route path="/tobias" element={<TobiasPage />}/>
                 <Route path="/contact" element={<ContactPage />}/>
                 <Route path="/case-library" element={<CaseLibrary />}/>
-                <Route path="/case-index" element={<Navigate to="/case-library" replace />}/>
                 <Route path="/services/bail-hearings" element={<BailHearings />}/>
                 <Route path="/services/criminal-appeals" element={<CriminalAppeals />}/>
                 <Route path="/services/criminal-trials" element={<CriminalTrials />}/>
