@@ -84,7 +84,7 @@ function Footer() {
       </div>
 
       <div className="footerBottom">
-        <p>© {new Date().getFullYear()} TOP Law. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} TOP Law Criminal Defence. All rights reserved.</p>
       </div>
     </footer>
   );
