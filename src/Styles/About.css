@@ -95,6 +95,12 @@
 
 }
 
+@media (min-width: 1019px) {
+    .aboutBlurb {
+        font-size: 17px;
+    }
+}
+
 .aboutBlurb1 {
     display: none;
 
