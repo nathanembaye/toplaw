@@ -12,7 +12,7 @@ const violentSections: Array<{
   trailingParagraphs?: string[];
 }> = [
   {
-    id: 'bail-understanding',
+    id: 'violent-understanding',
     indexTitle: 'Understanding Violent Offences',
     heading: 'What are violent offences under Canadian criminal law?',
     paragraphs: [
@@ -36,7 +36,7 @@ const violentSections: Array<{
     ],
   },
   {
-    id: 'bail-process',
+    id: 'violent-assault',
     indexTitle: 'Assault Charges',
     heading: 'What are the different types of assault charges in Ontario?',
     paragraphs: [
@@ -54,7 +54,7 @@ const violentSections: Array<{
     ],
   },
   {
-    id: 'bail-conditions',
+    id: 'violent-defences',
     indexTitle: 'Defending Violent Charges',
     heading: 'What defences are available for violent criminal charges in Canada?',
     paragraphs: [
@@ -74,7 +74,7 @@ const violentSections: Array<{
     ],
   },
   {
-    id: 'bail-refusals',
+    id: 'violent-penalties',
     indexTitle: 'Penalties and Consequences',
     heading: 'What are the penalties for violent offences in Ontario?',
     paragraphs: [
@@ -95,7 +95,7 @@ const violentSections: Array<{
     ],
   },
   {
-    id: 'bail-representation',
+    id: 'violent-representation',
     indexTitle: 'Legal Representation',
     heading: 'How can a criminal defence lawyer help with violent offence charges?',
     paragraphs: [
@@ -125,7 +125,7 @@ function ViolentOffences() {
     const content = contentRef.current;
     if (!content) return;
 
-    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-bail-section]'));
+    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-violent-section]'));
     if (!('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
@@ -189,7 +189,7 @@ function ViolentOffences() {
             <section
               className="bailHearingsSection"
               id={section.id}
-              data-bail-section
+              data-violent-section
               key={section.id}
             >
               <p className="bailHearingsSectionNumber">{String(index + 1).padStart(2, '0')}</p>

@@ -11,7 +11,7 @@ const appealSections: Array<{
   bullets?: string[];
 }> = [
   {
-    id: 'bail-understanding',
+    id: 'appeal-understanding',
     indexTitle: 'Understanding Appeals',
     heading: 'What is a criminal appeal in Canada?',
     paragraphs: [
@@ -21,7 +21,7 @@ const appealSections: Array<{
     ],
   },
   {
-    id: 'bail-process',
+    id: 'appeal-grounds',
     indexTitle: 'Grounds for Appeal',
     heading: 'What are the grounds for appealing a criminal conviction in Ontario?',
     paragraphs: [
@@ -39,7 +39,7 @@ const appealSections: Array<{
     ],
   },
   {
-    id: 'bail-conditions',
+    id: 'appeal-sentence',
     indexTitle: 'Sentence Appeals',
     heading: 'Can you appeal a criminal sentence in Ontario?',
     paragraphs: [
@@ -57,7 +57,7 @@ const appealSections: Array<{
     ],
   },
   {
-    id: 'bail-refusals',
+    id: 'appeal-process',
     indexTitle: 'The Appeals Process',
     heading: 'How does the criminal appeals process work in Ontario?',
     paragraphs: [
@@ -71,7 +71,7 @@ const appealSections: Array<{
     ],
   },
   {
-    id: 'bail-representation',
+    id: 'appeal-representation',
     indexTitle: 'Legal Representation',
     heading: 'How can a criminal appeal lawyer help challenge a conviction or sentence?',
     paragraphs: [
@@ -99,7 +99,7 @@ function CriminalAppeals() {
     const content = contentRef.current;
     if (!content) return;
 
-    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-bail-section]'));
+    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-appeal-section]'));
     if (!('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
@@ -163,7 +163,7 @@ function CriminalAppeals() {
             <section
               className="bailHearingsSection"
               id={section.id}
-              data-bail-section
+              data-appeal-section
               key={section.id}
             >
               <p className="bailHearingsSectionNumber">{String(index + 1).padStart(2, '0')}</p>

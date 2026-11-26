@@ -12,7 +12,7 @@ const sexualSections: Array<{
   trailingParagraphs?: string[];
 }> = [
   {
-    id: 'bail-understanding',
+    id: 'sexual-understanding',
     indexTitle: 'Understanding Sexual Offences',
     heading: 'What are sexual offences under Canadian criminal law?',
     paragraphs: [
@@ -35,7 +35,7 @@ const sexualSections: Array<{
     ],
   },
   {
-    id: 'bail-process',
+    id: 'sexual-assault',
     indexTitle: 'Sexual Assault Charges',
     heading: 'What constitutes sexual assault in Canada?',
     paragraphs: [
@@ -47,7 +47,7 @@ const sexualSections: Array<{
     ],
   },
   {
-    id: 'bail-conditions',
+    id: 'sexual-evidence',
     indexTitle: 'Evidence and Defences',
     heading: 'How are sexual offence allegations defended in Ontario?',
     paragraphs: [
@@ -70,7 +70,7 @@ const sexualSections: Array<{
     ],
   },
   {
-    id: 'bail-refusals',
+    id: 'sexual-penalties',
     indexTitle: 'Penalties and Consequences',
     heading: 'What are the penalties for sexual offences in Ontario?',
     paragraphs: [
@@ -91,7 +91,7 @@ const sexualSections: Array<{
     ],
   },
   {
-    id: 'bail-representation',
+    id: 'sexual-representation',
     indexTitle: 'Legal Representation',
     heading: 'How can a criminal defence lawyer help with sexual offence charges?',
     paragraphs: [
@@ -122,7 +122,7 @@ function SexualOffences() {
     const content = contentRef.current;
     if (!content) return;
 
-    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-bail-section]'));
+    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-sexual-section]'));
     if (!('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
@@ -186,7 +186,7 @@ function SexualOffences() {
             <section
               className="bailHearingsSection"
               id={section.id}
-              data-bail-section
+              data-sexual-section
               key={section.id}
             >
               <p className="bailHearingsSectionNumber">{String(index + 1).padStart(2, '0')}</p>

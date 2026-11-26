@@ -5,7 +5,7 @@ import './CriminalTrials.css';
 
 const trialSections: Array<{ id: string; indexTitle: string; heading: string; paragraphs: string[]; bullets?: string[]; trailingParagraphs?: string[] }> = [
   {
-    id: 'bail-understanding',
+    id: 'trial-understanding',
     indexTitle: 'Understanding Trials',
     heading: 'What is a criminal trial in Canada?',
     paragraphs: [
@@ -16,7 +16,7 @@ const trialSections: Array<{ id: string; indexTitle: string; heading: string; pa
     ],
   },
   {
-    id: 'bail-process',
+    id: 'trial-process',
     indexTitle: 'Trial Process',
     heading: 'What happens during a criminal trial in Ontario?',
     paragraphs: [
@@ -27,7 +27,7 @@ const trialSections: Array<{ id: string; indexTitle: string; heading: string; pa
     ],
   },
   {
-    id: 'bail-conditions',
+    id: 'trial-evidence',
     indexTitle: 'Evidence & Witnesses',
     heading: 'How is evidence challenged during a criminal trial?',
     paragraphs: [
@@ -48,7 +48,7 @@ const trialSections: Array<{ id: string; indexTitle: string; heading: string; pa
     ],
   },
   {
-    id: 'bail-refusals',
+    id: 'trial-outcomes',
     indexTitle: 'Trial Outcomes',
     heading: 'What happens after a criminal trial in Ontario?',
     paragraphs: [
@@ -59,7 +59,7 @@ const trialSections: Array<{ id: string; indexTitle: string; heading: string; pa
     ],
   },
   {
-    id: 'bail-representation',
+    id: 'trial-representation',
     indexTitle: 'Legal Representation',
     heading: 'How can a criminal defence lawyer help during a trial?',
     paragraphs: [
@@ -88,7 +88,7 @@ function CriminalTrials() {
     const content = contentRef.current;
     if (!content) return;
 
-    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-bail-section]'));
+    const sections = Array.from(content.querySelectorAll<HTMLElement>('[data-trial-section]'));
     if (!('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver((entries) => {
@@ -152,7 +152,7 @@ function CriminalTrials() {
             <section
               className="bailHearingsSection"
               id={section.id}
-              data-bail-section
+              data-trial-section
               key={section.id}
             >
               <p className="bailHearingsSectionNumber">{String(index + 1).padStart(2, '0')}</p>
