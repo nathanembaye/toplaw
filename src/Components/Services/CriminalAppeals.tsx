@@ -15,11 +15,9 @@ const appealSections: Array<{
     indexTitle: 'Understanding Appeals',
     heading: 'What is a criminal appeal in Canada?',
     paragraphs: [
-      'A criminal appeal is a legal process through which a higher court reviews a decision made in a criminal proceeding. In Canada, individuals convicted of a criminal offence may have the right to appeal their conviction, sentence, or both, depending on the circumstances of their case.',
-      'Unlike a trial, a criminal appeal does not ordinarily involve presenting witnesses or hearing the evidence again. Instead, the appellate court examines the trial record to determine whether errors occurred that justify changing the original decision.',
-      'Criminal appeals in Ontario are generally heard by the Superior Court of Justice or the Court of Appeal for Ontario, depending on how the offence was prosecuted and the court in which the original proceedings took place.',
-      'An appeal may involve questions about the interpretation of criminal law, the assessment of evidence, procedural fairness, or the appropriateness of a sentence.',
-      'TOP Law Criminal Defence assists individuals seeking to challenge criminal convictions and sentences in Toronto and throughout Ontario, providing careful analysis and strategic appellate advocacy.',
+      'A criminal appeal allows a higher court to review a decision made by a lower court. In Canada, a person convicted of a criminal offence may appeal their conviction, sentence or both, subject to the applicable legal requirements.',
+      'An appeal is not a new trial. Witnesses are not ordinarily called to testify again. Instead, the appeal court reviews the trial record to determine whether there are legal grounds to overturn or change the original decision.',
+      'In Ontario, criminal appeals are generally heard by the Superior Court of Justice or the Court of Appeal for Ontario. Which court hears the appeal depends on how the offence was prosecuted and the decision being appealed.',
     ],
   },
   {
@@ -27,17 +25,16 @@ const appealSections: Array<{
     indexTitle: 'Grounds for Appeal',
     heading: 'What are the grounds for appealing a criminal conviction in Ontario?',
     paragraphs: [
-      'A criminal conviction cannot be overturned simply because an individual disagrees with the outcome of their trial. A successful criminal appeal generally requires identifying a recognized legal basis for appellate intervention.',
-      'Not every error made during a criminal trial will justify overturning a conviction. The appellate court considers the nature of the alleged error, the applicable standard of review, and whether the legal requirements for intervention have been satisfied.',
-      'In limited circumstances, an appellate court may also permit fresh evidence that was not presented during the original proceedings.',
-      'A criminal appeal lawyer can examine the trial record, identify potential grounds of appeal, and assess whether there is a legal basis to challenge the conviction.',
+      'Disagreeing with the outcome of a trial is not enough to overturn a criminal conviction. There must be a legal basis for the appeal.',
+      'Not every error made during a trial will justify overturning a conviction. The appeal court considers the nature of the error and whether it provides a legal basis for setting aside the conviction.',
+      'In certain circumstances, the appeal court may also consider new evidence that was not presented at trial.',
     ],
     bullets: [
       "Errors in the trial judge's interpretation or application of the law",
       'Improper admission or exclusion of evidence',
-      'Incorrect instructions provided to a jury',
-      'A verdict that is unreasonable or unsupported by the evidence',
-      "Procedural unfairness affecting the accused's right to a fair trial",
+      'Incorrect instructions given to a jury',
+      'An unreasonable verdict or one that cannot be supported by the evidence',
+      "Violations of the accused's right to a fair trial",
       'A miscarriage of justice',
     ],
   },
@@ -46,18 +43,17 @@ const appealSections: Array<{
     indexTitle: 'Sentence Appeals',
     heading: 'Can you appeal a criminal sentence in Ontario?',
     paragraphs: [
-      'A person convicted of a criminal offence may be able to appeal the sentence imposed by the trial court. A sentence appeal asks a higher court to determine whether the original sentence should be changed.',
-      'Criminal sentencing in Canada is governed by principles that include proportionality, parity, rehabilitation, deterrence, and the circumstances of both the offence and the offender.',
-      'A sentence appeal is not automatically successful because another judge might have imposed a different punishment. Appellate courts generally give considerable deference to sentencing decisions unless a recognized basis for intervention exists.',
-      'Depending on the circumstances, the appellate court may reduce a sentence, increase it where legally permitted, or leave the original sentence unchanged.',
-      'TOP Law Criminal Defence can review sentencing decisions and assess potential grounds for pursuing a criminal sentence appeal in Ontario.',
+      'A person convicted of a criminal offence may challenge their sentence without challenging the conviction itself. A sentence appeal asks a higher court to review whether the sentence imposed was appropriate.',
+      "In Canada, a sentence must be proportionate to the seriousness of the offence and the offender's degree of responsibility. Courts must also consider other applicable sentencing principles and the circumstances of the case.",
+      'The fact that another judge might have imposed a different sentence is not enough to justify changing it. An appeal court may intervene where the sentence is demonstrably unfit or where an error in principle affected the sentence.',
+      'The appeal court may reduce the sentence, increase it where legally permitted, or leave it unchanged.',
     ],
     bullets: [
       'An error in the application of sentencing principles',
       'Failure to consider relevant mitigating circumstances',
       'Improper consideration of aggravating factors',
       'A sentence that is demonstrably unfit',
-      'An error affecting the calculation or structure of the sentence',
+      'Errors in calculating or structuring the sentence',
     ],
   },
   {
@@ -65,13 +61,13 @@ const appealSections: Array<{
     indexTitle: 'The Appeals Process',
     heading: 'How does the criminal appeals process work in Ontario?',
     paragraphs: [
-      'The criminal appeals process generally begins with filing a notice of appeal within the applicable deadline. In many Ontario criminal appeals, the notice must be filed within 30 days after sentencing, although the specific requirements depend on the type of appeal and the court involved.',
-      'Once an appeal has been initiated, the process may involve obtaining trial transcripts, reviewing the court record, identifying grounds of appeal, and preparing written legal arguments.',
-      'These written submissions, commonly called a factum, explain the legal errors alleged and the reasons the appellate court should intervene.',
-      'The Crown may file responding materials, and the parties may present oral arguments before the appellate court.',
-      'Depending on the outcome, the court may dismiss the appeal, order a new trial, set aside a conviction, enter an acquittal where legally appropriate, or modify a sentence.',
-      'An individual serving a custodial sentence is not automatically released simply because an appeal has been filed. In appropriate circumstances, an application for release pending appeal may be available.',
-      'Because criminal appeals involve strict procedural requirements and deadlines, obtaining legal advice promptly after a conviction or sentence is important.',
+      'A criminal appeal generally begins with filing a notice of appeal. In many Ontario criminal appeals, the deadline is 30 days after sentencing. The applicable deadline depends on the type of appeal and the court involved.',
+      'Once the appeal is underway, the defence reviews the court record and trial transcripts, identifies the grounds of appeal and prepares written legal arguments.',
+      'These written arguments are generally set out in a document called a factum, which explains why the original decision should be overturned or changed.',
+      'The Crown may respond in writing, and both sides may present oral arguments before the appeal court.',
+      'The court may dismiss the appeal, order a new trial, overturn a conviction, enter an acquittal where appropriate, or change the sentence.',
+      'Filing an appeal does not automatically release someone from custody. In certain circumstances, a person may apply for bail pending appeal.',
+      'Given the strict filing deadlines, it is important to seek legal advice promptly after sentencing.',
     ],
   },
   {
@@ -79,20 +75,18 @@ const appealSections: Array<{
     indexTitle: 'Legal Representation',
     heading: 'How can a criminal appeal lawyer help challenge a conviction or sentence?',
     paragraphs: [
-      'Criminal appeals require a different approach from trial proceedings. Rather than presenting the original defence again, appellate advocacy focuses on identifying legal errors, analyzing the trial record, and developing arguments that satisfy the requirements for appellate intervention.',
-      'The strength of a criminal appeal often depends on careful legal research, a thorough understanding of the trial proceedings, and the ability to identify errors that may have affected the outcome.',
-      'Not every conviction or sentence provides grounds for a successful appeal. An informed assessment can help determine whether appellate intervention is available and what steps should be taken.',
-      "TOP Law Criminal Defence provides criminal appeal representation in Toronto and Ontario, with an emphasis on detailed case analysis, persuasive written advocacy, and the protection of clients' legal rights.",
+      'A criminal appeal requires a different approach from a trial. An appeal lawyer reviews what happened during the original proceedings to determine whether there are grounds to challenge the conviction or sentence.',
+      'TOP Law Criminal Defence represents clients in conviction and sentence appeals in Toronto and throughout Ontario. The firm can assist with:',
     ],
     bullets: [
-      'Reviewing trial transcripts, evidence, and judicial decisions',
-      'Identifying potential errors of law or miscarriages of justice',
+      'Reviewing trial transcripts, evidence and court decisions',
+      'Identifying errors of law and other grounds for appeal',
       'Assessing the merits of conviction and sentence appeals',
       'Preparing notices of appeal and other required court documents',
-      'Conducting legal research and drafting written appellate arguments',
-      'Presenting oral submissions before the appellate court',
-      'Advising on applications for release pending appeal',
-      'Responding to appeals initiated by the Crown',
+      'Conducting legal research and preparing written arguments',
+      'Presenting oral arguments before the appeal court',
+      'Advising on and pursuing bail pending appeal',
+      'Responding to Crown appeals',
     ],
   },
 ];
@@ -144,7 +138,7 @@ function CriminalAppeals() {
             <p className="bailHearingsEyebrow">PRACTICE AREA</p>
               <h1 className="bailHearingsTitle">Criminal Appeals.</h1>
             <p className="bailHearingsIntroduction">
-              Focused appellate advocacy to challenge convictions, sentences, and errors in criminal proceedings.
+              Criminal defence representation for conviction and sentence appeals in Toronto and throughout Ontario.
             </p>
 
             <nav className="bailHearingsIndex" aria-label="Criminal appeals sections">

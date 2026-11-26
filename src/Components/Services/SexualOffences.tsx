@@ -16,8 +16,8 @@ const sexualSections: Array<{
     indexTitle: 'Understanding Sexual Offences',
     heading: 'What are sexual offences under Canadian criminal law?',
     paragraphs: [
-      "Sexual offences are criminal charges involving conduct prohibited by the sexual offence provisions of Canada's Criminal Code. These allegations can involve a wide range of circumstances, from unwanted sexual contact to offences involving sexual exploitation or sexual activity with minors.",
-      'Common sexual offences under Canadian law include:',
+      "Sexual offences under Canada's Criminal Code cover a range of conduct, including sexual activity without consent, sexual exploitation and prohibited sexual activity involving minors.",
+      'Common sexual offences include:',
     ],
     bullets: [
       'Sexual assault',
@@ -30,9 +30,8 @@ const sexualSections: Array<{
       'Non-consensual distribution of intimate images',
     ],
     trailingParagraphs: [
-      'The legal elements and potential penalties vary depending on the specific offence, the circumstances of the allegations, and the applicable provisions of the Criminal Code.',
-      "Sexual offence allegations can have significant consequences for an accused person's liberty, reputation, employment, and personal relationships. However, an allegation or criminal charge does not establish guilt. The Crown must prove the essential elements of the offence beyond a reasonable doubt.",
-      "TOP Law provides criminal defence representation for individuals facing sexual offence allegations in Toronto and throughout Ontario, emphasizing careful preparation, confidentiality, and the protection of clients' legal rights.",
+      'The legal requirements and potential penalties vary depending on the offence.',
+      "Sexual offence allegations can affect a person's employment, reputation and personal relationships even before a case goes to trial. However, being charged with a sexual offence does not establish guilt. The accused is presumed innocent, and the Crown must prove every essential element of the offence beyond a reasonable doubt.",
     ],
   },
   {
@@ -40,12 +39,11 @@ const sexualSections: Array<{
     indexTitle: 'Sexual Assault Charges',
     heading: 'What constitutes sexual assault in Canada?',
     paragraphs: [
-      'Sexual assault is a criminal offence involving an assault of a sexual nature. Canadian law examines the circumstances of the alleged contact, including whether the complainant voluntarily agreed to the sexual activity in question.',
-      'Consent is a central consideration in many sexual assault prosecutions. Under the Criminal Code, consent means the voluntary agreement of the complainant to engage in the sexual activity in question.',
-      'The law also identifies circumstances in which consent is absent or cannot be legally obtained, including certain situations involving incapacity, abuse of authority, or individuals below the applicable age of consent.',
-      "Sexual assault allegations may involve disputed accounts of events, electronic communications, witness testimony, medical evidence, and questions concerning the accused person's knowledge or beliefs.",
-      'The Criminal Code imposes specific legal restrictions on arguments concerning consent and mistaken belief in communicated consent. These issues require careful examination of the evidence and applicable law.',
-      'A criminal defence lawyer can assess the allegations, explain the relevant legal principles, and develop a defence strategy based on the particular circumstances of the case.',
+      'Sexual assault is an assault of a sexual nature. It can involve unwanted sexual touching and does not require penetration or physical injury.',
+      'Under the Criminal Code, consent means the voluntary agreement of the complainant to engage in the sexual activity in question. Consent must be present at the time of the activity and can be withdrawn at any point.',
+      'A person cannot legally consent if they are unconscious or otherwise incapable of consenting. Canadian law also places restrictions on consent in circumstances involving an abuse of trust, power or authority, or where a person is below the applicable age of consent.',
+      'Sexual assault cases often involve differing accounts of what happened. Text messages, witness testimony and other evidence may be relevant to determining whether consent was present.',
+      'Canadian law places strict limits on the defence of an honest but mistaken belief in communicated consent. Among other requirements, the accused must have taken reasonable steps, in the circumstances known to them at the time, to ascertain consent.',
     ],
   },
   {
@@ -53,23 +51,22 @@ const sexualSections: Array<{
     indexTitle: 'Evidence and Defences',
     heading: 'How are sexual offence allegations defended in Ontario?',
     paragraphs: [
-      'Defending a sexual offence charge requires a detailed assessment of the allegations, the available evidence, and the legal elements the Crown must establish.',
-      'Sexual offence prosecutions frequently involve questions of credibility and reliability, particularly where the accounts of the individuals involved differ.',
-      'Depending on the circumstances, relevant evidentiary and legal issues may include:',
+      'The defence of a sexual offence charge depends on the allegations, the available evidence and what the Crown must prove.',
+      'In many sexual assault cases, the court must assess differing accounts of the same incident. The credibility and reliability of witness testimony can be central to the outcome.',
+      'Relevant evidentiary and legal issues may include:',
     ],
     bullets: [
       'Inconsistencies in witness statements or testimony',
       'The reliability of identification evidence',
-      'Electronic messages, photographs, and digital communications',
+      'Text messages, photographs and other digital communications',
       'The interpretation of medical or forensic evidence',
-      'Whether the Crown can establish the required elements of the offence',
+      'Whether the Crown can prove each element of the offence',
       'The application of Canadian consent laws',
-      'Potential violations of constitutional rights during the investigation',
+      "Violations of the accused's Charter rights during the investigation",
     ],
     trailingParagraphs: [
-      "Canadian criminal law also contains specific rules governing the admissibility of certain evidence in sexual offence proceedings. These include restrictions concerning a complainant's sexual history and procedures governing some records containing personal information.",
-      'Such evidence cannot automatically be introduced at trial. Its admissibility may require a separate application and judicial determination.',
-      'A criminal defence lawyer can review the disclosure, identify relevant evidentiary issues, and advance legally available arguments while ensuring that the accused receives a fair trial.',
+      "Sexual offence trials are subject to specific rules about what evidence can be introduced in court. These include restrictions on evidence of a complainant's prior sexual activity and rules governing certain private records.",
+      'Before such evidence can be introduced, the defence may need to bring a separate application and obtain permission from the judge.',
     ],
   },
   {
@@ -77,22 +74,20 @@ const sexualSections: Array<{
     indexTitle: 'Penalties and Consequences',
     heading: 'What are the penalties for sexual offences in Ontario?',
     paragraphs: [
-      'The penalties for sexual offences in Canada depend on the specific charge, the circumstances of the offence, and the applicable sentencing provisions.',
-      'Some sexual offences carry substantial maximum penalties, while certain offences or circumstances may engage statutory minimum sentences. The applicability and constitutional validity of particular sentencing provisions must be assessed in light of current law.',
-      "When determining a sentence, courts consider factors such as the seriousness of the offence, the harm caused, the offender's circumstances, and relevant aggravating or mitigating factors.",
-      'A conviction for a sexual offence may also result in consequences beyond imprisonment or other criminal penalties, including:',
+      'Penalties for sexual offences vary depending on the charge and the circumstances of the case. More serious offences can carry lengthy prison sentences. Mandatory minimum sentences may also apply to certain offences, depending on the applicable law.',
+      "When imposing a sentence, the court considers the seriousness of the offence, the offender's degree of responsibility, the harm caused and any relevant aggravating or mitigating circumstances.",
+      'A conviction for a sexual offence can also have consequences beyond the sentence itself, including:',
     ],
     bullets: [
       'A criminal record',
-      'Sex offender registration obligations where legally applicable',
-      'Restrictions on employment or professional licensing',
+      'Registration on the National Sex Offender Registry, where required by law',
+      'Difficulties obtaining employment or professional licences',
       'Travel and immigration complications',
-      'No-contact or other court-ordered restrictions',
-      'Long-term reputational and personal consequences',
+      'No-contact orders and other court-imposed restrictions',
+      'Damage to personal and professional relationships',
     ],
     trailingParagraphs: [
-      "Not every sexual offence conviction results in the same orders or restrictions. The consequences depend on the offence, the individual's circumstances, and the applicable legislation.",
-      'A criminal defence lawyer can explain the potential penalties and collateral consequences associated with a particular charge and advise on the available legal options.',
+      "Not every sexual offence conviction results in the same penalties or restrictions. The consequences depend on the specific offence, the individual's circumstances and the applicable law.",
     ],
   },
   {
@@ -100,25 +95,21 @@ const sexualSections: Array<{
     indexTitle: 'Legal Representation',
     heading: 'How can a criminal defence lawyer help with sexual offence charges?',
     paragraphs: [
-      'Sexual offence allegations require careful legal analysis, sensitivity to the circumstances, and a thorough understanding of the evidentiary rules governing these prosecutions.',
-      'Early legal representation can help an accused person understand the allegations, preserve relevant evidence, and make informed decisions throughout the criminal process.',
-      'A criminal defence lawyer may assist by:',
+      'Speaking with a criminal defence lawyer early in the process can help an accused person understand the charges, preserve relevant evidence and avoid decisions that could affect their defence.',
+      "Sexual offence cases are often sensitive and deeply personal. A lawyer can explain the legal process, assess the Crown's evidence and advise the accused on their options in confidence.",
+      'TOP Law Criminal Defence represents individuals charged with sexual assault and other sexual offences in Toronto and throughout Ontario. The firm can assist with:',
     ],
     bullets: [
       'Reviewing Crown disclosure and investigative materials',
       'Examining witness statements and digital communications',
-      'Assessing credibility and reliability issues',
-      'Identifying potential legal and constitutional defences',
-      'Addressing the admissibility of evidence',
-      'Preparing and conducting cross-examinations',
-      'Representing the accused at bail hearings',
+      'Assessing the credibility and reliability of witness testimony',
+      'Identifying potential legal defences and Charter violations',
+      'Challenging the admissibility of evidence and preparing evidentiary applications',
+      'Preparing for and conducting cross-examinations',
+      'Representing clients at bail hearings',
       'Negotiating with the Crown where appropriate',
       'Preparing for and conducting criminal trials',
-      'Advising on sentencing and potential appeals',
-    ],
-    trailingParagraphs: [
-      'Every sexual offence prosecution presents distinct legal, factual, and evidentiary considerations. An effective defence strategy requires detailed preparation and an individualized assessment of the allegations.',
-      "TOP Law represents individuals facing sexual criminal charges in Toronto and Ontario, providing discreet legal guidance, focused courtroom advocacy, and dedicated attention to each client's defence.",
+      'Representing clients at sentencing and advising on potential appeals',
     ],
   },
 ];
@@ -170,7 +161,7 @@ function SexualOffences() {
             <p className="bailHearingsEyebrow">PRACTICE AREA</p>
               <h1 className="bailHearingsTitle">Sexual Offences.</h1>
             <p className="bailHearingsIntroduction">
-              Discreet, strategic criminal defence for serious allegations involving sexual misconduct.
+              Criminal defence representation for sexual assault and other sexual offences in Toronto and throughout Ontario.
             </p>
 
             <nav className="bailHearingsIndex" aria-label="Sexual offence sections">

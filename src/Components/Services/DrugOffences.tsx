@@ -16,8 +16,7 @@ const drugSections: Array<{
     indexTitle: 'Understanding Drug Offences',
     heading: 'What are drug offences under Canadian law?',
     paragraphs: [
-      'Drug offences in Canada are primarily governed by the Controlled Drugs and Substances Act (CDSA), which regulates the possession, production, trafficking, importation, and distribution of controlled substances.',
-      'The legal consequences of a drug charge depend on the substance involved, the alleged conduct, and the applicable provisions of federal legislation.',
+      'Drug offences in Canada are primarily governed by the Controlled Drugs and Substances Act (CDSA), which regulates the possession, trafficking, production, importation and exportation of controlled substances.',
       'Common drug-related criminal charges include:',
     ],
     bullets: [
@@ -27,13 +26,12 @@ const drugSections: Array<{
       'Production of controlled substances',
       'Importing or exporting controlled substances',
       'Possession for the purpose of exporting',
-      'Conspiracy or other offences connected to drug trafficking',
+      'Conspiracy to commit drug trafficking offences',
     ],
     trailingParagraphs: [
-      'Drug prosecutions may involve substances such as cocaine, fentanyl, heroin, methamphetamine, and other controlled drugs.',
-      'Not every possession of a substance is necessarily unlawful. The applicable schedules, statutory exemptions, authorizations, and other legal requirements must be considered.',
-      'A drug-related criminal charge can carry serious consequences, particularly where the allegations involve trafficking, production, or large quantities of controlled substances.',
-      'TOP Law provides criminal defence representation for individuals facing drug charges in Toronto and throughout Ontario, with a focus on detailed evidence review and strategic legal advocacy.',
+      'These charges may involve substances such as cocaine, fentanyl, heroin, methamphetamine and other controlled drugs.',
+      'Possession of a controlled substance is not always unlawful. Certain substances may be legally possessed under a valid prescription, statutory exemption or other lawful authorization.',
+      'The seriousness of a drug charge and the potential penalties depend on the substance involved, the nature of the allegations and the circumstances of the case.',
     ],
   },
   {
@@ -41,23 +39,22 @@ const drugSections: Array<{
     indexTitle: 'Possession & Trafficking',
     heading: 'What is the difference between drug possession and drug trafficking in Canada?',
     paragraphs: [
-      'Drug possession and drug trafficking are distinct offences under Canadian law, with different legal elements and potential consequences.',
-      'A possession charge generally requires the Crown to establish that the accused knowingly possessed a controlled substance without lawful authorization. Possession may be actual, constructive, or joint, depending on the circumstances.',
-      'Drug trafficking involves conduct such as selling, administering, giving, transferring, transporting, sending, or delivering a controlled substance, as defined by the Controlled Drugs and Substances Act.',
-      'Possession for the purpose of trafficking is a separate offence. It may be alleged where the Crown believes that controlled substances were possessed with the intention of trafficking them.',
-      'In determining whether possession was for the purpose of trafficking, investigators and prosecutors may rely on evidence such as:',
+      'Drug possession and drug trafficking are separate criminal offences with different legal requirements and potential penalties.',
+      'For a possession charge, the Crown generally must prove that the accused knowingly possessed a controlled substance without lawful authorization. A person does not necessarily need to have drugs physically on them to be charged with possession. Knowledge and control are important considerations.',
+      'Drug trafficking is not limited to selling drugs. Under the Controlled Drugs and Substances Act, trafficking can also include giving, transferring, transporting or delivering a controlled substance.',
+      'Possession for the purpose of trafficking is a separate offence. The Crown must prove that the accused possessed a controlled substance with the intention of trafficking it.',
+      'Evidence relied upon by the Crown may include:',
     ],
     bullets: [
-      'The quantity and packaging of the substances',
+      'The quantity and packaging of the drugs',
       'Scales or other drug-related equipment',
       'Cash and financial records',
-      'Electronic messages and communications',
-      'Surveillance evidence',
-      'The circumstances in which the substances were discovered',
+      'Text messages and other electronic communications',
+      'Police surveillance',
+      'The circumstances in which the drugs were discovered',
     ],
     trailingParagraphs: [
-      'No single factor necessarily establishes trafficking. The Crown must prove the essential elements of the particular offence beyond a reasonable doubt.',
-      'A criminal defence lawyer can assess the evidence and determine whether the prosecution can establish possession, knowledge, control, or the alleged purpose of trafficking.',
+      'The presence of any one of these factors does not necessarily establish an intention to traffic. The Crown must prove every essential element of the offence beyond a reasonable doubt.',
     ],
   },
   {
@@ -65,23 +62,22 @@ const drugSections: Array<{
     indexTitle: 'Search and Seizure',
     heading: 'Can drug charges be challenged if police conducted an unlawful search?',
     paragraphs: [
-      'Drug investigations frequently involve searches of vehicles, residences, electronic devices, and personal belongings.',
-      'Section 8 of the Canadian Charter of Rights and Freedoms protects individuals against unreasonable search or seizure. Police searches must comply with applicable constitutional and statutory requirements.',
-      'Depending on the circumstances, police may require judicial authorization before conducting a search. Certain exceptions permit warrantless searches, but those exceptions are subject to legal limits.',
-      'Potential issues in a drug prosecution may include:',
+      'Drug charges often arise from police searches of vehicles, homes, electronic devices or personal belongings. Whether those searches were lawful can be an important issue in the defence.',
+      'Section 8 of the Canadian Charter of Rights and Freedoms protects individuals against unreasonable search or seizure.',
+      'Police generally require a warrant to search a place where a person has a reasonable expectation of privacy, unless a recognized legal exception applies. Even when police have a search warrant, there are limits on how the search can be conducted.',
+      'Common legal issues in drug cases include:',
     ],
     bullets: [
-      'Whether police had lawful grounds to stop or detain an individual',
-      'Whether a search warrant was validly obtained and executed',
-      'Whether a warrantless search was legally authorized',
+      'Whether police had lawful grounds to stop or detain the accused',
+      'Whether a search warrant was lawfully obtained and executed',
+      'Whether police had legal grounds to conduct a search without a warrant',
       'Whether police exceeded the permitted scope of a search',
-      "Whether the accused's rights during detention or arrest were respected",
-      'Whether seized evidence was handled and documented appropriately',
+      "Whether the accused's Charter rights, including the right to counsel, were respected",
+      'Whether seized evidence was properly handled and documented',
     ],
     trailingParagraphs: [
-      'If a Charter violation occurred, defence counsel may seek an appropriate legal remedy. In some circumstances, this may include an application to exclude evidence under section 24(2) of the Charter.',
-      'Evidence is not automatically excluded whenever a constitutional violation is established. The court must apply the relevant legal test.',
-      'TOP Law examines the legality of police investigative methods and the admissibility of evidence when defending drug-related criminal charges.',
+      "If police violated the accused's Charter rights, the defence may apply to have evidence excluded under section 24(2) of the Charter.",
+      "Evidence obtained through a Charter violation is not automatically excluded. The court must determine whether admitting the evidence would bring the administration of justice into disrepute. If key evidence is excluded, it can significantly weaken the Crown's case.",
     ],
   },
   {
@@ -89,23 +85,21 @@ const drugSections: Array<{
     indexTitle: 'Penalties and Consequences',
     heading: 'What are the penalties for drug offences in Ontario?',
     paragraphs: [
-      'The penalties for drug offences in Canada depend on the specific charge, the controlled substance involved, and the circumstances of the alleged conduct.',
-      'Simple possession offences may carry different maximum penalties from trafficking, production, or importation offences. Serious drug trafficking allegations can result in lengthy custodial sentences.',
-      "Sentencing courts consider factors such as the nature and quantity of the substance, the offender's role, the circumstances of the offence, and relevant aggravating or mitigating factors.",
-      'A drug conviction may also result in consequences beyond the sentence imposed by the court, including:',
+      'Penalties for drug offences vary depending on the charge, the substance involved and the circumstances of the offence.',
+      'Simple possession generally carries less severe penalties than trafficking, production or importation. Serious drug trafficking offences can result in lengthy prison sentences.',
+      "When imposing a sentence, the court may consider the type and quantity of drugs involved, the offender's role in the offence and any relevant aggravating or mitigating circumstances.",
+      'A drug conviction can also have consequences beyond the sentence itself, including:',
     ],
     bullets: [
       'A criminal record',
-      'Employment or professional licensing difficulties',
+      'Difficulties obtaining employment or professional licences',
       'Travel and immigration complications',
-      'Forfeiture of certain property where legally authorized',
-      'Restrictions arising from probation or other court orders',
-      'Long-term personal and financial consequences',
+      'Forfeiture of property where permitted by law',
+      'Restrictions imposed through probation or other court orders',
+      'Personal and financial consequences',
     ],
     trailingParagraphs: [
-      'The availability of alternatives to incarceration depends on the offence, the individual\'s circumstances, and applicable law.',
-      'In appropriate cases, legal options may include diversionary measures, treatment-related approaches, or other sentencing alternatives.',
-      'A criminal defence lawyer can explain the potential consequences of a drug charge and assess the legal options available at each stage of the proceedings.',
+      'Not every drug charge results in a criminal conviction or imprisonment. Depending on the offence and the circumstances of the accused, alternatives such as diversion programs, treatment programs or non-custodial sentences may be available.',
     ],
   },
   {
@@ -113,25 +107,20 @@ const drugSections: Array<{
     indexTitle: 'Legal Representation',
     heading: 'How can a criminal defence lawyer help with drug charges?',
     paragraphs: [
-      'Drug prosecutions often involve complex investigations, police surveillance, search warrants, electronic communications, and questions concerning possession or control of controlled substances.',
-      'Effective criminal defence requires careful examination of the investigative process and the evidence relied upon by the Crown.',
-      'A criminal defence lawyer may assist by:',
+      'Drug cases often raise questions about how police obtained their evidence and whether the accused knew about or had control over the drugs in question. A criminal defence lawyer can review the investigation, challenge the admissibility of evidence and assess whether the Crown can prove the charges.',
+      'TOP Law Criminal Defence represents individuals charged with drug possession, trafficking and other drug offences in Toronto and throughout Ontario. The firm can assist with:',
     ],
     bullets: [
-      'Reviewing police reports, search warrants, and Crown disclosure',
-      'Assessing the legality of searches, seizures, and arrests',
+      'Reviewing police reports, search warrants and Crown disclosure',
+      'Assessing the legality of searches, seizures and arrests',
       'Identifying potential Charter violations',
-      'Challenging evidence concerning possession, knowledge, or control',
+      'Challenging evidence of possession, knowledge or control',
       'Examining allegations of trafficking or possession for the purpose of trafficking',
       'Reviewing surveillance and electronic communications',
-      'Representing the accused at bail hearings',
+      'Representing clients at bail hearings',
       'Negotiating with the Crown where appropriate',
       'Preparing for and conducting criminal trials',
-      'Advising on sentencing and potential appeals',
-    ],
-    trailingParagraphs: [
-      'Every drug prosecution involves distinct factual and legal considerations. The appropriate defence strategy depends on the charges, the investigative methods used, and the available evidence.',
-      'TOP Law represents individuals facing drug-related criminal charges in Toronto and Ontario, providing thorough case preparation, strategic legal advice, and focused courtroom advocacy.',
+      'Representing clients at sentencing and advising on potential appeals',
     ],
   },
 ];
@@ -183,7 +172,7 @@ function DrugOffences() {
             <p className="bailHearingsEyebrow">PRACTICE AREA</p>
               <h1 className="bailHearingsTitle">Drug Offences.</h1>
             <p className="bailHearingsIntroduction">
-              Strategic criminal defence for drug possession, trafficking, and controlled substance allegations.
+              Criminal defence representation for drug possession, trafficking and other drug offences in Toronto and throughout Ontario.
             </p>
 
             <nav className="bailHearingsIndex" aria-label="Drug offence sections">
